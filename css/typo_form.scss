@@ -1,0 +1,100 @@
+/*GENERAL
+-------------*/
+@font-face {
+    font-family: 'abelregular';
+    src: url('../fonts/abel-regular-webfont.eot');
+    src: url('../fonts/abel-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/abel-regular-webfont.woff') format('woff'),
+         url('../fonts/abel-regular-webfont.ttf') format('truetype'),
+         url('../fonts/abel-regular-webfont.svg#abelregular') format('svg');
+}
+.font{
+    font-weight: normal;
+    font-style: normal;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+margin-reset{
+}
+
+/*TITLE
+-------------*/
+h1, h2, h3, .h1-like, .h2-like, .h3-like{
+    font-family: 'abelregular';  
+    @extend .font;
+    line-height: 1;
+    margin: $tall-margin 0;
+}
+h1, .h1-like{
+    font-size: 3em;
+    @extend .uppercase;
+}
+h2, .h2-like{
+    font-size: 2.5em;
+}
+h3, .h3-like{
+    font-size: 2em;
+}
+
+/*PARAGRAPHE
+-------------*/
+p{
+    line-height: 1.6;
+    text-indent: 20px;
+    margin: 0 0 $tall-margin 0;
+}
+
+/*LIST
+-------------*/
+ul,ol{
+    margin: 0 0 $tall-margin 0;
+}
+
+/*LINKS
+-------------*/
+a{
+    text-decoration: none;
+    color: $font-link;
+    
+        &:focus,&:hover{
+    
+        }
+}
+
+/*FORM
+-------------*/
+.input{
+    border: 1px solid $border-color1;
+    padding: 8px $tall-margin;
+    font-size: 0.9em;
+    @extend .rounded1;
+    margin: 0 $tall-margin $tall-margin 0;
+}
+label{
+    margin: 0 0 $tall-margin 0;
+    display: block;
+}
+select{
+    @extend .input;
+}
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"]{
+    @extend .input;
+}
+input[type="search"]{
+    @extend .rounded2;
+    @extend .input;
+}

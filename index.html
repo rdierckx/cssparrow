@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Responsive Raptor</title>
+
+  <link rel="stylesheet" media="screen" href="css/global.css">
+  <script src="js/modernizr.custom.29167.js"></script>
+  <script src="js/lib.js"></script>
+</head>
+    
+<body id="demo-page">
+<header>
+    <h1 id="main-logo">
+        <a href="#img_modernizr_js_remplacement_bis" >
+            <img class="logo" src="img/logo.svg" data-fallback="img/logo.png" alt="Responsive Raptor" />
+        </a>
+        <span>responsive raptor</span>
+    </h1>
+</header>
+<div class="wrapper shadow1">   
+
+<!--Grid-->
+    <section class="row" id="grid"> 
+        <h2 class="span12">Grid</h2>
+            <!-- SPAN1 -->
+            <div class="row">
+                <div class="span1"><a href="#">1</a></div>
+                <div class="span1"><a href="#">1</a></div>
+                <div class="span1"><a href="#">1</a></div>
+                <div class="span1"><a href="#">1</a></div>
+                <div class="span1"><a href="#">1</a></div>
+                <div class="span1"><a href="#">1</a></div>
+                <div class="span1"><a href="#">1</a></div>
+                <div class="span1"><a href="#">1</a></div>
+                <div class="span1"><a href="#">1</a></div>
+                <div class="span1"><a href="#">1</a></div>
+                <div class="span1"><a href="#">1</a></div>
+                <div class="span1"><a href="#">1</a></div>
+            </div>
+            
+            <!-- SPAN3 -->
+            <div class="row">        
+                <div class="span3"><a href="#">3</a></div>
+                <div class="span3"><a href="#">3</a></div>
+                <div class="span3"><a href="#">3</a></div>
+                <div class="span3"><a href="#">3</a></div>
+            </div>
+            
+            <!-- SPAN4 -->
+            <div class="row">
+                <div class="span4"><a href="#">4</a></div>
+                <div class="span4"><a href="#">4</a></div>
+                <div class="span4"><a href="#">4</a></div>
+            </div>
+            
+            <!-- SPAN6 -->
+            <div class="row">
+                <div class="span6"><a href="#">6</a></div>
+                <div class="span6"><a href="#">6</a></div>
+            </div>
+            <a href="http://tinkerbin.com/YyLJwYud" class="span12">tinkerbin source code</a>
+    </section>
+ 
+<!--Typo-->
+    <section class="row">   
+        <h2 class="span12">Typo</h2>
+        
+        <div class="table3row">
+            <div class="cell bloc-level-1">
+                <h3>title</h3>
+                <h1>Title level 1</h1>
+                <h2>Title level 2</h2>
+                <h3>Title level 3</h3>
+            </div>
+            <div class="cell bloc-level-1">
+                <h3>paragraph</h3>
+                <p>
+                Lorem ipsum dolor sit amet, consectetur <mark>adipiscing</mark> elit. Nulla urna leo, 
+                tincidunt ut volutpat ac, <q>mattis a purus</q>. Aenean vitae lectus imperdiet 
+                lacus dignissim adipiscing. Nulla fermentum erat eu sapien tempus convallis. 
+                Donec mauris leo, lacinia sed pretium in.
+                </p>
+            </div>
+            <div class="cell bloc-level-1">
+                <h3>list</h3>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Lorem ipsum dolor sit amet</li>
+                </ul>
+                <ol>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Lorem ipsum dolor sit amet</li>
+                </ol>
+            </div>
+        </div>
+        <a href="http://tinkerbin.com/t7nVJkzK" class="span12">tinkerbin source code</a>
+    </section>
+    
+<!--Button-->
+    <section class="row" id="buttons"> 
+        <h2 class="span12">Buttons</h2> 
+        <div class="span12">
+            <a href="#" class="button">Button Action</a>
+            <a href="#" class="button-important">Button Important</a>
+            <a href="#" class="button-success">Button Success</a>
+            <a href="#" class="button-dark">Button Dark</a>
+            <ul class="buttons-block">
+                <li><a href="#">1</a></li><!--
+                --><li><a href="#">2</a></li><!--
+                --><li><a href="#">3</a></li><!--
+                --><li><a href="#">4</a></li>
+            </ul>
+        </div>
+        <a href="http://tinkerbin.com/MXk5Yi12" class="span12">tinkerbin source code</a>
+    </section>
+    
+<!--Form-->
+    <section class="row" id="forms"> 
+        <h2 class="span12">Forms</h2>
+        <!--form input text-->
+        <form class="span6">
+            <h3>start form</h3>
+            <div class="row">
+                <label>label</label>
+                <input type="text" placeholder="placeholder">
+                <input class="button" type="submit" value="submit">
+            </div>
+            <div class="row">
+                <input type="search" placeholder="search">
+                <input class="button" type="submit" value="search">
+            </div>
+            <div class="row">
+                <select name="list-demo" id="list-demo">
+                   <option value="france">France</option>
+                   <option value="espagne">Espagne</option>
+                   <option value="italie">Italie</option>
+                   <option value="royaume-uni">Royaume-Uni</option>
+                   <option value="canada">Canada</option>
+                   <option value="etats-unis">États-Unis</option>
+                   <option value="chine">Chine</option>
+                   <option value="japon">Japon</option>
+                </select>
+            </div>
+        </form>
+        <form class="span6">
+            <h3>error form</h3>
+            <div class="row error">
+                <label>label</label>
+                <input type="text" placeholder="placeholder">
+                <input class="button" type="submit" value="submit">
+            </div>
+            <div class="row error">
+                <input type="search" placeholder="search">
+                <input class="button" type="submit" value="search">
+            </div>
+            <div class="row error">
+                <input type="color" placeholder="search">
+            </div>
+            <div class="row error">
+                <select name="list-demo" id="list-demo">
+                   <option value="france">France</option>
+                   <option value="espagne">Espagne</option>
+                   <option value="italie">Italie</option>
+                   <option value="royaume-uni">Royaume-Uni</option>
+                   <option value="canada">Canada</option>
+                   <option value="etats-unis">États-Unis</option>
+                   <option value="chine">Chine</option>
+                   <option value="japon">Japon</option>
+                </select>
+            </div>
+        </form>
+        <a href="http://tinkerbin.com/4O5ddSsT" class="span12">tinkerbin source code</a>
+    </section>
+    
+    <footer class="row" id="main-footer">
+            <p class="span12">This is my footer</p>
+    </footer>
+</div>
+</body>
+</html>

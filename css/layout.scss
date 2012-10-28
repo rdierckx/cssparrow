@@ -1,0 +1,109 @@
+//layout.scss is the elements position stylesheet
+
+/*WRAPPER
+-------------*/
+.wrapper{
+    margin: -$venti-margin auto 0 auto;
+    background: #FFF;
+    width: 90%;
+    @extend .container-clear;
+}
+.wrapper>section{
+    margin: $venti-margin 0 0 0;
+    padding: 0 ($grid-col-padding * 2);
+    
+        &:first-child{
+            margin: $tall-margin 0 0 0;
+        }
+}
+
+/*LOGO
+-------------*/  
+h1#main-logo{
+    position: relative;
+        a{
+            display: block;
+            width: 15%;
+            overflow: hidden;
+                
+                img{
+                    width: 100%;
+                }
+        }
+        span{ 
+            position: absolute;
+            left: -200%;
+        }
+}
+
+
+/*GRID
+-------------*/
+.container-clear{
+    overflow: hidden;
+    clear: both;
+}
+.row{
+    @extend .container-clear;
+}
+[class*="span"] {
+    float: left;
+    padding: 0 $grid-col-padding;
+}
+
+.span1 {
+    width: (100% - $grid-col-padding * 24) / 12;    
+}
+.span2 {
+    width: ((100% / 12) * 2) - ($grid-col-padding * 2);     
+}
+.span3 {
+    width: ((100% / 12) * 3) - ($grid-col-padding * 2);    
+}
+.span4 {
+    width: ((100% / 12) * 4) - ($grid-col-padding * 2);    
+}
+.span5 {
+    width: ((100% / 12) * 5) - ($grid-col-padding * 2);    
+}
+.span6 {
+    width: ((100% / 12) * 6) - ($grid-col-padding * 2);  
+}
+.span7 {
+    width: ((100% / 12) * 7) - ($grid-col-padding * 2);   
+}
+.span8 {
+    width: ((100% / 12) * 8) - ($grid-col-padding * 2);   
+}
+.span9 {
+    width: ((100% / 12) * 9) - ($grid-col-padding * 2);   
+}
+.span10 {
+    width: ((100% / 12) * 10) - ($grid-col-padding * 2);   
+}
+.span11 {
+    width: ((100% / 12) * 11) - ($grid-col-padding * 2);   
+}
+.span12 {
+    width: (100% - $grid-col-padding * 2); 
+    float: none;
+}
+
+/*display TABLE
+-------------*/
+.table{
+    display: table;
+    border-collapse: separate;
+    border-spacing: $tall-margin;
+}
+.cell{
+    display: table-cell;
+    vertical-align: top;
+}
+.table3row{
+    @extend .table;
+    .cell{
+        width: (100% /3);
+        @extend .cell;
+    }
+}

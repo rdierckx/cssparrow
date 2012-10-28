@@ -1,0 +1,12 @@
+@import "reset";
+@import "variable";
+@import "layout";
+@import "typo_form";
+@import "style";
+@import "mediaquery";
+@import "demo";
+
+body{
+    line-height: 1.4;
+    color: $font-color1;
+}

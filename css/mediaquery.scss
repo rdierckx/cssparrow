@@ -1,0 +1,23 @@
+//mediaquery.scss to target differents devices
+
+/*MEDIAQUERY
+-------------*/
+@media handheld, only screen and (max-width: 750px) {
+
+    .wrapper{
+        width: auto;
+    }
+    [class*="span"] {
+        width: 100%;
+    }
+    .bloc-level-1{
+        margin: 0 0 $tall-margin 0;
+    }
+    .table3row{
+        display: block;
+        .cell{
+            display: block;
+            width: (100% - ($grid-col-padding * 4));
+        }
+    }  
+}

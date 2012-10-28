@@ -1,0 +1,58 @@
+/*DEMO
+-------------*/
+#demo-page{
+    background: $secondary-color;
+}
+
+/*Grid*/
+#grid{
+    [class*="span"] a{
+        background: $main-color;
+        display: block;
+        margin: 0 0 $grande-margin 0;
+        padding: $tall-margin;
+        text-align: center;
+        color: #FFF;
+    }
+    .row:last-child a{
+        margin: 0;
+    }
+}
+/*Forms*/
+#forms form>.span12{
+    margin: 0 0 $tall-margin 0;
+}
+
+/*Section*/
+section>h2{
+    @extend .uppercase;
+}
+
+/*Header*/
+body>header{
+    padding: ($venti-margin) 0 ($venti-margin * 2) 0;
+    background: $main-color;
+    
+        h1{
+            width: 90%; 
+            margin: 0 auto;
+        }
+}
+
+/*Footer*/
+footer#main-footer{
+    background: #34363A;
+    padding: ($grid-col-padding * 2) 0;
+    margin: ($venti-margin * 2) 0 0 0;
+}
+
+
+/*MEDIAQUERY
+-------------*/
+@media handheld, only screen and (max-width: 750px) {
+
+    body .wrapper section#grid .row:last-child a{
+        margin: 0 0 $grande-margin 0;
+    }
+    
+}
