@@ -17,32 +17,8 @@
         }
 }
 
-/*LOGO
--------------*/  
-h1#main-logo{
-    position: relative;
-        a{
-            display: block;
-            width: 15%;
-            overflow: hidden;
-                
-                img{
-                    width: 100%;
-                }
-        }
-        span{ 
-            position: absolute;
-            left: -200%;
-        }
-}
-
-
 /*GRID
 -------------*/
-.container-clear{
-    overflow: hidden;
-    clear: both;
-}
 .row{
     @extend .container-clear;
 }
@@ -87,6 +63,41 @@ h1#main-logo{
 .span12 {
     width: (100% - $grid-col-padding * 2); 
     float: none;
+}
+
+/*FLOAT
+-------------*/ 
+.container-clear{
+    overflow: hidden;
+    clear: both;
+}
+.float-right{
+    float: right;
+}
+.float-left{
+    float: left;
+}
+
+/*LOGO
+-------------*/  
+h1#main-logo{
+    position: relative;
+    width: 15%;
+        a{
+            display: block;
+            width: 100%;
+            overflow: hidden;
+                
+                img{
+                    width: 100%;
+                }
+        }
+        span{ 
+            position: absolute;
+            left: -2000%;
+            font-size: 0px;
+            color: transparent;
+        }
 }
 
 /*display TABLE

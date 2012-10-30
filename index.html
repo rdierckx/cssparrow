@@ -13,12 +13,14 @@
     
 <body id="demo-page">
 <header>
-    <h1 id="main-logo">
-        <a href="#img_modernizr_js_remplacement_bis" >
-            <img class="logo" src="img/logo.svg" data-fallback="img/logo.png" alt="Responsive Raptor" />
-        </a>
-        <span>responsive raptor</span>
-    </h1>
+    <div>
+        <h1 id="main-logo">
+            <a href="#img_modernizr_js_remplacement_bis" >
+                <img class="logo" src="img/logo.svg" data-fallback="img/logo.png" alt="Responsive Raptor" />
+            </a>
+            <span>responsive raptor</span>
+        </h1>
+    </div>
 </header>
 <div class="wrapper shadow1">   
 
@@ -103,7 +105,8 @@
     
 <!--Button-->
     <section class="row" id="buttons"> 
-        <h2 class="span12">Buttons</h2> 
+        <h2 class="span12">Buttons</h2>
+        <h3 class="span12">Color</h3>
         <div class="span12">
             <a href="#" class="button">Button Action</a>
             <a href="#" class="button-important">Button Important</a>
@@ -116,6 +119,16 @@
                 --><li><a href="#">4</a></li>
             </ul>
         </div>
+        <h3 class="span12">Size</h3> 
+        <div class="span12">
+            <a href="#" class="button-dark small-size">Button Dark</a>
+        </div>
+        <div class="span12">
+            <a href="#" class="button-dark">Button Dark</a>
+        </div>
+        <div class="span12">
+            <a href="#" class="button-dark king-size">Button Dark</a>
+        </div>
         <a href="http://tinkerbin.com/MXk5Yi12" class="span12">tinkerbin source code</a>
     </section>
     
@@ -123,7 +136,7 @@
     <section class="row" id="forms"> 
         <h2 class="span12">Forms</h2>
         <!--form input text-->
-        <form class="span6">
+        <form class="float-left">
             <h3>start form</h3>
             <div class="row">
                 <label>label</label>
@@ -135,6 +148,9 @@
                 <input class="button" type="submit" value="search">
             </div>
             <div class="row">
+                <input type="color" placeholder="color">
+            </div>
+            <div class="row">
                 <select name="list-demo" id="list-demo">
                    <option value="france">France</option>
                    <option value="espagne">Espagne</option>
@@ -147,7 +163,7 @@
                 </select>
             </div>
         </form>
-        <form class="span6">
+        <form class="float-left">
             <h3>error form</h3>
             <div class="row error">
                 <label>label</label>
@@ -159,7 +175,7 @@
                 <input class="button" type="submit" value="search">
             </div>
             <div class="row error">
-                <input type="color" placeholder="search">
+                <input type="color" placeholder="color">
             </div>
             <div class="row error">
                 <select name="list-demo" id="list-demo">
@@ -174,7 +190,7 @@
                 </select>
             </div>
         </form>
-        <a href="http://tinkerbin.com/4O5ddSsT" class="span12">tinkerbin source code</a>
+        <a href="http://tinkerbin.com/4O5ddSsT" class="demo-tinkerbin span12">tinkerbin source code</a>
     </section>
     
     <footer class="row" id="main-footer">

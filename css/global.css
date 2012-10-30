@@ -325,26 +325,8 @@ table {
   .wrapper > section:first-child {
     margin: 10px 0 0 0; }
 
-/*LOGO
--------------*/
-h1#main-logo {
-  position: relative; }
-  h1#main-logo a {
-    display: block;
-    width: 15%;
-    overflow: hidden; }
-    h1#main-logo a img {
-      width: 100%; }
-  h1#main-logo span {
-    position: absolute;
-    left: -200%; }
-
 /*GRID
 -------------*/
-.container-clear, .wrapper, .row {
-  overflow: hidden;
-  clear: both; }
-
 [class*="span"] {
   float: left;
   padding: 0 1%; }
@@ -385,6 +367,35 @@ h1#main-logo {
 .span12 {
   width: 98%;
   float: none; }
+
+/*FLOAT
+-------------*/
+.container-clear, .wrapper, .row, .demo-tinkerbin {
+  overflow: hidden;
+  clear: both; }
+
+.float-right {
+  float: right; }
+
+.float-left {
+  float: left; }
+
+/*LOGO
+-------------*/
+h1#main-logo {
+  position: relative;
+  width: 15%; }
+  h1#main-logo a {
+    display: block;
+    width: 100%;
+    overflow: hidden; }
+    h1#main-logo a img {
+      width: 100%; }
+  h1#main-logo span {
+    position: absolute;
+    left: -2000%;
+    font-size: 0px;
+    color: transparent; }
 
 /*display TABLE
 -------------*/
@@ -480,15 +491,25 @@ label {
   background: #eeeeee;
   padding: 2%; }
 
-/*buttons*/
+/*BUTTON
+-------------*/
 .btn, .button, ul.buttons-block li a, .button-important, .button-success, .button-dark {
   display: inline-block;
-  padding: 10px 10px 11px 10px;
   margin: 0 10px 10px 0;
+  padding: 8.33333px 10px;
   font-size: 0.9em;
   color: #555555;
   border-style: solid;
   border-width: 1px; }
+
+/*size (starbucks)*/
+.small-size {
+  padding: 4.16667px 6.66667px;
+  font-size: 0.85em; }
+
+.king-size {
+  padding: 11.53846px 15px;
+  font-size: 1.1em; }
 
 .button, ul.buttons-block li a {
   color: #555555;
@@ -553,7 +574,8 @@ ul.buttons-block {
 .error input[type="tel"],
 .error input[type="color"],
 .error select {
-  border: 2px solid red; }
+  border: 2px solid red;
+  background: rgba(255, 0, 0, 0.1); }
 
 /*transition*/
 .transition1, .btn, .button, ul.buttons-block li a, .button-important, .button-success, .button-dark {
@@ -696,15 +718,15 @@ input[type="color"], .btn, .button, ul.buttons-block li a, .button-important, .b
   margin: 0; }
 
 /*Forms*/
-#forms form > .span12 {
-  margin: 0 0 10px 0; }
+#forms > form {
+  padding: 0 1%; }
 
 /*Section*/
 /*Header*/
 body > header {
   padding: 40px 0 80px 0;
   background: orange; }
-  body > header h1 {
+  body > header > div {
     width: 90%;
     margin: 0 auto; }
 
@@ -713,6 +735,9 @@ footer#main-footer {
   background: #34363A;
   padding: 2% 0;
   margin: 80px 0 0 0; }
+
+.demo-tinkerbin {
+  display: block; }
 
 /*MEDIAQUERY
 -------------*/

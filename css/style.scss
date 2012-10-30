@@ -8,11 +8,12 @@
     padding: ($grid-col-padding * 2);
 }
 
-/*buttons*/
+/*BUTTON
+-------------*/
 .btn{
     display: inline-block;
-    padding: $tall-margin $tall-margin ($tall-margin + 1) $tall-margin;
     margin: 0 $tall-margin $tall-margin 0;
+    padding: ($tall-margin / 1.2) $tall-margin;
     font-size: 0.9em;
     color: $font-color1;
     @extend .transition1;
@@ -21,10 +22,20 @@
     border-style: solid;
     border-width: 1px;
     
-    &:hover{
-        @extend .button-shadow-focus;
+        &:hover{
+            @extend .button-shadow-focus;
+        }
     }
+/*size (starbucks)*/
+.small-size{
+    padding: (($tall-margin / 2) /1.2)($tall-margin / 1.5);
+    font-size: 0.85em;
 }
+.king-size{
+    padding: (($tall-margin * 1.5) /1.3)($tall-margin * 1.5);
+    font-size: 1.1em;
+}
+
 .button{
     color: $font-color1;
     border-color: $border-color1;
@@ -41,9 +52,9 @@
     @extend .btn;
     @extend .main-color-gradient;
 
-    &:hover{
-        background: #FC9700;
-    }
+        &:hover{
+            background: #FC9700;
+        }
 }
 .button-success{
     color: #FFF;
@@ -51,9 +62,9 @@
     @extend .btn;
     @extend .success-color-gradient;
 
-    &:hover{
-        background: #68995A;
-    }
+        &:hover{
+            background: #68995A;
+        }
 }
 .button-dark{
     color: #FFF;
@@ -113,6 +124,7 @@ ul.buttons-block{
 .error input[type="color"],
 .error select{
     border: 2px solid $error-color;
+    background: transparentize($error-color, 0.9);;
 }
 
 
