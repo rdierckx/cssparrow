@@ -1,75 +1,78 @@
 //layout.scss is the elements position stylesheet
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 /*WRAPPER
 -------------*/
 .wrapper{
-    margin: -$venti-margin auto 0 auto;
-    background: #FFF;
-    width: 90%;
+    position: relative;
+    margin: 0 auto;
     @extend .container-clear;
+    width: 90%;
+    z-index: 100;
 }
-.wrapper>section{
-    margin: $venti-margin 0 0 0;
-    padding: 0 ($grid-col-padding * 2);
-    
-        &:first-child{
-            margin: $tall-margin 0 0 0;
+
+        //IE hacks
+        //---------------------------
+        .lt-ie8 .wrapper{
+            width: 980px;
         }
-}
+        
+        .wrapper>section{
+            margin: $venti-margin 0 0 0;
+            padding: 0 $tall-margin;
+            
+                &:first-child{
+                    margin: $tall-margin 0 0 0;
+                }
+        }
 
 /*GRID
 -------------*/
 .row{
     @extend .container-clear;
+    zoom: 1;
 }
 [class*="span"] {
     float: left;
-    padding: 0 $grid-col-padding;
+    padding: 0 $tall-margin; 
 }
 
-.span1 {
-    width: (100% - $grid-col-padding * 24) / 12;    
-}
-.span2 {
-    width: ((100% / 12) * 2) - ($grid-col-padding * 2);     
-}
-.span3 {
-    width: ((100% / 12) * 3) - ($grid-col-padding * 2);    
-}
-.span4 {
-    width: ((100% / 12) * 4) - ($grid-col-padding * 2);    
-}
-.span5 {
-    width: ((100% / 12) * 5) - ($grid-col-padding * 2);    
-}
-.span6 {
-    width: ((100% / 12) * 6) - ($grid-col-padding * 2);  
-}
-.span7 {
-    width: ((100% / 12) * 7) - ($grid-col-padding * 2);   
-}
-.span8 {
-    width: ((100% / 12) * 8) - ($grid-col-padding * 2);   
-}
-.span9 {
-    width: ((100% / 12) * 9) - ($grid-col-padding * 2);   
-}
-.span10 {
-    width: ((100% / 12) * 10) - ($grid-col-padding * 2);   
-}
-.span11 {
-    width: ((100% / 12) * 11) - ($grid-col-padding * 2);   
-}
-.span12 {
-    width: (100% - $grid-col-padding * 2); 
-    float: none;
-}
+.span1 {width: (100% / 12);}
+.span2 {width: (100% / 6);}
+.span3 {width: (100% / 4);}
+.span4 {width: (100% / 3);}
+.span5 {width: ((100% / 12)*5);}
+.span6 {width: (100% / 2);}
+.span7 {width: ((100% / 12)*7);}
+.span8 {width: ((100% / 12)*8);}
+.span9 {width: ((100% / 12)*9);}
+.span10 {width: ((100% / 12)*10);}
+.span11 {width: ((100% / 12)*11);}
+.span12 {width: (100%);float: none;}
+
+        //IE hacks
+        //---------------------------
+        .lt-ie8 .span1{width: 60px;}
+        .lt-ie8 .span2{width: ((60px*2)+20px);}
+        .lt-ie8 .span3{width: ((60px*3)+40px);}
+        .lt-ie8 .span4{width: ((60px*4)+60px);}
+        .lt-ie8 .span5{width: ((60px*5)+80px);}
+        .lt-ie8 .span6{width: ((60px*6)+100px);}
+        .lt-ie8 .span7{width: ((60px*7)+120px);}
+        .lt-ie8 .span8{width: ((60px*8)+140px);}
+        .lt-ie8 .span9{width: ((60px*9)+160px);}
+        .lt-ie8 .span10{width: ((60px*10)+180px);}
+        .lt-ie8 .span11{width: ((60px*11)+200px);}
+        .lt-ie8 .span12{width: ((60px*12)+220px);}
 
 /*FLOAT
 -------------*/ 
 .container-clear{
     overflow: hidden;
-    clear: both;
 }
 .float-right{
     float: right;
@@ -82,7 +85,7 @@
 -------------*/  
 h1#main-logo{
     position: relative;
-    width: 15%;
+    width: 20%;
         a{
             display: block;
             width: 100%;
@@ -113,8 +116,77 @@ h1#main-logo{
 }
 .table3row{
     @extend .table;
-    .cell{
-        width: (100% /3);
-        @extend .cell;
+    
+        .cell{
+            width: (100% /3);
+            @extend .cell;
+        }
+}
+    //IE hacks
+    //---------------------------
+    .lt-ie8 .table3row{
+        
+        .cell{
+                float: left;
+                width: (94% /3);
+            }
     }
+
+/*Navigation
+-------------------------*/
+.main-nav-band{
+    height: 50px;
+    width: 100%;
+    z-index: 200;
+    
+        &>div{ 
+            margin: 0 auto;
+            padding: 0;
+            width: 90%;
+            @extend .container-clear;
+                
+                h1{
+                    float: left;
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin: 0;
+                    text-transform: capitalize;
+                    
+                        a{
+                            display: inline-block;
+                            line-height: 50px;
+                        }
+                }
+                ul{
+                    margin: 0;
+                    width: auto;
+                    float: right;
+                    
+                        li{
+                            display: inline;
+                            
+                                a{
+                                    display: inline-block;
+                                    line-height: 50px;
+                                    padding: 0 $grande-margin;
+                                    border-left: 1px solid #000;
+                                }
+                                &:last-child a{
+                                    border-right: 1px solid #000;
+                                }
+                        }
+                }
+        }
+}
+    
+/*display NONE (or not)
+-------------------------*/
+.no-visibility-mobile{
+    display: none;
+}
+.no-visibility-tablet{
+    display: none;
+}
+.no-visibility-desktop{
+    display: none;
 }

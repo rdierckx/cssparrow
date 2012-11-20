@@ -32,8 +32,8 @@
     font-size: 0.85em;
 }
 .king-size{
-    padding: (($tall-margin * 1.5) /1.3)($tall-margin * 1.5);
-    font-size: 1.1em;
+    padding: (($tall-margin * 2) /1.3)($tall-margin * 2);
+    font-size: 1.3em;
 }
 
 .button{
@@ -78,6 +78,7 @@
 }
 ul.buttons-block{
     padding: 0;
+    margin: 0 $tall-margin $tall-margin 0; 
     display: inline-block;  
     
         li{
@@ -106,25 +107,6 @@ ul.buttons-block{
                     border-left-width: 0;
                 }
         }
-}
-/*error*/
-.error input[type="text"],
-.error input[type="password"],
-.error input[type="datetime"],
-.error input[type="datetime-local"],
-.error input[type="date"],
-.error input[type="month"],
-.error input[type="time"],
-.error input[type="week"],
-.error input[type="number"],
-.error input[type="email"],
-.error input[type="url"],
-.error input[type="search"],
-.error input[type="tel"],
-.error input[type="color"],
-.error select{
-    border: 2px solid $error-color;
-    background: transparentize($error-color, 0.9);;
 }
 
 
@@ -179,6 +161,15 @@ ul.buttons-block{
     background: -ms-linear-gradient(top,  #606c88 0%,#3f4c6b 100%); // IE10+
     background: linear-gradient(to bottom,  #606c88 0%,#3f4c6b 100%); // W3C 
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606c88', endColorstr='#3f4c6b',GradientType=0 ); // IE6-9
+}
+.general-gradient{
+    background: -moz-linear-gradient(left,  rgba(142,28,28,0.3) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(142,28,28,0.3)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(142,28,28,0.3) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(142,28,28,0.3) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(142,28,28,0.3) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(142,28,28,0.3) 0%,rgba(255,255,255,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d8e1c1c', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
 }
 
 /*box-shadow*/

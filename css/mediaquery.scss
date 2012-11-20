@@ -3,21 +3,76 @@
 /*MEDIAQUERY
 -------------*/
 @media handheld, only screen and (max-width: 750px) {
-
+    //LAYOUT
+    //---------------------
     .wrapper{
-        width: auto;
+        width: 100%;
+    }
+    .row{
+        margin: 0!important;
     }
     [class*="span"] {
         width: 100%;
-    }
-    .bloc-level-1{
+        padding: 0;
         margin: 0 0 $tall-margin 0;
     }
     .table3row{
         display: block;
-        .cell{
-            display: block;
-            width: (100% - ($grid-col-padding * 4));
-        }
-    }  
+        
+            .cell{
+                display: block;
+                width: 100%;
+            }
+    } 
+    
+    //FORM
+    //--------------------
+    form{
+        width: 100%;
+        display: block;
+    }
+    
+    //STYLE
+    //----------------------
+    .bloc-level-1{
+        margin: 0 0 $tall-margin 0;
+    } 
+    //NAVIGATION
+    //----------------------
+    .main-nav-band{
+        height: auto;
+        position: inherit;
+        
+            &>div{ 
+                width: 100%;
+                @extend .container-clear;
+                    
+                    h1{    
+                        float: none;
+                    }
+                    ul{
+                        margin: 0;
+                        padding: 0;
+                        width: auto;
+                        float: none;
+                        text-align: center;
+                        
+                            li{
+                                display: block;
+                                
+                                    a{
+                                        display: block;
+                                        line-height: 50px;
+                                        padding: 0 $grande-margin;
+                                        border-top: 1px solid #000;
+                                        border-left: none;
+                                    }
+                                    &:last-child a{
+                                        border-bottom: 1px solid #000;
+                                        border-right: none;
+                                    }
+                            }
+                    }
+            }
+    }
 }

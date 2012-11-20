@@ -47,9 +47,7 @@ p{
 
 /*LIST
 -------------*/
-ul,ol{
-    margin: 0 0 $tall-margin 0;
-}
+
 
 /*LINKS
 -------------*/
@@ -97,4 +95,24 @@ input[type="color"]{
 input[type="search"]{
     @extend .rounded2;
     @extend .input;
+}
+
+/*error*/
+.error input[type="text"],
+.error input[type="password"],
+.error input[type="datetime"],
+.error input[type="datetime-local"],
+.error input[type="date"],
+.error input[type="month"],
+.error input[type="time"],
+.error input[type="week"],
+.error input[type="number"],
+.error input[type="email"],
+.error input[type="url"],
+.error input[type="search"],
+.error input[type="tel"],
+.error input[type="color"],
+.error select{
+    border: 2px solid $error-color;
+    background: transparentize($error-color, 0.9);;
 }

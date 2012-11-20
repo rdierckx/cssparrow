@@ -4,23 +4,54 @@
     background: $secondary-color;
 }
 
+/*Demo container*/
+.demo-container{
+    margin: -$venti-margin auto 0 auto;
+    background: #FFF;
+}
+        /*ie hacks*/ 
+        .lt-ie8 .demo-container{
+            margin: -$venti-margin auto 0 auto;
+            background: #FFF;
+            width: 980px;
+        }
+
 /*Grid*/
 #grid{
-    [class*="span"] a{
-        background: $main-color;
+    [class*="span"]>span{
         display: block;
-        margin: 0 0 $grande-margin 0;
-        padding: $tall-margin;
+        background: #CCC;
+        height: 40px;
+        line-height: 40px;
         text-align: center;
         color: #FFF;
     }
-    .row:last-child a{
+    .row{
+        margin: 0 0 $grande-margin 0;
+    }
+    .row:last-child{
         margin: 0;
     }
 }
+
+/*Navigation*/
+    body>nav{
+        background: #34363A;
+        position: fixed;
+        top: 0;
+        
+            a{
+                color: #FFF;
+            }
+    }
+
 /*Forms*/
 #forms>form{
     padding: 0 $grid-col-padding;
+}
+/*Buttons*/
+#buttons a[class^="button"]{
+    display: inline-block;
 }
 
 /*Section*/
@@ -30,12 +61,25 @@ section>h2{
 
 /*Header*/
 body>header{
-    padding: ($venti-margin) 0 ($venti-margin * 2) 0;
-    background: $main-color;
+    padding: ($venti-margin * 4) 0 ($venti-margin * 3.7) 0;
+    background-color: $main-color;
+    @extend .general-gradient; 
     
         &>div{
             width: 90%; 
             margin: 0 auto;
+            text-align: center;
+            
+                h2{
+                    color: #FFF;
+                    margin: 0 0 $venti-margin 0 !important;
+                    
+                        span{
+                            display: block;
+                            font-size: 0.7em;
+                            text-transform: none;
+                        }
+                }
         }
 }
 
@@ -44,6 +88,7 @@ footer#main-footer{
     background: #34363A;
     padding: ($grid-col-padding * 2) 0;
     margin: ($venti-margin * 2) 0 0 0;
+    min-height: 200px;
 }
 
 .demo-tinkerbin{
