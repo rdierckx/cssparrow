@@ -324,15 +324,17 @@ table {
   margin: 0 auto;
   width: 90%;
   z-index: 100; }
+  .wrapper > section {
+    margin: 40px 0 0 0;
+    padding: 0 10px; }
+    .wrapper > section:first-child {
+      margin: 10px 0 0 0; }
+
+.section-like {
+  padding: 0 10px; }
 
 .lt-ie8 .wrapper {
   width: 980px; }
-
-.wrapper > section {
-  margin: 40px 0 0 0;
-  padding: 0 10px; }
-  .wrapper > section:first-child {
-    margin: 10px 0 0 0; }
 
 /*GRID
 -------------*/
@@ -418,7 +420,7 @@ table {
 
 /*FLOAT
 -------------*/
-.container-clear, .wrapper, .row, .main-nav-band > div, .demo-tinkerbin {
+.container-clear, .wrapper, .row, .main-nav-band > div, .main-nav-band > div > ul, .demo-tinkerbin {
   overflow: hidden; }
 
 .float-right {
@@ -462,7 +464,7 @@ h1#main-logo {
   float: left;
   width: 31.33333%; }
 
-/*Navigation
+/*NAVIGATION
 -------------------------*/
 .main-nav-band {
   height: 50px;
@@ -476,34 +478,30 @@ h1#main-logo {
       float: left;
       font-size: 20px;
       font-weight: bold;
-      margin: 0;
-      text-transform: capitalize; }
+      text-transform: capitalize;
+      margin: 0; }
       .main-nav-band > div h1 a {
         display: inline-block;
         line-height: 50px; }
-    .main-nav-band > div ul {
+    .main-nav-band > div > ul {
       margin: 0;
       width: auto;
       float: right; }
-      .main-nav-band > div ul li {
+      .main-nav-band > div > ul li {
         display: inline; }
-        .main-nav-band > div ul li a {
+        .main-nav-band > div > ul li a {
           display: inline-block;
           line-height: 50px;
           padding: 0 20px;
           border-left: 1px solid #000; }
-        .main-nav-band > div ul li:last-child a {
+        .main-nav-band > div > ul li:last-child a {
           border-right: 1px solid #000; }
 
 /*display NONE (or not)
 -------------------------*/
-.no-visibility-mobile {
-  display: none; }
-
-.no-visibility-tablet {
-  display: none; }
-
-.no-visibility-desktop {
+.visibility-mobile-false,
+.visibility-tablet-false,
+.visibility-desktop-false {
   display: none; }
 
 /*GENERAL
@@ -797,7 +795,13 @@ input[type="color"], .btn, .button, ul.buttons-block li a, .button-important, .b
 -------------*/
 @media handheld, only screen and (max-width: 750px) {
   .wrapper {
-    width: 100%; }
+    width: 100%;
+    margin: 0 auto !important; }
+    .wrapper > section {
+      padding: 0 20px; }
+
+  .section-like {
+    padding: 0 20px; }
 
   .row {
     margin: 0!important; }
@@ -825,25 +829,34 @@ input[type="color"], .btn, .button, ul.buttons-block li a, .button-important, .b
     position: inherit; }
     .main-nav-band > div {
       width: 100%; }
-      .main-nav-band > div h1 {
-        float: none; }
-      .main-nav-band > div ul {
+      .main-nav-band > div > a {
+        float: right;
+        line-height: 50px;
+        font-size: 2em; }
+      .main-nav-band > div > ul {
         margin: 0;
         padding: 0;
         width: auto;
+        height: 0;
         float: none;
-        text-align: center; }
-        .main-nav-band > div ul li {
+        text-align: center;
+        clear: both; }
+        .main-nav-band > div > ul:target {
+          height: auto; }
+        .main-nav-band > div > ul li {
           display: block; }
-          .main-nav-band > div ul li a {
+          .main-nav-band > div > ul li a {
             display: block;
             line-height: 50px;
             padding: 0 20px;
             border-top: 1px solid #000;
             border-left: none; }
-          .main-nav-band > div ul li:last-child a {
+          .main-nav-band > div > ul li:last-child a {
             border-bottom: 1px solid #000;
-            border-right: none; } }
+            border-right: none; }
+
+  .visibility-mobile-true {
+    display: inherit; } }
 /*DEMO
 -------------*/
 #demo-page {

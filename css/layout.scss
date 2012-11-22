@@ -13,15 +13,8 @@
     @extend .container-clear;
     width: 90%;
     z-index: 100;
-}
-
-        //IE hacks
-        //---------------------------
-        .lt-ie8 .wrapper{
-            width: 980px;
-        }
-        
-        .wrapper>section{
+    
+        &>section{
             margin: $venti-margin 0 0 0;
             padding: 0 $tall-margin;
             
@@ -29,6 +22,18 @@
                     margin: $tall-margin 0 0 0;
                 }
         }
+}
+.section-like{
+    padding: 0 $tall-margin;
+}
+
+
+        //IE hacks
+        //---------------------------
+        .lt-ie8 .wrapper{
+            width: 980px;
+        }
+        
 
 /*GRID
 -------------*/
@@ -132,7 +137,7 @@ h1#main-logo{
             }
     }
 
-/*Navigation
+/*NAVIGATION
 -------------------------*/
 .main-nav-band{
     height: 50px;
@@ -149,18 +154,20 @@ h1#main-logo{
                     float: left;
                     font-size: 20px;
                     font-weight: bold;
-                    margin: 0;
                     text-transform: capitalize;
+                    margin: 0;
                     
                         a{
                             display: inline-block;
                             line-height: 50px;
                         }
                 }
-                ul{
+                
+                &>ul{
                     margin: 0;
                     width: auto;
                     float: right;
+                    @extend .container-clear;
                     
                         li{
                             display: inline;
@@ -181,12 +188,8 @@ h1#main-logo{
     
 /*display NONE (or not)
 -------------------------*/
-.no-visibility-mobile{
-    display: none;
-}
-.no-visibility-tablet{
-    display: none;
-}
-.no-visibility-desktop{
+.visibility-mobile-false,
+.visibility-tablet-false,
+.visibility-desktop-false{
     display: none;
 }
