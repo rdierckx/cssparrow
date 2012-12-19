@@ -1,36 +1,34 @@
-//layout.scss is the elements position stylesheet
+/*layout.scss is the elements position stylesheet*/
 *{
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 /*WRAPPER
 -------------*/
-.wrapper{
+.cssp-wrapper{
     position: relative;
     margin: 0 auto;
-    @extend .container-clear;
-    width: 90%;
+    width: 93%;
+    max-width: 1300px;
     z-index: 100;
+    @extend .container-clear;
+}
+.cssp-section{
+    margin: $venti-margin 0 0 0;
+    padding: 0 $grande-margin;
     
-        &>section{
-            margin: $venti-margin 0 0 0;
-            padding: 0 $tall-margin;
-            
-                &:first-child{
-                    margin: $tall-margin 0 0 0;
-                }
+        &:first-child{
+            margin: $grande-margin 0 0 0;
         }
 }
-.section-like{
-    padding: 0 $tall-margin;
-}
 
 
-        //IE hacks
-        //---------------------------
-        .lt-ie8 .wrapper{
+        /*IE hacks*/
+	.lt-ie8 .wrapper{
             width: 980px;
         }
         
@@ -39,12 +37,16 @@
 -------------*/
 .row{
     @extend .container-clear;
-    zoom: 1;
 }
 [class*="span"] {
     float: left;
     padding: 0 $tall-margin; 
 }
+
+        /*IE hacks*/
+        .lt-ie8 [class*="span"] {
+            padding: 0 ($ie-margin/1.09); 
+        }
 
 .span1 {width: (100% / 12);}
 .span2 {width: (100% / 6);}
@@ -59,25 +61,26 @@
 .span11 {width: ((100% / 12)*11);}
 .span12 {width: (100%);float: none;}
 
-        //IE hacks
-        //---------------------------
-        .lt-ie8 .span1{width: 60px;}
-        .lt-ie8 .span2{width: ((60px*2)+20px);}
-        .lt-ie8 .span3{width: ((60px*3)+40px);}
-        .lt-ie8 .span4{width: ((60px*4)+60px);}
-        .lt-ie8 .span5{width: ((60px*5)+80px);}
-        .lt-ie8 .span6{width: ((60px*6)+100px);}
-        .lt-ie8 .span7{width: ((60px*7)+120px);}
-        .lt-ie8 .span8{width: ((60px*8)+140px);}
-        .lt-ie8 .span9{width: ((60px*9)+160px);}
-        .lt-ie8 .span10{width: ((60px*10)+180px);}
-        .lt-ie8 .span11{width: ((60px*11)+200px);}
-        .lt-ie8 .span12{width: ((60px*12)+220px);}
+        /*IE hacks*/
+            .lt-ie8 .span1 {width: (100% / 12)-($ie-margin*2);}
+            .lt-ie8 .span2 {width: (100% / 6)-($ie-margin*2);}
+            .lt-ie8 .span3 {width: (100% / 4)-($ie-margin*2);}
+            .lt-ie8 .span4 {width: (100% / 3)-($ie-margin*2);}
+            .lt-ie8 .span5 {width: ((100% / 12)*5)-($ie-margin*2);}
+            .lt-ie8 .span6 {width: (100% / 2)-($ie-margin*2);}
+            .lt-ie8 .span7 {width: ((100% / 12)*7)-($ie-margin*2);}
+            .lt-ie8 .span8 {width: ((100% / 12)*8)-($ie-margin*2);}
+            .lt-ie8 .span9 {width: ((100% / 12)*9)-($ie-margin*2);}
+            .lt-ie8 .span10 {width: ((100% / 12)*10)-($ie-margin*2);}
+            .lt-ie8 .span11 {width: ((100% / 12)*11)-($ie-margin*2);}
+            .lt-ie8 .span12 {width: (100%)-($ie-margin*4);}
+
 
 /*FLOAT
 -------------*/ 
 .container-clear{
     overflow: hidden;
+    zoom: 1; /*IE hacks*/
 }
 .float-right{
     float: right;
@@ -108,46 +111,16 @@ h1#main-logo{
         }
 }
 
-/*display TABLE
--------------*/
-.table{
-    display: table;
-    border-collapse: separate;
-    border-spacing: $tall-margin;
-}
-.cell{
-    display: table-cell;
-    vertical-align: top;
-}
-.table3row{
-    @extend .table;
-    
-        .cell{
-            width: (100% /3);
-            @extend .cell;
-        }
-}
-    //IE hacks
-    //---------------------------
-    .lt-ie8 .table3row{
-        
-        .cell{
-                float: left;
-                width: (94% /3);
-            }
-    }
-
 /*NAVIGATION
 -------------------------*/
-.main-nav-band{
-    height: 50px;
+.cssp-main-nav{
+    height: 45px;
     width: 100%;
     z-index: 200;
     
         &>div{ 
             margin: 0 auto;
             padding: 0;
-            width: 90%;
             @extend .container-clear;
                 
                 h1{
@@ -159,37 +132,38 @@ h1#main-logo{
                     
                         a{
                             display: inline-block;
-                            line-height: 50px;
+                            line-height: 45px;
                         }
                 }
-                
-                &>ul{
+                ul{
                     margin: 0;
                     width: auto;
-                    float: right;
-                    @extend .container-clear;
                     
                         li{
                             display: inline;
                             
                                 a{
                                     display: inline-block;
-                                    line-height: 50px;
+                                    line-height: 45px;
                                     padding: 0 $grande-margin;
-                                    border-left: 1px solid #000;
-                                }
-                                &:last-child a{
-                                    border-right: 1px solid #000;
                                 }
                         }
                 }
         }
 }
+
+/*THUMBNAIL
+-------------------------*/
+.cssp-thumbnail{
+    max-width: 100%;
+    }
+        /*IE hacks*/
+        .lt-ie8 .cssp-thumbnail{
+            width: 100%;
+        }
     
 /*display NONE (or not)
 -------------------------*/
-.visibility-mobile-false,
-.visibility-tablet-false,
 .visibility-desktop-false{
     display: none;
 }

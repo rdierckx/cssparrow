@@ -1,12 +1,17 @@
 @import "reset";
 @import "variable";
+@import "animate";
 @import "layout";
 @import "typo_form";
 @import "style";
 @import "mediaquery";
-@import "demo";
+
+    //@import "your_page_style_here";
+    @import "cssparrow_home";
+    @import "elements";
+
 
 body{
-    line-height: 1.4;
+    line-height: 1.6;
     color: $font-color1;
 }

@@ -1,0 +1,15 @@
+//animate.scss is the animation stylesheet
+.transition-button{
+    -moz-transition: box-shadow 0.3s ease-out;
+    -webkit-transition: box-shadow 0.3s ease-out;
+    -ms-transition: box-shadow 0.3s ease-out;
+    -o-transition: box-shadow 0.3s ease-out;
+    transition: box-shadow 0.3s ease-out;
+}
+.transition2{
+    transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
+    -moz-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
+    -webkit-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
+    -ms-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
+    -o-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
+}

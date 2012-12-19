@@ -1,21 +1,40 @@
-//variable.scss is the easiest way to change colors, proportions and sizes
+/*------------------------------------------------------------
+variable.scss is a powerful way to change colors, 
+proportions and sizes in your project. 
+------------------------------------------------------------*/
 
-$grid-col-padding: 1%;
-$tall-margin: 10px;
+//margin / padding
+//----------------------------
+    $tall-margin: 10px;
+    
+    //other margin
+        $venti-margin: ($tall-margin * 4);
+        $grande-margin: ($tall-margin * 2);
 
-//other margin
-    $venti-margin: ($tall-margin * 4);
-    $grande-margin: ($tall-margin * 2);
-
-
+		//IE margin grid
+			$ie-margin: 1%;
 //color
-$main-color: #FF993B;
-$secondary-color: #EEE;
-$error-color: #F00;
-$border-color1: #CCC;
-
-$font-color1: #555;
-
-$font-link: #32628C;
+//----------------------------
+    //color-1
+        $main-color: #116D89;
+        $border-main-color: #0B5066;
+        
+    //color-2        
+        $second-color: #C6BFB3;
+        $border-second-color: #ADA496;
+        
+    //color-3       
+        $third-color: #F2F2F2;
+        $border-third-color: #DDDDDD;
+        
+    //color-4      
+        $four-color: #000000;
+    
+    $error-color: #F00000;
+    
+    $font-color1: #555555;
+    $font-color2: #BBBBBB;
+    $font-color-sub: #999999;
+    $font-color-link: $main-color;
 
 

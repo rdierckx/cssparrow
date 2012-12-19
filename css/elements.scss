@@ -1,0 +1,66 @@
+/*GENERAL
+-------------*/
+#demo-wrap{
+    background: #FFFFFF;
+    @extend .shadow1;
+}
+
+/*GRID
+-------------*/
+    #grid{
+        [class*="span"]>span{
+            display: block;
+            background: #CCCCCC;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        .row{
+            margin: 0 0 $grande-margin 0;
+        }
+        .row:last-child{
+            margin: 0;
+        }
+    }
+    
+/*BUTTON
+-------------*/
+#buttons{
+	.button,
+	.button-important,
+	.button-success,
+	.button-dark{
+		margin: 0 $tall-margin $tall-margin 0;
+	}
+}
+
+/*STYLE
+-------------*/
+.title-plus-action{
+    @extend .container-clear;
+    
+		h2{
+			display: inline;
+			float: left;
+		}
+		.button-dark{
+			float: right;
+			margin: $tall-margin 0 0 0 !important;
+		}
+}  
+
+/*FONT
+-------------*/
+
+
+/*FORM
+-------------*/
+    #forms>form{
+        padding: 0 $venti-margin 0 0;
+    }
+    
+    /*Buttons*/
+    #buttons a[class^="button"]{
+        display: inline-block;
+    }
