@@ -4,30 +4,32 @@
 <!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
 
   <title>CsSparrow</title>
 
   <link rel="stylesheet" media="screen" href="css/global.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="css/own_style.css">
   <script src="js/modernizr.custom.29167.js"></script>
   <script src="js/lib.js"></script>
 </head>
     
-<body id="home-page"> 
+<body id="cssp-target" class="my-home"> 
     <nav class="cssp-main-nav nav-dark">
         <div class="cssp-wrapper">
-            <h1><a href="#">CSSPARROW</a></h1>
+            <h1><a href="#">CSSPARROW <sup>beta</sup></a></h1>
             
-            <label for="main-nav-btn" class="visibility-tablet-false visibility-desktop-false visibility-mobile-true">
-                MENU
-            </label> 
-            <input name="main-nav-btn" id="main-nav-btn" type="checkbox" class="visibility-tablet-false visibility-desktop-false visibility-mobile-true"/>
+            <!--Button to open and close navigation only visible on small screen-->
+            <a class="cssp-oppen-nav h1-like visibility-desktop-false" href="#cssp-target" aria-hidden="true"><strong>≡</strong></a>
+            <a class="cssp-close-nav h1-like visibility-desktop-false" href="#" aria-hidden="true"><strong>≡</strong></a>
+            
             <ul class="float-right">
-                <li><a href="#">first</a></li><!--
-                --><li><a href="#">second</a></li><!--
-                --><li><a href="#">third</a></li><!--
-                --><li><a href="#">fourth</a></li>
+                <li><a href="#">Home</a></li><!--
+                --><li><a href="#">Documentation</a></li><!--
+                --><li><a href="#">GitHub</a></li><!--
+                --><li><a href="#">Contact</a></li>
             </ul>
         </div>
     </nav> 
@@ -38,16 +40,12 @@
                 <span>Light, flexible &amp; responsive css framework</span>
                 <a href="#" class="button-important king-size">Download me</a>
             </div>
-            <div class="span5 thumbnail visibility-mobile-false">
-                <img src="img/sparrow_bg.png" alt="color-bird" />
-            </div>
         </div>
     </header>
-    <div id="cssparrow-container" class="cssp-wrapper shadow1">  
-        <section class="cssp-section row">  
+    <div class="my-container cssp-wrapper shadow1">  
+        <section id="advantage-home" class="cssp-section row">
             <h2 class="span12">Advantages</h2>
             <div class="span4">
-                <img class="cssp-thumbnail" src="img/sparrow_bg.png" alt="color-bird" />
                 <h3 class="h4-like">Light</h3>
                 <p>
                     CsSparrow is one of the lightest css framework.
@@ -55,15 +53,12 @@
                 </p>
             </div>
             <div class="span4">
-                <img class="cssp-thumbnail" src="img/sparrow_bg.png" alt="color-bird" />
                 <h3 class="h4-like">Flexible</h3>
                 <p>
-                    For all your specific needs .
-                    Use the power of Sass to change the look of your web project easily.          
+                    To feet your needs we use the power of Sass to change the look of your web project easily.          
                 </p>
             </div>
             <div class="span4">
-                <img class="cssp-thumbnail" src="img/sparrow_bg.png" alt="color-bird" />
                 <h3 class="h4-like">Responsive</h3>
                 <p>
                     Because each devices deserve the best user experience,
@@ -71,18 +66,50 @@
                 </p>
             </div>
         </section>
-        <section class="cssp-section row">  
-            <div class="span8">
-                <h2>How to use ?</h2>
-                <p class="cssp-grande-text">
-                    CsSparrow can be adapted to all of your web project.
-                    Use the power of Sass to change the look of your web site easily.
+        <section class="cssp-section row">
+            <h2 class="span12">Main features</h2>
+            <div class="span3">
+                <h3 class="h4-like">Grid</h3>
+                <p>
+                    This responsive grid works with overflow hidden to reset float elements and use css box-sizing to manage columns.
                 </p>
             </div>
-            <div class="span4">
+            <div class="span3">
+                <h3 class="h4-like">IE complient</h3>
+                <p>
+                    Cssparrow also works with Internet Explorer until 7.
+                </p>
+            </div>
+            <div class="span3">
+                <h3 class="h4-like">Widgets</h3>
+                <p>
+                    Take advantage of Responsive navigation, fluid Thumbnail and buttons library.
+                </p>
+            </div>
+            <div class="span3">
+                <h3 class="h4-like">theme tools</h3>
+                <p>
+                    Change colors, margins and fonts easily with variable.scss.
+                </p>
+            </div>
+        </section>
+        <section class="cssp-section row">
+            <h2 class="span12">How it works ?</h2>
+            <div class="span9">
+                <p class="cssp-grande-text">
+                    Powered by Sass, Cssparrow give you the most optimized, flexible and responsive Cascading Style Sheets.
+                </p>
+                <p>
+                    You just need to install Sass and create and implement your own sass documents in global.scss.
+                    Then you will be able to take the control with variable.scss and use @extend sass feature for a better maintainability.               
+                </p>
+                <p>
+                    You also can use Cssparrow without Sass like a traditionnal css framework.             
+                </p>
+            </div>
+            <div class="span3">
                 <div class="cssp-box-regular">
-                    <h3 class="h4-like">Documentation</h3>
-                    <p>
+                    <p class="catch-text">
                         CsSparrow can be adapted to all of your web project.
                         Use the power of Sass to change the look of your web site easily.
                     </p>

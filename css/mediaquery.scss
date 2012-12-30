@@ -8,10 +8,6 @@
     .cssp-wrapper{
         width: 100%;
         margin: 0 auto !important;
-        
-            &>section{
-                padding: 0 $grande-margin;
-            }
     }
     [class*="span"] {
         width: 100%;
@@ -53,70 +49,65 @@
         margin: 0 0 $tall-margin 0;
     } 
     
-    /*NAVIGATION
+    /*NAVIGATION 
     ----------------------*/
-    .cssp-main-nav{
-        height: auto;
-        position: relative;
-        
-            &>div{ 
-                width: 100%;
-                
-                    &>h1{
-                        margin: 0 0 0 $grande-margin;
-                    }
-                    &>label{
-                        float: right;
-                        margin: 0 $grande-margin 0 0;
-                        line-height: 45px;
-                        color: $font-color2;
-                    }
-                    &>input[type="checkbox"]{
-                        position: absolute;
-                        top: -9999px;
-                        left: -9999px;
-                        z-index: -10;
-                        line-height: 0;
-                        visibility: hidden;
-                        opacity: 0;
-                        height: 0;
-                        width: 0;
-                    }
-                    &>ul{
-                        padding: 0;
-                        float: none;
-                        text-align: center;
-                        clear: both;
-                
+        /*cssp-main-nav foundation structure*/
+        nav.cssp-main-nav{
+            height: auto;
+            position: relative;
+            
+                &>div{ 
+                    width: 100%;
+                    
+                        h1{
+                            margin: 0 0 0 $tall-margin;
+                        }
+                        a.cssp-oppen-nav,a.cssp-close-nav{
+                            float: right;
+                            margin: 0 $tall-margin 0 0;
+                            color: $font-color2;
+                            line-height: 45px;
+                        }
+                        a.cssp-close-nav{
+                            color: #FFF;
+                        }
+                        &>ul{
+                            padding: 0;
+                            float: none;
+                            text-align: center;
+                            clear: both;
+                            width: 100%;
                             
-                            li{
-                                display: block;
-                                
-                                    a{
-                                        display: block;
-                                        height: 0;
-                                        overflow: hidden;
-                                        border-left: none;
-                                        border-top: 0px solid rgba(150,150,150,0.5);
-                                        transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-                                        -moz-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-                                        -webkit-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-                                        -ms-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-                                        -o-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-                                    }
-                                    &:last-child a{
-                                        border-right: none;
-                                        border-bottom: 1px solid rgba(150,150,150,0.5);
-                                    }
-                            }
-                    }
-            }
-    }
-
-    .cssp-main-nav div input[type="checkbox"]:checked~ul li a{
-        border-top: 1px solid rgba(150,150,150,0.5);
-        height: 50px;
-    }
+                                &>li a{
+                                    display: block;
+                                    border-left: none;
+                                    border-top: 1px solid rgba(150,150,150,0.5);
+                                    height: 50px;
+                                    transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
+                                    -moz-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
+                                    -webkit-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
+                                    -ms-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
+                                    -o-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
+                                }
+                                &>li:last-child a{
+                                    border-right: none !important;
+                                }
+                        }
+                }
+        }
+        
+        /*nav buttons close and open visibility management very important for ":target" system*/
+        body[id^="cssp"]:not(:target) .cssp-oppen-nav, body[id^="cssp"]:target .cssp-close-nav {display: inline-block;}
+        body[id^="cssp"]:not(:target) .cssp-close-nav, body[id^="cssp"]:target .cssp-oppen-nav {display: none;}
+        
+        /*it's important to give "cssp" prefix ID to your body if it's not possible create a div element after body tag and target it*/
+        body[id^="cssp"]:not(:target) .cssp-main-nav div ul li a{
+            height: 0;
+            overflow: hidden;
+            border-top: 0px solid rgba(150,150,150,0.5);
+            border-bottom: 0px solid rgba(150,150,150,0.5);
+        }
+        
     
     /*VISIBILITY
     ----------------------*/

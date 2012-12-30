@@ -1,34 +1,18 @@
 /*layout.scss is the elements position stylesheet*/
-*{
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    box-sizing: border-box;
-}
 
 /*WRAPPER
 -------------*/
 .cssp-wrapper{
     position: relative;
     margin: 0 auto;
-    width: 93%;
-    max-width: 1300px;
-    z-index: 100;
-    @extend .container-clear;
+    width: $wrapper-width;
+    max-width: $wrapper-max-width;
 }
 .cssp-section{
-    margin: $venti-margin 0 0 0;
-    padding: 0 $grande-margin;
-    
-        &:first-child{
-            margin: $grande-margin 0 0 0;
-        }
+    padding-bottom: $grande-margin;
 }
-
-
         /*IE hacks*/
-	.lt-ie8 .wrapper{
+	.lt-ie8 .cssp-wrapper{
             width: 980px;
         }
         
@@ -111,7 +95,7 @@ h1#main-logo{
         }
 }
 
-/*NAVIGATION
+/*NAVIGATION STRUCTURE
 -------------------------*/
 .cssp-main-nav{
     height: 45px;
@@ -152,18 +136,34 @@ h1#main-logo{
         }
 }
 
-/*THUMBNAIL
+/*IMAGE / THUMBNAIL
 -------------------------*/
-.cssp-thumbnail{
+.cssp-flex-img{
     max-width: 100%;
     }
         /*IE hacks*/
-        .lt-ie8 .cssp-thumbnail{
+        .lt-ie8 .cssp-flex-img,.cssp-flex-svg{
             width: 100%;
         }
-    
-/*display NONE (or not)
+
+/*BOX-CALCUL
 -------------------------*/
-.visibility-desktop-false{
-    display: none;
+.cssp-box-sizing-reset{
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+    -o-box-sizing: content-box;
+    box-sizing: content-box;
 }
+
+/*VISIBILITY
+-------------------------*/
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+    /*desktop visibility*/
+    .visibility-desktop-false{
+	display: none;
+    }

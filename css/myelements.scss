@@ -3,12 +3,16 @@
 #demo-wrap{
     background: #FFFFFF;
     @extend .shadow1;
+    padding-top: $grande-margin;
+}
+.cssp-secondary-nav{
+    margin-top: $grande-margin;
 }
 
 /*GRID
 -------------*/
-    #grid{
-        [class*="span"]>span{
+    #positioning{
+        .my-grid span{
             display: block;
             background: #CCCCCC;
             height: 40px;
@@ -26,12 +30,10 @@
     
 /*BUTTON
 -------------*/
-#buttons{
-	.button,
-	.button-important,
-	.button-success,
-	.button-dark{
-		margin: 0 $tall-margin $tall-margin 0;
+#button{
+
+	[class^="button"]{
+		margin: 0 $tall-margin 0 0;
 	}
 }
 
@@ -40,25 +42,30 @@
 .title-plus-action{
     @extend .container-clear;
     
-		h2{
-			display: inline;
-			float: left;
-		}
-		.button-dark{
-			float: right;
-			margin: $tall-margin 0 0 0 !important;
-		}
+	h2{
+	    display: inline;
+	    float: left;
+	}
+	a[class^="button"]{
+	    float: right;
+	    margin: $tall-margin 0 0 0 !important;
+	}
 }  
 
 /*FONT
 -------------*/
-
+#title div{
+    h1, h2, h3, h4, h5, h6, .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like{
+	font-family: "arial",sans-serif;
+	color: $font-color1;
+    }
+}
 
 /*FORM
 -------------*/
-    #forms>form{
-        padding: 0 $venti-margin 0 0;
-    }
+#forms>form{
+    padding: 0 $venti-margin 0 0;
+}
     
     /*Buttons*/
     #buttons a[class^="button"]{

@@ -1,0 +1,50 @@
+/*GENERAL
+-------------*/
+body{
+    background: $third-color;
+}
+    /*Section*/
+    .cssp-section{
+	padding: 0 $grande-margin $grande-margin;
+    }
+
+    /*Demo container*/
+    .my-container{
+        margin: -$venti-margin auto 0 auto;
+        background: #FFFFFF;
+        padding: 0 0 $venti-margin 0;
+    }
+        /*IE hacks*/ 
+        .lt-ie8 #demo-container{width: 980px;}
+	
+/*TYPO
+-------------*/
+@font-face {
+    font-family: 'abelregular';
+    src: url('../fonts/abel-regular-webfont.eot');
+    src: url('../fonts/abel-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/abel-regular-webfont.woff') format('woff'),
+         url('../fonts/abel-regular-webfont.ttf') format('truetype'),
+         url('../fonts/abel-regular-webfont.svg#abelregular') format('svg');
+}
+.font{
+    font-weight: normal;
+    font-style: normal;
+}
+h1, h2, h3, h4, h5, h6, .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like{
+    font-family: 'abelregular';
+    @extend .font;
+}
+h2, .h2-like{
+    color: $main-color;
+}
+
+/*NAVIGATION
+-------------*/
+nav.cssp-main-nav h1 sup{
+   font-family: "arial", sans-serif;
+   font-weight: 100;
+   color: $font-color2;
+}
+
+

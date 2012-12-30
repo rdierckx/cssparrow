@@ -3,35 +3,48 @@ variable.scss is a powerful way to change colors,
 proportions and sizes in your project. 
 ------------------------------------------------------------*/
 
-//margin / padding
+//MARGIN / PADDING
 //----------------------------
-    $tall-margin: 10px;
+    $tall-margin: 14px;
     
     //other margin
-        $venti-margin: ($tall-margin * 4);
-        $grande-margin: ($tall-margin * 2);
+    $venti-margin: ($tall-margin * 4);
+    $grande-margin: ($tall-margin * 2);
 
-		//IE margin grid
-			$ie-margin: 1%;
-//color
+        //IE margin grid
+        $ie-margin: 1%;
+                        
+//CSSP-WRAPPER
+//----------------------------
+    $wrapper-width: 95%;
+    $wrapper-max-width: 1400px;
+                        
+//COLOR RANGE
 //----------------------------
     //color-1
-        $main-color: #116D89;
-        $border-main-color: #0B5066;
-        
+    $main-color: #37606B;
     //color-2        
-        $second-color: #C6BFB3;
-        $border-second-color: #ADA496;
-        
+    $second-color: #C6BFB3;
     //color-3       
-        $third-color: #F2F2F2;
-        $border-third-color: #DDDDDD;
-        
+    $third-color: #F2F2F2;
     //color-4      
-        $four-color: #000000;
-    
-    $error-color: #F00000;
-    
+    $four-color: #24262A;
+
+//INFORMATION COLORS
+//----------------------------
+    //color-DEFAULT      
+    $default-color: #FFFFFF;
+    //color-IMPORTANT      
+    $important-color: #F4A535;
+    //color-SUCCESS    
+    $success-color: #8AB66B;
+    //color-ERROR           
+    $error-color: #C93A3A;
+    //color-DARK    
+    $dark-color: #54565A;
+
+//TEXT COLORS
+//----------------------------   
     $font-color1: #555555;
     $font-color2: #BBBBBB;
     $font-color-sub: #999999;

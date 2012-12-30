@@ -1,16 +1,22 @@
-@import "reset";
+@import "normalize";
 @import "variable";
-@import "animate";
 @import "layout";
 @import "typo_form";
 @import "style";
 @import "mediaquery";
 
     //@import "your_page_style_here";
-    @import "cssparrow_home";
-    @import "elements";
+    @import "myglobal";
+    @import "myhome";
+    @import "myelements";
 
-
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
 body{
     line-height: 1.6;
     color: $font-color1;

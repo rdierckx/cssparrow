@@ -2,31 +2,18 @@
 
 /*GENERAL
 -------------------------*/
-@font-face {
-    font-family: 'abelregular';
-    src: url('../fonts/abel-regular-webfont.eot');
-    src: url('../fonts/abel-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/abel-regular-webfont.woff') format('woff'),
-         url('../fonts/abel-regular-webfont.ttf') format('truetype'),
-         url('../fonts/abel-regular-webfont.svg#abelregular') format('svg');
-}
-.font{
-    font-weight: normal;
-    font-style: normal;
-}
 .uppercase{
     text-transform: uppercase;
 }
 .cssp-margin-bottom{
-    margin-bottom: $grande-margin;
+    margin: 0 0 $tall-margin 0;
 }
 
 /*TITLE
 -------------------------*/
     /*general*/
-    h1, h2, h3, h4, h5, .h1-like, .h2-like, .h3-like, .h4-like, .h5-like{
-	font-family: 'abelregular';  
-	@extend .font;
+    h1, h2, h3, h4, h5, h6, .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like{
+	font-family: inherit;
 	line-height: 1;
 	margin: $tall-margin 0;
     }
@@ -43,7 +30,10 @@
 	font-size: 1.6em;
     }
     h5, .h5-like{
-	font-size: 1.2em;
+	font-size: 1.3em;
+    }
+    h6, .h6-like{
+	font-size: 1em;
     }
 
     /*sub-title*/
@@ -55,8 +45,10 @@
 /*PARAGRAPHE
 --------------------------*/
 p{
-    text-indent: 20px;
     @extend .cssp-margin-bottom;
+}
+.cssp-tall-para{
+    text-indent: 20px;
 }
 
 /*TEXT SIZE
@@ -70,17 +62,19 @@ p{
     @extend .catch-text;
 }
 .cssp-grande-text{
-    font-size: 1.4em;
+    font-size: 1.3em;
     @extend .catch-text;
 }
 .cssp-venti-text{
-    font-size: 1.6em;
+    font-size: 1.5em;
     @extend .catch-text;
 }
 
 /*LIST
 --------------------------*/
-
+ul,ol,dl{
+    @extend .cssp-margin-bottom;
+}
 
 /*LINKS
 --------------------------*/
@@ -101,6 +95,8 @@ a{
     font-size: 0.9em;
     @extend .rounded1;
     margin: 0 $tall-margin $tall-margin 0;
+    display: inline-block;
+    vertical-align: middle;
 }
 label{
     margin: 0 0 $tall-margin 0;
@@ -147,5 +143,25 @@ input[type="search"]{
 .error input[type="color"],
 .error select{
     border: 2px solid $error-color;
-    background: transparentize($error-color, 0.9);;
+    background: transparentize($error-color, 0.9);
+}
+
+/*CODE
+--------------------------*/
+pre.cssp-code{
+    background-color: #000000;
+    color: $font-color2;
+    line-height: 1.4;
+    padding: $tall-margin;
+    
+	code{
+	    .cssp-tag{
+		color: $important-color;
+	    }
+	    .cssp-class{
+		color: $success-color;
+	    }
+	    ol{
+	    }
+	}
 }
