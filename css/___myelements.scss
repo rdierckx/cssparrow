@@ -30,11 +30,8 @@
     
 /*BUTTON
 -------------*/
-#button{
-
-	[class^="button"]{
-		margin: 0 $tall-margin 0 0;
-	}
+#button [class^="button"]{
+    margin: 0 $tall-margin $tall-margin 0;
 }
 
 /*STYLE
@@ -63,11 +60,3 @@
 
 /*FORM
 -------------*/
-#forms>form{
-    padding: 0 $venti-margin 0 0;
-}
-    
-    /*Buttons*/
-    #buttons a[class^="button"]{
-        display: inline-block;
-    }

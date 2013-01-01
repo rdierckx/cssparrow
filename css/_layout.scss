@@ -72,6 +72,9 @@
 .float-left{
     float: left;
 }
+.default-margin-bottom{
+    margin: 0 0 $tall-margin 0;
+}
 
 /*LOGO
 -------------*/  
@@ -97,43 +100,41 @@ h1#main-logo{
 
 /*NAVIGATION STRUCTURE
 -------------------------*/
-.cssp-main-nav{
-    height: 45px;
+.main-nav-open-btn{
     width: 100%;
     z-index: 200;
-    
-        &>div{ 
-            margin: 0 auto;
-            padding: 0;
-            @extend .container-clear;
-                
-                h1{
-                    float: left;
-                    font-size: 20px;
-                    font-weight: bold;
-                    text-transform: capitalize;
-                    margin: 0;
-                    
-                        a{
-                            display: inline-block;
-                            line-height: 45px;
-                        }
-                }
-                ul{
-                    margin: 0;
-                    width: auto;
-                    
-                        li{
-                            display: inline;
-                            
-                                a{
-                                    display: inline-block;
-                                    line-height: 45px;
-                                    padding: 0 $grande-margin;
-                                }
-                        }
-                }
-        }
+    @extend .container-clear;
+             
+	.cssp-id{
+	    font-size: 20px;
+	    font-weight: bold;
+	    text-transform: capitalize;
+            margin: 0 0 0 $tall-margin;
+	    @extend .float-left;
+	    line-height: $main-nav-height;
+	}
+	ul{
+	    margin: 0;
+	    overflow: hidden;
+	    @extend .float-right;
+	    
+		&>li{
+		    display: inline;
+		    
+			a{
+			    display: inline-block;
+			    padding: 0 $grande-margin;
+			    vertical-align: middle;
+			    line-height: $main-nav-height;
+			    
+			    transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
+			    -moz-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
+			    -webkit-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
+			    -ms-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
+			    -o-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
+			}
+		}
+	}
 }
 
 /*IMAGE / THUMBNAIL

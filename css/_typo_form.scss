@@ -5,9 +5,6 @@
 .uppercase{
     text-transform: uppercase;
 }
-.cssp-margin-bottom{
-    margin: 0 0 $tall-margin 0;
-}
 
 /*TITLE
 -------------------------*/
@@ -45,7 +42,7 @@
 /*PARAGRAPHE
 --------------------------*/
 p{
-    @extend .cssp-margin-bottom;
+    @extend .default-margin-bottom;
 }
 .cssp-tall-para{
     text-indent: 20px;
@@ -73,8 +70,13 @@ p{
 /*LIST
 --------------------------*/
 ul,ol,dl{
-    @extend .cssp-margin-bottom;
+    @extend .default-margin-bottom;
 }
+
+        /*IE hacks*/
+	.lt-ie8 ul, .lt-ie8 ol{
+	    padding-left: 30px;
+	}
 
 /*LINKS
 --------------------------*/
@@ -94,57 +96,71 @@ a{
     padding: 8px $tall-margin;
     font-size: 0.9em;
     @extend .rounded1;
-    margin: 0 $tall-margin $tall-margin 0;
     display: inline-block;
     vertical-align: middle;
 }
 label{
-    margin: 0 0 $tall-margin 0;
-    display: block;
+    margin: 0 $tall-margin 0 0;
 }
 select{
     @extend .input;
+    -webkit-appearance: none;
 }
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"]{
-    @extend .input;
-}
-input[type="search"]{
-    @extend .rounded2;
-    @extend .input;
-}
-
-/*error*/
-.error input[type="text"],
-.error input[type="password"],
-.error input[type="datetime"],
-.error input[type="datetime-local"],
-.error input[type="date"],
-.error input[type="month"],
-.error input[type="time"],
-.error input[type="week"],
-.error input[type="number"],
-.error input[type="email"],
-.error input[type="url"],
-.error input[type="search"],
-.error input[type="tel"],
-.error input[type="color"],
-.error select{
-    border: 2px solid $error-color;
-    background: transparentize($error-color, 0.9);
-}
+    /*default*/
+    input[type="text"],
+    input[type="password"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    input[type="number"],
+    input[type="email"],
+    input[type="url"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"],
+    text-area{
+	@extend .input;
+    }
+        /*IE hacks*/
+	.lt-ie8 input{
+	    vertical-align: middle;
+	}
+    input[type="search"]{
+	@extend .rounded2;
+	@extend .input;
+    }
+    
+    /*error*/
+    .cssp-error input[type="text"],
+    .cssp-error input[type="password"],
+    .cssp-error input[type="datetime"],
+    .cssp-error input[type="datetime-local"],
+    .cssp-error input[type="date"],
+    .cssp-error input[type="month"],
+    .cssp-error input[type="time"],
+    .cssp-error input[type="week"],
+    .cssp-error input[type="number"],
+    .cssp-error input[type="email"],
+    .cssp-error input[type="url"],
+    .cssp-error input[type="search"],
+    .cssp-error input[type="tel"],
+    .cssp-error input[type="color"],
+    .cssp-error select,
+    .cssp-error text-area{
+	border: 2px solid $error-color;
+	background: transparentize($error-color, 0.9);
+    }
+    input [type="submit"]{
+	vertical-align: middle;
+    }
+    
+    /*input group config*/
+    .input-group-line{
+	@extend .default-margin-bottom;
+    }
 
 /*CODE
 --------------------------*/
@@ -154,14 +170,15 @@ pre.cssp-code{
     line-height: 1.4;
     padding: $tall-margin;
     
-	code{
+	code{    
 	    .cssp-tag{
 		color: $important-color;
 	    }
 	    .cssp-class{
 		color: $success-color;
 	    }
-	    ol{
+	    .cssp-type{
+		color: $error-color;
 	    }
 	}
 }

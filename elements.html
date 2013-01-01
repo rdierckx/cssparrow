@@ -15,19 +15,19 @@
 </head>
     
 <body id="cssp-target" class="my-elements-page"> 
-    <nav class="cssp-main-nav nav-dark">
+    <nav class="main-nav-open-btn nav-dark">
         <div class="cssp-wrapper">
-            <h1><a href="#">CSSPARROW <sup>beta</sup></a></h1>
+            <h1 class="cssp-id"><a href="#">CSSPARROW <sup>beta</sup></a></h1>
             
             <!--Button to open and close navigation only visible on small screen-->
             <a class="cssp-oppen-nav h1-like visibility-desktop-false" href="#cssp-target" aria-hidden="true"><strong>≡</strong></a>
             <a class="cssp-close-nav h1-like visibility-desktop-false" href="#" aria-hidden="true"><strong>≡</strong></a>
             
-            <ul class="float-right">
+            <ul>
                 <li><a href="#">Home</a></li><!--
+		--><li><a href="#">Start</a></li><!--
                 --><li><a href="#">Documentation</a></li><!--
-                --><li><a href="#">GitHub</a></li><!--
-                --><li><a href="#">Contact</a></li>
+                --><li><a href="#">GitHub</a></li>
             </ul>
         </div>
     </nav> 
@@ -61,6 +61,13 @@
 			    <ul>
 				    <li><a href="#style-form">style-form</a></li>
 				    <li><a href="#error-form">error-form</a></li>
+			    </ul>
+		    </li>
+		    <li>
+			    <a href="#navigation">Nav</a>
+			    <ul>
+				    <li><a href="#main-navigation">main navbar</a></li>
+				    <li><a href="#secondary-navbar">secondary navbar</a></li>
 			    </ul>
 		    </li>
 		</ul>
@@ -265,72 +272,129 @@
 		    </header>
 		    
 		    <!--form input text-->
-		    <form id="style-form">
+		    <div id="style-form">
 			<h2>style form</h2>
-			<div class="row">
-			    <label>label</label>
-			    <input type="text" placeholder="placeholder">
-			    <input class="button" type="submit" value="submit">
-			</div>
-			<div class="row">
-			    <input type="search" placeholder="search">
-			    <input class="button" type="submit" value="search">
-			</div>
-			<div class="row">
-			    <input type="color">
-			</div>
-			<div class="row">
-			    <select name="list-demo">
-			       <option value="france">France</option>
-			       <option value="espagne">Espagne</option>
-			       <option value="italie">Italie</option>
-			       <option value="royaume-uni">Royaume-Uni</option>
-			       <option value="canada">Canada</option>
-			       <option value="etats-unis">États-Unis</option>
-			       <option value="chine">Chine</option>
-			       <option value="japon">Japon</option>
-			    </select>
-			</div>
-		    </form>
+			<form>
+			    <div class="input-group-line">
+				<input type="text" placeholder="placeholder">
+				<input class="button" type="submit" value="submit">
+			    </div>
+			    <div class="input-group-line">
+				<input type="search" placeholder="search">
+				<input class="button" type="submit" value="search">
+			    </div>
+			    <div class="input-group-line">
+				<select name="list-demo">
+				   <option value="france">France</option>
+				   <option value="espagne">Espagne</option>
+				   <option value="italie">Italie</option>
+				   <option value="royaume-uni">Royaume-Uni</option>
+				   <option value="canada">Canada</option>
+				   <option value="etats-unis">États-Unis</option>
+				   <option value="chine">Chine</option>
+				   <option value="japon">Japon</option>
+				</select>
+			    </div>
+			</form>
+			
+			<!-- code -->
+			<pre class="cssp-code"><!--
+			 --><code><!--
+				--><ol><!--
+				    --><li><span class="cssp-tag"><<span>div</span><span> class</span>=<span class="cssp-class">"input-group-line"</span>></span></li><!--
+				    --><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>input</span><span> type</span>=<span class="cssp-type">"text"</span><span> placeholder</span>=<span class="cssp-type">"placeholder"</span><span>/</span>></span></li><!--
+				    --><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>input</span><span> type</span>=<span class="cssp-type">"submit"</span><span> value</span>=<span class="cssp-type">"submit"</span><span>/</span>></span></li><!--
+				    --><li><span class="cssp-tag"><<span>div</span><span>/</span>></span></li><!--
+				--></ol><!--
+			 --></code><!--
+		     --></pre>
+		    </div>
 		    
-		    <form id="error-form">
+		    <div id="error-form">
 			<h2>error form</h2>
-			<div class="row error">
-			    <label>label</label>
-			    <input type="text" placeholder="placeholder">
-			    <input class="button" type="submit" value="submit">
-			</div>
-			<div class="row error">
-			    <input type="search" placeholder="search">
-			    <input class="button" type="submit" value="search">
-			</div>
-			<div class="row error">
-			    <input type="color">
-			</div>
-			<div class="row error">
-			    <select name="list-demo">
-			       <option value="france">France</option>
-			       <option value="espagne">Espagne</option>
-			       <option value="italie">Italie</option>
-			       <option value="royaume-uni">Royaume-Uni</option>
-			       <option value="canada">Canada</option>
-			       <option value="etats-unis">États-Unis</option>
-			       <option value="chine">Chine</option>
-			       <option value="japon">Japon</option>
-			    </select>
-			</div>
-		    </form>
+			<form>
+			    <div class="input-group-line cssp-error">
+				<input type="text" placeholder="placeholder">
+				<input class="button" type="submit" value="submit">
+			    </div>
+			    <div class="input-group-line cssp-error">
+				<input type="search" placeholder="search">
+				<input class="button" type="submit" value="search">
+			    </div>
+			    <div class="input-group-line cssp-error">
+				<select name="list-demo">
+				   <option value="france">France</option>
+				   <option value="espagne">Espagne</option>
+				   <option value="italie">Italie</option>
+				   <option value="royaume-uni">Royaume-Uni</option>
+				   <option value="canada">Canada</option>
+				   <option value="etats-unis">États-Unis</option>
+				   <option value="chine">Chine</option>
+				   <option value="japon">Japon</option>
+				</select>
+			    </div>
+			</form>
+			<!-- code -->
+			<pre class="cssp-code"><!--
+			 --><code><!--
+				--><ol><!--
+				    --><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>input</span><span> class</span>=<span class="cssp-class">"cssp-error"</span><span> type</span>=<span class="cssp-type">"text"</span><span> placeholder</span>=<span class="cssp-type">"placeholder"</span><span>/</span>></span></li><!--
+				    --><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>input</span><span> type</span>=<span class="cssp-type">"submit"</span><span> value</span>=<span class="cssp-type">"submit"</span><span>/</span>></span></li><!--
+				--></ol><!--
+			 --></code><!--
+		     --></pre>
+		    </div>
 		</section>
-		
-		<section class="cssp-section row" id="logo">    
-		    <h1  class="section-title">Logo</h1>
-		    <div>
-			<h1 id="main-logo">
-			    <a href="#img_modernizr_js_remplacement_bis" >
-				<img class="logo" src="img/logo.svg" data-fallback="img/logo.png" alt="Responsive Raptor" />
-			    </a>
-			    <span>responsive raptor</span>
-			</h1>
+
+		<section class="cssp-section row" id="navigation">    
+		    <header class="cssp-section-header">
+			    <h1>Navigation</h1>
+		    </header>
+		    <div id="main-navigation">
+			<h2>Main NAvigation</h2>
+			<nav class="main-nav-open-btn nav-dark">
+			    <h1 class="cssp-id">My ID</h1>
+			    
+			    <!--Button to open and close navigation only visible on small screen-->
+			    <a class="cssp-oppen-nav h1-like visibility-desktop-false" href="#cssp-target" aria-hidden="true"><strong>≡</strong></a>
+			    <a class="cssp-close-nav h1-like visibility-desktop-false" href="#" aria-hidden="true"><strong>≡</strong></a>
+			    
+			    <ul>
+				<li><a href="#">1</a></li><!--
+				--><li><a href="#">2</a></li><!--
+				--><li><a href="#">3</a></li><!--
+				--><li><a href="#">4</a></li>
+			    </ul>
+			</nav>
+			<pre class="cssp-code"><!--
+			 --><code><!--
+				--><ol><!--				    
+				    --><li><span class="cssp-tag"><<span>nav</span><span> class</span>=<span class="cssp-class">"main-nav-open-btn"</span>></span></li><!--
+					--><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>h1</span><span> class</span>=<span class="cssp-class">"cssp-id"</span>></span><!--
+					--><span>My ID</span><span class="cssp-tag"><<span>/</span><span>h1</span>></span></li><!--
+					--><li></li><!--
+				    --><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>ul</span>></span></li><!--
+					--><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
+					--><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
+					--><span>1</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
+					--></li><!--
+					--><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
+					--><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
+					--><span>2</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
+					--></li><!--
+					--><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
+					--><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
+					--><span>3</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
+					--></li><!--
+					--><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
+					--><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
+					--><span>4</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
+					--></li><!--
+				    --><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>/</span><span>ul</span>></span></li><!--
+				    --><li><span class="cssp-tag"><<span>/</span><span>nav</span>></span></li><!--
+				--></ol><!--
+			 --></code><!--
+		     --></pre>
 		    </div>  
 		</section>
 	    </div>

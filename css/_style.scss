@@ -139,21 +139,24 @@
 -------------------------*/
     .nav-dark{
         background-color: $four-color;
-        
-            a{ 
+	
+	    .cssp-id,.cssp-id a{
 		color: #FFFFFF;
-            }
-            ul li a{            
-		border-left: 1px solid rgba(150,150,150,0.5);
-		color: $font-color2;
+	    }
+	    ul>li {
+		a{
+		    color: $font-color2;
+		    border-color: lighten($four-color, 20%)!important;
+		    border-left: 1px solid;
 		
-		    &:hover{
-			background: darken($four-color, 3%);
-			color: #FFF;
-		    }
-            }
-	    ul li:last-child a{
-		border-right: 1px solid rgba(150,150,150,0.5);
+			&:hover{
+			    background: darken($four-color, 5%);
+			    color: #FFF;
+			}
+		}
+		&:last-child a{
+		    border-right: 1px solid;
+		}
 	    }
     }
     

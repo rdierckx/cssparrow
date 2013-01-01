@@ -1,0 +1,70 @@
+/*------------------------------------------------------------
+variable.scss is a powerful way to change colors, typo
+and sizes in your project. 
+------------------------------------------------------------*/
+
+//--------------------------------------
+    //GENERAL
+//--------------------------------------
+
+    //margin / padding
+    //----------------------------
+        $tall-margin: 14px;
+        
+        //other margin
+        $venti-margin: ($tall-margin * 4);
+        $grande-margin: ($tall-margin * 2);
+    
+            //IE grid gutter
+            $ie-margin: 1.5%;
+                            
+    //cssp-wrapper
+    //----------------------------
+        $wrapper-width: 95%;
+        $wrapper-max-width: 1500px;
+        
+    //font system
+    //----------------------------
+        $current-text: "Arial",Trebuchet MS,Verdana,Helvetica,Sans-Serif;
+          
+    //color range
+    //----------------------------
+        //color-1
+        $main-color: #37606B;
+        //color-2        
+        $second-color: #C6BFB3;
+        //color-3       
+        $third-color: #F2F2F2;
+        //color-4      
+        $four-color: #24262A;
+    
+    //color information
+    //----------------------------
+        //color-DEFAULT      
+        $default-color: #FFFFFF;
+        //color-IMPORTANT      
+        $important-color: #F4A535;
+        //color-SUCCESS    
+        $success-color: #8AB66B;
+        //color-ERROR           
+        $error-color: #C93A3A;
+        //color-DARK    
+        $dark-color: #54565A;
+    
+    //text color
+    //----------------------------   
+        $font-color1: #555555;
+        $font-color2: #BBBBBB;
+        $font-color-sub: #999999;
+        $font-color-link: $main-color;
+        
+//--------------------------------------
+    //WIDGET
+//--------------------------------------
+
+    //navigation
+    //----------------------------
+        //height
+        $main-nav-height: 45px;
+
+

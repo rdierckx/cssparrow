@@ -313,8 +313,8 @@ table {
   border-spacing: 0; }
 
 /*------------------------------------------------------------
-variable.scss is a powerful way to change colors, 
-proportions and sizes in your project. 
+variable.scss is a powerful way to change colors, typo
+and sizes in your project. 
 ------------------------------------------------------------*/
 /*layout.scss is the elements position stylesheet*/
 /*WRAPPER
@@ -323,7 +323,7 @@ proportions and sizes in your project.
   position: relative;
   margin: 0 auto;
   width: 95%;
-  max-width: 1400px; }
+  max-width: 1500px; }
 
 .cssp-section {
   padding-bottom: 28px; }
@@ -340,7 +340,7 @@ proportions and sizes in your project.
 
 /*IE hacks*/
 .lt-ie8 [class*="span"] {
-  padding: 0 0.91743%; }
+  padding: 0 1.37615%; }
 
 .span1 {
   width: 8.33333%; }
@@ -381,53 +381,56 @@ proportions and sizes in your project.
 
 /*IE hacks*/
 .lt-ie8 .span1 {
-  width: 6.33333%; }
+  width: 5.33333%; }
 
 .lt-ie8 .span2 {
-  width: 14.66667%; }
+  width: 13.66667%; }
 
 .lt-ie8 .span3 {
-  width: 23%; }
+  width: 22%; }
 
 .lt-ie8 .span4 {
-  width: 31.33333%; }
+  width: 30.33333%; }
 
 .lt-ie8 .span5 {
-  width: 39.66667%; }
+  width: 38.66667%; }
 
 .lt-ie8 .span6 {
-  width: 48%; }
+  width: 47%; }
 
 .lt-ie8 .span7 {
-  width: 56.33333%; }
+  width: 55.33333%; }
 
 .lt-ie8 .span8 {
-  width: 64.66667%; }
+  width: 63.66667%; }
 
 .lt-ie8 .span9 {
-  width: 73%; }
+  width: 72%; }
 
 .lt-ie8 .span10 {
-  width: 81.33333%; }
+  width: 80.33333%; }
 
 .lt-ie8 .span11 {
-  width: 89.66667%; }
+  width: 88.66667%; }
 
 .lt-ie8 .span12 {
-  width: 96%; }
+  width: 94%; }
 
 /*FLOAT
 -------------*/
-.container-clear, .row, .cssp-main-nav > div, header#main-header, .title-plus-action {
+.container-clear, .row, .main-nav-open-btn, header#main-header, .title-plus-action {
   overflow: hidden;
   zoom: 1;
   /*IE hacks*/ }
 
-.float-right {
+.float-right, .main-nav-open-btn ul {
   float: right; }
 
-.float-left {
+.float-left, .main-nav-open-btn .cssp-id {
   float: left; }
+
+.default-margin-bottom, p, ul, ol, dl, .input-group-line {
+  margin: 0 0 14px 0; }
 
 /*LOGO
 -------------*/
@@ -448,31 +451,30 @@ h1#main-logo {
 
 /*NAVIGATION STRUCTURE
 -------------------------*/
-.cssp-main-nav {
-  height: 45px;
+.main-nav-open-btn {
   width: 100%;
   z-index: 200; }
-  .cssp-main-nav > div {
-    margin: 0 auto;
-    padding: 0; }
-    .cssp-main-nav > div h1 {
-      float: left;
-      font-size: 20px;
-      font-weight: bold;
-      text-transform: capitalize;
-      margin: 0; }
-      .cssp-main-nav > div h1 a {
+  .main-nav-open-btn .cssp-id {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 0 0 0 14px;
+    line-height: 45px; }
+  .main-nav-open-btn ul {
+    margin: 0;
+    overflow: hidden; }
+    .main-nav-open-btn ul > li {
+      display: inline; }
+      .main-nav-open-btn ul > li a {
         display: inline-block;
-        line-height: 45px; }
-    .cssp-main-nav > div ul {
-      margin: 0;
-      width: auto; }
-      .cssp-main-nav > div ul li {
-        display: inline; }
-        .cssp-main-nav > div ul li a {
-          display: inline-block;
-          line-height: 45px;
-          padding: 0 28px; }
+        padding: 0 28px;
+        vertical-align: middle;
+        line-height: 45px;
+        transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
+        -moz-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
+        -webkit-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
+        -ms-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
+        -o-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68); }
 
 /*IMAGE / THUMBNAIL
 -------------------------*/
@@ -507,9 +509,6 @@ h1#main-logo {
 -------------------------*/
 .uppercase {
   text-transform: uppercase; }
-
-.cssp-margin-bottom, p, ul, ol, dl {
-  margin: 0 0 14px 0; }
 
 /*TITLE
 -------------------------*/
@@ -563,6 +562,10 @@ h6, .h6-like {
 
 /*LIST
 --------------------------*/
+/*IE hacks*/
+.lt-ie8 ul, .lt-ie8 ol {
+  padding-left: 30px; }
+
 /*LINKS
 --------------------------*/
 a {
@@ -584,37 +587,49 @@ input[type="email"],
 input[type="url"],
 input[type="search"],
 input[type="tel"],
-input[type="color"] {
+input[type="color"],
+text-area {
   border: 1px solid #CCC;
   padding: 8px 14px;
   font-size: 0.9em;
-  margin: 0 14px 14px 0;
   display: inline-block;
   vertical-align: middle; }
 
 label {
-  margin: 0 0 14px 0;
-  display: block; }
+  margin: 0 14px 0 0; }
+
+select {
+  -webkit-appearance: none; }
+
+/*default*/
+/*IE hacks*/
+.lt-ie8 input {
+  vertical-align: middle; }
 
 /*error*/
-.error input[type="text"],
-.error input[type="password"],
-.error input[type="datetime"],
-.error input[type="datetime-local"],
-.error input[type="date"],
-.error input[type="month"],
-.error input[type="time"],
-.error input[type="week"],
-.error input[type="number"],
-.error input[type="email"],
-.error input[type="url"],
-.error input[type="search"],
-.error input[type="tel"],
-.error input[type="color"],
-.error select {
+.cssp-error input[type="text"],
+.cssp-error input[type="password"],
+.cssp-error input[type="datetime"],
+.cssp-error input[type="datetime-local"],
+.cssp-error input[type="date"],
+.cssp-error input[type="month"],
+.cssp-error input[type="time"],
+.cssp-error input[type="week"],
+.cssp-error input[type="number"],
+.cssp-error input[type="email"],
+.cssp-error input[type="url"],
+.cssp-error input[type="search"],
+.cssp-error input[type="tel"],
+.cssp-error input[type="color"],
+.cssp-error select,
+.cssp-error text-area {
   border: 2px solid #c93a3a;
   background: rgba(201, 58, 58, 0.1); }
 
+input [type="submit"] {
+  vertical-align: middle; }
+
+/*input group config*/
 /*CODE
 --------------------------*/
 pre.cssp-code {
@@ -626,6 +641,8 @@ pre.cssp-code {
     color: #f4a535; }
   pre.cssp-code code .cssp-class {
     color: #8ab66b; }
+  pre.cssp-code code .cssp-type {
+    color: #c93a3a; }
 
 /*style.scss is the look and feel stylesheet*/
 /*BOX
@@ -732,16 +749,17 @@ ul.button-multi {
 -------------------------*/
 .nav-dark {
   background-color: #24262a; }
-  .nav-dark a {
+  .nav-dark .cssp-id, .nav-dark .cssp-id a {
     color: #FFFFFF; }
-  .nav-dark ul li a {
-    border-left: 1px solid rgba(150, 150, 150, 0.5);
-    color: #bbbbbb; }
-    .nav-dark ul li a:hover {
-      background: #1d1f22;
+  .nav-dark ul > li a {
+    color: #bbbbbb;
+    border-color: #535861 !important;
+    border-left: 1px solid; }
+    .nav-dark ul > li a:hover {
+      background: #181a1c;
       color: #FFF; }
-  .nav-dark ul li:last-child a {
-    border-right: 1px solid rgba(150, 150, 150, 0.5); }
+  .nav-dark ul > li:last-child a {
+    border-right: 1px solid; }
 
 /*SECTION-HEADER
 -------------------------*/
@@ -898,7 +916,8 @@ input[type="email"],
 input[type="url"],
 input[type="search"],
 input[type="tel"],
-input[type="color"], .btn, .button, ul.button-multi li a, .button-main, .button-important, .button-success, .button-error, .button-dark {
+input[type="color"],
+text-area, .btn, .button, ul.button-multi li a, .button-main, .button-important, .button-success, .button-error, .button-dark {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -946,7 +965,7 @@ input[type="color"], .btn, .button, ul.button-multi li a, .button-main, .button-
 /*mediaquery.scss to target differents devices*/
 /*MEDIAQUERY
 -------------*/
-@media handheld, only screen and (max-width: 768px) {
+@media handheld, only screen and (max-width: 767px) {
   /*LAYOUT
   ---------------------*/
   .cssp-wrapper {
@@ -989,52 +1008,39 @@ input[type="color"], .btn, .button, ul.button-multi li a, .button-main, .button-
   /*NAVIGATION 
   ----------------------*/
   /*cssp-main-nav foundation structure*/
-  nav.cssp-main-nav {
-    height: auto;
-    position: relative; }
-    nav.cssp-main-nav > div {
-      width: 100%; }
-      nav.cssp-main-nav > div h1 {
-        margin: 0 0 0 14px; }
-      nav.cssp-main-nav > div a.cssp-oppen-nav, nav.cssp-main-nav > div a.cssp-close-nav {
-        float: right;
-        margin: 0 14px 0 0;
-        color: #bbbbbb;
-        line-height: 45px; }
-      nav.cssp-main-nav > div a.cssp-close-nav {
-        color: #FFF; }
-      nav.cssp-main-nav > div > ul {
-        padding: 0;
-        float: none;
-        text-align: center;
-        clear: both;
-        width: 100%; }
-        nav.cssp-main-nav > div > ul > li a {
-          display: block;
-          border-left: none;
-          border-top: 1px solid rgba(150, 150, 150, 0.5);
-          height: 50px;
-          transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-          -moz-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-          -webkit-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-          -ms-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-          -o-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68); }
-        nav.cssp-main-nav > div > ul > li:last-child a {
-          border-right: none !important; }
+  nav.main-nav-open-btn {
+    text-align: center; }
+    nav.main-nav-open-btn a.cssp-oppen-nav, nav.main-nav-open-btn a.cssp-close-nav {
+      float: right;
+      margin: 0 14px 0 0;
+      color: #bbbbbb;
+      line-height: 45px; }
+    nav.main-nav-open-btn a.cssp-close-nav {
+      color: #FFF; }
+    nav.main-nav-open-btn ul > li a {
+      display: block;
+      height: 45px;
+      margin: 0 !important; }
 
   /*nav buttons close and open visibility management very important for ":target" system*/
-  body[id^="cssp"]:not(:target) .cssp-oppen-nav, body[id^="cssp"]:target .cssp-close-nav {
+  body#cssp-target:not(:target) .cssp-oppen-nav, body#cssp-target:target .cssp-close-nav {
     display: inline-block; }
 
-  body[id^="cssp"]:not(:target) .cssp-close-nav, body[id^="cssp"]:target .cssp-oppen-nav {
+  body#cssp-target:not(:target) .cssp-close-nav, body#cssp-target:target .cssp-oppen-nav {
     display: none; }
 
   /*it's important to give "cssp" prefix ID to your body if it's not possible create a div element after body tag and target it*/
-  body[id^="cssp"]:not(:target) .cssp-main-nav div ul li a {
+  body#cssp-target:not(:target) .main-nav-open-btn div ul li a {
     height: 0;
     overflow: hidden;
     border-top: 0px solid rgba(150, 150, 150, 0.5);
     border-bottom: 0px solid rgba(150, 150, 150, 0.5); }
+
+  /*nav style*/
+  .nav-dark ul > li a {
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important; }
 
   /*VISIBILITY
   ----------------------*/
@@ -1043,6 +1049,20 @@ input[type="color"], .btn, .button, ul.button-multi li a, .button-main, .button-
 
   .visibility-mobile-true {
     display: inherit; } }
+@media handheld, only screen and (max-width: 979px) {
+  /*NAVIGATION 
+  ----------------------*/
+  /*main-nav-open-btn foundation structure*/
+  .main-nav-open-btn ul {
+    clear: both;
+    float: none;
+    padding: 0; }
+    .main-nav-open-btn ul > li a {
+      margin: 0 14px 28px 14px; }
+
+  /*nav style*/
+  .nav-dark ul > li a {
+    border: 1px solid; } }
 /*GENERAL
 -------------*/
 body {
@@ -1081,7 +1101,7 @@ h2, .h2-like {
 
 /*NAVIGATION
 -------------*/
-nav.cssp-main-nav h1 sup {
+nav.main-nav-open-btn h1 sup {
   font-family: "arial", sans-serif;
   font-weight: 100;
   color: #bbbbbb; }
@@ -1116,7 +1136,7 @@ footer#main-footer {
 /*PART (advantages)
 -----------------------*/
 #advantage-home div.span4 h3 {
-  border-bottom: 1px solid #999999;
+  border-bottom: 1px dotted #999999;
   padding: 0 0 14px 0; }
 
 /*MEDIAQUERY
@@ -1161,7 +1181,7 @@ footer#main-footer {
 /*BUTTON
 -------------*/
 #button [class^="button"] {
-  margin: 0 14px 0 0; }
+  margin: 0 14px 14px 0; }
 
 /*STYLE
 -------------*/
@@ -1180,13 +1200,6 @@ footer#main-footer {
 
 /*FORM
 -------------*/
-#forms > form {
-  padding: 0 56px 0 0; }
-
-/*Buttons*/
-#buttons a[class^="button"] {
-  display: inline-block; }
-
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1196,4 +1209,5 @@ footer#main-footer {
 
 body {
   line-height: 1.6;
-  color: #555555; }
+  color: #555555;
+  font-family: "Arial", Trebuchet MS, Verdana, Helvetica, Sans-Serif; }
