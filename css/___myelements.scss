@@ -1,12 +1,12 @@
 /*GENERAL
 -------------*/
-#demo-wrap{
+.my-elements-page .cssp-wrapper #demo-wrap{
     background: #FFFFFF;
     @extend .shadow1;
-    padding-top: $grande-margin;
+    padding: $grande-margin;
 }
-.cssp-secondary-nav{
-    margin-top: $grande-margin;
+.cssp-nav-column{
+    margin-top: $tall-margin;
 }
 
 /*GRID
@@ -21,7 +21,7 @@
             color: #FFFFFF;
         }
         .row{
-            margin: 0 0 $grande-margin 0;
+            margin-bottom: $grande-margin;
         }
         .row:last-child{
             margin: 0;

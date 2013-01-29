@@ -6,7 +6,7 @@
 }
 [class*="span"] {
     width: 100%;
-    padding: 0;
+    padding: 0 $tall-margin;
     margin: 0 0 $tall-margin 0;
 }
 .table3row{
@@ -46,42 +46,43 @@ form{
 
 /*NAVIGATION 
 ----------------------*/
-    /*cssp-main-nav foundation structure*/
-    nav.main-nav-open-btn{
-        text-align: center;
-        a.cssp-oppen-nav,a.cssp-close-nav{
-            float: right;
-            margin: 0 $tall-margin 0 0;
-            color: $font-color2;
-            line-height: 45px;
-        }
-        a.cssp-close-nav{
-            color: #FFF;
-        }
-        ul>li a{
-                display: block;
-                height: $main-nav-height;
-                margin: 0 !important;
-        }
+    .cssp-oppen-nav,.cssp-close-nav{
+        float: right;
+        margin: 0 $tall-margin 0 0;
+        color: $font-color2;
+        line-height: 45px;
     }
+    .cssp-close-nav{
+        color: #FFF;
+    }
+    
+    /*cssp-main-nav foundation structure*/
+    .cssp-nav-bar{
+        clear: both;
+        float: none;
+        text-align: center;
+        
+            li{
+                a{
+                    display: block;
+                    height: $main-nav-height;
+                    margin: 0 !important;
+                    border-top: 1px solid;
+                }
+            }
+    }
+    
     /*nav buttons close and open visibility management very important for ":target" system*/
     body#cssp-target:not(:target) .cssp-oppen-nav, body#cssp-target:target .cssp-close-nav {display: inline-block;}
     body#cssp-target:not(:target) .cssp-close-nav, body#cssp-target:target .cssp-oppen-nav {display: none;}
     
     /*it's important to give "cssp" prefix ID to your body if it's not possible create a div element after body tag and target it*/
-    body#cssp-target:not(:target) .main-nav-open-btn div ul li a{
+    body#cssp-target:not(:target) .cssp-nav-bar>li a{
         height: 0;
         overflow: hidden;
         border-top: 0px solid rgba(150,150,150,0.5);
         border-bottom: 0px solid rgba(150,150,150,0.5);
-    }
-
-    /*nav style*/
-    .nav-dark ul>li a{
-        border-left: none !important;
-        border-right: none !important;
-        border-bottom: none !important;
-    }    
+    }  
 
 /*VISIBILITY
 ----------------------*/

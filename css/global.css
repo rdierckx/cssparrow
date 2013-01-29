@@ -323,18 +323,24 @@ and sizes in your project.
   position: relative;
   margin: 0 auto;
   width: 95%;
-  max-width: 1500px; }
-
-.cssp-section {
-  padding-bottom: 28px; }
+  max-width: 1200px; }
 
 /*IE hacks*/
 .lt-ie8 .cssp-wrapper {
   width: 980px; }
 
+.cssp-section {
+  padding-bottom: 28px; }
+
+.default-margin-bottom, ul, ol, dl, .input-group-line {
+  margin-bottom: 10px; }
+
 /*GRID
 -------------*/
-[class*="span"] {
+.row .row {
+  margin: 0 -14px; }
+
+[class^="span"] {
   float: left;
   padding: 0 14px; }
 
@@ -418,63 +424,55 @@ and sizes in your project.
 
 /*FLOAT
 -------------*/
-.container-clear, .row, .main-nav-open-btn, header#main-header, .title-plus-action {
+.container-clear, .row, #main-header, .title-plus-action {
   overflow: hidden;
   zoom: 1;
   /*IE hacks*/ }
 
-.float-right, .main-nav-open-btn ul {
+.float-right {
   float: right; }
 
-.float-left, .main-nav-open-btn .cssp-id {
+.float-left {
   float: left; }
 
-.default-margin-bottom, p, ul, ol, dl, .input-group-line {
-  margin: 0 0 14px 0; }
-
-/*LOGO
+/*FOOTER
 -------------*/
-h1#main-logo {
-  position: relative;
-  width: 20%; }
-  h1#main-logo a {
-    display: block;
-    width: 100%;
-    overflow: hidden; }
-    h1#main-logo a img {
-      width: 100%; }
-  h1#main-logo span {
-    position: absolute;
-    left: -2000%;
-    font-size: 0px;
-    color: transparent; }
+footer {
+  clear: both; }
 
 /*NAVIGATION STRUCTURE
 -------------------------*/
-.main-nav-open-btn {
-  width: 100%;
-  z-index: 200; }
-  .main-nav-open-btn .cssp-id {
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: capitalize;
-    margin: 0 0 0 14px;
-    line-height: 45px; }
-  .main-nav-open-btn ul {
+.cssp-nav-bar {
+  margin: 0;
+  padding-left: 0; }
+  .cssp-nav-bar > li {
+    list-style: none;
+    display: inline; }
+    .cssp-nav-bar > li a {
+      display: inline-block;
+      padding: 0 28px;
+      vertical-align: middle;
+      line-height: 45px;
+      border-left: 1px solid; }
+    .cssp-nav-bar > li:last-child a {
+      border-right: 1px solid; }
+
+.cssp-nav-column {
+  margin: 0;
+  padding-left: 0;
+  list-style: none; }
+  .cssp-nav-column > li a {
+    display: block;
+    padding: 7px 14px;
+    border-bottom: 1px solid; }
+  .cssp-nav-column > li:last-child a {
+    border-bottom: 1px solid; }
+  .cssp-nav-column ul {
     margin: 0;
-    overflow: hidden; }
-    .main-nav-open-btn ul > li {
-      display: inline; }
-      .main-nav-open-btn ul > li a {
-        display: inline-block;
-        padding: 0 28px;
-        vertical-align: middle;
-        line-height: 45px;
-        transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-        -moz-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-        -webkit-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-        -ms-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-        -o-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68); }
+    padding-left: 0;
+    list-style: none; }
+    .cssp-nav-column ul > li a {
+      padding-left: 28px; }
 
 /*IMAGE / THUMBNAIL
 -------------------------*/
@@ -516,7 +514,7 @@ h1#main-logo {
 h1, h2, h3, h4, h5, h6, .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like {
   font-family: inherit;
   line-height: 1;
-  margin: 14px 0; }
+  margin: 10px 0; }
 
 h1, .h1-like {
   font-size: 2.8em; }
@@ -538,23 +536,26 @@ h6, .h6-like {
 
 /*sub-title*/
 .cssp-sub-title {
-  color: #999999; }
+  color: #d4d4d4; }
 
 /*PARAGRAPHE
 --------------------------*/
+p {
+  margin: 0 0 10px 0; }
+
 .cssp-tall-para {
   text-indent: 20px; }
 
 /*TEXT SIZE
 --------------------------*/
-.catch-text, .cssp-tall-text, .cssp-grande-text, .cssp-venti-text {
+.catch-text {
   font-weight: bold;
   text-indent: 0; }
 
 .cssp-tall-text {
   font-size: 1.2em; }
 
-.cssp-grande-text {
+.cssp-grande-text, #main-header p {
   font-size: 1.3em; }
 
 .cssp-venti-text {
@@ -570,7 +571,7 @@ h6, .h6-like {
 --------------------------*/
 a {
   text-decoration: none;
-  color: #37606b; }
+  color: #d1c585; }
 
 /*FORM
 -------------------------*/
@@ -634,7 +635,7 @@ input [type="submit"] {
 --------------------------*/
 pre.cssp-code {
   background-color: #000000;
-  color: #bbbbbb;
+  color: #cccccc;
   line-height: 1.4;
   padding: 14px; }
   pre.cssp-code code .cssp-tag {
@@ -655,8 +656,8 @@ pre.cssp-code {
   border: 1px solid #d8d8d8; }
 
 .cssp-box-important {
-  background: #37606b;
-  border: 1px solid #142428; }
+  background: #d1c585;
+  border: 1px solid #ae9d42; }
 
 /*BUTTONS
 -------------------------*/
@@ -669,47 +670,52 @@ pre.cssp-code {
   border-style: solid;
   border-width: 1px; }
 
+.btn-block {
+  display: block;
+  padding: 7px 0px; }
+
+/*Button family*/
 .button, ul.button-multi li a {
   background-color: #ebebeb;
   color: #555555;
-  border-color: #b3b3b3; }
+  border-color: #bfbfbf; }
   .button:hover, ul.button-multi li a:hover {
     background: #ebebeb; }
 
 .button-main {
-  background-color: #294850;
+  background-color: #c6b767;
   color: #FFFFFF;
-  border-color: #030506; }
+  border-color: #ae9d42; }
   .button-main:hover {
-    background: #294850; }
+    background: #c6b767; }
 
 .button-important {
   background-color: #f2940e;
   color: #FFFFFF;
-  border-color: #a16209; }
+  border-color: #b9710a; }
   .button-important:hover {
     background: #e0880c; }
 
 .button-success {
   background-color: #75a652;
   color: #FFFFFF;
-  border-color: #4c6c35; }
+  border-color: #587d3e; }
   .button-success:hover {
     background: #709f4f; }
 
 .button-error {
   background-color: #ab2f2f;
   color: #FFFFFF;
-  border-color: #671c1c; }
+  border-color: #7b2222; }
   .button-error:hover {
     background: #a32d2d; }
 
 .button-dark {
-  background-color: #404245;
+  background-color: #111214;
   color: #FFFFFF;
-  border-color: #161718; }
+  border-color: black; }
   .button-dark:hover {
-    background: #36383a; }
+    background: #080809; }
 
 ul.button-multi {
   padding: 0;
@@ -747,31 +753,42 @@ ul.button-multi {
 
 /*NAVIGATION THEMES
 -------------------------*/
-.nav-dark {
-  background-color: #24262a; }
-  .nav-dark .cssp-id, .nav-dark .cssp-id a {
-    color: #FFFFFF; }
-  .nav-dark ul > li a {
-    color: #bbbbbb;
-    border-color: #535861 !important;
-    border-left: 1px solid; }
-    .nav-dark ul > li a:hover {
-      background: #181a1c;
-      color: #FFF; }
-  .nav-dark ul > li:last-child a {
-    border-right: 1px solid; }
+.thm-nav-dark {
+  background-color: #24262a;
+  color: #ffffff; }
+  .thm-nav-dark ul > li a {
+    color: #cccccc;
+    border-color: #474b53 !important; }
+    .thm-nav-dark ul > li a:hover {
+      background: #111214;
+      color: #FFFFFF; }
+
+.thm-nav-second {
+  background-color: #897c34;
+  color: #ffffff; }
+  .thm-nav-second ul > li a {
+    color: #555555;
+    border-color: #524a1f !important; }
+    .thm-nav-second ul > li a:hover {
+      background: #776b2d; }
+
+.thm-nav-third {
+  background-color: #f2f2f2;
+  color: #ffffff; }
+  .thm-nav-third ul > li a {
+    color: #555555;
+    border-color: #cccccc !important; }
+    .thm-nav-third ul > li a:hover {
+      background: #e5e5e5; }
 
 /*SECTION-HEADER
 -------------------------*/
 .cssp-section-header {
-  border-bottom: 1px solid #999999;
+  border-bottom: 1px solid #d4d4d4;
   margin: 0 0 28px 0; }
-  .cssp-section-header h1, .cssp-section-header h2, .cssp-section-header h3, .cssp-section-header h4, .cssp-section-header h5, .cssp-section-header .h1-like, .cssp-section-header .h2-like, .cssp-section-header .h3-like, .cssp-section-header .h4-like, .cssp-section-header .h5-like {
-    color: #37606b; }
 
-/*@EXTEND
+/*GRADIENT
 ------------------*/
-/*gradients*/
 .default-color-gradient, .button, ul.button-multi li a {
   background-image: white;
   /* Old browsers */
@@ -791,19 +808,19 @@ ul.button-multi {
   /* IE6-9 */ }
 
 .main-color-gradient, .button-main {
-  background-image: #37606b;
+  background-image: #d1c585;
   /* Old browsers */
-  background-image: -moz-linear-gradient(top, #37606b 0%, #2d4e57 100%);
+  background-image: -moz-linear-gradient(top, #d1c585 0%, #c9ba6f 100%);
   /* FF3.6+ */
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #37606b), color-stop(100%, #2d4e57));
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d1c585), color-stop(100%, #c9ba6f));
   /* Chrome,Safari4+ */
-  background-image: -webkit-linear-gradient(top, #37606b 0%, #2d4e57 100%);
+  background-image: -webkit-linear-gradient(top, #d1c585 0%, #c9ba6f 100%);
   /* Chrome10+,Safari5.1+ */
-  background-image: -o-linear-gradient(top, #37606b 0%, #2d4e57 100%);
+  background-image: -o-linear-gradient(top, #d1c585 0%, #c9ba6f 100%);
   /* Opera 11.10+ */
-  background-image: -ms-linear-gradient(top, #37606b 0%, #2d4e57 100%);
+  background-image: -ms-linear-gradient(top, #d1c585 0%, #c9ba6f 100%);
   /* IE10+ */
-  background-image: linear-gradient(to bottom, #37606b 0%, #2d4e57 100%);
+  background-image: linear-gradient(to bottom, #d1c585 0%, #c9ba6f 100%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$main-color', endColorstr='darken($main-color, 6%)',GradientType=0 );
   /* IE6-9 */ }
@@ -863,25 +880,26 @@ ul.button-multi {
   /* IE6-9 */ }
 
 .dark-color-gradient, .button-dark {
-  background-image: #54565a;
+  background-image: #24262a;
   /* Old browsers */
-  background-image: -moz-linear-gradient(top, #54565a 0%, #323335 100%);
+  background-image: -moz-linear-gradient(top, #24262a 0%, #030304 100%);
   /* FF3.6+ */
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #54565a), color-stop(100%, #323335));
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #24262a), color-stop(100%, #030304));
   /* Chrome,Safari4+ */
-  background-image: -webkit-linear-gradient(top, #54565a 0%, #323335 100%);
+  background-image: -webkit-linear-gradient(top, #24262a 0%, #030304 100%);
   /* Chrome10+,Safari5.1+ */
-  background-image: -o-linear-gradient(top, #54565a 0%, #323335 100%);
+  background-image: -o-linear-gradient(top, #24262a 0%, #030304 100%);
   /* Opera 11.10+ */
-  background-image: -ms-linear-gradient(top, #54565a 0%, #323335 100%);
+  background-image: -ms-linear-gradient(top, #24262a 0%, #030304 100%);
   /* IE10+ */
-  background-image: linear-gradient(to bottom, #54565a 0%, #323335 100%);
+  background-image: linear-gradient(to bottom, #24262a 0%, #030304 100%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$dark-color', endColorstr='darken($dark-color, 14%)',GradientType=0 );
   /* IE6-9 */ }
 
-/*box-shadow*/
-.shadow1, #demo-wrap {
+/*BOX-SHADOW
+------------------*/
+.shadow1, .my-elements-page .cssp-wrapper #demo-wrap {
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   -ms-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
@@ -894,13 +912,12 @@ ul.button-multi {
   -ms-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 -1px 0 rgba(0, 0, 0, 0.2) inset;
   -o-border-radius: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 -1px 0 rgba(0, 0, 0, 0.2) inset;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 -1px 0 rgba(0, 0, 0, 0.2) inset; }
-
-.button-shadow-focus, .btn:hover, .button:hover, ul.button-multi li a:hover, .button-main:hover, .button-important:hover, .button-success:hover, .button-error:hover, .button-dark:hover {
-  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.4) inset;
-  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.4) inset;
-  -ms-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.4) inset;
-  -o-border-radius: 0 1px 0 rgba(0, 0, 0, 0.4) inset;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; }
+  .button-shadow:hover, .btn:hover, .button:hover, ul.button-multi li a:hover, .button-main:hover, .button-important:hover, .button-success:hover, .button-error:hover, .button-dark:hover, .button-shadow:focus, .btn:focus, .button:focus, ul.button-multi li a:focus, .button-main:focus, .button-important:focus, .button-success:focus, .button-error:focus, .button-dark:focus {
+    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.4) inset;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.4) inset;
+    -ms-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.4) inset;
+    -o-border-radius: 0 1px 0 rgba(0, 0, 0, 0.4) inset;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; }
 
 /*rounded*/
 .rounded1, .input, select, input[type="text"],
@@ -917,7 +934,7 @@ input[type="url"],
 input[type="search"],
 input[type="tel"],
 input[type="color"],
-text-area, .btn, .button, ul.button-multi li a, .button-main, .button-important, .button-success, .button-error, .button-dark {
+text-area {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -947,13 +964,15 @@ text-area, .btn, .button, ul.button-multi li a, .button-main, .button-important,
   -o-border-radius: 0px;
   border-radius: 0px; }
 
+/*@EXTEND
+------------------*/
 /*transition*/
 .transition-button, .btn, .button, ul.button-multi li a, .button-main, .button-important, .button-success, .button-error, .button-dark {
-  -moz-transition: box-shadow 0.3s ease-out;
-  -webkit-transition: box-shadow 0.3s ease-out;
-  -ms-transition: box-shadow 0.3s ease-out;
-  -o-transition: box-shadow 0.3s ease-out;
-  transition: box-shadow 0.3s ease-out; }
+  -moz-transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
+  -webkit-transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
+  -ms-transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
+  -o-transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
+  transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out; }
 
 .transition2 {
   transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
@@ -974,7 +993,7 @@ text-area, .btn, .button, ul.button-multi li a, .button-main, .button-important,
 
   [class*="span"] {
     width: 100%;
-    padding: 0;
+    padding: 0 14px;
     margin: 0 0 14px 0; }
 
   .table3row {
@@ -1007,20 +1026,25 @@ text-area, .btn, .button, ul.button-multi li a, .button-main, .button-important,
 
   /*NAVIGATION 
   ----------------------*/
+  .cssp-oppen-nav, .cssp-close-nav {
+    float: right;
+    margin: 0 14px 0 0;
+    color: #cccccc;
+    line-height: 45px; }
+
+  .cssp-close-nav {
+    color: #FFF; }
+
   /*cssp-main-nav foundation structure*/
-  nav.main-nav-open-btn {
+  .cssp-nav-bar {
+    clear: both;
+    float: none;
     text-align: center; }
-    nav.main-nav-open-btn a.cssp-oppen-nav, nav.main-nav-open-btn a.cssp-close-nav {
-      float: right;
-      margin: 0 14px 0 0;
-      color: #bbbbbb;
-      line-height: 45px; }
-    nav.main-nav-open-btn a.cssp-close-nav {
-      color: #FFF; }
-    nav.main-nav-open-btn ul > li a {
+    .cssp-nav-bar li a {
       display: block;
       height: 45px;
-      margin: 0 !important; }
+      margin: 0 !important;
+      border-top: 1px solid; }
 
   /*nav buttons close and open visibility management very important for ":target" system*/
   body#cssp-target:not(:target) .cssp-oppen-nav, body#cssp-target:target .cssp-close-nav {
@@ -1030,17 +1054,11 @@ text-area, .btn, .button, ul.button-multi li a, .button-main, .button-important,
     display: none; }
 
   /*it's important to give "cssp" prefix ID to your body if it's not possible create a div element after body tag and target it*/
-  body#cssp-target:not(:target) .main-nav-open-btn div ul li a {
+  body#cssp-target:not(:target) .cssp-nav-bar > li a {
     height: 0;
     overflow: hidden;
     border-top: 0px solid rgba(150, 150, 150, 0.5);
     border-bottom: 0px solid rgba(150, 150, 150, 0.5); }
-
-  /*nav style*/
-  .nav-dark ul > li a {
-    border-left: none !important;
-    border-right: none !important;
-    border-bottom: none !important; }
 
   /*VISIBILITY
   ----------------------*/
@@ -1053,12 +1071,8 @@ text-area, .btn, .button, ul.button-multi li a, .button-main, .button-important,
   /*NAVIGATION 
   ----------------------*/
   /*main-nav-open-btn foundation structure*/
-  .main-nav-open-btn ul {
-    clear: both;
-    float: none;
-    padding: 0; }
-    .main-nav-open-btn ul > li a {
-      margin: 0 14px 28px 14px; }
+  .main-nav-open-btn ul li a {
+    margin: 14px; }
 
   /*nav style*/
   .nav-dark ul > li a {
@@ -1070,12 +1084,11 @@ body {
 
 /*Section*/
 .cssp-section {
-  padding: 0 28px 28px; }
+  padding: 0 0 28px 0; }
 
 /*Demo container*/
 .my-container {
-  margin: -56px auto 0 auto;
-  background: #FFFFFF;
+  margin: 0 auto 0 auto;
   padding: 0 0 56px 0; }
 
 /*IE hacks*/
@@ -1097,46 +1110,64 @@ h1, h2, h3, h4, h5, h6, .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-li
   font-family: 'abelregular'; }
 
 h2, .h2-like {
-  color: #37606b; }
+  color: #897c34; }
 
 /*NAVIGATION
 -------------*/
-nav.main-nav-open-btn h1 sup {
-  font-family: "arial", sans-serif;
-  font-weight: 100;
-  color: #bbbbbb; }
+.cssp-id {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin: 0 0 0 14px;
+  line-height: 45px; }
+  .cssp-id, .cssp-id a {
+    color: #ffffff; }
+  .cssp-id sup {
+    font-family: "arial", sans-serif;
+    font-weight: 100;
+    color: #cccccc; }
 
-/*WRAPPER
--------------*/
-body.my-home .my-container.cssp-wrapper {
-  padding: 14px 0 0 0; }
+.cssp-nav-column > li > a {
+  font-weight: bold; }
 
 /*HEADER
 -------------*/
-header#main-header {
-  background: #37606b; }
-  header#main-header h2 {
-    color: #FFFFFF;
-    font-size: 5em; }
-  header#main-header span {
-    display: block;
-    color: #bbbbbb;
-    font-size: 1.4em;
-    font-weight: 100;
-    margin: 0 0 28px 0; }
-  header#main-header .span7 {
-    margin: 28px 0 112px 0; }
-
-/*Typo*/
-/*Footer*/
-footer#main-footer {
+#main-header {
+  background: #d1c585;
   padding: 28px 0;
-  min-height: 200px; }
+  color: #897c34; }
+  #main-header h2 {
+    font-size: 4em; }
+
+/*FOOTER
+-------------*/
+#main-footer {
+  margin: 28px 0 0 0;
+  padding: 28px 0;
+  min-height: 200px;
+  background-color: #e5e5e5;
+  border-top: 1px solid #cccccc; }
+
+/*WRAPPER
+-------------*/
+body.my-home .my-container {
+  padding: 28px 0 0 0; }
+  body.my-home .my-container section h2 {
+    font-size: 2.8em; }
+
+/*ASIDE
+-------------*/
+body.my-home aside {
+  padding-bottom: 14px; }
+  body.my-home aside > div {
+    background-color: #e5e5e5; }
+    body.my-home aside > div > div {
+      margin: 14px 0; }
 
 /*PART (advantages)
 -----------------------*/
 #advantage-home div.span4 h3 {
-  border-bottom: 1px dotted #999999;
+  border-bottom: 1px dotted #d4d4d4;
   padding: 0 0 14px 0; }
 
 /*MEDIAQUERY
@@ -1148,21 +1179,20 @@ footer#main-footer {
 @media handheld, only screen and (max-width: 768px) {
   header#main-header {
     padding: 56px 0;
-    background: #37606b; }
+    background: #d1c585; }
     header#main-header div {
       text-align: center; }
-      header#main-header div .span7 {
-        margin: 0; }
-        header#main-header div .span7 span {
-          padding: 0 14px; } }
+      header#main-header div p {
+        padding: 0 14px;
+        font-size: 1em; } }
 /*GENERAL
 -------------*/
-#demo-wrap {
+.my-elements-page .cssp-wrapper #demo-wrap {
   background: #FFFFFF;
-  padding-top: 28px; }
+  padding: 28px; }
 
-.cssp-secondary-nav {
-  margin-top: 28px; }
+.cssp-nav-column {
+  margin-top: 14px; }
 
 /*GRID
 -------------*/
@@ -1174,7 +1204,7 @@ footer#main-footer {
   text-align: center;
   color: #FFFFFF; }
 #positioning .row {
-  margin: 0 0 28px 0; }
+  margin-bottom: 28px; }
 #positioning .row:last-child {
   margin: 0; }
 

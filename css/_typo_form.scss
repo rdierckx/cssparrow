@@ -12,7 +12,7 @@
     h1, h2, h3, h4, h5, h6, .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like{
 	font-family: inherit;
 	line-height: 1;
-	margin: $tall-margin 0;
+	margin: 10px 0;
     }
     h1, .h1-like{
 	font-size: 2.8em;
@@ -42,7 +42,7 @@
 /*PARAGRAPHE
 --------------------------*/
 p{
-    @extend .default-margin-bottom;
+    margin: 0 0 10px 0;
 }
 .cssp-tall-para{
     text-indent: 20px;
@@ -56,15 +56,12 @@ p{
 }
 .cssp-tall-text{
     font-size: 1.2em;
-    @extend .catch-text;
 }
 .cssp-grande-text{
     font-size: 1.3em;
-    @extend .catch-text;
 }
 .cssp-venti-text{
     font-size: 1.5em;
-    @extend .catch-text;
 }
 
 /*LIST
@@ -83,10 +80,6 @@ ul,ol,dl{
 a{
     text-decoration: none;
     color: $font-color-link;
-    
-        &:focus,&:hover{
-    
-        }
 }
 
 /*FORM

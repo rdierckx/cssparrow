@@ -8,25 +8,32 @@
     width: $wrapper-width;
     max-width: $wrapper-max-width;
 }
-.cssp-section{
-    padding-bottom: $grande-margin;
-}
         /*IE hacks*/
 	.lt-ie8 .cssp-wrapper{
             width: 980px;
         }
-        
+	
+.cssp-section{
+    padding-bottom: $grande-margin;
+}
+.default-margin-bottom{
+    margin-bottom: 10px;
+}
 
 /*GRID
 -------------*/
 .row{
     @extend .container-clear;
+    
+	//nesting row
+	.row{
+	   margin: 0 (-$tall-margin); 
+	}
 }
-[class*="span"] {
+[class^="span"] {
     float: left;
     padding: 0 $tall-margin; 
 }
-
         /*IE hacks*/
         .lt-ie8 [class*="span"] {
             padding: 0 ($ie-margin/1.09); 
@@ -72,67 +79,57 @@
 .float-left{
     float: left;
 }
-.default-margin-bottom{
-    margin: 0 0 $tall-margin 0;
-}
 
-/*LOGO
--------------*/  
-h1#main-logo{
-    position: relative;
-    width: 20%;
-        a{
-            display: block;
-            width: 100%;
-            overflow: hidden;
-                
-                img{
-                    width: 100%;
-                }
-        }
-        span{ 
-            position: absolute;
-            left: -2000%;
-            font-size: 0px;
-            color: transparent;
-        }
+/*FOOTER
+-------------*/
+footer{
+    clear: both;
 }
 
 /*NAVIGATION STRUCTURE
 -------------------------*/
-.main-nav-open-btn{
-    width: 100%;
-    z-index: 200;
-    @extend .container-clear;
-             
-	.cssp-id{
-	    font-size: 20px;
-	    font-weight: bold;
-	    text-transform: capitalize;
-            margin: 0 0 0 $tall-margin;
-	    @extend .float-left;
-	    line-height: $main-nav-height;
+.cssp-nav-bar{
+    margin: 0;
+    padding-left: 0;
+    
+	&>li{
+	    list-style: none;
+	    display: inline;
+	    
+		a{
+		    display: inline-block;
+		    padding: 0 $grande-margin;
+		    vertical-align: middle;
+		    line-height: $main-nav-height;
+		    border-left: 1px solid;
+		}
+		&:last-child a{
+		    border-right: 1px solid;
+		}
+	}
+}
+.cssp-nav-column{
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    
+	&>li{
+		a{
+		    display: block;
+		    padding: ($tall-margin/2) $tall-margin;
+		    border-bottom: 1px solid;
+		}
+		&:last-child a{
+		    border-bottom: 1px solid;
+		}
 	}
 	ul{
 	    margin: 0;
-	    overflow: hidden;
-	    @extend .float-right;
+	    padding-left: 0;
+	    list-style: none;
 	    
-		&>li{
-		    display: inline;
-		    
-			a{
-			    display: inline-block;
-			    padding: 0 $grande-margin;
-			    vertical-align: middle;
-			    line-height: $main-nav-height;
-			    
-			    transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-			    -moz-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-			    -webkit-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-			    -ms-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-			    -o-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-			}
+		&>li a{
+		    padding-left: $grande-margin;
 		}
 	}
 }

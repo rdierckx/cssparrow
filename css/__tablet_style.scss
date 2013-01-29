@@ -1,14 +1,8 @@
 /*NAVIGATION 
 ----------------------*/    
     /*main-nav-open-btn foundation structure*/
-    .main-nav-open-btn ul{
-        clear: both;
-        float: none;
-        padding: 0;
-        
-            &>li a{
-                margin: 0 $tall-margin $grande-margin $tall-margin;
-            }
+    .main-nav-open-btn ul li a{
+        margin: $tall-margin;
     }
     /*nav style*/
     .nav-dark ul>li a{

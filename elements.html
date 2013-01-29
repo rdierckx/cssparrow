@@ -15,66 +15,73 @@
 </head>
     
 <body id="cssp-target" class="my-elements-page"> 
-    <nav class="main-nav-open-btn nav-dark">
+    <nav class="row thm-nav-dark">
         <div class="cssp-wrapper">
-            <h1 class="cssp-id"><a href="#">CSSPARROW <sup>beta</sup></a></h1>
+            <h1 class="cssp-id float-left"><a href="#">CSSPARROW <sup>beta</sup></a></h1>
             
             <!--Button to open and close navigation only visible on small screen-->
             <a class="cssp-oppen-nav h1-like visibility-desktop-false" href="#cssp-target" aria-hidden="true"><strong>≡</strong></a>
             <a class="cssp-close-nav h1-like visibility-desktop-false" href="#" aria-hidden="true"><strong>≡</strong></a>
             
-            <ul>
+            <ul class="cssp-nav-bar float-right">
                 <li><a href="#">Home</a></li><!--
 		--><li><a href="#">Start</a></li><!--
                 --><li><a href="#">Documentation</a></li><!--
                 --><li><a href="#">GitHub</a></li>
             </ul>
         </div>
-    </nav> 
+    </nav>
+    <header id="main-header">
+        <div class="cssp-wrapper row">
+            <h2 class="span12">Documentation</h2>
+        </div>
+    </header>
     <div class="row">
 	<div class="cssp-wrapper">
 	    <div class="span3">
-		<ul class="cssp-secondary-nav">
-		    <li>
-			    <a href="#positioning">Positioning</a>
-			    <ul>
-				    <li><a href="#grid">grid</a></li>
-			    </ul>
-		    </li>
-		    <li>
-			    <a href="#typo">Typo</a>
-			    <ul>
-				    <li><a href="#paragraph">paragraph</a></li>
-				    <li><a href="#title">title</a></li>
-			    </ul>
-		    </li>
-		    <li>
-			    <a href="#button">Button</a>
-			    <ul>
-				    <li><a href="#button-color">colors</a></li>
-				    <li><a href="#button-widget">widget</a></li>
-				    <li><a href="#button-size">size</a></li>
-			    </ul>
-		    </li>
-		    <li>
-			    <a href="#forms">Forms</a>
-			    <ul>
-				    <li><a href="#style-form">style-form</a></li>
-				    <li><a href="#error-form">error-form</a></li>
-			    </ul>
-		    </li>
-		    <li>
-			    <a href="#navigation">Nav</a>
-			    <ul>
-				    <li><a href="#main-navigation">main navbar</a></li>
-				    <li><a href="#secondary-navbar">secondary navbar</a></li>
-			    </ul>
-		    </li>
-		</ul>
+		<nav class="thm-nav-third">
+		    <ul class="cssp-nav-column">
+			<li>
+				<a href="#positioning">Positioning</a>
+				<ul>
+					<li><a href="#grid">grid</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#typo">Typo</a>
+				<ul>
+					<li><a href="#paragraph">paragraph</a></li>
+					<li><a href="#title">title</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#button">Button</a>
+				<ul>
+					<li><a href="#button-color">colors</a></li>
+					<li><a href="#button-widget">widget</a></li>
+					<li><a href="#button-size">size</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#forms">Forms</a>
+				<ul>
+					<li><a href="#style-form">style-form</a></li>
+					<li><a href="#error-form">error-form</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#navigation">Nav</a>
+				<ul>
+					<li><a href="#inline-navigation">inline navigation</a></li>
+					<li><a href="#secondary-navbar">secondary navbar</a></li>
+				</ul>
+			</li>
+		    </ul>
+		</nav>
 	    </div>
 	    <div id="demo-wrap" class="span9">
 		<!--Grid-->
-		<section class="cssp-section row" id="positioning">
+		<section class="cssp-section" id="positioning">
 			<header class="cssp-section-header">
 				<h1>Positioning</h1>
 			</header>
@@ -140,7 +147,7 @@
 		</section>
 		
 		<!--Button-->
-		<section class="cssp-section row" id="typo"> 
+		<section class="cssp-section" id="typo"> 
 		    <header class="cssp-section-header">
 			    <h1>Typo</h1>
 		    </header>
@@ -175,7 +182,7 @@
 		</section>
 		
 		<!--Button-->
-		<section class="cssp-section row" id="button"> 
+		<section class="cssp-section" id="button"> 
 		    <header class="cssp-section-header">
 			    <h1>Buttons</h1>
 		    </header>
@@ -266,7 +273,7 @@
 		</section>
 		
 		<!--Form-->
-		<section class="cssp-section row" id="forms"> 
+		<section class="cssp-section" id="forms"> 
 		    <header class="cssp-section-header">
 			<h1>Forms</h1>
 		    </header>
@@ -346,20 +353,19 @@
 		    </div>
 		</section>
 
-		<section class="cssp-section row" id="navigation">    
+		<section class="cssp-section" id="navigation">    
 		    <header class="cssp-section-header">
 			    <h1>Navigation</h1>
 		    </header>
-		    <div id="main-navigation">
-			<h2>Main NAvigation</h2>
-			<nav class="main-nav-open-btn nav-dark">
-			    <h1 class="cssp-id">My ID</h1>
+		    <div id="inline-navigation">
+			<h2>Inline Navigation</h2>
+			<nav class="row thm-nav-dark">
 			    
 			    <!--Button to open and close navigation only visible on small screen-->
 			    <a class="cssp-oppen-nav h1-like visibility-desktop-false" href="#cssp-target" aria-hidden="true"><strong>≡</strong></a>
 			    <a class="cssp-close-nav h1-like visibility-desktop-false" href="#" aria-hidden="true"><strong>≡</strong></a>
 			    
-			    <ul>
+			    <ul class="cssp-nav-bar">
 				<li><a href="#">1</a></li><!--
 				--><li><a href="#">2</a></li><!--
 				--><li><a href="#">3</a></li><!--
@@ -369,11 +375,8 @@
 			<pre class="cssp-code"><!--
 			 --><code><!--
 				--><ol><!--				    
-				    --><li><span class="cssp-tag"><<span>nav</span><span> class</span>=<span class="cssp-class">"main-nav-open-btn"</span>></span></li><!--
-					--><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>h1</span><span> class</span>=<span class="cssp-class">"cssp-id"</span>></span><!--
-					--><span>My ID</span><span class="cssp-tag"><<span>/</span><span>h1</span>></span></li><!--
-					--><li></li><!--
-				    --><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>ul</span>></span></li><!--
+				    --><li><span class="cssp-tag"><<span>nav</span><span> class</span>=<span class="cssp-class">"row thm-nav-dark"</span>></span></li><!--
+				    --><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>ul</span><span> class</span>=<span class="cssp-class">"cssp-nav-bar"</span>></span></li><!--
 					--><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
 					--><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
 					--><span>1</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
@@ -395,7 +398,44 @@
 				--></ol><!--
 			 --></code><!--
 		     --></pre>
-		    </div>  
+		    </div>
+		    <div id="inline-navigation">
+			<h2>Column Navigation</h2>
+			<nav class="thm-nav-third">	    
+			    <ul class="cssp-nav-column">
+				<li><a href="#">1</a></li><!--
+				--><li><a href="#">2</a></li><!--
+				--><li><a href="#">3</a></li><!--
+				--><li><a href="#">4</a></li>
+			    </ul>
+			</nav>
+			<pre class="cssp-code"><!--
+			 --><code><!--
+				--><ol><!--				    
+				    --><li><span class="cssp-tag"><<span>nav</span><span> class</span>=<span class="cssp-class">"thm-nav-third"</span>></span></li><!--
+				    --><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>ul</span><span> class</span>=<span class="cssp-class">"cssp-nav-column"</span>></span></li><!--
+					--><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
+					--><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
+					--><span>1</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
+					--></li><!--
+					--><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
+					--><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
+					--><span>2</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
+					--></li><!--
+					--><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
+					--><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
+					--><span>3</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
+					--></li><!--
+					--><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
+					--><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
+					--><span>4</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
+					--></li><!--
+				    --><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>/</span><span>ul</span>></span></li><!--
+				    --><li><span class="cssp-tag"><<span>/</span><span>nav</span>></span></li><!--
+				--></ol><!--
+			 --></code><!--
+		     --></pre>
+		    </div> 
 		</section>
 	    </div>
         </div>

@@ -17,107 +17,102 @@
 </head>
     
 <body id="cssp-target" class="my-home"> 
-    <nav class="main-nav-open-btn nav-dark">
+    <nav class="row thm-nav-dark">
         <div class="cssp-wrapper">
-            <h1 class="cssp-id"><a href="#">CSSPARROW <sup>beta</sup></a></h1>
+            <h1 class="cssp-id float-left"><a href="#">CSSPARROW <sup>beta</sup></a></h1>
             
             <!--Button to open and close navigation only visible on small screen-->
             <a class="cssp-oppen-nav h1-like visibility-desktop-false" href="#cssp-target" aria-hidden="true"><strong>≡</strong></a>
             <a class="cssp-close-nav h1-like visibility-desktop-false" href="#" aria-hidden="true"><strong>≡</strong></a>
             
-            <ul>
+            <ul class="cssp-nav-bar float-right">
                 <li><a href="#">Home</a></li><!--
 		--><li><a href="#">Start</a></li><!--
                 --><li><a href="#">Documentation</a></li><!--
                 --><li><a href="#">GitHub</a></li>
             </ul>
         </div>
-    </nav> 
+    </nav>
     <header id="main-header">
         <div class="cssp-wrapper row">
-            <div class="span7">
+            <div class="span8">
                 <h2>CsSparrow</h2>
-                <span>Light, flexible &amp; responsive css framework</span>
-                <a href="#" class="button-important king-size">Download me</a>
+                <!--<span>Maintainable, adaptable, flexible and full responsive</span>-->
+                <p>
+                    Cssparrow est un framework css responsive construit avec SASS et fonctionnant avec SASS.
+                    La structure de Cssparrow  à été pensé pour évoluer et s'adapter à vos besoins tout en garantissant une bonne maintenabilité.
+                    Tirez partie des variables SASS et appropriez vous celles de cssparrow en les intégrants à vos feuilles de styles scss.
+                </p>
             </div>
         </div>
     </header>
-    <div class="my-container cssp-wrapper shadow1">  
-        <section id="advantage-home" class="cssp-section row">
-            <h2 class="span12">Advantages</h2>
-            <div class="span4">
-                <h3 class="h4-like">Light</h3>
-                <p>
-                    CsSparrow is one of the lightest css framework.
-                    Because each line count, we optimize all the code.
-                </p>
-            </div>
-            <div class="span4">
-                <h3 class="h4-like">Flexible</h3>
-                <p>
-                    To feet your needs we use the power of Sass to change the look of your web project easily.          
-                </p>
-            </div>
-            <div class="span4">
-                <h3 class="h4-like">Responsive</h3>
-                <p>
-                    Because each devices deserve the best user experience,
-                    CsSparrow implement responsive features and fluid grid.          
-                </p>
-            </div>
-        </section>
-        <section class="cssp-section row">
-            <h2 class="span12">Main features</h2>
-            <div class="span3">
-                <h3 class="h4-like">Grid</h3>
-                <p>
-                    This responsive grid works with overflow hidden to reset float elements and use css box-sizing to manage columns.
-                </p>
-            </div>
-            <div class="span3">
-                <h3 class="h4-like">IE complient</h3>
-                <p>
-                    Cssparrow also works with Internet Explorer until 7.
-                </p>
-            </div>
-            <div class="span3">
-                <h3 class="h4-like">Widgets</h3>
-                <p>
-                    Take advantage of Responsive navigation, fluid Thumbnail and buttons library.
-                </p>
-            </div>
-            <div class="span3">
-                <h3 class="h4-like">theme tools</h3>
-                <p>
-                    Change colors, margins and fonts easily with variable.scss.
-                </p>
-            </div>
-        </section>
-        <section class="cssp-section row">
-            <h2 class="span12">How it works ?</h2>
-            <div class="span9">
-                <p class="cssp-grande-text">
-                    Powered by Sass, Cssparrow give you the most optimized, flexible and responsive Cascading Style Sheets.
-                </p>
-                <p>
-                    You just need to install Sass and create and implement your own sass documents in global.scss.
-                    Then you will be able to take the control with variable.scss and use @extend sass feature for a better maintainability.               
-                </p>
-                <p>
-                    You also can use Cssparrow without Sass like a traditionnal css framework.             
-                </p>
-            </div>
-            <div class="span3">
-                <div class="cssp-box-regular">
-                    <p class="catch-text">
-                        CsSparrow can be adapted to all of your web project.
-                        Use the power of Sass to change the look of your web site easily.
+    <div class="my-container cssp-wrapper row">
+        <div class="span9">
+            <section id="advantage-home" class="cssp-section row">
+                <h2 class="span12">Advantages</h2>
+                <div class="span4">
+                    <h3 class="h4-like">Maintainable</h3>
+                    <p>
+                        Evolved according to your needs and stay easy to used and maintain.
                     </p>
                 </div>
+                <div class="span4">
+                    <h3 class="h4-like">Flexible</h3>
+                    <p>
+                        To feet your needs we use the power of Sass to change the look of your web project easily.          
+                    </p>
+                </div>
+                <div class="span4">
+                    <h3 class="h4-like">Responsive</h3>
+                    <p>
+                        Because each devices deserve the best user experience,
+                        CsSparrow implement responsive features and fluid grid.          
+                    </p>
+                </div>
+            </section>
+            <section class="cssp-section row">
+                <h2 class="span12">Main features</h2>
+                <div class="span4">
+                    <h3 class="h4-like">Grid</h3>
+                    <p>
+                        This responsive grid works with overflow hidden to reset float elements and use css box-sizing to manage columns.
+                    </p>
+                </div>
+                <div class="span4">
+                    <h3 class="h4-like">IE complient</h3>
+                    <p>
+                        Cssparrow also works with Internet Explorer until 7.
+                    </p>
+                </div>
+                <div class="span4">
+                    <h3 class="h4-like">theme tools</h3>
+                    <p>
+                        Change colors, margins and fonts easily with variable.scss.
+                    </p>
+                </div>
+            </section>
+        </div>        
+        <aside class="span3">
+            <div class="cssp-box">
+                <div>
+                    <h4>Download</h4>
+                    <p>the latest version 0.7</p>
+                    <a href="#" class="button-main king-size">Download Cssparrow</a>
+                </div>
+                <div>
+                    <h4>How to start</h4>
+                    <p>Start with Cssparrow is very simple</p>
+                    <a href="#" class="button">Read documentation</a>
+                </div>
+                <div>
+                    <h4>Open and free</h4>
+                    <p>Start with Cssparrow is very simple</p>
+                    <a href="#" class="button">Go to GitHub</a>
+                </div>
             </div>
-        </section>
+        </aside>
     </div>
-        <footer id="main-footer">
-        </footer>
+    <footer id="main-footer">
+    </footer>
 </body>
 </html>

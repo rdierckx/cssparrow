@@ -1,39 +1,27 @@
 /*WRAPPER
 -------------*/
-body.my-home .my-container.cssp-wrapper{
-    padding: $tall-margin 0 0 0;
+body.my-home .my-container{
+    padding: $grande-margin 0 0 0;
+    
+        section h2{
+            font-size: 2.8em;
+        }
 }
 
-/*HEADER
+/*ASIDE
 -------------*/
-    header#main-header{
-        //background: url('../img/sparrow_bg.png') no-repeat $main-color right bottom;
-        background: $main-color;
-        @extend .container-clear;
-                    
-            h2{
-                color: #FFFFFF;
-                font-size: 5em;
-            }
-            span{
-                display: block;
-                color: $font-color2;
-                font-size: 1.4em;
-                font-weight: 100;
-                margin: 0 0 $grande-margin 0;
-            }
-            .span7{ 
-                margin: $grande-margin 0 ($venti-margin*2) 0;
-            }
-    }
-
-    /*Typo*/
+body.my-home aside{
+    padding-bottom: $tall-margin;
     
-    /*Footer*/
-    footer#main-footer{
-        padding: ($tall-margin * 2) 0;
-        min-height: 200px;
-    }
+        &>div{
+            background-color: darken($third-color, 5%);
+            
+                &>div{
+                    margin: $tall-margin 0;                       
+                }
+        }
+}
+    
 /*PART (advantages)
 -----------------------*/
 #advantage-home div.span4 h3{
@@ -59,12 +47,9 @@ body.my-home .my-container.cssp-wrapper{
                 div {
                     text-align: center;
                     
-                        .span7{ 
-                            margin: 0;
-                            
-                                span{
-                                    padding: 0 $tall-margin;
-                                }
+                        p{
+                            padding: 0 $tall-margin;
+                            font-size: 1em;
                         }
                 }                
         }

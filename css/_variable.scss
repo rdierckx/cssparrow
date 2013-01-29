@@ -21,7 +21,7 @@ and sizes in your project.
     //cssp-wrapper
     //----------------------------
         $wrapper-width: 95%;
-        $wrapper-max-width: 1500px;
+        $wrapper-max-width: 1200px;
         
     //font system
     //----------------------------
@@ -29,14 +29,14 @@ and sizes in your project.
           
     //color range
     //----------------------------
-        //color-1
-        $main-color: #37606B;
+        //main-color
+        $main-color: #D1C585;
         //color-2        
-        $second-color: #C6BFB3;
+        $second-color: darken($main-color, 30%);
         //color-3       
         $third-color: #F2F2F2;
-        //color-4      
-        $four-color: #24262A;
+        //dark-color     
+        $dark-color: #24262A;
     
     //color information
     //----------------------------
@@ -48,14 +48,12 @@ and sizes in your project.
         $success-color: #8AB66B;
         //color-ERROR           
         $error-color: #C93A3A;
-        //color-DARK    
-        $dark-color: #54565A;
     
     //text color
     //----------------------------   
         $font-color1: #555555;
-        $font-color2: #BBBBBB;
-        $font-color-sub: #999999;
+        $font-color2: #CCCCCC;
+        $font-color-sub: lighten($font-color1, 50%);
         $font-color-link: $main-color;
         
 //--------------------------------------
