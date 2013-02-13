@@ -678,6 +678,7 @@ pre.cssp-code {
   border-width: 1px;
   background-color: #ebebeb;
   border-color: #bfbfbf;
+  border-radius: 3px;
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset, 0 -1px 0 rgba(0, 0, 0, 0.2) inset;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset, 0 -1px 0 rgba(0, 0, 0, 0.2) inset;
   -moz-transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
@@ -911,10 +912,7 @@ ul.btn-multi {
 /*BOX-SHADOW
 ------------------*/
 .shadow1 {
-  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  -ms-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  -o-border-radius: 0 0 5px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); }
 
 /*rounded*/
@@ -933,33 +931,22 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 text-area {
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
   border-radius: 3px; }
 
 /*perfect for input type search*/
 .rounded2, input[type="search"] {
-  -moz-border-radius: 90px;
   -webkit-border-radius: 90px;
-  -ms-border-radius: 90px;
-  -o-border-radius: 90px;
   border-radius: 90px; }
 
 /*for circle block*/
 .circle {
-  -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
   border-radius: 50%; }
 
+/*reset rounded*/
 .rounded-none, ul.btn-multi li a {
-  -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
-  -ms-border-radius: 0px;
-  -o-border-radius: 0px;
   border-radius: 0px; }
 
 /*@EXTEND
@@ -1034,7 +1021,7 @@ text-area {
     float: none;
     text-align: center; }
     .cssp-nav-bar li {
-      display: inherit; }
+      display: block; }
       .cssp-nav-bar li a {
         display: block;
         height: 45px;
