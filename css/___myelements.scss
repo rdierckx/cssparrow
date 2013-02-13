@@ -1,12 +1,71 @@
 /*GENERAL
 -------------*/
+/*Demo container*/
+.my-container{
+    margin: 0 auto 0 auto;
+    padding: 0 0 $row-venti-margin 0;
+}
+    /*IE hacks*/ 
+    .lt-ie8 #demo-container{width: 980px;}
+	
 .my-elements-page .cssp-wrapper #demo-wrap{
     background: #FFFFFF;
-    @extend .shadow1;
-    padding: $grande-margin;
+    padding: $row-tall-margin $col-grande-margin $row-grande-margin $col-grande-margin;
+    margin: $row-grande-margin 0 0 0;
+    box-shadow: 0 0 2px rgba(0,0,0,0.1);
 }
 .cssp-nav-column{
-    margin-top: $tall-margin;
+    margin-top: $row-grande-margin;
+}
+	
+/*TYPO
+-------------*/
+@font-face {
+    font-family: 'abelregular';
+    src: url('../fonts/abel-regular-webfont.eot');
+    src: url('../fonts/abel-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/abel-regular-webfont.woff') format('woff'),
+         url('../fonts/abel-regular-webfont.ttf') format('truetype'),
+         url('../fonts/abel-regular-webfont.svg#abelregular') format('svg');
+}
+.font{
+    font-weight: normal;
+    font-style: normal;
+}
+h1, h2, h3, h4, h5, h6, .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like{
+    font-family: 'abelregular';
+    @extend .font;
+}
+h2, .h2-like{
+    color: $second-color;
+}
+#title div{
+    h1, h2, h3, h4, h5, h6, .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like{
+	font-family: "arial",sans-serif;
+	color: $font-color1;
+    }
+}
+
+/*NAVIGATION
+-------------*/
+.cssp-id{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 0 0 0 $col-tall-margin;
+    line-height: $main-nav-height;
+    
+	&,a{
+	    color: #ffffff;	    
+	}
+	sup{
+	    font-family: "arial", sans-serif;
+	    font-weight: 100;
+	    color: $font-color2;
+	}
+}
+.cssp-nav-column>li>a{
+	    font-weight: bold;
 }
 
 /*GRID
@@ -21,42 +80,42 @@
             color: #FFFFFF;
         }
         .row{
-            margin-bottom: $grande-margin;
+            margin-bottom: $row-grande-margin;
         }
         .row:last-child{
             margin: 0;
         }
     }
     
+/*HEADER
+-------------*/
+#main-header{
+    //background: url('../img/sparrow_bg.png') no-repeat $main-color right bottom;    
+    background-color: $main-color;
+    background: 
+	linear-gradient(115deg, transparent 75%, lighten($main-color, 4%) 75%) 0 0,
+	linear-gradient(245deg, transparent 75%, lighten($main-color, 4%) 75%) 0 0,
+	linear-gradient(115deg, transparent 75%, lighten($main-color, 4%) 75%) 5px -10px,
+	linear-gradient(245deg, transparent 75%, lighten($main-color, 4%) 75%) 5px -10px, $main-color;
+    background-size: 10px 20px;    
+
+    padding: $row-grande-margin 0;
+    @extend .container-clear;
+    color: darken($second-color, 15%);
+    border-bottom: 1px solid #ffffff;
+    border-top: 1px solid rgba(255,255,255,0.4);
+    box-shadow: 0 -5px 3px darken($main-color, 5%) inset;
+                
+        h2{
+            font-size: 4em;
+	    color: darken($second-color, 15%); 
+        }
+}
+
 /*BUTTON
 -------------*/
-#button [class^="button"]{
-    margin: 0 $tall-margin $tall-margin 0;
+#button .btn{
+    margin: 0 $col-tall-margin $row-tall-margin 0;
 }
 
-/*STYLE
--------------*/
-.title-plus-action{
-    @extend .container-clear;
-    
-	h2{
-	    display: inline;
-	    float: left;
-	}
-	a[class^="button"]{
-	    float: right;
-	    margin: $tall-margin 0 0 0 !important;
-	}
-}  
 
-/*FONT
--------------*/
-#title div{
-    h1, h2, h3, h4, h5, h6, .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like{
-	font-family: "arial",sans-serif;
-	color: $font-color1;
-    }
-}
-
-/*FORM
--------------*/

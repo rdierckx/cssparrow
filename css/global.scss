@@ -5,20 +5,13 @@
 @import "_style";
 @import "_mediaquery";
 
-    //@import "your_page_style_here";
-    @import "___myglobal";
-    @import "___myhome";
+    //import all specific cases here;
     @import "___myelements";
-
-*{
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    box-sizing: border-box;
-}
+    
 body{
-    line-height: 1.6;
+    font-size: $font-size;
+    line-height: $line-height;
     color: $font-color1;
     font-family: $current-text;
+    background: $third-color;
 }

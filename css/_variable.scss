@@ -1,68 +1,87 @@
-/*------------------------------------------------------------
-variable.scss is a powerful way to change colors, typo
-and sizes in your project. 
-------------------------------------------------------------*/
+//------------------------------------------------------------
+//variable.scss is a powerful way to change colors, typo
+//and sizes in your project. 
+//------------------------------------------------------------
 
 //--------------------------------------
-    //GENERAL
-//--------------------------------------
-
+    //LAYOUT
+//--------------------------------------      
     //margin / padding
     //----------------------------
-        $tall-margin: 14px;
-        
-        //other margin
-        $venti-margin: ($tall-margin * 4);
-        $grande-margin: ($tall-margin * 2);
-    
-            //IE grid gutter
-            $ie-margin: 1.5%;
-                            
+        //column margin (left,right)
+        $col-tall-margin: 14px;
+        $col-grande-margin: ($col-tall-margin * 2);
+        $col-venti-margin: ($col-tall-margin * 4);
+
+        //row margin (top,bottom)
+        $row-tall-margin: 8px;
+        $row-grande-margin: ($row-tall-margin * 2);
+        $row-venti-margin: ($row-tall-margin * 6);
+                       
     //cssp-wrapper
     //----------------------------
-        $wrapper-width: 95%;
-        $wrapper-max-width: 1200px;
+    $wrapper-width: 95%;
+    $wrapper-max-width: 1300px;
         
     //font system
     //----------------------------
-        $current-text: "Arial",Trebuchet MS,Verdana,Helvetica,Sans-Serif;
-          
+    $current-text: "Arial",Trebuchet MS,Verdana,Helvetica,Sans-Serif;
+
+//--------------------------------------
+    //STYLE
+//--------------------------------------           
     //color range
+    // + specify if it's dark or not (to know the good font color) 
     //----------------------------
-        //main-color
-        $main-color: #D1C585;
-        //color-2        
-        $second-color: darken($main-color, 30%);
-        //color-3       
+        //main-color 
+        $main-color: #BADA55;
+        $main-color-dark: false;
+        //color-2       
+        $second-color: darken($main-color, 20%);
+        $second-color-dark: true;
+        //color-3     
         $third-color: #F2F2F2;
-        //dark-color     
+        $third-color-dark: false;
+        //dark-color  
         $dark-color: #24262A;
+        $dark-color-dark: true;
     
     //color information
+    // + specify if it's dark or not (to know the good font color) 
     //----------------------------
         //color-DEFAULT      
         $default-color: #FFFFFF;
+        $default-color-dark: false;
         //color-IMPORTANT      
         $important-color: #F4A535;
+        $important-color-dark: true;
         //color-SUCCESS    
         $success-color: #8AB66B;
+        $success-color-dark: true;
         //color-ERROR           
         $error-color: #C93A3A;
+        $error-color-dark: true;
     
     //text color
     //----------------------------   
-        $font-color1: #555555;
-        $font-color2: #CCCCCC;
-        $font-color-sub: lighten($font-color1, 50%);
-        $font-color-link: $main-color;
-        
+    $font-color1: #555555;
+    $font-color2: #CCCCCC;
+    $font-color-sub: lighten($font-color1, 50%);
+    $font-color-link: $main-color;
+
+//--------------------------------------
+    //FONT
+//--------------------------------------
+    //current text
+    //----------------------------
+    $line-height: 1.6em;
+    $font-size: 1em;
+    
 //--------------------------------------
     //WIDGET
 //--------------------------------------
-
     //navigation
     //----------------------------
-        //height
         $main-nav-height: 45px;
 
 

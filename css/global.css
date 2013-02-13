@@ -312,42 +312,48 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/*------------------------------------------------------------
-variable.scss is a powerful way to change colors, typo
-and sizes in your project. 
-------------------------------------------------------------*/
 /*layout.scss is the elements position stylesheet*/
+/*GENERAL
+-------------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
 /*WRAPPER
 -------------*/
 .cssp-wrapper {
   position: relative;
   margin: 0 auto;
   width: 95%;
-  max-width: 1200px; }
-
-/*IE hacks*/
-.lt-ie8 .cssp-wrapper {
-  width: 980px; }
-
-.cssp-section {
-  padding-bottom: 28px; }
-
-.default-margin-bottom, ul, ol, dl, .input-group-line {
-  margin-bottom: 10px; }
+  max-width: 1300px; }
 
 /*GRID
 -------------*/
-.row .row {
-  margin: 0 -14px; }
-
-[class^="span"] {
+/*row and span with float system*/
+.row > [class^="span"] {
   float: left;
   padding: 0 14px; }
+.row .row,
+.row .t-row {
+  margin: 0 -14px; }
 
-/*IE hacks*/
-.lt-ie8 [class*="span"] {
-  padding: 0 1.37615%; }
+/*row and span with table system*/
+.t-row {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse; }
 
+/*"t-span" can works without "t-row" system*/
+.t-span, .t-row > [class^="span"] {
+  display: table-cell;
+  vertical-align: top;
+  padding: 0 14px; }
+
+/*grid span size setting*/
 .span1 {
   width: 8.33333%; }
 
@@ -382,49 +388,18 @@ and sizes in your project.
   width: 91.66667%; }
 
 .span12 {
-  width: 100%;
-  float: none; }
-
-/*IE hacks*/
-.lt-ie8 .span1 {
-  width: 5.33333%; }
-
-.lt-ie8 .span2 {
-  width: 13.66667%; }
-
-.lt-ie8 .span3 {
-  width: 22%; }
-
-.lt-ie8 .span4 {
-  width: 30.33333%; }
-
-.lt-ie8 .span5 {
-  width: 38.66667%; }
-
-.lt-ie8 .span6 {
-  width: 47%; }
-
-.lt-ie8 .span7 {
-  width: 55.33333%; }
-
-.lt-ie8 .span8 {
-  width: 63.66667%; }
-
-.lt-ie8 .span9 {
-  width: 72%; }
-
-.lt-ie8 .span10 {
-  width: 80.33333%; }
-
-.lt-ie8 .span11 {
-  width: 88.66667%; }
-
-.lt-ie8 .span12 {
-  width: 94%; }
+  width: 100%; }
 
 /*FLOAT
 -------------*/
-.container-clear, .row, #main-header, .title-plus-action {
+.clearfix, .row {
+  clear: both; }
+  .clearfix:after, .row:after, .clearfix:before, .row:before {
+    content: "";
+    display: table;
+    clear: both; }
+
+.clearfix-overflow {
   overflow: hidden;
   zoom: 1;
   /*IE hacks*/ }
@@ -435,13 +410,47 @@ and sizes in your project.
 .float-left {
   float: left; }
 
-/*FOOTER
--------------*/
-footer {
-  clear: both; }
-
-/*NAVIGATION STRUCTURE
+/*MARGIN SYSTEM
 -------------------------*/
+.ml1 {
+  margin-left: 14px; }
+
+.ml2 {
+  margin-left: 28px; }
+
+.ml3 {
+  margin-left: 56px; }
+
+.mr1 {
+  margin-right: 14px; }
+
+.mr2 {
+  margin-right: 28px; }
+
+.mr3 {
+  margin-right: 56px; }
+
+.mt1 {
+  margin-top: 8px; }
+
+.mt2 {
+  margin-top: 16px; }
+
+.mt3 {
+  margin-top: 48px; }
+
+.mb1 {
+  margin-bottom: 8px; }
+
+.mb2 {
+  margin-bottom: 16px; }
+
+.mb3 {
+  margin-bottom: 48px; }
+
+/*WIDGET
+-------------------------*/
+/*inline navigation*/
 .cssp-nav-bar {
   margin: 0;
   padding-left: 0; }
@@ -457,13 +466,14 @@ footer {
     .cssp-nav-bar > li:last-child a {
       border-right: 1px solid; }
 
+/*column navigation*/
 .cssp-nav-column {
   margin: 0;
   padding-left: 0;
   list-style: none; }
   .cssp-nav-column > li a {
     display: block;
-    padding: 7px 14px;
+    padding: 8px 14px;
     border-bottom: 1px solid; }
   .cssp-nav-column > li:last-child a {
     border-bottom: 1px solid; }
@@ -474,44 +484,36 @@ footer {
     .cssp-nav-column ul > li a {
       padding-left: 28px; }
 
-/*IMAGE / THUMBNAIL
--------------------------*/
+/*fluid image
+- image never exceed is own size*/
 .cssp-flex-img {
   max-width: 100%; }
 
-/*IE hacks*/
-.lt-ie8 .cssp-flex-img, .cssp-flex-svg {
+/*replace "max-width" by "width" for ie7 and ie6*/
+.lt-ie8 .cssp-flex-img {
   width: 100%; }
-
-/*BOX-CALCUL
--------------------------*/
-.cssp-box-sizing-reset {
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  -ms-box-sizing: content-box;
-  -o-box-sizing: content-box;
-  box-sizing: content-box; }
 
 /*VISIBILITY
 -------------------------*/
-.hidden {
-  display: none !important;
-  visibility: hidden; }
-
 /*desktop visibility*/
 .visibility-desktop-false {
   display: none; }
 
 /*typo_form.scss to manage all typo and form issues*/
 /*GENERAL
--------------------------*/
+-------------*/
 .uppercase {
   text-transform: uppercase; }
 
 /*TITLE
 -------------------------*/
 /*general*/
-h1, h2, h3, h4, h5, h6, .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like {
+h1, .h1-like,
+h2, .h2-like,
+h3, .h3-like,
+h4, .h4-like,
+h5, .h5-like,
+h6, .h6-like {
   font-family: inherit;
   line-height: 1;
   margin: 10px 0; }
@@ -555,7 +557,7 @@ p {
 .cssp-tall-text {
   font-size: 1.2em; }
 
-.cssp-grande-text, #main-header p {
+.cssp-grande-text {
   font-size: 1.3em; }
 
 .cssp-venti-text {
@@ -563,6 +565,9 @@ p {
 
 /*LIST
 --------------------------*/
+ul, ol, dl {
+  margin-bottom: 8px; }
+
 /*IE hacks*/
 .lt-ie8 ul, .lt-ie8 ol {
   padding-left: 30px; }
@@ -571,7 +576,7 @@ p {
 --------------------------*/
 a {
   text-decoration: none;
-  color: #d1c585; }
+  color: #bada55; }
 
 /*FORM
 -------------------------*/
@@ -646,98 +651,48 @@ pre.cssp-code {
     color: #c93a3a; }
 
 /*style.scss is the look and feel stylesheet*/
-/*BOX
--------------------------*/
-.cssp-box, .cssp-box-regular, .cssp-box-important {
-  padding: 14px 28px; }
-
-.cssp-box-regular {
-  background: #f2f2f2;
-  border: 1px solid #d8d8d8; }
-
-.cssp-box-important {
-  background: #d1c585;
-  border: 1px solid #ae9d42; }
-
 /*BUTTONS
 -------------------------*/
-.btn, .button, ul.button-multi li a, .button-main, .button-important, .button-success, .button-error, .button-dark {
+.btn, ul.btn-multi li a {
   display: inline-block;
   padding: 7px 14px;
   font-size: 0.9em;
   color: #555555;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   border-style: solid;
-  border-width: 1px; }
+  border-width: 1px;
+  background-color: #ebebeb;
+  border-color: #bfbfbf;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset, 0 -1px 0 rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset, 0 -1px 0 rgba(0, 0, 0, 0.2) inset;
+  -moz-transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
+  -webkit-transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
+  -ms-transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
+  -o-transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
+  transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out; }
+  .btn:hover, ul.btn-multi li a:hover, .btn:focus, ul.btn-multi li a:focus {
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.4) inset;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; }
+  .btn:hover, ul.btn-multi li a:hover {
+    background: #ebebeb; }
 
 .btn-block {
   display: block;
   padding: 7px 0px; }
 
-/*Button family*/
-.button, ul.button-multi li a {
-  background-color: #ebebeb;
-  color: #555555;
-  border-color: #bfbfbf; }
-  .button:hover, ul.button-multi li a:hover {
-    background: #ebebeb; }
-
-.button-main {
-  background-color: #c6b767;
-  color: #FFFFFF;
-  border-color: #ae9d42; }
-  .button-main:hover {
-    background: #c6b767; }
-
-.button-important {
-  background-color: #f2940e;
-  color: #FFFFFF;
-  border-color: #b9710a; }
-  .button-important:hover {
-    background: #e0880c; }
-
-.button-success {
-  background-color: #75a652;
-  color: #FFFFFF;
-  border-color: #587d3e; }
-  .button-success:hover {
-    background: #709f4f; }
-
-.button-error {
-  background-color: #ab2f2f;
-  color: #FFFFFF;
-  border-color: #7b2222; }
-  .button-error:hover {
-    background: #a32d2d; }
-
-.button-dark {
-  background-color: #111214;
-  color: #FFFFFF;
-  border-color: black; }
-  .button-dark:hover {
-    background: #080809; }
-
-ul.button-multi {
+ul.btn-multi {
   padding: 0;
-  margin: 0 14px 14px 0;
+  margin: 0 14px 8px 0;
   display: inline-block; }
-  ul.button-multi li {
+  ul.btn-multi li {
     list-style: none;
     display: inline; }
-    ul.button-multi li a {
+    ul.btn-multi li a {
       margin: 0 !important;
       border-left-width: 0; }
-    ul.button-multi li:last-child a {
-      -moz-border-radius: 0 3px 3px 0;
-      -webkit-border-radius: 0 3px 3px 0;
-      -ms-border-radius: 0 3px 3px 0;
-      -o-border-radius: 0 3px 3px 0;
+    ul.btn-multi li:last-child a {
       border-radius: 0 3px 3px 0; }
-    ul.button-multi li:first-child a {
-      -moz-border-radius: 3px 0 0 3px;
-      -webkit-border-radius: 3px 0 0 3px;
-      -ms-border-radius: 3px 0 0 3px;
-      -o-border-radius: 3px 0 0 3px;
+    ul.btn-multi li:first-child a {
       border-radius: 3px 0 0 3px;
       border-left-width: 1px; }
 
@@ -751,6 +706,42 @@ ul.button-multi {
   padding: 10px 18px;
   font-size: 1.1em; }
 
+/*THEMES
+-------------------------*/
+.main {
+  background-color: #acd333;
+  border-color: #86a524; }
+  .main:hover {
+    background: #acd333; }
+
+.important {
+  background-color: #f2940e;
+  border-color: #b9710a;
+  color: #FFFFFF; }
+  .important:hover {
+    background: #e0880c; }
+
+.success {
+  background-color: #75a652;
+  border-color: #587d3e;
+  color: #FFFFFF; }
+  .success:hover {
+    background: #709f4f; }
+
+.error {
+  background-color: #ab2f2f;
+  border-color: #7b2222;
+  color: #FFFFFF; }
+  .error:hover {
+    background: #a32d2d; }
+
+.dark {
+  background-color: #111214;
+  border-color: black;
+  color: #FFFFFF; }
+  .dark:hover {
+    background: #080809; }
+
 /*NAVIGATION THEMES
 -------------------------*/
 .thm-nav-dark {
@@ -763,14 +754,14 @@ ul.button-multi {
       background: #111214;
       color: #FFFFFF; }
 
-.thm-nav-second {
-  background-color: #897c34;
+.thm-nav-main {
+  background-color: #bada55;
   color: #ffffff; }
-  .thm-nav-second ul > li a {
+  .thm-nav-main ul > li a {
     color: #555555;
-    border-color: #524a1f !important; }
-    .thm-nav-second ul > li a:hover {
-      background: #776b2d; }
+    border-color: #97ba28 !important; }
+    .thm-nav-main ul > li a:hover {
+      background: #b2d540; }
 
 .thm-nav-third {
   background-color: #f2f2f2;
@@ -781,15 +772,20 @@ ul.button-multi {
     .thm-nav-third ul > li a:hover {
       background: #e5e5e5; }
 
+/*BOX
+-------------------------*/
+.cssp-box {
+  padding: 8px 28px; }
+
 /*SECTION-HEADER
 -------------------------*/
 .cssp-section-header {
   border-bottom: 1px solid #d4d4d4;
-  margin: 0 0 28px 0; }
+  margin: 0 0 16px 0; }
 
 /*GRADIENT
 ------------------*/
-.default-color-gradient, .button, ul.button-multi li a {
+.default-color-gradient, .btn, ul.btn-multi li a {
   background-image: white;
   /* Old browsers */
   background-image: -moz-linear-gradient(top, white 0%, #f0f0f0 100%);
@@ -807,25 +803,25 @@ ul.button-multi {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$default-color', endColorstr='darken($default-color, 6%)',GradientType=0 );
   /* IE6-9 */ }
 
-.main-color-gradient, .button-main {
-  background-image: #d1c585;
+.main-color-gradient, .main {
+  background-image: #bada55;
   /* Old browsers */
-  background-image: -moz-linear-gradient(top, #d1c585 0%, #c9ba6f 100%);
+  background-image: -moz-linear-gradient(top, #bada55 0%, #b0d53c 100%);
   /* FF3.6+ */
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d1c585), color-stop(100%, #c9ba6f));
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bada55), color-stop(100%, #b0d53c));
   /* Chrome,Safari4+ */
-  background-image: -webkit-linear-gradient(top, #d1c585 0%, #c9ba6f 100%);
+  background-image: -webkit-linear-gradient(top, #bada55 0%, #b0d53c 100%);
   /* Chrome10+,Safari5.1+ */
-  background-image: -o-linear-gradient(top, #d1c585 0%, #c9ba6f 100%);
+  background-image: -o-linear-gradient(top, #bada55 0%, #b0d53c 100%);
   /* Opera 11.10+ */
-  background-image: -ms-linear-gradient(top, #d1c585 0%, #c9ba6f 100%);
+  background-image: -ms-linear-gradient(top, #bada55 0%, #b0d53c 100%);
   /* IE10+ */
-  background-image: linear-gradient(to bottom, #d1c585 0%, #c9ba6f 100%);
+  background-image: linear-gradient(to bottom, #bada55 0%, #b0d53c 100%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$main-color', endColorstr='darken($main-color, 6%)',GradientType=0 );
   /* IE6-9 */ }
 
-.important-color-gradient, .button-important {
+.important-color-gradient, .important {
   background-image: #f4a535;
   /* Old browsers */
   background-image: -moz-linear-gradient(top, #f4a535 0%, #d6820c 100%);
@@ -843,7 +839,7 @@ ul.button-multi {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$important-color', endColorstr='darken($important-color, 14%)',GradientType=0 );
   /* IE6-9 */ }
 
-.success-color-gradient, .button-success {
+.success-color-gradient, .success {
   background-image: #8ab66b;
   /* Old browsers */
   background-image: -moz-linear-gradient(top, #8ab66b 0%, #669248 100%);
@@ -861,7 +857,7 @@ ul.button-multi {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$success-color', endColorstr='darken($success-color, 14%)',GradientType=0 );
   /* IE6-9 */ }
 
-.error-color-gradient, .button-error {
+.error-color-gradient, .error {
   background-image: #c93a3a;
   /* Old browsers */
   background-image: -moz-linear-gradient(top, #c93a3a 0%, #932828 100%);
@@ -879,7 +875,7 @@ ul.button-multi {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$error-color', endColorstr='darken($error-color, 14%)',GradientType=0 );
   /* IE6-9 */ }
 
-.dark-color-gradient, .button-dark {
+.dark-color-gradient, .dark {
   background-image: #24262a;
   /* Old browsers */
   background-image: -moz-linear-gradient(top, #24262a 0%, #030304 100%);
@@ -899,25 +895,12 @@ ul.button-multi {
 
 /*BOX-SHADOW
 ------------------*/
-.shadow1, .my-elements-page .cssp-wrapper #demo-wrap {
+.shadow1 {
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   -ms-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   -o-border-radius: 0 0 5px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); }
-
-.button-shadow, .btn, .button, ul.button-multi li a, .button-main, .button-important, .button-success, .button-error, .button-dark {
-  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 -1px 0 rgba(0, 0, 0, 0.2) inset;
-  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 -1px 0 rgba(0, 0, 0, 0.2) inset;
-  -ms-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 -1px 0 rgba(0, 0, 0, 0.2) inset;
-  -o-border-radius: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 -1px 0 rgba(0, 0, 0, 0.2) inset;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 -1px 0 rgba(0, 0, 0, 0.2) inset; }
-  .button-shadow:hover, .btn:hover, .button:hover, ul.button-multi li a:hover, .button-main:hover, .button-important:hover, .button-success:hover, .button-error:hover, .button-dark:hover, .button-shadow:focus, .btn:focus, .button:focus, ul.button-multi li a:focus, .button-main:focus, .button-important:focus, .button-success:focus, .button-error:focus, .button-dark:focus {
-    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.4) inset;
-    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.4) inset;
-    -ms-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.4) inset;
-    -o-border-radius: 0 1px 0 rgba(0, 0, 0, 0.4) inset;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; }
 
 /*rounded*/
 .rounded1, .input, select, input[type="text"],
@@ -957,7 +940,7 @@ text-area {
   -o-border-radius: 50%;
   border-radius: 50%; }
 
-.rounded-none, ul.button-multi li a {
+.rounded-none, ul.btn-multi li a {
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
   -ms-border-radius: 0px;
@@ -967,13 +950,6 @@ text-area {
 /*@EXTEND
 ------------------*/
 /*transition*/
-.transition-button, .btn, .button, ul.button-multi li a, .button-main, .button-important, .button-success, .button-error, .button-dark {
-  -moz-transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
-  -webkit-transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
-  -ms-transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
-  -o-transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
-  transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out; }
-
 .transition2 {
   transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
   -moz-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
@@ -991,10 +967,12 @@ text-area {
     width: 100%;
     margin: 0 auto !important; }
 
+  [class*="span"],
   [class*="span"] {
+    display: block;
     width: 100%;
     padding: 0 14px;
-    margin: 0 0 14px 0; }
+    margin: 0 0 8px 0; }
 
   .table3row {
     display: block; }
@@ -1022,7 +1000,7 @@ text-area {
   /*STYLE
   ----------------------*/
   .bloc-level-1 {
-    margin: 0 0 14px 0; }
+    margin: 0 0 8px 0; }
 
   /*NAVIGATION 
   ----------------------*/
@@ -1069,31 +1047,26 @@ text-area {
     display: inherit; } }
 @media handheld, only screen and (max-width: 979px) {
   /*NAVIGATION 
-  ----------------------*/
-  /*main-nav-open-btn foundation structure*/
-  .main-nav-open-btn ul li a {
-    margin: 14px; }
-
-  /*nav style*/
-  .nav-dark ul > li a {
-    border: 1px solid; } }
+  ----------------------*/ }
 /*GENERAL
 -------------*/
-body {
-  background: #f2f2f2; }
-
-/*Section*/
-.cssp-section {
-  padding: 0 0 28px 0; }
-
 /*Demo container*/
 .my-container {
   margin: 0 auto 0 auto;
-  padding: 0 0 56px 0; }
+  padding: 0 0 48px 0; }
 
 /*IE hacks*/
 .lt-ie8 #demo-container {
   width: 980px; }
+
+.my-elements-page .cssp-wrapper #demo-wrap {
+  background: #FFFFFF;
+  padding: 8px 28px 16px 28px;
+  margin: 16px 0 0 0;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1); }
+
+.cssp-nav-column {
+  margin-top: 16px; }
 
 /*TYPO
 -------------*/
@@ -1110,7 +1083,11 @@ h1, h2, h3, h4, h5, h6, .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-li
   font-family: 'abelregular'; }
 
 h2, .h2-like {
-  color: #897c34; }
+  color: #86a524; }
+
+#title div h1, #title div h2, #title div h3, #title div h4, #title div h5, #title div h6, #title div .h1-like, #title div .h2-like, #title div .h3-like, #title div .h4-like, #title div .h5-like, #title div .h6-like {
+  font-family: "arial",sans-serif;
+  color: #555555; }
 
 /*NAVIGATION
 -------------*/
@@ -1130,70 +1107,6 @@ h2, .h2-like {
 .cssp-nav-column > li > a {
   font-weight: bold; }
 
-/*HEADER
--------------*/
-#main-header {
-  background: #d1c585;
-  padding: 28px 0;
-  color: #897c34; }
-  #main-header h2 {
-    font-size: 4em; }
-
-/*FOOTER
--------------*/
-#main-footer {
-  margin: 28px 0 0 0;
-  padding: 28px 0;
-  min-height: 200px;
-  background-color: #e5e5e5;
-  border-top: 1px solid #cccccc; }
-
-/*WRAPPER
--------------*/
-body.my-home .my-container {
-  padding: 28px 0 0 0; }
-  body.my-home .my-container section h2 {
-    font-size: 2.8em; }
-
-/*ASIDE
--------------*/
-body.my-home aside {
-  padding-bottom: 14px; }
-  body.my-home aside > div {
-    background-color: #e5e5e5; }
-    body.my-home aside > div > div {
-      margin: 14px 0; }
-
-/*PART (advantages)
------------------------*/
-#advantage-home div.span4 h3 {
-  border-bottom: 1px dotted #d4d4d4;
-  padding: 0 0 14px 0; }
-
-/*MEDIAQUERY
--------------*/
-@media handheld, only screen and (max-width: 900px) {
-  header#main-header div h2 {
-    font-size: 2.8em;
-    padding: 0; } }
-@media handheld, only screen and (max-width: 768px) {
-  header#main-header {
-    padding: 56px 0;
-    background: #d1c585; }
-    header#main-header div {
-      text-align: center; }
-      header#main-header div p {
-        padding: 0 14px;
-        font-size: 1em; } }
-/*GENERAL
--------------*/
-.my-elements-page .cssp-wrapper #demo-wrap {
-  background: #FFFFFF;
-  padding: 28px; }
-
-.cssp-nav-column {
-  margin-top: 14px; }
-
 /*GRID
 -------------*/
 #positioning .my-grid span {
@@ -1204,40 +1117,33 @@ body.my-home aside {
   text-align: center;
   color: #FFFFFF; }
 #positioning .row {
-  margin-bottom: 28px; }
+  margin-bottom: 16px; }
 #positioning .row:last-child {
   margin: 0; }
 
+/*HEADER
+-------------*/
+#main-header {
+  background-color: #bada55;
+  background: linear-gradient(115deg, transparent 75%, #c1de66 75%) 0 0, linear-gradient(245deg, transparent 75%, #c1de66 75%) 0 0, linear-gradient(115deg, transparent 75%, #c1de66 75%) 5px -10px, linear-gradient(245deg, transparent 75%, #c1de66 75%) 5px -10px, #bada55;
+  background-size: 10px 20px;
+  padding: 16px 0;
+  color: #536616;
+  border-bottom: 1px solid #ffffff;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 -5px 3px #b2d540 inset; }
+  #main-header h2 {
+    font-size: 4em;
+    color: #536616; }
+
 /*BUTTON
 -------------*/
-#button [class^="button"] {
-  margin: 0 14px 14px 0; }
-
-/*STYLE
--------------*/
-.title-plus-action h2 {
-  display: inline;
-  float: left; }
-.title-plus-action a[class^="button"] {
-  float: right;
-  margin: 14px 0 0 0 !important; }
-
-/*FONT
--------------*/
-#title div h1, #title div h2, #title div h3, #title div h4, #title div h5, #title div h6, #title div .h1-like, #title div .h2-like, #title div .h3-like, #title div .h4-like, #title div .h5-like, #title div .h6-like {
-  font-family: "arial",sans-serif;
-  color: #555555; }
-
-/*FORM
--------------*/
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box; }
+#button .btn, #button ul.btn-multi li a, ul.btn-multi li #button a {
+  margin: 0 14px 8px 0; }
 
 body {
-  line-height: 1.6;
+  font-size: 1em;
+  line-height: 1.6em;
   color: #555555;
-  font-family: "Arial", Trebuchet MS, Verdana, Helvetica, Sans-Serif; }
+  font-family: "Arial", Trebuchet MS, Verdana, Helvetica, Sans-Serif;
+  background: #f2f2f2; }

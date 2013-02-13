@@ -1,5 +1,15 @@
 /*layout.scss is the elements position stylesheet*/
 
+/*GENERAL
+-------------*/
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 /*WRAPPER
 -------------*/
 .cssp-wrapper{
@@ -7,38 +17,43 @@
     margin: 0 auto;
     width: $wrapper-width;
     max-width: $wrapper-max-width;
-}
-        /*IE hacks*/
-	.lt-ie8 .cssp-wrapper{
-            width: 980px;
-        }
-	
-.cssp-section{
-    padding-bottom: $grande-margin;
-}
-.default-margin-bottom{
-    margin-bottom: 10px;
-}
+}	
 
 /*GRID
 -------------*/
-.row{
-    @extend .container-clear;
-    
+/*row and span with float system*/
+.row {
+    @extend .clearfix;
+	&>[class^="span"] {
+	    float: left;
+	    padding: 0 $col-tall-margin; 
+	}
 	//nesting row
-	.row{
-	   margin: 0 (-$tall-margin); 
+	.row,
+	.t-row {
+	   margin: 0 (-$col-tall-margin); 
 	}
 }
-[class^="span"] {
-    float: left;
-    padding: 0 $tall-margin; 
-}
-        /*IE hacks*/
-        .lt-ie8 [class*="span"] {
-            padding: 0 ($ie-margin/1.09); 
-        }
 
+/*row and span with table system*/
+.t-row {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+	&>[class^="span"]{
+	    @extend  .t-span;
+	}
+}
+
+/*"t-span" can works without "t-row" system*/
+.t-span {
+	display: table-cell;
+	vertical-align: top;
+	padding: 0 $col-tall-margin; 
+}
+
+/*grid span size setting*/
 .span1 {width: (100% / 12);}
 .span2 {width: (100% / 6);}
 .span3 {width: (100% / 4);}
@@ -50,26 +65,19 @@
 .span9 {width: ((100% / 12)*9);}
 .span10 {width: ((100% / 12)*10);}
 .span11 {width: ((100% / 12)*11);}
-.span12 {width: (100%);float: none;}
-
-        /*IE hacks*/
-            .lt-ie8 .span1 {width: (100% / 12)-($ie-margin*2);}
-            .lt-ie8 .span2 {width: (100% / 6)-($ie-margin*2);}
-            .lt-ie8 .span3 {width: (100% / 4)-($ie-margin*2);}
-            .lt-ie8 .span4 {width: (100% / 3)-($ie-margin*2);}
-            .lt-ie8 .span5 {width: ((100% / 12)*5)-($ie-margin*2);}
-            .lt-ie8 .span6 {width: (100% / 2)-($ie-margin*2);}
-            .lt-ie8 .span7 {width: ((100% / 12)*7)-($ie-margin*2);}
-            .lt-ie8 .span8 {width: ((100% / 12)*8)-($ie-margin*2);}
-            .lt-ie8 .span9 {width: ((100% / 12)*9)-($ie-margin*2);}
-            .lt-ie8 .span10 {width: ((100% / 12)*10)-($ie-margin*2);}
-            .lt-ie8 .span11 {width: ((100% / 12)*11)-($ie-margin*2);}
-            .lt-ie8 .span12 {width: (100%)-($ie-margin*4);}
-
+.span12 {width: (100%);}
 
 /*FLOAT
 -------------*/ 
-.container-clear{
+.clearfix{
+    clear: both;	
+	&:after, &:before{
+	    content: "";
+	    display: table;
+	    clear: both;
+	}
+}
+.clearfix-overflow{
     overflow: hidden;
     zoom: 1; /*IE hacks*/
 }
@@ -80,25 +88,34 @@
     float: left;
 }
 
-/*FOOTER
--------------*/
-footer{
-    clear: both;
-}
-
-/*NAVIGATION STRUCTURE
+/*MARGIN SYSTEM
 -------------------------*/
+.ml1 {margin-left: $col-tall-margin;}
+.ml2 {margin-left: $col-grande-margin;}
+.ml3 {margin-left: $col-venti-margin;}
+.mr1 {margin-right: $col-tall-margin;}
+.mr2 {margin-right: $col-grande-margin;}
+.mr3 {margin-right: $col-venti-margin;}
+
+.mt1 {margin-top: $row-tall-margin;}
+.mt2 {margin-top: $row-grande-margin;}
+.mt3 {margin-top: $row-venti-margin;}
+.mb1 {margin-bottom: $row-tall-margin;}
+.mb2 {margin-bottom: $row-grande-margin;}
+.mb3 {margin-bottom: $row-venti-margin;}
+
+/*WIDGET
+-------------------------*/
+/*inline navigation*/
 .cssp-nav-bar{
     margin: 0;
     padding-left: 0;
-    
 	&>li{
 	    list-style: none;
 	    display: inline;
-	    
 		a{
 		    display: inline-block;
-		    padding: 0 $grande-margin;
+		    padding: 0 $col-grande-margin;
 		    vertical-align: middle;
 		    line-height: $main-nav-height;
 		    border-left: 1px solid;
@@ -108,15 +125,15 @@ footer{
 		}
 	}
 }
+/*column navigation*/
 .cssp-nav-column{
     margin: 0;
     padding-left: 0;
     list-style: none;
-    
 	&>li{
 		a{
 		    display: block;
-		    padding: ($tall-margin/2) $tall-margin;
+		    padding: ($row-tall-margin) $col-tall-margin;
 		    border-bottom: 1px solid;
 		}
 		&:last-child a{
@@ -127,41 +144,26 @@ footer{
 	    margin: 0;
 	    padding-left: 0;
 	    list-style: none;
-	    
 		&>li a{
-		    padding-left: $grande-margin;
+		    padding-left: $col-grande-margin;
 		}
 	}
 }
 
-/*IMAGE / THUMBNAIL
--------------------------*/
+/*fluid image
+- image never exceed is own size*/
 .cssp-flex-img{
     max-width: 100%;
-    }
-        /*IE hacks*/
-        .lt-ie8 .cssp-flex-img,.cssp-flex-svg{
-            width: 100%;
-        }
-
-/*BOX-CALCUL
--------------------------*/
-.cssp-box-sizing-reset{
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    -ms-box-sizing: content-box;
-    -o-box-sizing: content-box;
-    box-sizing: content-box;
 }
+    /*replace "max-width" by "width" for ie7 and ie6*/
+    .lt-ie8 .cssp-flex-img{
+	width: 100%;
+    }
 
 /*VISIBILITY
 -------------------------*/
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
 
-    /*desktop visibility*/
-    .visibility-desktop-false{
-	display: none;
-    }
+/*desktop visibility*/
+.visibility-desktop-false{
+    display: none;
+}

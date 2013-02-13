@@ -4,10 +4,12 @@
     width: 100%;
     margin: 0 auto !important;
 }
-[class*="span"] {
+[class*="span"],
+[class*="span"]{
+    display: block;
     width: 100%;
-    padding: 0 $tall-margin;
-    margin: 0 0 $tall-margin 0;
+    padding: 0 $col-tall-margin;
+    margin: 0 0 $row-tall-margin 0;
 }
 .table3row{
     display: block;
@@ -20,14 +22,14 @@
 
 /*TYPO
 ---------------------*/
-h1, .h1-like{
+h1,.h1-like{
     font-size: 2.3em;
     @extend .uppercase;
 }
-h2, .h2-like{
+h2,.h2-like{
     font-size: 2.1em;
 }
-h3, .h3-like{
+h3,.h3-like{
     font-size: 1.9em;
 }
 
@@ -41,14 +43,14 @@ form{
 /*STYLE
 ----------------------*/
 .bloc-level-1{
-    margin: 0 0 $tall-margin 0;
+    margin: 0 0 $row-tall-margin 0;
 } 
 
 /*NAVIGATION 
 ----------------------*/
     .cssp-oppen-nav,.cssp-close-nav{
         float: right;
-        margin: 0 $tall-margin 0 0;
+        margin: 0 $col-tall-margin 0 0;
         color: $font-color2;
         line-height: 45px;
     }

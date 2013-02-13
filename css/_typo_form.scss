@@ -1,7 +1,7 @@
 /*typo_form.scss to manage all typo and form issues*/
 
 /*GENERAL
--------------------------*/
+-------------*/
 .uppercase{
     text-transform: uppercase;
 }
@@ -9,29 +9,22 @@
 /*TITLE
 -------------------------*/
     /*general*/
-    h1, h2, h3, h4, h5, h6, .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like{
+    h1,.h1-like,
+    h2,.h2-like,
+    h3,.h3-like,
+    h4,.h4-like,
+    h5,.h5-like,
+    h6,.h6-like{
 	font-family: inherit;
 	line-height: 1;
 	margin: 10px 0;
     }
-    h1, .h1-like{
-	font-size: 2.8em;
-    }
-    h2, .h2-like{
-	font-size: 2.4em;
-    }
-    h3, .h3-like{
-	font-size: 2em;
-    }
-    h4, .h4-like{
-	font-size: 1.6em;
-    }
-    h5, .h5-like{
-	font-size: 1.3em;
-    }
-    h6, .h6-like{
-	font-size: 1em;
-    }
+    h1,.h1-like{font-size: 2.8em;}
+    h2,.h2-like{font-size: 2.4em;}
+    h3,.h3-like{font-size: 2em;}
+    h4,.h4-like{font-size: 1.6em;}
+    h5,.h5-like{font-size: 1.3em;}
+    h6,.h6-like{font-size: 1em;}
 
     /*sub-title*/
     .cssp-sub-title{
@@ -67,7 +60,7 @@ p{
 /*LIST
 --------------------------*/
 ul,ol,dl{
-    @extend .default-margin-bottom;
+    margin-bottom: $row-tall-margin;
 }
 
         /*IE hacks*/
@@ -86,14 +79,14 @@ a{
 -------------------------*/
 .input{
     border: 1px solid #CCC;
-    padding: 8px $tall-margin;
+    padding: $row-tall-margin $col-tall-margin;
     font-size: 0.9em;
     @extend .rounded1;
     display: inline-block;
     vertical-align: middle;
 }
 label{
-    margin: 0 $tall-margin 0 0;
+    margin: 0 $col-tall-margin 0 0;
 }
 select{
     @extend .input;
@@ -161,7 +154,7 @@ pre.cssp-code{
     background-color: #000000;
     color: $font-color2;
     line-height: 1.4;
-    padding: $tall-margin;
+    padding: $col-tall-margin;
     
 	code{    
 	    .cssp-tag{
