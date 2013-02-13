@@ -62,11 +62,18 @@ p{
 ul,ol,dl{
     margin-bottom: $row-tall-margin;
 }
-
         /*IE hacks*/
 	.lt-ie8 ul, .lt-ie8 ol{
 	    padding-left: 30px;
 	}
+li{
+    ul,
+    ol,
+    {
+	margin-top: 0;
+	margin-bottom: 0;
+    }
+}
 
 /*LINKS
 --------------------------*/

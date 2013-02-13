@@ -1,13 +1,5 @@
 @import "_normalize";
 @import "_variable";
-@import "_layout";
-@import "_typo_form";
-@import "_style";
-@import "_mediaquery";
-
-    //import all specific cases here;
-    @import "___myelements";
-    
 body{
     font-size: $font-size;
     line-height: $line-height;
@@ -15,3 +7,10 @@ body{
     font-family: $current-text;
     background: $third-color;
 }
+@import "_layout";
+@import "_typo_form";
+@import "_style";
+@import "_mediaquery";
+
+    //import all specific cases here;
+    @import "___myelements";

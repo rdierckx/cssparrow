@@ -14,7 +14,7 @@
         $col-venti-margin: ($col-tall-margin * 4);
 
         //row margin (top,bottom)
-        $row-tall-margin: 8px;
+        $row-tall-margin: 9px;
         $row-grande-margin: ($row-tall-margin * 2);
         $row-venti-margin: ($row-tall-margin * 6);
                        
@@ -31,36 +31,34 @@
     //STYLE
 //--------------------------------------           
     //color range
-    // + specify if it's dark or not (to know the good font color) 
     //----------------------------
         //main-color 
         $main-color: #BADA55;
-        $main-color-dark: false;
+        $YN-main-color-dark: false; // + ($YN-) specify if it's dark or not (to know the good font color)?
         //color-2       
         $second-color: darken($main-color, 20%);
-        $second-color-dark: true;
+        $YN-second-color-dark: true; // + ($YN-)
         //color-3     
         $third-color: #F2F2F2;
-        $third-color-dark: false;
+        $YN-third-color-dark: false; // + ($YN-)
         //dark-color  
         $dark-color: #24262A;
-        $dark-color-dark: true;
+        $YN-dark-color-dark: true; // + ($YN-)
     
     //color information
-    // + specify if it's dark or not (to know the good font color) 
     //----------------------------
         //color-DEFAULT      
         $default-color: #FFFFFF;
-        $default-color-dark: false;
+        $YN-default-color-dark: false; // + ($YN-) specify if it's dark or not (to know the good font color)? 
         //color-IMPORTANT      
         $important-color: #F4A535;
-        $important-color-dark: true;
+        $YN-important-color-dark: true; // + ($YN-)
         //color-SUCCESS    
         $success-color: #8AB66B;
-        $success-color-dark: true;
+        $YN-success-color-dark: true; // + ($YN-)
         //color-ERROR           
-        $error-color: #C93A3A;
-        $error-color-dark: true;
+        $error-color: #B00B00;
+        $YN-error-color-dark: true; // + ($YN-)
     
     //text color
     //----------------------------   
@@ -80,8 +78,16 @@
 //--------------------------------------
     //WIDGET
 //--------------------------------------
-    //navigation
+    //buttons
     //----------------------------
-        $main-nav-height: 45px;
+    $btn-border-radius: 3px;
+    
+    //navigation bar
+    //----------------------------
+    $nav-bar-height: 45px;
+    $YN-nav-bar-border: true; // + ($YN-) display border ?
+    
+    
+    
 
 

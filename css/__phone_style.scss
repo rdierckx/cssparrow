@@ -52,7 +52,7 @@ form{
         float: right;
         margin: 0 $col-tall-margin 0 0;
         color: $font-color2;
-        line-height: 45px;
+        line-height: $nav-bar-height;
     }
     .cssp-close-nav{
         color: #FFF;
@@ -65,12 +65,13 @@ form{
         text-align: center;
         
             li{
-                a{
-                    display: block;
-                    height: $main-nav-height;
-                    margin: 0 !important;
-                    border-top: 1px solid;
-                }
+                display: inherit;
+                    a{
+                        display: block;
+                        height: $nav-bar-height;
+                        margin: 0 !important;
+                        border-top: 1px solid;
+                    }
             }
     }
     

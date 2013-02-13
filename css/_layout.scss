@@ -7,7 +7,7 @@
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
-    box-sizing: border-box;
+    box-sizing: border-box; *behavior: url(/js/boxsizing.htc);
 }
 
 /*WRAPPER
@@ -70,7 +70,8 @@
 /*FLOAT
 -------------*/ 
 .clearfix{
-    clear: both;	
+    clear: both;
+    zoom: 1; /*IE hacks*/
 	&:after, &:before{
 	    content: "";
 	    display: table;
@@ -112,17 +113,18 @@
     padding-left: 0;
 	&>li{
 	    list-style: none;
-	    display: inline;
+	    display: table-cell;
 		a{
 		    display: inline-block;
 		    padding: 0 $col-grande-margin;
 		    vertical-align: middle;
-		    line-height: $main-nav-height;
-		    border-left: 1px solid;
+		    line-height: $nav-bar-height;
+		    @if $YN-nav-bar-border == true{border-left: 1px solid;}
+		    
 		}
-		&:last-child a{
-		    border-right: 1px solid;
-		}
+		@if $YN-nav-bar-border == true{
+		    &:last-child a{border-right: 1px solid;}
+		} 
 	}
 }
 /*column navigation*/

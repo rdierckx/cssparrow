@@ -11,7 +11,7 @@
     border-style: solid;
     border-width: 1px;	
     background-color: darken($default-color, 8%);
-    @if $default-color-dark == true{color: #FFFFFF;}
+    @if $YN-default-color-dark == true{color: #FFFFFF;}
     border-color: darken($default-color, 25%);
     @extend .default-color-gradient;
     -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset, 0 -1px 0 rgba(0,0,0,0.2) inset;
@@ -73,7 +73,7 @@ ul.btn-multi{
 .main{
     background-color: darken($main-color, 8%);
     border-color: darken($main-color, 20%);
-    @if $main-color-dark == true{color: #FFFFFF;}
+    @if $YN-main-color-dark == true{color: #FFFFFF;}
     @extend .main-color-gradient;
 	&:hover{
 	    background: darken($main-color, 8%);
@@ -82,7 +82,7 @@ ul.btn-multi{
 .important{
     background-color: darken($important-color, 8%);
     border-color: darken($important-color, 20%);
-    @if $important-color-dark == true{color: #FFFFFF;}
+    @if $YN-important-color-dark == true{color: #FFFFFF;}
     @extend .important-color-gradient;
 	&:hover{
 	    background: darken($important-color, 12%);
@@ -91,7 +91,7 @@ ul.btn-multi{
 .success{
     background-color: darken($success-color, 8%);
     border-color: darken($success-color, 20%);
-    @if $success-color-dark == true{color: #FFFFFF;}
+    @if $YN-success-color-dark == true{color: #FFFFFF;}
     @extend .success-color-gradient;
 	&:hover{
 	    background: darken($success-color, 10%);
@@ -100,7 +100,7 @@ ul.btn-multi{
 .error{
     background-color: darken($error-color, 8%);
     border-color: darken($error-color, 20%);
-    @if $error-color-dark == true {color: #FFFFFF;}
+    @if $YN-error-color-dark == true {color: #FFFFFF;}
     @extend .error-color-gradient;
 	&:hover{
 	    background: darken($error-color, 10%);
@@ -109,7 +109,7 @@ ul.btn-multi{
 .dark{
     background-color: darken($dark-color, 8%);
     border-color: darken($dark-color, 50%);
-    @if $dark-color-dark == true{color: #FFFFFF;}
+    @if $YN-dark-color-dark == true{color: #FFFFFF;}
     @extend .dark-color-gradient;
 	&:hover{
 	    background: darken($dark-color, 12%);
@@ -279,14 +279,14 @@ ul.btn-multi{
 	border-radius: 0px;
     }
 
-    /*@EXTEND
-    ------------------*/	
-	/*transition*/
-	.transition2{
-	    transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-	    -moz-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-	    -webkit-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-	    -ms-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-	    -o-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-	}
+/*@EXTEND
+------------------*/	
+    /*transition*/
+    .transition2{
+	transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
+	-moz-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
+	-webkit-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
+	-ms-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
+	-o-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
+    }
 
