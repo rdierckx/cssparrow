@@ -29,9 +29,8 @@
 	    padding: 0 $col-tall-margin; 
 	}
 	//nesting row
-	.row,
-	.t-row {
-	   margin: 0 (-$col-tall-margin); 
+	.row {
+	    margin: 0 (-$col-tall-margin); 
 	}
 }
 
@@ -111,8 +110,8 @@
 .cssp-nav-bar{
     margin: 0;
     padding-left: 0;
+    list-style: none;
 	&>li{
-	    list-style: none;
 	    display: table-cell;
 		a{
 		    display: inline-block;

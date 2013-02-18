@@ -344,8 +344,7 @@ body {
 .row > [class^="span"] {
   float: left;
   padding: 0 14px; }
-.row .row,
-.row .t-row {
+.row .row {
   margin: 0 -14px; }
 
 /*row and span with table system*/
@@ -463,9 +462,9 @@ body {
 /*inline navigation*/
 .cssp-nav-bar {
   margin: 0;
-  padding-left: 0; }
+  padding-left: 0;
+  list-style: none; }
   .cssp-nav-bar > li {
-    list-style: none;
     display: table-cell; }
     .cssp-nav-bar > li a {
       display: inline-block;
@@ -722,7 +721,8 @@ ul.btn-multi {
   padding: 10px 18px;
   font-size: 1.1em; }
 
-/*THEMES
+/*THEME BUTTON
+ *style for button
 -------------------------*/
 .main {
   background-color: #acd333;
@@ -758,35 +758,47 @@ ul.btn-multi {
   .dark:hover {
     background: #080809; }
 
-/*NAVIGATION THEMES
+/*THEMES
 -------------------------*/
-.thm-nav-dark {
-  background-color: #24262a;
-  color: #ffffff; }
-  .thm-nav-dark ul > li a {
-    color: #cccccc;
-    border-color: #474b53 !important; }
-    .thm-nav-dark ul > li a:hover {
-      background: #111214;
-      color: #FFFFFF; }
-
-.thm-nav-main {
+.thm-main {
   background-color: #bada55;
-  color: #ffffff; }
-  .thm-nav-main ul > li a {
+  color: #555555; }
+  .thm-main .cssp-nav-bar > li a, .thm-main .cssp-nav-column > li a {
     color: #555555;
-    border-color: #97ba28 !important; }
-    .thm-nav-main ul > li a:hover {
+    border-color: #97ba28; }
+    .thm-main .cssp-nav-bar > li a:hover, .thm-main .cssp-nav-column > li a:hover {
+      color: #555555;
       background: #b2d540; }
 
-.thm-nav-third {
+.thm-second {
+  background-color: #86a524;
+  color: #cccccc; }
+  .thm-second .cssp-nav-bar > li a, .thm-second .cssp-nav-column > li a {
+    color: #cccccc;
+    border-color: #536616; }
+    .thm-second .cssp-nav-bar > li a:hover, .thm-second .cssp-nav-column > li a:hover {
+      color: #ffffff;
+      background: #75901f; }
+
+.thm-third {
   background-color: #f2f2f2;
-  color: #ffffff; }
-  .thm-nav-third ul > li a {
+  color: #555555; }
+  .thm-third .cssp-nav-bar > li a, .thm-third .cssp-nav-column > li a {
     color: #555555;
-    border-color: #cccccc !important; }
-    .thm-nav-third ul > li a:hover {
+    border-color: #cccccc; }
+    .thm-third .cssp-nav-bar > li a:hover, .thm-third .cssp-nav-column > li a:hover {
+      color: #555555;
       background: #e5e5e5; }
+
+.thm-dark {
+  background-color: #24262a;
+  color: #cccccc; }
+  .thm-dark .cssp-nav-bar > li a, .thm-dark .cssp-nav-column > li a {
+    color: #cccccc;
+    border-color: #474b53; }
+    .thm-dark .cssp-nav-bar > li a:hover, .thm-dark .cssp-nav-column > li a:hover {
+      color: #ffffff;
+      background: #111214; }
 
 /*BOX
 -------------------------*/
@@ -815,9 +827,7 @@ ul.btn-multi {
   background-image: -ms-linear-gradient(top, white 0%, #f0f0f0 100%);
   /* IE10+ */
   background-image: linear-gradient(to bottom, white 0%, #f0f0f0 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$default-color', endColorstr='darken($default-color, 6%)',GradientType=0 );
-  /* IE6-9 */ }
+  /* W3C */ }
 
 .main-color-gradient, .main {
   background-image: #bada55;
@@ -833,9 +843,7 @@ ul.btn-multi {
   background-image: -ms-linear-gradient(top, #bada55 0%, #b0d53c 100%);
   /* IE10+ */
   background-image: linear-gradient(to bottom, #bada55 0%, #b0d53c 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$main-color', endColorstr='darken($main-color, 6%)',GradientType=0 );
-  /* IE6-9 */ }
+  /* W3C */ }
 
 .important-color-gradient, .important {
   background-image: #f4a535;
@@ -851,9 +859,7 @@ ul.btn-multi {
   background-image: -ms-linear-gradient(top, #f4a535 0%, #d6820c 100%);
   /* IE10+ */
   background-image: linear-gradient(to bottom, #f4a535 0%, #d6820c 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$important-color', endColorstr='darken($important-color, 14%)',GradientType=0 );
-  /* IE6-9 */ }
+  /* W3C */ }
 
 .success-color-gradient, .success {
   background-image: #8ab66b;
@@ -869,9 +875,7 @@ ul.btn-multi {
   background-image: -ms-linear-gradient(top, #8ab66b 0%, #669248 100%);
   /* IE10+ */
   background-image: linear-gradient(to bottom, #8ab66b 0%, #669248 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$success-color', endColorstr='darken($success-color, 14%)',GradientType=0 );
-  /* IE6-9 */ }
+  /* W3C */ }
 
 .error-color-gradient, .error {
   background-image: #b00b00;
@@ -887,9 +891,7 @@ ul.btn-multi {
   background-image: -ms-linear-gradient(top, #b00b00 0%, #690700 100%);
   /* IE10+ */
   background-image: linear-gradient(to bottom, #b00b00 0%, #690700 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$error-color', endColorstr='darken($error-color, 14%)',GradientType=0 );
-  /* IE6-9 */ }
+  /* W3C */ }
 
 .dark-color-gradient, .dark {
   background-image: #24262a;
@@ -905,9 +907,7 @@ ul.btn-multi {
   background-image: -ms-linear-gradient(top, #24262a 0%, #030304 100%);
   /* IE10+ */
   background-image: linear-gradient(to bottom, #24262a 0%, #030304 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$dark-color', endColorstr='darken($dark-color, 14%)',GradientType=0 );
-  /* IE6-9 */ }
+  /* W3C */ }
 
 /*BOX-SHADOW
 ------------------*/
@@ -1013,7 +1013,7 @@ text-area {
     line-height: 45px; }
 
   .cssp-close-nav {
-    color: #FFF; }
+    color: #ffffff; }
 
   /*cssp-main-nav foundation structure*/
   .cssp-nav-bar {
@@ -1025,18 +1025,17 @@ text-area {
       .cssp-nav-bar li a {
         display: block;
         height: 45px;
-        margin: 0 !important;
         border-top: 1px solid; }
 
   /*nav buttons close and open visibility management very important for ":target" system*/
-  body#cssp-target:not(:target) .cssp-oppen-nav, body#cssp-target:target .cssp-close-nav {
+  #cssp-target:not(:target) .cssp-oppen-nav, #cssp-target:target .cssp-close-nav {
     display: inline-block; }
 
-  body#cssp-target:not(:target) .cssp-close-nav, body#cssp-target:target .cssp-oppen-nav {
+  #cssp-target:not(:target) .cssp-close-nav, #cssp-target:target .cssp-oppen-nav {
     display: none; }
 
   /*it's important to give "cssp" prefix ID to your body if it's not possible create a div element after body tag and target it*/
-  body#cssp-target:not(:target) .cssp-nav-bar > li a {
+  #cssp-target:not(:target) .cssp-nav-bar > li a {
     height: 0;
     overflow: hidden;
     border-top: 0px solid rgba(150, 150, 150, 0.5);

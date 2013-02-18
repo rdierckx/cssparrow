@@ -71,7 +71,8 @@ ul.btn-multi{
 	font-size: 1.1em;
     }
 
-/*THEMES
+/*THEME BUTTON
+ *style for button
 -------------------------*/
 .main{
     background-color: darken($main-color, 8%);
@@ -119,39 +120,65 @@ ul.btn-multi{
 	}
 }
 
-/*NAVIGATION THEMES
+/*THEMES
 -------------------------*/
-.thm-nav-dark{
-    background-color: $dark-color;
-    color: #ffffff;
-	ul>li a{
-	    color: $font-color2;
-	    border-color: lighten($dark-color, 15%) !important;
-		&:hover{
-		    background: darken($dark-color, 8%);
-		    color: #FFFFFF;
-		}
-	}
-}
-.thm-nav-main{
+.thm-main{
     background-color: $main-color;
-    color: #ffffff;
-	ul>li a{
-	    color: $font-color1;
-	    border-color: darken($main-color, 15%) !important;
+    @if $YN-main-color-dark == false{color: $font-color1;}
+    @if $YN-main-color-dark == true{color: $font-color2;}
+	.cssp-nav-bar>li a,.cssp-nav-column>li a{
+	    @if $YN-main-color-dark == false{color: $font-color1;}
+	    @if $YN-main-color-dark == true{color: $font-color2;}
+	    border-color: darken($main-color, 15%);
 		&:hover{
+		    @if $YN-main-color-dark == false{color: $font-color1;}
+		    @if $YN-main-color-dark == true{color: #ffffff;}
 		    background: darken($main-color, 5%);
 		}
 	}
 }
-.thm-nav-third{
-    background-color: $third-color;
-    color: #ffffff;
-	ul>li a{
-	    color: $font-color1;
-	    border-color: darken($third-color, 15%) !important;
+.thm-second{
+    background-color: $second-color;
+    @if $YN-second-color-dark == false{color: $font-color1;}
+    @if $YN-second-color-dark == true{color: $font-color2;}
+	.cssp-nav-bar>li a,.cssp-nav-column>li a{
+	    @if $YN-second-color-dark == false{color: $font-color1;}
+	    @if $YN-second-color-dark == true{color: $font-color2;}
+	    border-color: darken($second-color, 15%);
 		&:hover{
+		    @if $YN-second-color-dark == false{color: $font-color1;}
+		    @if $YN-second-color-dark == true{color: #ffffff;}
+		    background: darken($second-color, 5%);
+		}
+	}
+}
+.thm-third{
+    background-color: $third-color;
+    @if $YN-third-color-dark == false{color: $font-color1;}
+    @if $YN-third-color-dark == true{color: $font-color2;}
+	.cssp-nav-bar>li a,.cssp-nav-column>li a{
+	    @if $YN-third-color-dark == false{color: $font-color1;}
+	    @if $YN-third-color-dark == true{color: $font-color2;}
+	    border-color: darken($third-color, 15%);
+		&:hover{
+		    @if $YN-third-color-dark == false{color: $font-color1;}
+		    @if $YN-third-color-dark == true{color: #ffffff;}
 		    background: darken($third-color, 5%);
+		}
+	}
+}
+.thm-dark{
+    background-color: $dark-color;
+    @if $YN-dark-color-dark == false{color: $font-color1;}
+    @if $YN-dark-color-dark == true{color: $font-color2;}
+	.cssp-nav-bar>li a,.cssp-nav-column>li a{
+	    @if $YN-dark-color-dark == false{color: $font-color1;}
+	    @if $YN-dark-color-dark == true{color: $font-color2;}
+	    border-color: lighten($dark-color, 15%);
+		&:hover{
+		    @if $YN-dark-color-dark == false{color: $font-color1;}
+		    @if $YN-dark-color-dark == true{color: #ffffff;}
+		    background: darken($dark-color, 8%);
 		}
 	}
 }
@@ -179,7 +206,6 @@ ul.btn-multi{
     background-image: -o-linear-gradient(top,  $default-color 0%,darken($default-color, 6%) 100%); /* Opera 11.10+ */
     background-image: -ms-linear-gradient(top,  $default-color 0%,darken($default-color, 6%) 100%); /* IE10+ */
     background-image: linear-gradient(to bottom,  $default-color 0%,darken($default-color, 6%) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$default-color', endColorstr='darken($default-color, 6%)',GradientType=0 ); /* IE6-9 */
 }
 .main-color-gradient{
     background-image: $main-color; /* Old browsers */
@@ -189,7 +215,6 @@ ul.btn-multi{
     background-image: -o-linear-gradient(top,  $main-color 0%,darken($main-color, 6%) 100%); /* Opera 11.10+ */
     background-image: -ms-linear-gradient(top,  $main-color 0%,darken($main-color, 6%) 100%); /* IE10+ */
     background-image: linear-gradient(to bottom,  $main-color 0%,darken($main-color, 6%) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$main-color', endColorstr='darken($main-color, 6%)',GradientType=0 ); /* IE6-9 */
 }
 .important-color-gradient{
     background-image: $important-color; /* Old browsers */
@@ -199,7 +224,6 @@ ul.btn-multi{
     background-image: -o-linear-gradient(top,  $important-color 0%,darken($important-color, 14%) 100%); /* Opera 11.10+ */
     background-image: -ms-linear-gradient(top,  $important-color 0%,darken($important-color, 14%) 100%); /* IE10+ */
     background-image: linear-gradient(to bottom,  $important-color 0%,darken($important-color, 14%) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$important-color', endColorstr='darken($important-color, 14%)',GradientType=0 ); /* IE6-9 */
 }
 .success-color-gradient{
     background-image: $success-color; /* Old browsers */
@@ -209,7 +233,6 @@ ul.btn-multi{
     background-image: -o-linear-gradient(top,  $success-color 0%,darken($success-color, 14%) 100%); /* Opera 11.10+ */
     background-image: -ms-linear-gradient(top,  $success-color 0%,darken($success-color, 14%) 100%); /* IE10+ */
     background-image: linear-gradient(to bottom,  $success-color 0%,darken($success-color, 14%) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$success-color', endColorstr='darken($success-color, 14%)',GradientType=0 ); /* IE6-9 */
 }
 .error-color-gradient{
     background-image: $error-color; /* Old browsers */
@@ -219,7 +242,6 @@ ul.btn-multi{
     background-image: -o-linear-gradient(top,  $error-color 0%,darken($error-color, 14%) 100%); /* Opera 11.10+ */
     background-image: -ms-linear-gradient(top,  $error-color 0%,darken($error-color, 14%) 100%); /* IE10+ */
     background-image: linear-gradient(to bottom,  $error-color 0%,darken($error-color, 14%) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$error-color', endColorstr='darken($error-color, 14%)',GradientType=0 ); /* IE6-9 */
 }
 .dark-color-gradient{
     background-image: $dark-color; /* Old browsers */
@@ -229,7 +251,6 @@ ul.btn-multi{
     background-image: -o-linear-gradient(top,  $dark-color 0%,darken($dark-color, 14%) 100%); /* Opera 11.10+ */
     background-image: -ms-linear-gradient(top,  $dark-color 0%,darken($dark-color, 14%) 100%); /* IE10+ */
     background-image: linear-gradient(to bottom,  $dark-color 0%,darken($dark-color, 14%) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$dark-color', endColorstr='darken($dark-color, 14%)',GradientType=0 ); /* IE6-9 */
 }
 
 /*BOX-SHADOW
