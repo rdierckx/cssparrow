@@ -92,12 +92,6 @@ h2, .h2-like{
 #main-header{
     //background: url('../img/sparrow_bg.png') no-repeat $main-color right bottom;    
     background-color: $main-color;
-    background: 
-	linear-gradient(115deg, transparent 75%, lighten($main-color, 4%) 75%) 0 0,
-	linear-gradient(245deg, transparent 75%, lighten($main-color, 4%) 75%) 0 0,
-	linear-gradient(115deg, transparent 75%, lighten($main-color, 4%) 75%) 5px -10px,
-	linear-gradient(245deg, transparent 75%, lighten($main-color, 4%) 75%) 5px -10px, $main-color;
-    background-size: 10px 20px;    
 
     padding: $row-grande-margin 0;
     @extend .container-clear;

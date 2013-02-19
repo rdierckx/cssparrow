@@ -154,6 +154,23 @@ select{
     .input-group-line{
 	@extend .default-margin-bottom;
     }
+    
+/*CODE
+--------------------------*/
+.icon{
+    text-align: center;
+    font-family: 'cssparrow_icons';
+    font-weight: normal;
+    font-style: normal;
+    cursor: help;
+    
+    display: inline-block;
+    letter-spacing: 2px;
+    line-height: inherit;
+    vertical-align: baseline;
+    text-align: center;
+    border: 0 none !important;
+}
 
 /*CODE
 --------------------------*/

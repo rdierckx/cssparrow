@@ -312,6 +312,18 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@font-face {
+  font-family: 'abelregular';
+  src: url("../fonts/abel-regular-webfont.eot");
+  src: url("../fonts/abel-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/abel-regular-webfont.woff") format("woff"), url("../fonts/abel-regular-webfont.ttf") format("truetype"), url("../fonts/abel-regular-webfont.svg#abelregular") format("svg"); }
+
+@font-face {
+  font-family: 'cssparrow_icons';
+  src: url("../fonts/icons_sparrow-webfont.eot");
+  src: url("../fonts/icons_sparrow-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/icons_sparrow-webfont.woff") format("woff"), url("../fonts/icons_sparrow-webfont.ttf") format("truetype"), url("../fonts/icons_sparrow-webfont.svg#cssparrow_iconsregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 body {
   font-size: 1em;
   line-height: 1.6em;
@@ -650,6 +662,21 @@ input [type="submit"] {
   vertical-align: middle; }
 
 /*input group config*/
+/*CODE
+--------------------------*/
+.icon {
+  text-align: center;
+  font-family: 'cssparrow_icons';
+  font-weight: normal;
+  font-style: normal;
+  cursor: help;
+  display: inline-block;
+  letter-spacing: 2px;
+  line-height: inherit;
+  vertical-align: baseline;
+  text-align: center;
+  border: 0 none !important; }
+
 /*CODE
 --------------------------*/
 pre.cssp-code {
@@ -1128,8 +1155,6 @@ h2, .h2-like {
 -------------*/
 #main-header {
   background-color: #bada55;
-  background: linear-gradient(115deg, transparent 75%, #c1de66 75%) 0 0, linear-gradient(245deg, transparent 75%, #c1de66 75%) 0 0, linear-gradient(115deg, transparent 75%, #c1de66 75%) 5px -10px, linear-gradient(245deg, transparent 75%, #c1de66 75%) 5px -10px, #bada55;
-  background-size: 10px 20px;
   padding: 18px 0;
   color: #536616;
   border-bottom: 1px solid #ffffff;
