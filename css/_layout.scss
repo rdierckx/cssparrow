@@ -17,60 +17,54 @@
     margin: 0 auto;
     width: $wrapper-width;
     max-width: $wrapper-max-width;
+    @extend .clearfix;
 }	
 
 /*GRID
 -------------*/
-/*row and span with float system*/
+/*row and span float system*/
 .row {
-    @extend .clearfix;
-	&>[class^="span"] {
-	    float: left;
-	    padding: 0 $col-tall-margin; 
-	}
-	//nesting row
-	.row {
-	    margin: 0 (-$col-tall-margin); 
+	@extend .clearfix;
+}
+[class^="span"] {
+	display: block;
+	padding: 0 $col-tall-margin;
+	@extend .float-left;
+
+	//nested elements
+	.row,.t-row {
+		margin-left: (-$col-tall-margin);
+		margin-right: (-$col-tall-margin);
 	}
 }
-
-/*row and span with table system*/
+/*row and span float system*/
 .t-row {
     display: table;
+	width: 100%;
     table-layout: fixed;
-    width: 100%;
     border-collapse: collapse;
-	&>[class^="span"]{
-	    @extend  .t-span;
+}
+	
+/*"t-span" can works without "t-row" system*/
+[class^="t-span"] {
+	display: table-cell;
+	padding: 0 $col-tall-margin;
+	vertical-align: top;
+}
+
+/* grid span size setting */
+@for $i from 1 through $span-number{
+	.span#{$i},.t-span#{$i} {
+		width: (100%/$span-number)*$i;
 	}
 }
-
-/*"t-span" can works without "t-row" system*/
-.t-span {
-	display: table-cell;
-	vertical-align: top;
-	padding: 0 $col-tall-margin; 
-}
-
-/*grid span size setting*/
-.span1 {width: (100% / 12);}
-.span2 {width: (100% / 6);}
-.span3 {width: (100% / 4);}
-.span4 {width: (100% / 3);}
-.span5 {width: ((100% / 12)*5);}
-.span6 {width: (100% / 2);}
-.span7 {width: ((100% / 12)*7);}
-.span8 {width: ((100% / 12)*8);}
-.span9 {width: ((100% / 12)*9);}
-.span10 {width: ((100% / 12)*10);}
-.span11 {width: ((100% / 12)*11);}
-.span12 {width: (100%);}
 
 /*FLOAT
 -------------*/ 
 .clearfix{
     clear: both;
     zoom: 1; /*IE hacks*/
+
 	&:after, &:before{
 	    content: "";
 	    display: table;
@@ -90,6 +84,7 @@
 
 /*MARGIN SYSTEM
 -------------------------*/
+/* margin left, right */
 .ml1 {margin-left: $col-tall-margin;}
 .ml2 {margin-left: $col-grande-margin;}
 .ml3 {margin-left: $col-venti-margin;}
@@ -97,12 +92,19 @@
 .mr2 {margin-right: $col-grande-margin;}
 .mr3 {margin-right: $col-venti-margin;}
 
+/* margin top, bottom */
 .mt1 {margin-top: $row-tall-margin;}
 .mt2 {margin-top: $row-grande-margin;}
 .mt3 {margin-top: $row-venti-margin;}
 .mb1 {margin-bottom: $row-tall-margin;}
 .mb2 {margin-bottom: $row-grande-margin;}
 .mb3 {margin-bottom: $row-venti-margin;}
+
+/*BOX
+-------------------------*/
+.cssp-box{
+    padding: $row-grande-margin $col-grande-margin;
+}
 
 /*WIDGET
 -------------------------*/
@@ -111,10 +113,11 @@
     margin: 0;
     padding-left: 0;
     list-style: none;
+    display: table;
 	&>li{
-	    display: table-cell;
+		display: table-cell;
 		a{
-		    display: inline-block;
+		    display: block;
 		    padding: 0 $col-grande-margin;
 		    vertical-align: middle;
 		    line-height: $nav-bar-height;
@@ -137,26 +140,21 @@
 		    padding: ($row-tall-margin) $col-tall-margin;
 		    border-bottom: 1px solid;
 		}
-		&:last-child a{
-		    border-bottom: 1px solid;
-		}
-	}
-	ul{
-	    margin: 0;
-	    padding-left: 0;
-	    list-style: none;
-		&>li a{
-		    padding-left: $col-grande-margin;
+		ul{
+		    margin: 0;
+		    padding-left: 0;
+		    list-style: none;
+			&>li a{
+			    padding-left: $col-grande-margin;
+			}
 		}
 	}
 }
-
 /*fluid image
 - image never exceed is own size*/
 .cssp-flex-img{
     max-width: 100%;
 }
-    /*replace "max-width" by "width" for ie7 and ie6*/
     .lt-ie8 .cssp-flex-img{
 	width: 100%;
     }

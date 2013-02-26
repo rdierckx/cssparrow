@@ -10,7 +10,15 @@ body{
 @import "_layout";
 @import "_typo_form";
 @import "_style";
-@import "_mediaquery";
 
     //import all specific cases here;
     @import "___myelements";
+
+/*MEDIAQUERY
+-------------*/
+@media handheld, only screen and (max-width: 979px) {
+    @import "__tablet_style";
+}
+@media handheld, only screen and (max-width: 767px) {
+    @import "__phone_style";
+}

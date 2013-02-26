@@ -22,10 +22,11 @@
     //----------------------------
     $wrapper-width: 95%;
     $wrapper-max-width: 1300px;
-        
-    //font system
+
+    //grid span number
     //----------------------------
-    $current-text: "Arial",Trebuchet MS,Verdana,Helvetica,Sans-Serif;
+    $span-number: 12;
+    $span-number-tablet: 6;
 
 //--------------------------------------
     //STYLE
@@ -70,6 +71,10 @@
 //--------------------------------------
     //FONT
 //--------------------------------------
+    //font familly
+    //----------------------------
+    $current-text: "Arial",Trebuchet MS,Verdana,Helvetica,Sans-Serif;
+
     //@font-face
     //----------------------------
     @font-face {

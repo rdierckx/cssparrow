@@ -2,23 +2,51 @@
 ---------------------*/
 .cssp-wrapper{
     width: 100%;
-    margin: 0 auto !important;
 }
-[class*="span"],
-[class*="span"]{
+.t-row{
+    display: block;
+    width: inherit;
+}
+
+/*GRID
+-------------*/
+[class^="span"],
+[class^="t-span"],
+[class^="t-span-tablet"],
+[class^="span-tablet"]{
     display: block;
     width: 100%;
     padding: 0 $col-tall-margin;
-    margin: 0 0 $row-tall-margin 0;
 }
-.table3row{
-    display: block;
-    
-        .cell{
-            display: block;
-            width: 100%;
-        }
-} 
+@for $i from 1 through $span-number{
+    .span-mobile#{$i},.t-span-mobile#{$i} {
+        width: (100%/$span-number)*$i;
+    }
+}
+
+/*MARGIN SYSTEM
+-------------------------*/
+/* margin left, right */
+.ml1-mobile {margin-left: $col-tall-margin;}
+.ml2-mobile {margin-left: $col-grande-margin;}
+.ml3-mobile {margin-left: $col-venti-margin;}
+.mr1-mobile {margin-right: $col-tall-margin;}
+.mr2-mobile {margin-right: $col-grande-margin;}
+.mr3-mobile {margin-right: $col-venti-margin;}
+
+/* margin top, bottom */
+.mt1-mobile {margin-top: $row-tall-margin;}
+.mt2-mobile {margin-top: $row-grande-margin;}
+.mt3-mobile {margin-top: $row-venti-margin;}
+.mb1-mobile {margin-bottom: $row-tall-margin;}
+.mb2-mobile {margin-bottom: $row-grande-margin;}
+.mb3-mobile {margin-bottom: $row-venti-margin;}
+
+/*BOX
+-------------*/
+.cssp-box{
+    padding: $row-tall-margin 0;
+}
 
 /*TYPO
 ---------------------*/
@@ -63,12 +91,15 @@ form{
         clear: both;
         float: none;
         text-align: center;
+        width: 100%;
+        display: block;
             li{
                 display: block;
                     a{
                         display: block;
                         height: $nav-bar-height;
                         border-top: 1px solid;
+                        border-left: 0px solid;
                     }
             }
     }

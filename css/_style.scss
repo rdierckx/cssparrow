@@ -43,7 +43,7 @@ ul.btn-multi{
     
 	li{
 	    list-style: none;
-	    display: inline;
+	    display: table-cell;
 	    
 		a{
 		    @extend .rounded-none; 
@@ -74,7 +74,7 @@ ul.btn-multi{
 /*THEME BUTTON
  *style for button
 -------------------------*/
-.main{
+.btn-thm-main{
     background-color: darken($main-color, 8%);
     border-color: darken($main-color, 20%);
     @if $YN-main-color-dark == true{color: #FFFFFF;}
@@ -83,7 +83,7 @@ ul.btn-multi{
 	    background: darken($main-color, 8%);
 	}
 }
-.important{
+.btn-thm-important{
     background-color: darken($important-color, 8%);
     border-color: darken($important-color, 20%);
     @if $YN-important-color-dark == true{color: #FFFFFF;}
@@ -92,7 +92,7 @@ ul.btn-multi{
 	    background: darken($important-color, 12%);
 	}
 }
-.success{
+.btn-thm-success{
     background-color: darken($success-color, 8%);
     border-color: darken($success-color, 20%);
     @if $YN-success-color-dark == true{color: #FFFFFF;}
@@ -101,7 +101,7 @@ ul.btn-multi{
 	    background: darken($success-color, 10%);
 	}
 }
-.error{
+.btn-thm-error{
     background-color: darken($error-color, 8%);
     border-color: darken($error-color, 20%);
     @if $YN-error-color-dark == true {color: #FFFFFF;}
@@ -110,7 +110,7 @@ ul.btn-multi{
 	    background: darken($error-color, 10%);
 	}
 }
-.dark{
+.btn-thm-dark{
     background-color: darken($dark-color, 8%);
     border-color: darken($dark-color, 50%);
     @if $YN-dark-color-dark == true{color: #FFFFFF;}
@@ -126,75 +126,69 @@ ul.btn-multi{
     background-color: $main-color;
     @if $YN-main-color-dark == false{color: $font-color1;}
     @if $YN-main-color-dark == true{color: $font-color2;}
-	.cssp-nav-bar>li a,.cssp-nav-column>li a{
-	    @if $YN-main-color-dark == false{color: $font-color1;}
-	    @if $YN-main-color-dark == true{color: $font-color2;}
-	    border-color: darken($main-color, 15%);
-		&:hover{
-		    @if $YN-main-color-dark == false{color: $font-color1;}
-		    @if $YN-main-color-dark == true{color: #ffffff;}
-		    background: darken($main-color, 5%);
-		}
-	}
+}
+.thm-main.cssp-nav-bar>li a,.thm-main.cssp-nav-column>li a{
+    @if $YN-main-color-dark == false{color: $font-color1;}
+    @if $YN-main-color-dark == true{color: $font-color2;}
+    border-color: darken($main-color, 15%);
+    &:hover{
+        @if $YN-main-color-dark == false{color: $font-color1;}
+        @if $YN-main-color-dark == true{color: #ffffff;}
+        background: darken($main-color, 5%);
+    }
 }
 .thm-second{
     background-color: $second-color;
     @if $YN-second-color-dark == false{color: $font-color1;}
     @if $YN-second-color-dark == true{color: $font-color2;}
-	.cssp-nav-bar>li a,.cssp-nav-column>li a{
-	    @if $YN-second-color-dark == false{color: $font-color1;}
-	    @if $YN-second-color-dark == true{color: $font-color2;}
-	    border-color: darken($second-color, 15%);
-		&:hover{
-		    @if $YN-second-color-dark == false{color: $font-color1;}
-		    @if $YN-second-color-dark == true{color: #ffffff;}
-		    background: darken($second-color, 5%);
-		}
-	}
+}
+.thm-second.cssp-nav-bar>li a,.thm-second.cssp-nav-column>li a{
+    @if $YN-second-color-dark == false{color: $font-color1;}
+    @if $YN-second-color-dark == true{color: $font-color2;}
+    border-color: darken($second-color, 15%);
+    &:hover{
+        @if $YN-second-color-dark == false{color: $font-color1;}
+        @if $YN-second-color-dark == true{color: #ffffff;}
+        background: darken($second-color, 5%);
+    }
 }
 .thm-third{
     background-color: $third-color;
     @if $YN-third-color-dark == false{color: $font-color1;}
     @if $YN-third-color-dark == true{color: $font-color2;}
-	.cssp-nav-bar>li a,.cssp-nav-column>li a{
-	    @if $YN-third-color-dark == false{color: $font-color1;}
-	    @if $YN-third-color-dark == true{color: $font-color2;}
-	    border-color: darken($third-color, 15%);
-		&:hover{
-		    @if $YN-third-color-dark == false{color: $font-color1;}
-		    @if $YN-third-color-dark == true{color: #ffffff;}
-		    background: darken($third-color, 5%);
-		}
-	}
+}
+.thm-third.cssp-nav-bar>li a,.thm-third.cssp-nav-column>li a{
+    @if $YN-third-color-dark == false{color: $font-color1;}
+    @if $YN-third-color-dark == true{color: $font-color2;}
+    border-color: darken($third-color, 15%);
+    &:hover{
+        @if $YN-third-color-dark == false{color: $font-color1;}
+        @if $YN-third-color-dark == true{color: #ffffff;}
+        background: darken($third-color, 5%);
+    }
 }
 .thm-dark{
     background-color: $dark-color;
     @if $YN-dark-color-dark == false{color: $font-color1;}
     @if $YN-dark-color-dark == true{color: $font-color2;}
-	.cssp-nav-bar>li a,.cssp-nav-column>li a{
-	    @if $YN-dark-color-dark == false{color: $font-color1;}
-	    @if $YN-dark-color-dark == true{color: $font-color2;}
-	    border-color: lighten($dark-color, 15%);
-		&:hover{
-		    @if $YN-dark-color-dark == false{color: $font-color1;}
-		    @if $YN-dark-color-dark == true{color: #ffffff;}
-		    background: darken($dark-color, 8%);
-		}
-	}
 }
-
-/*BOX
--------------------------*/
-.cssp-box{
-    padding: $row-tall-margin $col-grande-margin;
+.thm-dark.cssp-nav-bar>li a,.thm-dark.cssp-nav-column>li a{
+    @if $YN-dark-color-dark == false{color: $font-color1;}
+    @if $YN-dark-color-dark == true{color: $font-color2;}
+    border-color: lighten($dark-color, 15%);
+    &:hover{
+        @if $YN-dark-color-dark == false{color: $font-color1;}
+        @if $YN-dark-color-dark == true{color: #ffffff;}
+        background: darken($dark-color, 8%);
+    }
 }
 
 /*SECTION-HEADER
 -------------------------*/
-	.cssp-section-header{
-		border-bottom: 1px solid $font-color-sub;
-		margin: 0 0 $row-grande-margin 0;
-	}
+.cssp-section-header{
+	border-bottom: 1px solid $font-color-sub;
+	margin: 0 0 $row-grande-margin 0;
+}
 
 /*GRADIENT
 ------------------*/
@@ -251,6 +245,14 @@ ul.btn-multi{
     background-image: -o-linear-gradient(top,  $dark-color 0%,darken($dark-color, 14%) 100%); /* Opera 11.10+ */
     background-image: -ms-linear-gradient(top,  $dark-color 0%,darken($dark-color, 14%) 100%); /* IE10+ */
     background-image: linear-gradient(to bottom,  $dark-color 0%,darken($dark-color, 14%) 100%); /* W3C */
+}
+
+/*IMAGES
+------------------*/
+.polaroid{
+    border: 7px solid #ffffff;
+    -webkit-box-shadow: 0 2px 1px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 1px rgba(0,0,0,0.2);
 }
 
 /*BOX-SHADOW

@@ -352,70 +352,71 @@ body {
 
 /*GRID
 -------------*/
-/*row and span with float system*/
-.row > [class^="span"] {
-  float: left;
+/*row and span float system*/
+[class^="span"] {
+  display: block;
   padding: 0 14px; }
-.row .row {
-  margin: 0 -14px; }
+  [class^="span"] .row, [class^="span"] .t-row {
+    margin-left: -14px;
+    margin-right: -14px; }
 
-/*row and span with table system*/
+/*row and span float system*/
 .t-row {
   display: table;
-  table-layout: fixed;
   width: 100%;
+  table-layout: fixed;
   border-collapse: collapse; }
 
 /*"t-span" can works without "t-row" system*/
-.t-span, .t-row > [class^="span"] {
+[class^="t-span"] {
   display: table-cell;
-  vertical-align: top;
-  padding: 0 14px; }
+  padding: 0 14px;
+  vertical-align: top; }
 
-/*grid span size setting*/
-.span1 {
+/* grid span size setting */
+.span1, .t-span1 {
   width: 8.33333%; }
 
-.span2 {
+.span2, .t-span2 {
   width: 16.66667%; }
 
-.span3 {
+.span3, .t-span3 {
   width: 25%; }
 
-.span4 {
+.span4, .t-span4 {
   width: 33.33333%; }
 
-.span5 {
+.span5, .t-span5 {
   width: 41.66667%; }
 
-.span6 {
+.span6, .t-span6 {
   width: 50%; }
 
-.span7 {
+.span7, .t-span7 {
   width: 58.33333%; }
 
-.span8 {
+.span8, .t-span8 {
   width: 66.66667%; }
 
-.span9 {
+.span9, .t-span9 {
   width: 75%; }
 
-.span10 {
+.span10, .t-span10 {
   width: 83.33333%; }
 
-.span11 {
+.span11, .t-span11 {
   width: 91.66667%; }
 
-.span12 {
+.span12, .t-span12 {
   width: 100%; }
 
 /*FLOAT
 -------------*/
-.clearfix, .row {
+.clearfix, .cssp-wrapper, .row {
   clear: both;
   zoom: 1;
   /*IE hacks*/ }
-  .clearfix:after, .row:after, .clearfix:before, .row:before {
+  .clearfix:after, .cssp-wrapper:after, .row:after, .clearfix:before, .cssp-wrapper:before, .row:before {
     content: "";
     display: table;
     clear: both; }
@@ -428,11 +429,12 @@ body {
 .float-right {
   float: right; }
 
-.float-left {
+.float-left, [class^="span"] {
   float: left; }
 
 /*MARGIN SYSTEM
 -------------------------*/
+/* margin left, right */
 .ml1 {
   margin-left: 14px; }
 
@@ -451,6 +453,7 @@ body {
 .mr3 {
   margin-right: 56px; }
 
+/* margin top, bottom */
 .mt1 {
   margin-top: 9px; }
 
@@ -469,17 +472,23 @@ body {
 .mb3 {
   margin-bottom: 54px; }
 
+/*BOX
+-------------------------*/
+.cssp-box {
+  padding: 18px 28px; }
+
 /*WIDGET
 -------------------------*/
 /*inline navigation*/
 .cssp-nav-bar {
   margin: 0;
   padding-left: 0;
-  list-style: none; }
+  list-style: none;
+  display: table; }
   .cssp-nav-bar > li {
     display: table-cell; }
     .cssp-nav-bar > li a {
-      display: inline-block;
+      display: block;
       padding: 0 28px;
       vertical-align: middle;
       line-height: 45px;
@@ -496,13 +505,11 @@ body {
     display: block;
     padding: 9px 14px;
     border-bottom: 1px solid; }
-  .cssp-nav-column > li:last-child a {
-    border-bottom: 1px solid; }
-  .cssp-nav-column ul {
+  .cssp-nav-column > li ul {
     margin: 0;
     padding-left: 0;
     list-style: none; }
-    .cssp-nav-column ul > li a {
+    .cssp-nav-column > li ul > li a {
       padding-left: 28px; }
 
 /*fluid image
@@ -510,7 +517,6 @@ body {
 .cssp-flex-img {
   max-width: 100%; }
 
-/*replace "max-width" by "width" for ie7 and ie6*/
 .lt-ie8 .cssp-flex-img {
   width: 100%; }
 
@@ -575,13 +581,13 @@ p {
   font-weight: bold;
   text-indent: 0; }
 
-.cssp-tall-text {
+.tall-text {
   font-size: 1.2em; }
 
-.cssp-grande-text {
+.grande-text {
   font-size: 1.3em; }
 
-.cssp-venti-text {
+.venti-text {
   font-size: 1.5em; }
 
 /*LIST
@@ -597,6 +603,9 @@ li ul,
 li ol {
   margin-top: 0;
   margin-bottom: 0; }
+
+.reset-list {
+  padding-left: 0; }
 
 /*LINKS
 --------------------------*/
@@ -728,7 +737,7 @@ ul.btn-multi {
   display: inline-block; }
   ul.btn-multi li {
     list-style: none;
-    display: inline; }
+    display: table-cell; }
     ul.btn-multi li a {
       margin: 0 !important;
       border-left-width: 0; }
@@ -751,38 +760,38 @@ ul.btn-multi {
 /*THEME BUTTON
  *style for button
 -------------------------*/
-.main {
+.btn-thm-main {
   background-color: #acd333;
   border-color: #86a524; }
-  .main:hover {
+  .btn-thm-main:hover {
     background: #acd333; }
 
-.important {
+.btn-thm-important {
   background-color: #f2940e;
   border-color: #b9710a;
   color: #FFFFFF; }
-  .important:hover {
+  .btn-thm-important:hover {
     background: #e0880c; }
 
-.success {
+.btn-thm-success {
   background-color: #75a652;
   border-color: #587d3e;
   color: #FFFFFF; }
-  .success:hover {
+  .btn-thm-success:hover {
     background: #709f4f; }
 
-.error {
+.btn-thm-error {
   background-color: #870800;
   border-color: #4a0500;
   color: #FFFFFF; }
-  .error:hover {
+  .btn-thm-error:hover {
     background: #7d0800; }
 
-.dark {
+.btn-thm-dark {
   background-color: #111214;
   border-color: black;
   color: #FFFFFF; }
-  .dark:hover {
+  .btn-thm-dark:hover {
     background: #080809; }
 
 /*THEMES
@@ -790,47 +799,46 @@ ul.btn-multi {
 .thm-main {
   background-color: #bada55;
   color: #555555; }
-  .thm-main .cssp-nav-bar > li a, .thm-main .cssp-nav-column > li a {
+
+.thm-main.cssp-nav-bar > li a, .thm-main.cssp-nav-column > li a {
+  color: #555555;
+  border-color: #97ba28; }
+  .thm-main.cssp-nav-bar > li a:hover, .thm-main.cssp-nav-column > li a:hover {
     color: #555555;
-    border-color: #97ba28; }
-    .thm-main .cssp-nav-bar > li a:hover, .thm-main .cssp-nav-column > li a:hover {
-      color: #555555;
-      background: #b2d540; }
+    background: #b2d540; }
 
 .thm-second {
   background-color: #86a524;
   color: #cccccc; }
-  .thm-second .cssp-nav-bar > li a, .thm-second .cssp-nav-column > li a {
-    color: #cccccc;
-    border-color: #536616; }
-    .thm-second .cssp-nav-bar > li a:hover, .thm-second .cssp-nav-column > li a:hover {
-      color: #ffffff;
-      background: #75901f; }
+
+.thm-second.cssp-nav-bar > li a, .thm-second.cssp-nav-column > li a {
+  color: #cccccc;
+  border-color: #536616; }
+  .thm-second.cssp-nav-bar > li a:hover, .thm-second.cssp-nav-column > li a:hover {
+    color: #ffffff;
+    background: #75901f; }
 
 .thm-third {
   background-color: #f2f2f2;
   color: #555555; }
-  .thm-third .cssp-nav-bar > li a, .thm-third .cssp-nav-column > li a {
+
+.thm-third.cssp-nav-bar > li a, .thm-third.cssp-nav-column > li a {
+  color: #555555;
+  border-color: #cccccc; }
+  .thm-third.cssp-nav-bar > li a:hover, .thm-third.cssp-nav-column > li a:hover {
     color: #555555;
-    border-color: #cccccc; }
-    .thm-third .cssp-nav-bar > li a:hover, .thm-third .cssp-nav-column > li a:hover {
-      color: #555555;
-      background: #e5e5e5; }
+    background: #e5e5e5; }
 
 .thm-dark {
   background-color: #24262a;
   color: #cccccc; }
-  .thm-dark .cssp-nav-bar > li a, .thm-dark .cssp-nav-column > li a {
-    color: #cccccc;
-    border-color: #474b53; }
-    .thm-dark .cssp-nav-bar > li a:hover, .thm-dark .cssp-nav-column > li a:hover {
-      color: #ffffff;
-      background: #111214; }
 
-/*BOX
--------------------------*/
-.cssp-box {
-  padding: 9px 28px; }
+.thm-dark.cssp-nav-bar > li a, .thm-dark.cssp-nav-column > li a {
+  color: #cccccc;
+  border-color: #474b53; }
+  .thm-dark.cssp-nav-bar > li a:hover, .thm-dark.cssp-nav-column > li a:hover {
+    color: #ffffff;
+    background: #111214; }
 
 /*SECTION-HEADER
 -------------------------*/
@@ -856,7 +864,7 @@ ul.btn-multi {
   background-image: linear-gradient(to bottom, white 0%, #f0f0f0 100%);
   /* W3C */ }
 
-.main-color-gradient, .main {
+.main-color-gradient, .btn-thm-main {
   background-image: #bada55;
   /* Old browsers */
   background-image: -moz-linear-gradient(top, #bada55 0%, #b0d53c 100%);
@@ -872,7 +880,7 @@ ul.btn-multi {
   background-image: linear-gradient(to bottom, #bada55 0%, #b0d53c 100%);
   /* W3C */ }
 
-.important-color-gradient, .important {
+.important-color-gradient, .btn-thm-important {
   background-image: #f4a535;
   /* Old browsers */
   background-image: -moz-linear-gradient(top, #f4a535 0%, #d6820c 100%);
@@ -888,7 +896,7 @@ ul.btn-multi {
   background-image: linear-gradient(to bottom, #f4a535 0%, #d6820c 100%);
   /* W3C */ }
 
-.success-color-gradient, .success {
+.success-color-gradient, .btn-thm-success {
   background-image: #8ab66b;
   /* Old browsers */
   background-image: -moz-linear-gradient(top, #8ab66b 0%, #669248 100%);
@@ -904,7 +912,7 @@ ul.btn-multi {
   background-image: linear-gradient(to bottom, #8ab66b 0%, #669248 100%);
   /* W3C */ }
 
-.error-color-gradient, .error {
+.error-color-gradient, .btn-thm-error {
   background-image: #b00b00;
   /* Old browsers */
   background-image: -moz-linear-gradient(top, #b00b00 0%, #690700 100%);
@@ -920,7 +928,7 @@ ul.btn-multi {
   background-image: linear-gradient(to bottom, #b00b00 0%, #690700 100%);
   /* W3C */ }
 
-.dark-color-gradient, .dark {
+.dark-color-gradient, .btn-thm-dark {
   background-image: #24262a;
   /* Old browsers */
   background-image: -moz-linear-gradient(top, #24262a 0%, #030304 100%);
@@ -935,6 +943,13 @@ ul.btn-multi {
   /* IE10+ */
   background-image: linear-gradient(to bottom, #24262a 0%, #030304 100%);
   /* W3C */ }
+
+/*IMAGES
+------------------*/
+.polaroid {
+  border: 7px solid #ffffff;
+  -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2); }
 
 /*BOX-SHADOW
 ------------------*/
@@ -986,125 +1001,19 @@ text-area {
   -ms-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
   -o-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68); }
 
-/*mediaquery.scss to target differents devices*/
-/*MEDIAQUERY
--------------*/
-@media handheld, only screen and (max-width: 767px) {
-  /*LAYOUT
-  ---------------------*/
-  .cssp-wrapper {
-    width: 100%;
-    margin: 0 auto !important; }
-
-  [class*="span"],
-  [class*="span"] {
-    display: block;
-    width: 100%;
-    padding: 0 14px;
-    margin: 0 0 9px 0; }
-
-  .table3row {
-    display: block; }
-    .table3row .cell {
-      display: block;
-      width: 100%; }
-
-  /*TYPO
-  ---------------------*/
-  h1, .h1-like {
-    font-size: 2.3em; }
-
-  h2, .h2-like {
-    font-size: 2.1em; }
-
-  h3, .h3-like {
-    font-size: 1.9em; }
-
-  /*FORM
-  --------------------*/
-  form {
-    width: 100%;
-    display: block; }
-
-  /*STYLE
-  ----------------------*/
-  .bloc-level-1 {
-    margin: 0 0 9px 0; }
-
-  /*NAVIGATION 
-  ----------------------*/
-  .cssp-oppen-nav, .cssp-close-nav {
-    float: right;
-    margin: 0 14px 0 0;
-    color: #cccccc;
-    line-height: 45px; }
-
-  .cssp-close-nav {
-    color: #ffffff; }
-
-  /*cssp-main-nav foundation structure*/
-  .cssp-nav-bar {
-    clear: both;
-    float: none;
-    text-align: center; }
-    .cssp-nav-bar li {
-      display: block; }
-      .cssp-nav-bar li a {
-        display: block;
-        height: 45px;
-        border-top: 1px solid; }
-
-  /*nav buttons close and open visibility management very important for ":target" system*/
-  #cssp-target:not(:target) .cssp-oppen-nav, #cssp-target:target .cssp-close-nav {
-    display: inline-block; }
-
-  #cssp-target:not(:target) .cssp-close-nav, #cssp-target:target .cssp-oppen-nav {
-    display: none; }
-
-  /*it's important to give "cssp" prefix ID to your body if it's not possible create a div element after body tag and target it*/
-  #cssp-target:not(:target) .cssp-nav-bar > li a {
-    height: 0;
-    overflow: hidden;
-    border-top: 0px solid rgba(150, 150, 150, 0.5);
-    border-bottom: 0px solid rgba(150, 150, 150, 0.5); }
-
-  /*VISIBILITY
-  ----------------------*/
-  .visibility-mobile-false {
-    display: none; }
-
-  .visibility-mobile-true {
-    display: inherit; } }
-@media handheld, only screen and (max-width: 979px) {
-  /*NAVIGATION 
-  ----------------------*/ }
 /*GENERAL
 -------------*/
-/*Demo container*/
-.my-container {
-  margin: 0 auto 0 auto;
-  padding: 0 0 54px 0; }
-
-/*IE hacks*/
-.lt-ie8 #demo-container {
-  width: 980px; }
-
-.my-elements-page .cssp-wrapper #demo-wrap {
+#demo-wrap {
   background: #FFFFFF;
   padding: 9px 28px 18px 28px;
   margin: 18px 0 0 0;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1); }
 
-.cssp-nav-column {
-  margin-top: 18px; }
+.separ-b {
+  border-bottom: 1px solid #d4d4d4; }
 
 /*TYPO
 -------------*/
-@font-face {
-  font-family: 'abelregular';
-  src: url("../fonts/abel-regular-webfont.eot");
-  src: url("../fonts/abel-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/abel-regular-webfont.woff") format("woff"), url("../fonts/abel-regular-webfont.ttf") format("truetype"), url("../fonts/abel-regular-webfont.svg#abelregular") format("svg"); }
-
 .font, h1, h2, h3, h4, h5, h6, .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like {
   font-weight: normal;
   font-style: normal; }
@@ -1112,7 +1021,8 @@ text-area {
 h1, h2, h3, h4, h5, h6, .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like {
   font-family: 'abelregular'; }
 
-h2, .h2-like {
+.cssp-nav-column h2,
+.cssp-nav-column .h2-like {
   color: #86a524; }
 
 #title div h1, #title div h2, #title div h3, #title div h4, #title div h5, #title div h6, #title div .h1-like, #title div .h2-like, #title div .h3-like, #title div .h4-like, #title div .h5-like, #title div .h6-like {
@@ -1168,3 +1078,254 @@ h2, .h2-like {
 -------------*/
 #button .btn, #button ul.btn-multi li a, ul.btn-multi li #button a {
   margin: 0 14px 9px 0; }
+
+/*MEDIAQUERY
+-------------*/
+@media handheld, only screen and (max-width: 979px) {
+  /*GRID
+  -------------*/
+  .span-tablet1, .t-span-tablet1 {
+    width: 8.33333%; }
+
+  .span-tablet2, .t-span-tablet2 {
+    width: 16.66667%; }
+
+  .span-tablet3, .t-span-tablet3 {
+    width: 25%; }
+
+  .span-tablet4, .t-span-tablet4 {
+    width: 33.33333%; }
+
+  .span-tablet5, .t-span-tablet5 {
+    width: 41.66667%; }
+
+  .span-tablet6, .t-span-tablet6 {
+    width: 50%; }
+
+  .span-tablet7, .t-span-tablet7 {
+    width: 58.33333%; }
+
+  .span-tablet8, .t-span-tablet8 {
+    width: 66.66667%; }
+
+  .span-tablet9, .t-span-tablet9 {
+    width: 75%; }
+
+  .span-tablet10, .t-span-tablet10 {
+    width: 83.33333%; }
+
+  .span-tablet11, .t-span-tablet11 {
+    width: 91.66667%; }
+
+  .span-tablet12, .t-span-tablet12 {
+    width: 100%; }
+
+  /*MARGIN SYSTEM
+  -------------------------*/
+  /* margin left, right */
+  .ml1-tablet {
+    margin-left: 14px; }
+
+  .ml2-tablet {
+    margin-left: 28px; }
+
+  .ml3-tablet {
+    margin-left: 56px; }
+
+  .mr1-tablet {
+    margin-right: 14px; }
+
+  .mr2-tablet {
+    margin-right: 28px; }
+
+  .mr3-tablet {
+    margin-right: 56px; }
+
+  /* margin top, bottom */
+  .mt1-tablet {
+    margin-top: 9px; }
+
+  .mt2-tablet {
+    margin-top: 18px; }
+
+  .mt3-tablet {
+    margin-top: 54px; }
+
+  .mb1-tablet {
+    margin-bottom: 9px; }
+
+  .mb2-tablet {
+    margin-bottom: 18px; }
+
+  .mb3-tablet {
+    margin-bottom: 54px; } }
+@media handheld, only screen and (max-width: 767px) {
+  /*LAYOUT
+  ---------------------*/
+  .cssp-wrapper {
+    width: 100%; }
+
+  .t-row {
+    display: block;
+    width: inherit; }
+
+  /*GRID
+  -------------*/
+  [class^="span"],
+  [class^="t-span"],
+  [class^="t-span-tablet"],
+  [class^="span-tablet"] {
+    display: block;
+    width: 100%;
+    padding: 0 14px; }
+
+  .span-mobile1, .t-span-mobile1 {
+    width: 8.33333%; }
+
+  .span-mobile2, .t-span-mobile2 {
+    width: 16.66667%; }
+
+  .span-mobile3, .t-span-mobile3 {
+    width: 25%; }
+
+  .span-mobile4, .t-span-mobile4 {
+    width: 33.33333%; }
+
+  .span-mobile5, .t-span-mobile5 {
+    width: 41.66667%; }
+
+  .span-mobile6, .t-span-mobile6 {
+    width: 50%; }
+
+  .span-mobile7, .t-span-mobile7 {
+    width: 58.33333%; }
+
+  .span-mobile8, .t-span-mobile8 {
+    width: 66.66667%; }
+
+  .span-mobile9, .t-span-mobile9 {
+    width: 75%; }
+
+  .span-mobile10, .t-span-mobile10 {
+    width: 83.33333%; }
+
+  .span-mobile11, .t-span-mobile11 {
+    width: 91.66667%; }
+
+  .span-mobile12, .t-span-mobile12 {
+    width: 100%; }
+
+  /*MARGIN SYSTEM
+  -------------------------*/
+  /* margin left, right */
+  .ml1-mobile {
+    margin-left: 14px; }
+
+  .ml2-mobile {
+    margin-left: 28px; }
+
+  .ml3-mobile {
+    margin-left: 56px; }
+
+  .mr1-mobile {
+    margin-right: 14px; }
+
+  .mr2-mobile {
+    margin-right: 28px; }
+
+  .mr3-mobile {
+    margin-right: 56px; }
+
+  /* margin top, bottom */
+  .mt1-mobile {
+    margin-top: 9px; }
+
+  .mt2-mobile {
+    margin-top: 18px; }
+
+  .mt3-mobile {
+    margin-top: 54px; }
+
+  .mb1-mobile {
+    margin-bottom: 9px; }
+
+  .mb2-mobile {
+    margin-bottom: 18px; }
+
+  .mb3-mobile {
+    margin-bottom: 54px; }
+
+  /*BOX
+  -------------*/
+  .cssp-box {
+    padding: 9px 0; }
+
+  /*TYPO
+  ---------------------*/
+  h1, .h1-like {
+    font-size: 2.3em; }
+
+  h2, .h2-like {
+    font-size: 2.1em; }
+
+  h3, .h3-like {
+    font-size: 1.9em; }
+
+  /*FORM
+  --------------------*/
+  form {
+    width: 100%;
+    display: block; }
+
+  /*STYLE
+  ----------------------*/
+  .bloc-level-1 {
+    margin: 0 0 9px 0; }
+
+  /*NAVIGATION 
+  ----------------------*/
+  .cssp-oppen-nav, .cssp-close-nav {
+    float: right;
+    margin: 0 14px 0 0;
+    color: #cccccc;
+    line-height: 45px; }
+
+  .cssp-close-nav {
+    color: #ffffff; }
+
+  /*cssp-main-nav foundation structure*/
+  .cssp-nav-bar {
+    clear: both;
+    float: none;
+    text-align: center;
+    width: 100%;
+    display: block; }
+    .cssp-nav-bar li {
+      display: block; }
+      .cssp-nav-bar li a {
+        display: block;
+        height: 45px;
+        border-top: 1px solid;
+        border-left: 0px solid; }
+
+  /*nav buttons close and open visibility management very important for ":target" system*/
+  #cssp-target:not(:target) .cssp-oppen-nav, #cssp-target:target .cssp-close-nav {
+    display: inline-block; }
+
+  #cssp-target:not(:target) .cssp-close-nav, #cssp-target:target .cssp-oppen-nav {
+    display: none; }
+
+  /*it's important to give "cssp" prefix ID to your body if it's not possible create a div element after body tag and target it*/
+  #cssp-target:not(:target) .cssp-nav-bar > li a {
+    height: 0;
+    overflow: hidden;
+    border-top: 0px solid rgba(150, 150, 150, 0.5);
+    border-bottom: 0px solid rgba(150, 150, 150, 0.5); }
+
+  /*VISIBILITY
+  ----------------------*/
+  .visibility-mobile-false {
+    display: none; }
+
+  .visibility-mobile-true {
+    display: inherit; } }

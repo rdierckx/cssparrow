@@ -47,13 +47,13 @@ p{
     font-weight: bold;
     text-indent: 0;
 }
-.cssp-tall-text{
+.tall-text{
     font-size: 1.2em;
 }
-.cssp-grande-text{
+.grande-text{
     font-size: 1.3em;
 }
-.cssp-venti-text{
+.venti-text{
     font-size: 1.5em;
 }
 
@@ -73,6 +73,9 @@ li{
 	margin-top: 0;
 	margin-bottom: 0;
     }
+}
+.reset-list{
+    padding-left: 0;
 }
 
 /*LINKS

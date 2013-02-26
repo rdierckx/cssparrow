@@ -1,33 +1,17 @@
 /*GENERAL
 -------------*/
-/*Demo container*/
-.my-container{
-    margin: 0 auto 0 auto;
-    padding: 0 0 $row-venti-margin 0;
-}
-    /*IE hacks*/ 
-    .lt-ie8 #demo-container{width: 980px;}
-	
-.my-elements-page .cssp-wrapper #demo-wrap{
+#demo-wrap{
     background: #FFFFFF;
     padding: $row-tall-margin $col-grande-margin $row-grande-margin $col-grande-margin;
     margin: $row-grande-margin 0 0 0;
     box-shadow: 0 0 2px rgba(0,0,0,0.1);
 }
-.cssp-nav-column{
-    margin-top: $row-grande-margin;
+.separ-b{
+    border-bottom: 1px solid $font-color-sub;
 }
 	
 /*TYPO
 -------------*/
-@font-face {
-    font-family: 'abelregular';
-    src: url('../fonts/abel-regular-webfont.eot');
-    src: url('../fonts/abel-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/abel-regular-webfont.woff') format('woff'),
-         url('../fonts/abel-regular-webfont.ttf') format('truetype'),
-         url('../fonts/abel-regular-webfont.svg#abelregular') format('svg');
-}
 .font{
     font-weight: normal;
     font-style: normal;
@@ -36,7 +20,8 @@ h1, h2, h3, h4, h5, h6, .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-li
     font-family: 'abelregular';
     @extend .font;
 }
-h2, .h2-like{
+.cssp-nav-column h2, 
+.cssp-nav-column .h2-like{
     color: $second-color;
 }
 #title div{
@@ -65,27 +50,27 @@ h2, .h2-like{
 	}
 }
 .cssp-nav-column>li>a{
-	    font-weight: bold;
+	font-weight: bold;
 }
 
 /*GRID
 -------------*/
-    #positioning{
-        .my-grid span{
-            display: block;
-            background: #CCCCCC;
-            height: 40px;
-            line-height: 40px;
-            text-align: center;
-            color: #FFFFFF;
-        }
-        .row{
-            margin-bottom: $row-grande-margin;
-        }
-        .row:last-child{
-            margin: 0;
-        }
+#positioning{
+    .my-grid span{
+        display: block;
+        background: #CCCCCC;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #FFFFFF;
     }
+    .row{
+        margin-bottom: $row-grande-margin;
+    }
+    .row:last-child{
+        margin: 0;
+    }
+}
     
 /*HEADER
 -------------*/
