@@ -1,7 +1,6 @@
 /*layout.scss is the elements position stylesheet*/
 
-/*GENERAL
--------------*/
+//GENERAL
 *{
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -10,8 +9,7 @@
     box-sizing: border-box; *behavior: url(/js/boxsizing.htc);
 }
 
-/*WRAPPER
--------------*/
+//WRAPPER
 .cssp-wrapper{
     position: relative;
     margin: 0 auto;
@@ -20,8 +18,7 @@
     @extend .clearfix;
 }	
 
-/*GRID
--------------*/
+//GRID
 /*row and span float system*/
 .row {
 	@extend .clearfix;
@@ -37,21 +34,19 @@
 		margin-right: (-$col-tall-margin);
 	}
 }
-/*row and span float system*/
+/*row system for table*/
 .t-row {
     display: table;
-	width: 100%;
+    width: 100%;
     table-layout: fixed;
     border-collapse: collapse;
 }
-	
 /*"t-span" can works without "t-row" system*/
 [class^="t-span"] {
 	display: table-cell;
 	padding: 0 $col-tall-margin;
-	vertical-align: top;
+	vertical-align: middle;
 }
-
 /* grid span size setting */
 @for $i from 1 through $span-number{
 	.span#{$i},.t-span#{$i} {
@@ -59,11 +54,10 @@
 	}
 }
 
-/*FLOAT
--------------*/ 
+//FLOAT & RESET
 .clearfix{
     clear: both;
-    zoom: 1; /*IE hacks*/
+    *zoom: 1;
 
 	&:after, &:before{
 	    content: "";
@@ -73,7 +67,7 @@
 }
 .clearfix-overflow{
     overflow: hidden;
-    zoom: 1; /*IE hacks*/
+    *zoom: 1;
 }
 .float-right{
     float: right;
@@ -82,8 +76,14 @@
     float: left;
 }
 
-/*MARGIN SYSTEM
--------------------------*/
+//PLACEMENT
+.cssp-inline{
+	display: inline-block;
+	line-height: 1;
+	vertical-align: top;
+} 
+
+//MARGIN SYSTEM
 /* margin left, right */
 .ml1 {margin-left: $col-tall-margin;}
 .ml2 {margin-left: $col-grande-margin;}
@@ -100,14 +100,12 @@
 .mb2 {margin-bottom: $row-grande-margin;}
 .mb3 {margin-bottom: $row-venti-margin;}
 
-/*BOX
--------------------------*/
+//BOX
 .cssp-box{
     padding: $row-grande-margin $col-grande-margin;
 }
 
-/*WIDGET
--------------------------*/
+//WIDGET
 /*inline navigation*/
 .cssp-nav-bar{
     margin: 0;
@@ -116,13 +114,13 @@
     display: table;
 	&>li{
 		display: table-cell;
-		a{
-		    display: block;
-		    padding: 0 $col-grande-margin;
-		    vertical-align: middle;
-		    line-height: $nav-bar-height;
-		    @if $YN-nav-bar-border == true{border-left: 1px solid;}
-		    
+		vertical-align: middle;
+		&>a{
+			display: inline-block;
+			line-height: $nav-bar-height; 
+			height: $nav-bar-height;
+			padding: 0 $col-tall-margin;
+		    @if $YN-nav-bar-border == true{border-left: 1px solid;}    
 		}
 		@if $YN-nav-bar-border == true{
 		    &:last-child a{border-right: 1px solid;}
@@ -150,8 +148,7 @@
 		}
 	}
 }
-/*fluid image
-- image never exceed is own size*/
+/*fluid image*/
 .cssp-flex-img{
     max-width: 100%;
 }
@@ -159,8 +156,7 @@
 	width: 100%;
     }
 
-/*VISIBILITY
--------------------------*/
+//VISIBILITY
 
 /*desktop visibility*/
 .visibility-desktop-false{

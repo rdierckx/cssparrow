@@ -79,22 +79,54 @@ h1, h2, h3, h4, h5, h6, .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-li
     background-color: $main-color;
 
     padding: $row-grande-margin 0;
-    @extend .container-clear;
+    @extend .clearfix;
     color: darken($second-color, 15%);
     border-bottom: 1px solid #ffffff;
     border-top: 1px solid rgba(255,255,255,0.4);
-    box-shadow: 0 -5px 3px darken($main-color, 5%) inset;
-                
+    box-shadow: 0 -5px 3px darken($main-color, 5%) inset;        
         h2{
             font-size: 4em;
 	    color: darken($second-color, 15%); 
         }
 }
 
-/*BUTTON
+/*THEME
 -------------*/
-#button .btn{
-    margin: 0 $col-tall-margin $row-tall-margin 0;
+.thm-third{
+    background-color: $third-color;
+    @if $YN-third-color-dark == false{color: $font-color1;}
+    @if $YN-third-color-dark == true{color: $font-color2;}
+}
+.thm-third.cssp-nav-bar>li a,.thm-third.cssp-nav-column>li a{
+    @if $YN-third-color-dark == false{color: $font-color1;}
+    @if $YN-third-color-dark == true{color: $font-color2;}
+    border-color: darken($third-color, 15%);
+    &:hover{
+        @if $YN-third-color-dark == false{color: $font-color1;}
+        @if $YN-third-color-dark == true{color: #ffffff;}
+        background: darken($third-color, 5%);
+    }
+}
+
+/*CODE
+--------------------------*/
+pre.cssp-code{
+    background-color: #000000;
+    color: $font-color2;
+    line-height: 1.4;
+    padding: $col-tall-margin;
+    
+	code{    
+	    .cssp-tag{
+		color: $important-color;
+	    }
+	    .cssp-class{
+		color: $success-color;
+	    }
+	    .cssp-type{
+		color: $error-color;
+	    }
+	}
 }
 
 

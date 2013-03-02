@@ -1,5 +1,4 @@
-/*LAYOUT
----------------------*/
+//LAYOUT
 .cssp-wrapper{
     width: 100%;
 }
@@ -8,8 +7,7 @@
     width: inherit;
 }
 
-/*GRID
--------------*/
+//GRID
 [class^="span"],
 [class^="t-span"],
 [class^="t-span-tablet"],
@@ -24,99 +22,88 @@
     }
 }
 
-/*MARGIN SYSTEM
--------------------------*/
+//FLOAT
+.float-reset-mobile{
+    float: none;
+}
+
+//MARGIN SYSTEM
 /* margin left, right */
+.ml0-mobile {margin-left: 0;}
 .ml1-mobile {margin-left: $col-tall-margin;}
 .ml2-mobile {margin-left: $col-grande-margin;}
 .ml3-mobile {margin-left: $col-venti-margin;}
+.mr0-mobile {margin-right: 0;}
 .mr1-mobile {margin-right: $col-tall-margin;}
 .mr2-mobile {margin-right: $col-grande-margin;}
 .mr3-mobile {margin-right: $col-venti-margin;}
-
 /* margin top, bottom */
+.mt0-mobile {margin-top: 0;}
 .mt1-mobile {margin-top: $row-tall-margin;}
 .mt2-mobile {margin-top: $row-grande-margin;}
 .mt3-mobile {margin-top: $row-venti-margin;}
+.mb0-mobile {margin-bottom: 0;}
 .mb1-mobile {margin-bottom: $row-tall-margin;}
 .mb2-mobile {margin-bottom: $row-grande-margin;}
 .mb3-mobile {margin-bottom: $row-venti-margin;}
 
-/*BOX
--------------*/
+//BOX
 .cssp-box{
     padding: $row-tall-margin 0;
 }
 
-/*TYPO
----------------------*/
-h1,.h1-like{
-    font-size: 2.3em;
-    @extend .uppercase;
-}
-h2,.h2-like{
-    font-size: 2.1em;
-}
-h3,.h3-like{
-    font-size: 1.9em;
-}
+//TYPO
+h1,.h1-like{font-size: 2.3em;}
+h2,.h2-like{font-size: 2.1em;}
+h3,.h3-like{font-size: 1.8em;}
+h4,.h4-like{font-size: 1.5em;}
+h5,.h5-like{font-size: 1.2em;}
+h6,.h6-like{font-size: 1em;}
 
-/*FORM
---------------------*/
+//FORM
 form{
     width: 100%;
     display: block;
 }
 
-/*STYLE
-----------------------*/
+//STYLE
 .bloc-level-1{
     margin: 0 0 $row-tall-margin 0;
 } 
 
-/*NAVIGATION 
-----------------------*/
-    .cssp-oppen-nav,.cssp-close-nav{
-        float: right;
-        margin: 0 $col-tall-margin 0 0;
-        color: $font-color2;
-        line-height: $nav-bar-height;
-    }
-    .cssp-close-nav{
-        color: #ffffff;
-    }
-    
-    /*cssp-main-nav foundation structure*/
-    .cssp-nav-bar{
-        clear: both;
-        float: none;
-        text-align: center;
-        width: 100%;
-        display: block;
-            li{
-                display: block;
-                    a{
-                        display: block;
-                        height: $nav-bar-height;
-                        border-top: 1px solid;
-                        border-left: 0px solid;
-                    }
-            }
-    }
-    
-    /*nav buttons close and open visibility management very important for ":target" system*/
-    #cssp-target:not(:target) .cssp-oppen-nav, #cssp-target:target .cssp-close-nav {display: inline-block;}
-    #cssp-target:not(:target) .cssp-close-nav, #cssp-target:target .cssp-oppen-nav {display: none;}
-    
-    /*it's important to give "cssp" prefix ID to your body if it's not possible create a div element after body tag and target it*/
-    #cssp-target:not(:target) .cssp-nav-bar>li a{
-        height: 0;
-        overflow: hidden;
-        border-top: 0px solid rgba(150,150,150,0.5);
-        border-bottom: 0px solid rgba(150,150,150,0.5);
-    }  
+//NAVIGATION  
+.cssp-nav-bar{
+    display: block;
+    width: 100%;
+    clear: both;
+    text-align: center;
+        &>li{
+            display: block;
+                a{
+                    display: block;
+                    padding: 0;
+                    border-top: 1px solid;
+                    border-left: 0px solid;
+                }
+        }
+}
+/*nav buttons close and open visibility management very important for ":target" system*/
+.cssp-close-nav,
+.cssp-oppen-nav{
+    line-height: $nav-bar-height;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+#cssp-target:not(:target) .cssp-oppen-nav, #cssp-target:target .cssp-close-nav {display: inline-block !important;}
+#cssp-target:not(:target) .cssp-close-nav, #cssp-target:target .cssp-oppen-nav {display: none !important;}
+/*it's important to give "cssp" prefix ID to your body if it's not possible create a div element after body tag and target it*/
+#cssp-target:not(:target) .cssp-nav-bar>li a{
+    height: 0;
+    overflow: hidden;
+    border-top: 0px solid rgba(150,150,150,0.5);
+    border-bottom: 0px solid rgba(150,150,150,0.5);
+}  
 
-/*VISIBILITY
-----------------------*/
-.visibility-mobile-false{display: none;}
-.visibility-mobile-true{display: inherit;}
+//VISIBILITY
+.visibility-mobile-false{display: none !important;}
+.visibility-mobile-true{display: inherit !important;}

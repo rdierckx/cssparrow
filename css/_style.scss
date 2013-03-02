@@ -1,54 +1,80 @@
 /*style.scss is the look and feel stylesheet*/
 
-/*BUTTONS
--------------------------*/
+//THEMES
+.thm-main{
+    background-color: $main-color;
+    @if $YN-main-color-dark == false{color: $font-color1;}
+    @if $YN-main-color-dark == true{color: $font-color2;}
+}
+    .thm-main.cssp-nav-bar>li a,.thm-main.cssp-nav-column>li a{
+	@if $YN-main-color-dark == false{color: $font-color1;}
+	@if $YN-main-color-dark == true{color: $font-color2;}
+	border-color: darken($main-color, 15%);
+	&:hover{
+	    @if $YN-main-color-dark == false{color: $font-color1;}
+	    @if $YN-main-color-dark == true{color: #ffffff;}
+	    background: darken($main-color, 5%);
+	}
+    }
+.thm-dark{
+    background-color: $dark-color;
+    @if $YN-dark-color-dark == false{color: $font-color1;}
+    @if $YN-dark-color-dark == true{color: $font-color2;}
+}
+    .thm-dark.cssp-nav-bar>li a,.thm-dark.cssp-nav-column>li a{
+	@if $YN-dark-color-dark == false{color: $font-color1;}
+	@if $YN-dark-color-dark == true{color: $font-color2;}
+	border-color: lighten($dark-color, 15%);
+	&:hover{
+	    @if $YN-dark-color-dark == false{color: $font-color1;}
+	    @if $YN-dark-color-dark == true{color: #ffffff;}
+	    background: darken($dark-color, 8%);
+	}
+    }
+    
+//BUTTONS
 .btn{
     display: inline-block;
-    padding: 7px 14px;
+    padding: $row-tall-margin $col-tall-margin;
+    vertical-align: middle;
     font-size: 0.9em;
     color: $font-color1;
     text-shadow: 0 1px 0 rgba(0,0,0,0.1);
-    border-style: solid;
-    border-width: 1px;	
-    background-color: darken($default-color, 8%);
-    border-color: darken($default-color, 25%);
-    @if $YN-btn-border-radius == true{
-	border-radius: $btn-border-radius;
-	}
-    @if $YN-default-color-dark == true{color: #FFFFFF;}
-    @extend .default-color-gradient;
+    @extend .default-color;
     -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset, 0 -1px 0 rgba(0,0,0,0.2) inset;
     box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset, 0 -1px 0 rgba(0,0,0,0.2) inset;	
+    -webkit-transition: box-shadow 0.3s ease-out, background 0.3s ease-out;
+    transition: box-shadow 0.3s ease-out, background 0.3s ease-out;
+    -webkit-appearance: none;
+        @if $YN-btn-border == true{
+        border-style: solid;
+        border-width: 1px;
+	border-color: darken($default-color, 25%);
+        }
+        @if $YN-btn-border-radius == true{border-radius: $btn-border-radius;}
+        @if $YN-default-color-dark == true{color: #FFFFFF;}
 	&:hover,&:focus{
-	    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.4) inset;
-	    box-shadow: 0 1px 0 rgba(0,0,0,0.2) inset;	    
-	}	
-    -moz-transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
-    -webkit-transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
-    -ms-transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
-    -o-transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
-    transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
-	&:hover{
 	    background: darken($default-color, 8%);
-	}
+	    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.4) inset;
+	    box-shadow: 0 1px 0 rgba(0,0,0,0.2) inset;	
+	} 
 }
+/*take all width*/
 .btn-block{
     display: block;
     padding: 7px 0px;
 }
+/*pagination*/
 ul.btn-multi{
     padding: 0;
     margin: 0 $col-tall-margin $row-tall-margin 0; 
     display: inline-block;  
-    
 	li{
 	    list-style: none;
 	    display: table-cell;
-	    
 		a{
 		    @extend .rounded-none; 
 		    @extend .btn;
-		    margin: 0 !important;
 		    border-left-width: 0;
 		}                
 		&:last-child a{
@@ -71,226 +97,121 @@ ul.btn-multi{
 	font-size: 1.1em;
     }
 
-/*THEME BUTTON
- *style for button
--------------------------*/
+//THEME BUTTON
+/*style for button*/
 .btn-thm-main{
-    background-color: darken($main-color, 8%);
     border-color: darken($main-color, 20%);
     @if $YN-main-color-dark == true{color: #FFFFFF;}
-    @extend .main-color-gradient;
+    @extend .main-color;
 	&:hover{
 	    background: darken($main-color, 8%);
 	}
 }
 .btn-thm-important{
-    background-color: darken($important-color, 8%);
     border-color: darken($important-color, 20%);
     @if $YN-important-color-dark == true{color: #FFFFFF;}
-    @extend .important-color-gradient;
+    @extend .important-color;
 	&:hover{
 	    background: darken($important-color, 12%);
 	}
 }
 .btn-thm-success{
-    background-color: darken($success-color, 8%);
     border-color: darken($success-color, 20%);
     @if $YN-success-color-dark == true{color: #FFFFFF;}
-    @extend .success-color-gradient;
+    @extend .success-color;
 	&:hover{
 	    background: darken($success-color, 10%);
 	}
 }
 .btn-thm-error{
-    background-color: darken($error-color, 8%);
     border-color: darken($error-color, 20%);
     @if $YN-error-color-dark == true {color: #FFFFFF;}
-    @extend .error-color-gradient;
+    @extend .error-color;
 	&:hover{
 	    background: darken($error-color, 10%);
 	}
 }
 .btn-thm-dark{
-    background-color: darken($dark-color, 8%);
     border-color: darken($dark-color, 50%);
     @if $YN-dark-color-dark == true{color: #FFFFFF;}
-    @extend .dark-color-gradient;
+    @extend .dark-color;
 	&:hover{
 	    background: darken($dark-color, 12%);
 	}
 }
 
-/*THEMES
--------------------------*/
-.thm-main{
-    background-color: $main-color;
-    @if $YN-main-color-dark == false{color: $font-color1;}
-    @if $YN-main-color-dark == true{color: $font-color2;}
-}
-.thm-main.cssp-nav-bar>li a,.thm-main.cssp-nav-column>li a{
-    @if $YN-main-color-dark == false{color: $font-color1;}
-    @if $YN-main-color-dark == true{color: $font-color2;}
-    border-color: darken($main-color, 15%);
-    &:hover{
-        @if $YN-main-color-dark == false{color: $font-color1;}
-        @if $YN-main-color-dark == true{color: #ffffff;}
-        background: darken($main-color, 5%);
+//GRADIENT
+.default-color{
+    background-color: $default-color;
+    @if $YN-btn-gradient == true{
+	background-image: -webkit-linear-gradient(top,  $default-color 0%,darken($default-color, 6%) 100%);
+	background-image: linear-gradient(to bottom,  $default-color 0%,darken($default-color, 6%) 100%);
     }
 }
-.thm-second{
-    background-color: $second-color;
-    @if $YN-second-color-dark == false{color: $font-color1;}
-    @if $YN-second-color-dark == true{color: $font-color2;}
-}
-.thm-second.cssp-nav-bar>li a,.thm-second.cssp-nav-column>li a{
-    @if $YN-second-color-dark == false{color: $font-color1;}
-    @if $YN-second-color-dark == true{color: $font-color2;}
-    border-color: darken($second-color, 15%);
-    &:hover{
-        @if $YN-second-color-dark == false{color: $font-color1;}
-        @if $YN-second-color-dark == true{color: #ffffff;}
-        background: darken($second-color, 5%);
+.main-color{
+    background-color: $main-color; 
+    @if $YN-btn-gradient == true{
+	background-image: -webkit-linear-gradient(top,  $main-color 0%,darken($main-color, 6%) 100%); 
+	background-image: linear-gradient(to bottom,  $main-color 0%,darken($main-color, 6%) 100%);
     }
 }
-.thm-third{
-    background-color: $third-color;
-    @if $YN-third-color-dark == false{color: $font-color1;}
-    @if $YN-third-color-dark == true{color: $font-color2;}
-}
-.thm-third.cssp-nav-bar>li a,.thm-third.cssp-nav-column>li a{
-    @if $YN-third-color-dark == false{color: $font-color1;}
-    @if $YN-third-color-dark == true{color: $font-color2;}
-    border-color: darken($third-color, 15%);
-    &:hover{
-        @if $YN-third-color-dark == false{color: $font-color1;}
-        @if $YN-third-color-dark == true{color: #ffffff;}
-        background: darken($third-color, 5%);
+.important-color{
+    background-color: $important-color;
+    @if $YN-btn-gradient == true{
+	background-image: -webkit-linear-gradient(top,  $important-color 0%,darken($important-color, 14%) 100%);
+	background-image: linear-gradient(to bottom,  $important-color 0%,darken($important-color, 14%) 100%);
     }
 }
-.thm-dark{
+.success-color{
+    background-color: $success-color;
+    @if $YN-btn-gradient == true{
+	background-image: -webkit-linear-gradient(top,  $success-color 0%,darken($success-color, 14%) 100%); 
+	background-image: linear-gradient(to bottom,  $success-color 0%,darken($success-color, 14%) 100%);
+    }
+}
+.error-color{
+    background-color: $error-color;
+    @if $YN-btn-gradient == true{
+	background-image: -webkit-linear-gradient(top,  $error-color 0%,darken($error-color, 14%) 100%);
+	background-image: linear-gradient(to bottom,  $error-color 0%,darken($error-color, 14%) 100%);
+    }
+}
+.dark-color{
     background-color: $dark-color;
-    @if $YN-dark-color-dark == false{color: $font-color1;}
-    @if $YN-dark-color-dark == true{color: $font-color2;}
-}
-.thm-dark.cssp-nav-bar>li a,.thm-dark.cssp-nav-column>li a{
-    @if $YN-dark-color-dark == false{color: $font-color1;}
-    @if $YN-dark-color-dark == true{color: $font-color2;}
-    border-color: lighten($dark-color, 15%);
-    &:hover{
-        @if $YN-dark-color-dark == false{color: $font-color1;}
-        @if $YN-dark-color-dark == true{color: #ffffff;}
-        background: darken($dark-color, 8%);
+    @if $YN-btn-gradient == true{
+	background-image: -webkit-linear-gradient(top,  $dark-color 0%,darken($dark-color, 14%) 100%);
+	background-image: linear-gradient(to bottom,  $dark-color 0%,darken($dark-color, 14%) 100%);
     }
 }
 
-/*SECTION-HEADER
--------------------------*/
-.cssp-section-header{
-	border-bottom: 1px solid $font-color-sub;
-	margin: 0 0 $row-grande-margin 0;
-}
-
-/*GRADIENT
-------------------*/
-.default-color-gradient{
-    background-image: $default-color; /* Old browsers */
-    background-image: -moz-linear-gradient(top,  $default-color 0%, darken($default-color, 6%) 100%); /* FF3.6+ */
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$default-color), color-stop(100%,darken($default-color, 6%))); /* Chrome,Safari4+ */
-    background-image: -webkit-linear-gradient(top,  $default-color 0%,darken($default-color, 6%) 100%); /* Chrome10+,Safari5.1+ */
-    background-image: -o-linear-gradient(top,  $default-color 0%,darken($default-color, 6%) 100%); /* Opera 11.10+ */
-    background-image: -ms-linear-gradient(top,  $default-color 0%,darken($default-color, 6%) 100%); /* IE10+ */
-    background-image: linear-gradient(to bottom,  $default-color 0%,darken($default-color, 6%) 100%); /* W3C */
-}
-.main-color-gradient{
-    background-image: $main-color; /* Old browsers */
-    background-image: -moz-linear-gradient(top,  $main-color 0%, darken($main-color, 6%) 100%); /* FF3.6+ */
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$main-color), color-stop(100%,darken($main-color, 6%))); /* Chrome,Safari4+ */
-    background-image: -webkit-linear-gradient(top,  $main-color 0%,darken($main-color, 6%) 100%); /* Chrome10+,Safari5.1+ */
-    background-image: -o-linear-gradient(top,  $main-color 0%,darken($main-color, 6%) 100%); /* Opera 11.10+ */
-    background-image: -ms-linear-gradient(top,  $main-color 0%,darken($main-color, 6%) 100%); /* IE10+ */
-    background-image: linear-gradient(to bottom,  $main-color 0%,darken($main-color, 6%) 100%); /* W3C */
-}
-.important-color-gradient{
-    background-image: $important-color; /* Old browsers */
-    background-image: -moz-linear-gradient(top,  $important-color 0%, darken($important-color, 14%) 100%); /* FF3.6+ */
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$important-color), color-stop(100%,darken($important-color, 14%))); /* Chrome,Safari4+ */
-    background-image: -webkit-linear-gradient(top,  $important-color 0%,darken($important-color, 14%) 100%); /* Chrome10+,Safari5.1+ */
-    background-image: -o-linear-gradient(top,  $important-color 0%,darken($important-color, 14%) 100%); /* Opera 11.10+ */
-    background-image: -ms-linear-gradient(top,  $important-color 0%,darken($important-color, 14%) 100%); /* IE10+ */
-    background-image: linear-gradient(to bottom,  $important-color 0%,darken($important-color, 14%) 100%); /* W3C */
-}
-.success-color-gradient{
-    background-image: $success-color; /* Old browsers */
-    background-image: -moz-linear-gradient(top,  $success-color 0%, darken($success-color, 14%) 100%); /* FF3.6+ */
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$success-color), color-stop(100%,darken($success-color, 14%))); /* Chrome,Safari4+ */
-    background-image: -webkit-linear-gradient(top,  $success-color 0%,darken($success-color, 14%) 100%); /* Chrome10+,Safari5.1+ */
-    background-image: -o-linear-gradient(top,  $success-color 0%,darken($success-color, 14%) 100%); /* Opera 11.10+ */
-    background-image: -ms-linear-gradient(top,  $success-color 0%,darken($success-color, 14%) 100%); /* IE10+ */
-    background-image: linear-gradient(to bottom,  $success-color 0%,darken($success-color, 14%) 100%); /* W3C */
-}
-.error-color-gradient{
-    background-image: $error-color; /* Old browsers */
-    background-image: -moz-linear-gradient(top,  $error-color 0%, darken($error-color, 14%) 100%); /* FF3.6+ */
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$error-color), color-stop(100%,darken($error-color, 14%))); /* Chrome,Safari4+ */
-    background-image: -webkit-linear-gradient(top,  $error-color 0%,darken($error-color, 14%) 100%); /* Chrome10+,Safari5.1+ */
-    background-image: -o-linear-gradient(top,  $error-color 0%,darken($error-color, 14%) 100%); /* Opera 11.10+ */
-    background-image: -ms-linear-gradient(top,  $error-color 0%,darken($error-color, 14%) 100%); /* IE10+ */
-    background-image: linear-gradient(to bottom,  $error-color 0%,darken($error-color, 14%) 100%); /* W3C */
-}
-.dark-color-gradient{
-    background-image: $dark-color; /* Old browsers */
-    background-image: -moz-linear-gradient(top,  $dark-color 0%, darken($dark-color, 14%) 100%); /* FF3.6+ */
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$dark-color), color-stop(100%,darken($dark-color, 14%))); /* Chrome,Safari4+ */
-    background-image: -webkit-linear-gradient(top,  $dark-color 0%,darken($dark-color, 14%) 100%); /* Chrome10+,Safari5.1+ */
-    background-image: -o-linear-gradient(top,  $dark-color 0%,darken($dark-color, 14%) 100%); /* Opera 11.10+ */
-    background-image: -ms-linear-gradient(top,  $dark-color 0%,darken($dark-color, 14%) 100%); /* IE10+ */
-    background-image: linear-gradient(to bottom,  $dark-color 0%,darken($dark-color, 14%) 100%); /* W3C */
-}
-
-/*IMAGES
-------------------*/
+//IMAGES
 .polaroid{
     border: 7px solid #ffffff;
     -webkit-box-shadow: 0 2px 1px rgba(0,0,0,0.2);
     box-shadow: 0 2px 1px rgba(0,0,0,0.2);
 }
 
-/*BOX-SHADOW
-------------------*/
+//EFECTS
 .shadow1{
     -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2);
     box-shadow: 0 0 5px rgba(0,0,0,0.2);
 }
-
-    /*rounded*/
-    .rounded1{
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
-    }
-    /*perfect for input type search*/
-    .rounded2{
-	-webkit-border-radius: 90px;
-	border-radius: 90px;
-    }
-    /*for circle block*/
-    .circle{
-	-webkit-border-radius: 50%;
-	border-radius: 50%;
-    }
-    /*reset rounded*/
-    .rounded-none{
-	-webkit-border-radius: 0px;
-	border-radius: 0px;
-    }
-
-/*@EXTEND
-------------------*/	
-    /*transition*/
-    .transition2{
-	transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-	-moz-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-	-webkit-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-	-ms-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-	-o-transition: all 0.4s cubic-bezier(0.94, 0.06, 0.36, 0.68);
-    }
+.rounded1{
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+/*perfect for input type search*/
+.rounded2{
+    -webkit-border-radius: 200px;
+    border-radius: 200px;
+}
+.rounded-none{
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+/*for circle block*/
+.circle{
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
 

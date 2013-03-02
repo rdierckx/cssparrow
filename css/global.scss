@@ -1,3 +1,4 @@
+//* sass --style compressed --watch global.scss:global_min.css
 @import "_normalize";
 @import "_variable";
 body{
@@ -12,10 +13,9 @@ body{
 @import "_style";
 
     //import all specific cases here;
-    @import "___myelements";
+    //@import "___myelements";
 
-/*MEDIAQUERY
--------------*/
+//MEDIAQUERY
 @media handheld, only screen and (max-width: 979px) {
     @import "__tablet_style";
 }

@@ -1,52 +1,52 @@
 /*typo_form.scss to manage all typo and form issues*/
 
-/*GENERAL
--------------*/
+//GENERAL
+a{
+    text-decoration: none;
+    color: $font-color-link;
+}
+p{
+    margin-bottom: $row-tall-margin;
+}
+
+//TITLE
+h1,.h1-like,
+h2,.h2-like,
+h3,.h3-like,
+h4,.h4-like,
+h5,.h5-like,
+h6,.h6-like{
+    line-height: 1;
+    margin-top: $row-tall-margin;
+    margin-bottom: $row-tall-margin;
+}
+h1,.h1-like{font-size: 2.8em;}
+h2,.h2-like{font-size: 2.4em;}
+h3,.h3-like{font-size: 2em;}
+h4,.h4-like{font-size: 1.6em;}
+h5,.h5-like{font-size: 1.3em;}
+h6,.h6-like{font-size: 1em;}
+
+.cssp-sub-title{
+	color: $font-color-sub;
+}
 .uppercase{
     text-transform: uppercase;
 }
-
-/*TITLE
--------------------------*/
-    /*general*/
-    h1,.h1-like,
-    h2,.h2-like,
-    h3,.h3-like,
-    h4,.h4-like,
-    h5,.h5-like,
-    h6,.h6-like{
-	font-family: inherit;
-	line-height: 1;
-	margin: 10px 0;
-    }
-    h1,.h1-like{font-size: 2.8em;}
-    h2,.h2-like{font-size: 2.4em;}
-    h3,.h3-like{font-size: 2em;}
-    h4,.h4-like{font-size: 1.6em;}
-    h5,.h5-like{font-size: 1.3em;}
-    h6,.h6-like{font-size: 1em;}
-
-    /*sub-title*/
-    .cssp-sub-title{
-	    color: $font-color-sub;
-    }
 	
 
-/*PARAGRAPHE
---------------------------*/
-p{
-    margin: 0 0 10px 0;
-}
-.cssp-tall-para{
-    text-indent: 20px;
-}
+//ALIGN
+.text-left{
+    text-align: left;
+    }
+.text-center{
+    text-align: center;
+    }
+.text-right{
+    text-align: right;
+    }
 
-/*TEXT SIZE
---------------------------*/
-.catch-text{
-    font-weight: bold;
-    text-indent: 0;
-}
+//TEXT SIZE
 .tall-text{
     font-size: 1.2em;
 }
@@ -57,8 +57,7 @@ p{
     font-size: 1.5em;
 }
 
-/*LIST
---------------------------*/
+//LIST
 ul,ol,dl{
     margin-bottom: $row-tall-margin;
 }
@@ -76,24 +75,17 @@ li{
 }
 .reset-list{
     padding-left: 0;
+    list-style: none;
 }
 
-/*LINKS
---------------------------*/
-a{
-    text-decoration: none;
-    color: $font-color-link;
-}
-
-/*FORM
--------------------------*/
+//FORM
 .input{
     border: 1px solid #CCC;
     padding: $row-tall-margin $col-tall-margin;
     font-size: 0.9em;
     @extend .rounded1;
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: top;
 }
 label{
     margin: 0 $col-tall-margin 0 0;
@@ -117,13 +109,9 @@ select{
     input[type="search"],
     input[type="tel"],
     input[type="color"],
-    text-area{
+    textarea{
 	@extend .input;
     }
-        /*IE hacks*/
-	.lt-ie8 input{
-	    vertical-align: middle;
-	}
     input[type="search"]{
 	@extend .rounded2;
 	@extend .input;
@@ -145,21 +133,15 @@ select{
     .cssp-error input[type="tel"],
     .cssp-error input[type="color"],
     .cssp-error select,
-    .cssp-error text-area{
+    .cssp-error textarea{
 	border: 2px solid $error-color;
 	background: transparentize($error-color, 0.9);
     }
     input [type="submit"]{
-	vertical-align: middle;
+	-webkit-appearance: none;
     }
     
-    /*input group config*/
-    .input-group-line{
-	@extend .default-margin-bottom;
-    }
-    
-/*CODE
---------------------------*/
+//ICON FONT
 .icon{
     text-align: center;
     font-family: 'cssparrow_icons';
@@ -173,25 +155,4 @@ select{
     vertical-align: baseline;
     text-align: center;
     border: 0 none !important;
-}
-
-/*CODE
---------------------------*/
-pre.cssp-code{
-    background-color: #000000;
-    color: $font-color2;
-    line-height: 1.4;
-    padding: $col-tall-margin;
-    
-	code{    
-	    .cssp-tag{
-		color: $important-color;
-	    }
-	    .cssp-class{
-		color: $success-color;
-	    }
-	    .cssp-type{
-		color: $error-color;
-	    }
-	}
 }
