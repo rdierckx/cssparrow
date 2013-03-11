@@ -8,9 +8,8 @@
 
   <title>CsSparrow</title>
 
-  <link rel="stylesheet" media="screen" href="css/global.css">
+  <link rel="stylesheet" media="screen" href="css/global_min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no">
-  <script src="js/modernizr.custom.29167.js"></script>
   <script src="js/lib.js"></script>
 </head>
     
@@ -158,15 +157,10 @@
 			Lorem ipsum dolor sit amet, consectetur <mark>adipiscing</mark> elit. Nulla urna leo, 
 			tincidunt ut volutpat ac, <q>mattis a purus</q>. Aenean vitae lectus imperdiet 
 			lacus dignissim adipiscing. Nulla fermentum erat eu sapien tempus convallis. 
-			Donec mauris leo, lacinia sed pretium in. Aenean vitae lectus imperdiet 
+			Donec mauris leo, lacinia <b>sed pretium</b> in. Aenean vitae lectus imperdiet 
 			lacus dignissim adipiscing. Nulla fermentum erat eu sapien tempus convallis. 
-			Donec mauris leo, lacinia sed pretium in. Aenean vitae lectus imperdiet 
-			lacus dignissim adipiscing. Nulla fermentum erat eu sapien tempus convallis. 
-			Donec mauris leo, lacinia sed pretium in. Aenean vitae lectus imperdiet 
-			lacus dignissim adipiscing. Nulla fermentum erat eu sapien tempus convallis. 
-			Donec mauris leo, lacinia sed pretium in. Aenean vitae lectus imperdiet 
-			lacus dignissim adipiscing. Nulla fermentum erat eu sapien tempus convallis. 
-			Donec mauris leo, lacinia sed pretium in.               
+			Donec mauris leo, lacinia sed <i>pretium in</i>. Aenean vitae lectus imperdiet 
+			lacus dignissim adipiscing.             
 		    </p>
 		</div>
 		<div id="title">
@@ -191,11 +185,11 @@
 		    <h2>Color</h2>
 
 		    <a href="#" class="btn mb1 mr1">Button Action</a>
-		    <a href="#" class="btn btn-thm-main mb1 mr1">Button Main</a>
-		    <a href="#" class="btn btn-thm-important mb1 mr1">Button Important</a>
-		    <a href="#" class="btn btn-thm-success mb1 mr1">Button Success</a>
-		    <a href="#" class="btn btn-thm-error mb1 mr1">Button Error</a>
-		    <a href="#" class="btn btn-thm-dark mb1">Button Dark</a>
+		    <a href="#" class="btn btn-main mb1 mr1">Button Main</a>
+		    <a href="#" class="btn btn-important mb1 mr1">Button Important</a>
+		    <a href="#" class="btn btn-success mb1 mr1">Button Success</a>
+		    <a href="#" class="btn btn-error mb1 mr1">Button Error</a>
+		    <a href="#" class="btn btn-dark mb1">Button Dark</a>
 		    
 		    <!-- code -->
 		    <pre class="cssp-code"><!--
@@ -203,15 +197,15 @@
 			    --><ol><!--
 				--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn"</span>></span><!--
 				--><span>Button Default</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
-				--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn main"</span>></span><!--
+				--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn btn-main"</span>></span><!--
 				--><span>Button Main</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
-				--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn important"</span>></span><!--
+				--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn btn-important"</span>></span><!--
 				--><span>Button Important</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
-				--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn succes"</span>></span><!--
+				--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn btn-success"</span>></span><!--
 				--><span>Button Success</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
-				--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn error"</span>></span><!--
+				--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn btn-error"</span>></span><!--
 				--><span>Button Error</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
-				--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn dark"</span>></span><!--
+				--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn btn-dark"</span>></span><!--
 				--><span>Button Dark</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
 			    --></ol><!--
 		     --></code><!--
@@ -220,7 +214,7 @@
 		<div id="button-widget">
 		    <h2>Widget</h2>
 		    <ul class="btn-multi">
-				<li><a class="btn-thm-main" href="#">1</a></li>
+				<li><a href="#">1</a></li>
 				<li><a href="#">2</a></li>
 				<li><a href="#">3</a></li>
 				<li><a href="#">4</a></li>
@@ -253,9 +247,9 @@
 		</div>
 		<div id="button-size">
 		    <h2>Size</h2>
-		    <a href="#" class="btn btn-thm-main king-size mb1 mr1">King Size</a>
-		    <a href="#" class="btn btn-thm-main mb1 mr1">Default Size</a>
-		    <a href="#" class="btn btn-thm-main small-size mb1 mr1">Small Size</a>
+		    <a href="#" class="btn btn-main king-size mb1 mr1">King Size</a>
+		    <a href="#" class="btn btn-main mb1 mr1">Default Size</a>
+		    <a href="#" class="btn btn-main tiny-size mb1 mr1">Small Size</a>
 
 		    <!-- code -->
 		    <pre class="cssp-code"><!--
@@ -265,7 +259,7 @@
 				--><span>King Size</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
 				--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn"</span>></span><!--
 				--><span>Default Size</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
-				--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn small-size"</span>></span><!--
+				--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn tiny-size"</span>></span><!--
 				--><span>Small Size</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
 			    --></ol><!--
 		     --></code><!--
@@ -283,11 +277,11 @@
 		<div id="style-form">
 		    <h2>style form</h2>
 		    <form>
-			<div class="input-group-line mb1">
+			<div class="mb1">
 			    <input type="text" placeholder="placeholder">
 			    <input class="btn" type="submit" value="submit">
 			</div>
-			<div class="input-group-line mb1">
+			<div class="mb1">
 			    <input type="search" placeholder="search">
 			    <input class="btn" type="submit" value="search">
 			</div>
@@ -321,11 +315,11 @@
 		<div id="error-form">
 		    <h2>error form</h2>
 		    <form>
-			<div class="input-group-line mb1 cssp-error">
+			<div class="mb1 cssp-error">
 			    <input type="text" placeholder="placeholder">
 			    <input class="btn" type="submit" value="submit">
 			</div>
-			<div class="input-group-line mb1 cssp-error">
+			<div class="mb1 cssp-error">
 			    <input type="search" placeholder="search">
 			    <input class="btn" type="submit" value="search">
 			</div>

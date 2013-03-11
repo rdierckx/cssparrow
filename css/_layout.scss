@@ -58,7 +58,6 @@
 .clearfix{
     clear: both;
     *zoom: 1;
-
 	&:after, &:before{
 	    content: "";
 	    display: table;
@@ -91,7 +90,6 @@
 .mr1 {margin-right: $col-tall-margin;}
 .mr2 {margin-right: $col-grande-margin;}
 .mr3 {margin-right: $col-venti-margin;}
-
 /* margin top, bottom */
 .mt1 {margin-top: $row-tall-margin;}
 .mt2 {margin-top: $row-grande-margin;}
@@ -116,11 +114,13 @@
 		display: table-cell;
 		vertical-align: middle;
 		&>a{
-			display: inline-block;
-			line-height: $nav-bar-height; 
-			height: $nav-bar-height;
-			padding: 0 $col-tall-margin;
-		    @if $YN-nav-bar-border == true{border-left: 1px solid;}    
+		    display: inline-block;
+		    line-height: $nav-bar-height; 
+		    height: $nav-bar-height;
+		    padding: 0 $col-grande-margin;
+		    @if $YN-nav-bar-border == true{
+			border-left: 1px solid;
+		    }    
 		}
 		@if $YN-nav-bar-border == true{
 		    &:last-child a{border-right: 1px solid;}

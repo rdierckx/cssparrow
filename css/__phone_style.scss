@@ -17,7 +17,7 @@
     padding: 0 $col-tall-margin;
 }
 @for $i from 1 through $span-number{
-    .span-mobile#{$i},.t-span-mobile#{$i} {
+    .small-span#{$i},.small-t-span#{$i} {
         width: (100%/$span-number)*$i;
     }
 }
@@ -29,23 +29,23 @@
 
 //MARGIN SYSTEM
 /* margin left, right */
-.ml0-mobile {margin-left: 0;}
-.ml1-mobile {margin-left: $col-tall-margin;}
-.ml2-mobile {margin-left: $col-grande-margin;}
-.ml3-mobile {margin-left: $col-venti-margin;}
-.mr0-mobile {margin-right: 0;}
-.mr1-mobile {margin-right: $col-tall-margin;}
-.mr2-mobile {margin-right: $col-grande-margin;}
-.mr3-mobile {margin-right: $col-venti-margin;}
+.small-ml0 {margin-left: 0;}
+.small-ml1 {margin-left: $col-tall-margin;}
+.small-ml2 {margin-left: $col-grande-margin;}
+.small-ml3 {margin-left: $col-venti-margin;}
+.small-mr0 {margin-right: 0;}
+.small-mr1 {margin-right: $col-tall-margin;}
+.small-mr2 {margin-right: $col-grande-margin;}
+.small-mr3 {margin-right: $col-venti-margin;}
 /* margin top, bottom */
-.mt0-mobile {margin-top: 0;}
-.mt1-mobile {margin-top: $row-tall-margin;}
-.mt2-mobile {margin-top: $row-grande-margin;}
-.mt3-mobile {margin-top: $row-venti-margin;}
-.mb0-mobile {margin-bottom: 0;}
-.mb1-mobile {margin-bottom: $row-tall-margin;}
-.mb2-mobile {margin-bottom: $row-grande-margin;}
-.mb3-mobile {margin-bottom: $row-venti-margin;}
+.small-mt0 {margin-top: 0;}
+.small-mt1 {margin-top: $row-tall-margin;}
+.small-mt2 {margin-top: $row-grande-margin;}
+.small-mt3 {margin-top: $row-venti-margin;}
+.small-mb0 {margin-bottom: 0;}
+.small-mb1 {margin-bottom: $row-tall-margin;}
+.small-mb2 {margin-bottom: $row-grande-margin;}
+.small-mb3 {margin-bottom: $row-venti-margin;}
 
 //BOX
 .cssp-box{
@@ -105,5 +105,5 @@ form{
 }  
 
 //VISIBILITY
-.visibility-mobile-false{display: none !important;}
-.visibility-mobile-true{display: inherit !important;}
+.small-visibility-false{display: none !important;}
+.small-visibility-true{display: inherit !important;}
