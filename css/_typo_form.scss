@@ -1,6 +1,22 @@
 /*typo_form.scss to manage all typo and form issues*/
 
 //GENERAL
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
 a{
     text-decoration: none;
     color: $font-color-link;
@@ -27,7 +43,7 @@ h4,.h4-like{font-size: 1.6em;}
 h5,.h5-like{font-size: 1.3em;}
 h6,.h6-like{font-size: 1em;}
 
-.cssp-sub-title{
+.sub-text{
 	color: $font-color-sub;
 }
 .uppercase{

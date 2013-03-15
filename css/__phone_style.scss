@@ -2,23 +2,20 @@
 .cssp-wrapper{
     width: 100%;
 }
-.t-row{
+.row,
+.table-row,
+.cssp-wrapper{
     display: block;
-    width: inherit;
+}
+[class^="column"] {
+    display: block;
+    width: 100%;
 }
 
 //GRID
-[class^="span"],
-[class^="t-span"],
-[class^="t-span-tablet"],
-[class^="span-tablet"]{
-    display: block;
-    width: 100%;
-    padding: 0 $col-tall-margin;
-}
-@for $i from 1 through $span-number{
-    .small-span#{$i},.small-t-span#{$i} {
-        width: (100%/$span-number)*$i;
+@for $i from 1 through $column-number{
+    .small-column#{$i} {
+        width: (100%/$column-number)*$i;
     }
 }
 
@@ -84,6 +81,10 @@ form{
                     padding: 0;
                     border-top: 1px solid;
                     border-left: 0px solid;
+
+                }
+                &:last-child a{
+                    border-right: 0px solid;
                 }
         }
 }

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <title>Positioning</title>
+
+  <link rel="stylesheet" media="screen" href="css/global.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no">
+  <script src="js/lib.js"></script>
+</head>
+    
+<body class="my-elements-page"> 
+    <nav id="cssp-target" class="clearfix">
+        <div class="cssp-wrapper">
+            <h1 class="cssp-id float-left ml1"><a href="#">CSSPARROW <sup>beta</sup></a></h1>
+            
+            <!--Button to open and close navigation only visible on small screen-->
+            <a class="cssp-oppen-nav float-right mr1 visibility-desktop-false h1-like" href="#cssp-target" aria-hidden="true">
+				<b>≡</b>
+	    	</a>
+            <a class="cssp-close-nav float-right mr1 visibility-desktop-false h1-like" href="#" aria-hidden="true">
+				<b>≡</b>
+	    	</a>
+            
+            <ul class="cssp-nav-bar float-right thm-third">
+                <li><a href="#"><abbr class="icon" title="home">⌂</abbr> Home</a></li>
+				<li><a href="#"><abbr class="icon" title="star">*</abbr> Start</a></li>
+                <li><a href="#"><abbr class="icon" title="document">D</abbr> Documentation</a></li>
+                <li><a href="#"><abbr class="icon" title="edit">✎</abbr> GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header id="main-header">
+        <div class="cssp-wrapper">
+            <h2 class="column12">Positioning</h2>
+        </div>
+    </header>
+    <div class="cssp-wrapper">
+    	<div class="row">
+			<div class="column3 mt2">
+				<ul class="cssp-nav-column thm-third">
+				    <li class="selected">
+					<a href="#">Positioning</a>
+				    </li>
+				    <li>
+					<a href="#">Typo</a>
+				    </li>
+				    <li>
+					<a href="#">Style</a>
+				    </li>
+				</ul>
+			</div>
+			<div class="column9 mt2 box my-wrap shadow1">
+			    <!--Grid-->
+			    <section class="mb3" id="positioning">
+					<div id="grid">
+					    <header class="title-header">
+						<h2 class="text-main">Grid</h2>
+					    </header>
+					    <p class="grande-text sub-text mb3">Cssparrow grid system are fully flexible and responsive. You can manage position and column size to feet on each device. Mix "row" context and "table-row" context to create any layout. Vertical alignement is now easy to implement.</p>
+					    <h3 class="h4-like">Regular grid</h3>
+					    <div class="row my-grid mb2">
+							<div class="column2 small-mb1"><span>2</span></div>
+							<div class="column2 small-mb1"><span>2</span></div>
+							<div class="column2 small-mb1"><span>2</span></div>
+							<div class="column2 small-mb1"><span>2</span></div>
+							<div class="column2 small-mb1"><span>2</span></div>
+							<div class="column2 small-mb1"><span>2</span></div>
+					    </div>
+					    <div class="row my-grid mb2">        
+							<div class="column3 small-mb1"><span>3</span></div>
+							<div class="column3 small-mb1"><span>3</span></div>
+							<div class="column3 small-mb1"><span>3</span></div>
+							<div class="column3 small-mb1"><span>3</span></div>
+					    </div>
+					    <div class="row my-grid mb2">
+							<div class="column4 small-mb1"><span>4</span></div>
+							<div class="column4 small-mb1"><span>4</span></div>
+							<div class="column4 small-mb1"><span>4</span></div>
+					    </div>
+					    <div class="row my-grid mb2">
+							<div class="column6 small-mb1"><span>6</span></div>
+							<div class="column6 small-mb1"><span>6</span></div>
+					    </div>
+					    <!-- CODEPEN -->
+						<pre class="codepen" data-height="250" data-type="html" data-href="kxKvf" data-user="rdierckx" data-safe="true"><code>&lt;div class=&quot;row&quot;&gt;        
+						  &lt;div class=&quot;column1&quot;&gt;&lt;span&gt;1&lt;/span&gt;&lt;/div&gt;
+						  &lt;div class=&quot;column2&quot;&gt;&lt;span&gt;2&lt;/span&gt;&lt;/div&gt;
+						  &lt;div class=&quot;column3&quot;&gt;&lt;span&gt;3&lt;/span&gt;&lt;/div&gt;
+						  &lt;div class=&quot;column6&quot;&gt;&lt;span&gt;6&lt;/span&gt;&lt;/div&gt;
+						&lt;/div&gt;</code><a href="http://codepen.io/rdierckx/pen/kxKvf">Check out this Pen!</a></pre>
+				    
+					    <h3 class="h4-like">Nested grid</h3>
+					    <div class="row my-grid mb2">        
+							<div class="column12 small-mb1"><span>12</span>
+							    <div class="row">
+									<div class="column6"><span>6</span>
+									    <div class="row">
+											<div class="column6"><span>6</span></div>
+											<div class="column6"><span>6</span></div>
+									    </div>
+									</div>
+									<div class="column6"><span>6</span>
+									    <div class="row">
+											<div class="column6"><span>6</span></div>
+											<div class="column6"><span>6</span></div>
+									    </div>
+									</div>
+							    </div>
+							</div>
+						</div>
+						<!-- CODEPEN -->
+						<pre class="codepen" data-height="250" data-type="html" data-href="fiyeI" data-user="rdierckx" data-safe="true"><code>&lt;div class=&quot;row&quot;&gt;        
+						  &lt;div class=&quot;column12&quot;&gt;
+						    &lt;div class=&quot;row&quot;&gt;
+						      &lt;div class=&quot;column6&quot;&gt;
+						      &lt;/div&gt;
+						      &lt;div class=&quot;column6&quot;&gt;
+						      &lt;/div&gt;
+						    &lt;/div&gt;
+						  &lt;/div&gt;
+						&lt;/div&gt;</code><a href="http://codepen.io/rdierckx/pen/fiyeI">Check out this Pen!</a></pre>
+				    </div>
+
+				    <h3 class="h4-like">Table mix grid</h3>
+					<div class="table-row my-grid mb2"> 
+						<div class="block"><span>block</span></div>
+						<div class="block"><span>block</span></div>
+						<div class="block"><span>block</span></div>
+						<div class="column4"><span>6</span></div>
+						<div class="column4"><span>6</span></div>
+					</div>
+					<!-- CODEPEN -->
+					<pre class="codepen" data-height="250" data-type="html" data-href="gGeHr" data-user="rdierckx" data-safe="true"><code>&lt;div class=&quot;table-row my-grid mb2&quot;&gt; 
+					  &lt;div class=&quot;block&quot;&gt;block&lt;/div&gt;
+					  &lt;div class=&quot;block&quot;&gt;block&lt;/div&gt;
+					  &lt;div class=&quot;block&quot;&gt;block&lt;/div&gt;
+					  &lt;div class=&quot;column4&quot;&gt;4&lt;/div&gt;
+					  &lt;div class=&quot;column4&quot;&gt;4&lt;/div&gt;
+					&lt;/div&gt;</code><a href="http://codepen.io/rdierckx/pen/gGeHr">Check out this Pen!</a></pre>
+			    </section>
+			</div>
+		</div>
+    </div>
+	<script async src="http://codepen.io/assets/embed/ei.js"></script>	
+</body>
+</html>

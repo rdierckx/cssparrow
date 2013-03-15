@@ -1,74 +1,51 @@
 /*GENERAL
 -------------*/
-#demo-wrap{
+.my-wrap{
     background: #FFFFFF;
-    padding: $row-tall-margin $col-grande-margin $row-grande-margin $col-grande-margin;
-    margin: $row-grande-margin 0 0 0;
-    box-shadow: 0 0 2px rgba(0,0,0,0.1);
+    padding-top: $row-tall-margin;
+    padding-bottom: $row-tall-margin;
 }
-.separ-b{
+.my-separ-b{
     border-bottom: 1px solid $font-color-sub;
-}
-	
-/*TYPO
--------------*/
-.font{
-    font-weight: normal;
-    font-style: normal;
-}
-h1, h2, h3, h4, h5, h6, .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like{
-    font-family: 'abelregular';
-    @extend .font;
-}
-.cssp-nav-column h2, 
-.cssp-nav-column .h2-like{
-    color: $second-color;
-}
-#title div{
-    h1, h2, h3, h4, h5, h6, .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like{
-	font-family: "arial",sans-serif;
-	color: $font-color1;
-    }
-}
-
-/*NAVIGATION
--------------*/
-.cssp-id{
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: capitalize;
-    margin: 0 0 0 $col-tall-margin;
-    line-height: $nav-bar-height;
-    
-	&,a{
-	    color: #ffffff;	    
-	}
-	sup{
-	    font-family: "arial", sans-serif;
-	    font-weight: 100;
-	    color: $font-color2;
-	}
-}
-.cssp-nav-column>li>a{
-	font-weight: bold;
 }
 
 /*GRID
 -------------*/
 #positioning{
-    .my-grid span{
-        display: block;
-        background: #CCCCCC;
-        height: 40px;
-        line-height: 40px;
-        text-align: center;
-        color: #FFFFFF;
-    }
     .row{
-        margin-bottom: $row-grande-margin;
+        span{
+            display: block;
+            background: #CCCCCC;
+            min-height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+    	.row{
+    	    span{
+    		background: #999999;
+    	    }
+    	    .row span{
+    		background: #666666;
+    	    }
+    	}
     }
-    .row:last-child{
-        margin: 0;
+    .table-row {
+        text-align: center;
+            &>*{
+                background: #999999;
+                border: solid 1px rgba(0,0,0,0.2);
+                border-top: none;
+            }
+            span{
+                display: block;
+                padding: 10px 0;
+                background: none; 
+                color: #ffffff;
+            }
+            &>.block{
+               background: #666666 !important; 
+            }
     }
 }
     
@@ -80,14 +57,50 @@ h1, h2, h3, h4, h5, h6, .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-li
 
     padding: $row-grande-margin 0;
     @extend .clearfix;
-    color: darken($second-color, 15%);
+    color: #FFFFFF;
     border-bottom: 1px solid #ffffff;
-    border-top: 1px solid rgba(255,255,255,0.4);
-    box-shadow: 0 -5px 3px darken($main-color, 5%) inset;        
+    border-top: 1px solid rgba(255,255,255,0.4);    
         h2{
-            font-size: 4em;
-	    color: darken($second-color, 15%); 
+            font-size: 4em; 
         }
+}
+
+/*NAVIGATION
+-------------*/
+.cssp-id{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: $nav-bar-height;
+    
+	&,a{
+	    color: $font-color1;	    
+	}
+	sup{
+	    font-family: "arial", sans-serif;
+	    font-weight: 100;
+	    color: $font-color1;
+	}
+}
+.cssp-nav-column>li>a{
+	font-weight: bold;
+}
+
+/*TYPO
+-------------*/
+.font{
+    font-weight: normal;
+    font-style: normal;
+}
+h1, h2, h3, h4, h5, h6, .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like{
+    font-family: 'abelregular';
+    @extend .font;
+}
+.title-header{
+    border-bottom: 1px solid $font-color2;
+    margin-bottom: $col-tall-margin;
 }
 
 /*THEME
@@ -114,8 +127,7 @@ pre.cssp-code{
     background-color: #000000;
     color: $font-color2;
     line-height: 1.4;
-    padding: $col-tall-margin;
-    
+    padding: $col-tall-margin $col-tall-margin $col-tall-margin ($col-tall-margin + 30px);
 	code{    
 	    .cssp-tag{
 		color: $important-color;
@@ -127,6 +139,13 @@ pre.cssp-code{
 		color: $error-color;
 	    }
 	}
+}
+
+@media handheld, only screen and (max-width: 767px) {
+    #demo-wrap{
+       padding-left: 0;
+       padding-right: 0; 
+    }    
 }
 
 

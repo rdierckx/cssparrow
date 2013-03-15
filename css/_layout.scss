@@ -11,7 +11,6 @@
 
 //WRAPPER
 .cssp-wrapper{
-    position: relative;
     margin: 0 auto;
     width: $wrapper-width;
     max-width: $wrapper-max-width;
@@ -19,50 +18,51 @@
 }	
 
 //GRID
-/*row and span float system*/
-.row {
-	@extend .clearfix;
-}
-[class^="span"] {
-	display: block;
-	padding: 0 $col-tall-margin;
-	@extend .float-left;
-
-	//nested elements
-	.row,.t-row {
-		margin-left: (-$col-tall-margin);
-		margin-right: (-$col-tall-margin);
+/* grid column size setting */
+@for $i from 1 through $column-number {
+	.column#{$i} {
+		width: (100%/$column-number)*$i;
 	}
 }
-/*row system for table*/
-.t-row {
+/*row and column float system*/
+.row { 
+	@extend .clearfix; 
+		&>[class^="column"] {
+			padding-left: $col-tall-margin;
+			padding-right: $col-tall-margin;
+			@extend .float-left;
+		}
+		.row { 
+			margin-left: -$col-tall-margin;
+			margin-right: -$col-tall-margin;
+		}
+}
+/* row system for table perfect for vertical align */
+.table-row {
     display: table;
     width: 100%;
-    table-layout: fixed;
     border-collapse: collapse;
-}
-/*"t-span" can works without "t-row" system*/
-[class^="t-span"] {
-	display: table-cell;
-	padding: 0 $col-tall-margin;
-	vertical-align: middle;
-}
-/* grid span size setting */
-@for $i from 1 through $span-number{
-	.span#{$i},.t-span#{$i} {
-		width: (100%/$span-number)*$i;
-	}
+	    &>* {
+			display: table-cell;
+			padding-left: 0;
+			padding-right: 0;
+			vertical-align: middle;
+	    }
+	    .block{
+	    	display: block;
+	    	float: none;
+	    }
 }
 
 //FLOAT & RESET
 .clearfix{
     clear: both;
     *zoom: 1;
-	&:after, &:before{
-	    content: "";
-	    display: table;
-	    clear: both;
-	}
+		&:after, &:before{
+		    content: "";
+		    display: table;
+		    clear: both;
+		}
 }
 .clearfix-overflow{
     overflow: hidden;
@@ -75,7 +75,7 @@
     float: left;
 }
 
-//PLACEMENT
+//DISPLAY
 .cssp-inline{
 	display: inline-block;
 	line-height: 1;
@@ -103,29 +103,31 @@
     padding: $row-grande-margin $col-grande-margin;
 }
 
-//WIDGET
+//NAVIGATION
 /*inline navigation*/
 .cssp-nav-bar{
     margin: 0;
     padding-left: 0;
     list-style: none;
     display: table;
-	&>li{
-		display: table-cell;
-		vertical-align: middle;
-		&>a{
-		    display: inline-block;
-		    line-height: $nav-bar-height; 
-		    height: $nav-bar-height;
-		    padding: 0 $col-grande-margin;
-		    @if $YN-nav-bar-border == true{
-			border-left: 1px solid;
-		    }    
+		&>li{
+			display: table-cell;
+			vertical-align: middle;
+				&>a{
+				    display: inline-block;
+				    line-height: $nav-bar-height; 
+				    height: $nav-bar-height;
+				    padding: 0 $col-grande-margin;
+				    @if $YN-nav-bar-border == true{
+					border-left: 1px solid;
+				    }
+				    -webkit-transition: height 0.3s ease-out, border 0.3s ease-out;
+				    transition: height 0.3s ease-out, border 0.3s ease-out;
+				}
+				@if $YN-nav-bar-border == true{
+				    &:last-child a{border-right: 1px solid;}
+				} 
 		}
-		@if $YN-nav-bar-border == true{
-		    &:last-child a{border-right: 1px solid;}
-		} 
-	}
 }
 /*column navigation*/
 .cssp-nav-column{
@@ -148,6 +150,8 @@
 		}
 	}
 }
+
+//IMAGES
 /*fluid image*/
 .cssp-flex-img{
     max-width: 100%;
@@ -157,7 +161,6 @@
     }
 
 //VISIBILITY
-
 /*desktop visibility*/
 .visibility-desktop-false{
     display: none;

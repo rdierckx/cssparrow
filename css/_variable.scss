@@ -16,7 +16,7 @@
         //row margin (top,bottom)
         $row-tall-margin: 9px;
         $row-grande-margin: ($row-tall-margin * 2);
-        $row-venti-margin: ($row-tall-margin * 6);
+        $row-venti-margin: ($row-tall-margin * 4);
                        
     //cssp-wrapper
     //----------------------------
@@ -25,8 +25,9 @@
 
     //grid span number
     //----------------------------
-    $span-number: 12;
-    $span-number-tablet: 6;
+    $column-number: 12;
+    $column-with: $col-tall-margin;
+
 
 //--------------------------------------
     //STYLE
@@ -34,8 +35,8 @@
     //color range
     //----------------------------
         //main-color 
-        $main-color: #BADA55;
-        $YN-main-color-dark: false; // + ($YN-) specify if it's dark or not (to know the good font color)?
+        $main-color: #1888AD;
+        $YN-main-color-dark: true; // + ($YN-) specify if it's dark or not (to know the good font color)?
         //color-2       
         $second-color: darken($main-color, 20%);
         $YN-second-color-dark: true; // + ($YN-)
@@ -52,10 +53,10 @@
         $default-color: #FFFFFF;
         $YN-default-color-dark: false; // + ($YN-) specify if it's dark or not (to know the good font color)? 
         //color-IMPORTANT      
-        $important-color: #F4A535;
+        $important-color: #EDA600;
         $YN-important-color-dark: true; // + ($YN-)
         //color-SUCCESS    
-        $success-color: #8AB66B;
+        $success-color: #88AA19;
         $YN-success-color-dark: true; // + ($YN-)
         //color-ERROR           
         $error-color: #B00B00;
@@ -65,7 +66,7 @@
     //----------------------------   
     $font-color1: #555555;
     $font-color2: #CCCCCC;
-    $font-color-sub: lighten($font-color1, 50%);
+    $font-color-sub: lighten($font-color1, 35%);
     $font-color-link: $main-color;
 
 //--------------------------------------
@@ -108,12 +109,12 @@
     //----------------------------
     $YN-btn-border-radius: true; // + ($YN-) display border-radius ?
     $YN-btn-border: true; // + ($YN-) display border ?
-    $YN-btn-gradient: true; // + ($YN-) display gradient ?
+    $YN-btn-gradient: false; // + ($YN-) display gradient ?
     $btn-border-radius: 3px;
     
     //navigation bar
     //----------------------------
-    $nav-bar-height: 45px;
+    $nav-bar-height: 55px;
     $YN-nav-bar-border: true; // + ($YN-) display border ?
     
     

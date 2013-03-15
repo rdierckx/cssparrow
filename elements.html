@@ -8,13 +8,13 @@
 
   <title>CsSparrow</title>
 
-  <link rel="stylesheet" media="screen" href="css/global_min.css">
+  <link rel="stylesheet" media="screen" href="css/global.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no">
   <script src="js/lib.js"></script>
 </head>
     
 <body class="my-elements-page"> 
-    <nav id="cssp-target" class="clearfix thm-dark">
+    <nav id="cssp-target" class="clearfix">
         <div class="cssp-wrapper">
             <h1 class="cssp-id float-left"><a href="#">CSSPARROW <sup>beta</sup></a></h1>
             
@@ -26,7 +26,7 @@
 		<b>≡</b>
 	    </a>
             
-            <ul class="cssp-nav-bar float-right thm-dark">
+            <ul class="cssp-nav-bar float-right thm-third">
                 <li><a href="#"><abbr class="icon" title="home">⌂</abbr> Home</a></li>
 				<li><a href="#"><abbr class="icon" title="star">*</abbr> Start</a></li>
                 <li><a href="#"><abbr class="icon" title="document">D</abbr> Documentation</a></li>
@@ -36,401 +36,337 @@
     </nav>
     <header id="main-header">
         <div class="cssp-wrapper">
-            <h2 class="span12">Elements</h2>
+            <h2 class="column12">Elements</h2>
         </div>
     </header>
     <div class="cssp-wrapper">
-	<div class="span3 mt2">
-		<ul class="cssp-nav-column thm-third">
-		    <li>
-			    <a href="#positioning">Positioning</a>
-			    <ul>
-				    <li><a href="#grid">grid</a></li>
-			    </ul>
-		    </li>
-		    <li>
-			    <a href="#typo">Typo</a>
-			    <ul>
-				    <li><a href="#paragraph">paragraph</a></li>
-				    <li><a href="#title">title</a></li>
-			    </ul>
-		    </li>
-		    <li>
-			    <a href="#button">Button</a>
-			    <ul>
-				    <li><a href="#button-color">colors</a></li>
-				    <li><a href="#button-widget">widget</a></li>
-				    <li><a href="#button-size">size</a></li>
-			    </ul>
-		    </li>
-		    <li>
-			    <a href="#forms">Forms</a>
-			    <ul>
-				    <li><a href="#style-form">style-form</a></li>
-				    <li><a href="#error-form">error-form</a></li>
-			    </ul>
-		    </li>
-		    <li>
-			    <a href="#navigation">Nav</a>
-			    <ul>
-				    <li><a href="#inline-navigation">inline navigation</a></li>
-				    <li><a href="#secondary-navbar">secondary navbar</a></li>
-			    </ul>
-		    </li>
-		</ul>
-	</div>
-	<div id="demo-wrap" class="span9">
-	    <!--Grid-->
-	    <section class="mb3" id="positioning">
-		    <header class="cssp-section-header">
-			    <h1>Positioning</h1>
-		    </header>
-		    <div id="grid">
-			<h2>Grid</h2>
-	
-			<!-- SPAN1 -->
-			<div class="row my-grid">
-			    <div class="span1 mb1-mobile"><span>1</span></div>
-			    <div class="span1 mb1-mobile"><span>1</span></div>
-			    <div class="span1 mb1-mobile"><span>1</span></div>
-			    <div class="span1 mb1-mobile"><span>1</span></div>
-			    <div class="span1 mb1-mobile"><span>1</span></div>
-			    <div class="span1 mb1-mobile"><span>1</span></div>
-			    <div class="span1 mb1-mobile"><span>1</span></div>
-			    <div class="span1 mb1-mobile"><span>1</span></div>
-			    <div class="span1 mb1-mobile"><span>1</span></div>
-			    <div class="span1 mb1-mobile"><span>1</span></div>
-			    <div class="span1 mb1-mobile"><span>1</span></div>
-			    <div class="span1 mb1-mobile"><span>1</span></div>
-			</div>
-			    
-			<!-- SPAN3 -->
-			<div class="row my-grid">        
-			    <div class="span3 mb1-mobile"><span>3</span></div>
-			    <div class="span3 mb1-mobile"><span>3</span></div>
-			    <div class="span3 mb1-mobile"><span>3</span></div>
-			    <div class="span3 mb1-mobile"><span>3</span></div>
-			</div>
-			    
-			<!-- SPAN4 -->
-			<div class="row my-grid">
-			    <div class="span4 mb1-mobile"><span>4</span></div>
-			    <div class="span4 mb1-mobile"><span>4</span></div>
-			    <div class="span4 mb1-mobile"><span>4</span></div>
-			</div>
-			    
-			<!-- SPAN6 -->
-			<div class="row my-grid">
-			    <div class="span6 mb1-mobile"><span>6</span></div>
-			    <div class="span6 mb1-mobile"><span>6</span></div>
-			</div>
-			
-			<!-- code -->
-			<pre class="cssp-code"><!--
-			 --><code><!--
-				--><ol><!--
-				    --><li><span class="cssp-tag"><<span>div</span><span> class</span>=<span class="cssp-class">"row"</span>></span></li><!--
-				    --><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>div</span><span> class</span>=<!--
-					--><span class="cssp-class">"span1"</span>></span><!--
-					--><span>one column</span><span class="cssp-tag"><<span>/</span><span>div</span>></span></li><!--
-				    --><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>div</span><span> class</span>=<!--
-					--><span class="cssp-class">"span4"</span>></span><!--
-					--><span>four column</span><span class="cssp-tag"><<span>/</span><span>div</span>></span></li><!--
-				    --><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>div</span><span> class</span>=<!--
-					--><span class="cssp-class">"span7"</span>></span><!--
-					--><span>seven column</span><span class="cssp-tag"><<span>/</span><span>div</span>></span></li><!--
-				    --><li><span class="cssp-tag"><<span>/</span><span>div</span>></span></li><!--
-				--></ol><!--
-			 --></code><!--
-		     --></pre>
-		</div>
-	    </section>
-	    
-	    <!--Button-->
-	    <section class="mb3" id="typo"> 
-		<header class="cssp-section-header">
-			<h1>Typo</h1>
-		</header>
-		<div id="paragraph">
-		    <h2>paragraph</h2>
-		    <p>
-			Lorem ipsum dolor sit amet, consectetur <mark>adipiscing</mark> elit. Nulla urna leo, 
-			tincidunt ut volutpat ac, <q>mattis a purus</q>. Aenean vitae lectus imperdiet 
-			lacus dignissim adipiscing. Nulla fermentum erat eu sapien tempus convallis. 
-			Donec mauris leo, lacinia <b>sed pretium</b> in. Aenean vitae lectus imperdiet 
-			lacus dignissim adipiscing. Nulla fermentum erat eu sapien tempus convallis. 
-			Donec mauris leo, lacinia sed <i>pretium in</i>. Aenean vitae lectus imperdiet 
-			lacus dignissim adipiscing.             
-		    </p>
-		</div>
-		<div id="title">
-		    <h2>title</h2>
-		    <div>
-			<h1>Title level 1</h1>
-			<h2>Title level 2</h2>
-			<h3>Title level 3</h3>
-			<h4>Title level 4</h4>
-			<h5>Title level 5</h5>
-			<h6>Title level 6</h6>
-		    </div>
-		</div>
-	    </section>
-	    
-	    <!--Button-->
-	    <section class="mb3" id="button"> 
-		<header class="cssp-section-header">
-			<h1>Buttons</h1>
-		</header>
-		<div id="button-color">
-		    <h2>Color</h2>
-
-		    <a href="#" class="btn mb1 mr1">Button Action</a>
-		    <a href="#" class="btn btn-main mb1 mr1">Button Main</a>
-		    <a href="#" class="btn btn-important mb1 mr1">Button Important</a>
-		    <a href="#" class="btn btn-success mb1 mr1">Button Success</a>
-		    <a href="#" class="btn btn-error mb1 mr1">Button Error</a>
-		    <a href="#" class="btn btn-dark mb1">Button Dark</a>
-		    
-		    <!-- code -->
-		    <pre class="cssp-code"><!--
-		     --><code><!--
-			    --><ol><!--
-				--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn"</span>></span><!--
-				--><span>Button Default</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
-				--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn btn-main"</span>></span><!--
-				--><span>Button Main</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
-				--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn btn-important"</span>></span><!--
-				--><span>Button Important</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
-				--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn btn-success"</span>></span><!--
-				--><span>Button Success</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
-				--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn btn-error"</span>></span><!--
-				--><span>Button Error</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
-				--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn btn-dark"</span>></span><!--
-				--><span>Button Dark</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
-			    --></ol><!--
-		     --></code><!--
-		 --></pre>
-		</div>
-		<div id="button-widget">
-		    <h2>Widget</h2>
-		    <ul class="btn-multi">
-				<li><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-		    </ul>
-		    <!-- code -->
-		    <pre class="cssp-code"><!--
-		     --><code><!--
-			    --><ol><!--				    
-				--><li><span class="cssp-tag"><<span>ul</span><span> class</span>=<span class="cssp-class">"btn-multi"</span>></span></li><!--
-				    --><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
-				    --><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
-				    --><span>1</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
-				    --></li><!--
-				    --><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
-				    --><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
-				    --><span>2</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
-				    --></li><!--
-				    --><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
-				    --><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
-				    --><span>3</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
-				    --></li><!--
-				    --><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
-				    --><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
-				    --><span>4</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
-				    --></li><!--
-				--><li><span class="cssp-tag"><<span>/</span><span>ul</span>></span></li><!--
-			    --></ol><!--
-		     --></code><!--
-		 --></pre>
-		</div>
-		<div id="button-size">
-		    <h2>Size</h2>
-		    <a href="#" class="btn btn-main king-size mb1 mr1">King Size</a>
-		    <a href="#" class="btn btn-main mb1 mr1">Default Size</a>
-		    <a href="#" class="btn btn-main tiny-size mb1 mr1">Small Size</a>
-
-		    <!-- code -->
-		    <pre class="cssp-code"><!--
-		     --><code><!--
-			    --><ol><!--
-				--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn king-size"</span>></span><!--
-				--><span>King Size</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
-				--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn"</span>></span><!--
-				--><span>Default Size</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
-				--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn tiny-size"</span>></span><!--
-				--><span>Small Size</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
-			    --></ol><!--
-		     --></code><!--
-		 --></pre>
-		</div>
-	    </section>
-	    
-	    <!--Form-->
-	    <section class="mb3" id="forms"> 
-		<header class="cssp-section-header">
-		    <h1>Forms</h1>
-		</header>
-		
-		<!--form input text-->
-		<div id="style-form">
-		    <h2>style form</h2>
-		    <form>
-			<div class="mb1">
-			    <input type="text" placeholder="placeholder">
-			    <input class="btn" type="submit" value="submit">
-			</div>
-			<div class="mb1">
-			    <input type="search" placeholder="search">
-			    <input class="btn" type="submit" value="search">
-			</div>
-			<div class="input-group-line mb1">
-			    <select name="list-demo">
-			       <option value="france">France</option>
-			       <option value="espagne">Espagne</option>
-			       <option value="italie">Italie</option>
-			       <option value="royaume-uni">Royaume-Uni</option>
-			       <option value="canada">Canada</option>
-			       <option value="etats-unis">États-Unis</option>
-			       <option value="chine">Chine</option>
-			       <option value="japon">Japon</option>
-			    </select>
-			</div>
-		    </form>
-		    
-		    <!-- code -->
-		    <pre class="cssp-code"><!--
-		     --><code><!--
-			    --><ol><!--
-				--><li><span class="cssp-tag"><<span>div</span><span> class</span>=<span class="cssp-class">"input-group-line"</span>></span></li><!--
-				--><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>input</span><span> type</span>=<span class="cssp-type">"text"</span><span> placeholder</span>=<span class="cssp-type">"placeholder"</span><span>/</span>></span></li><!--
-				--><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>input</span><span> type</span>=<span class="cssp-type">"submit"</span><span> value</span>=<span class="cssp-type">"submit"</span><span>/</span>></span></li><!--
-				--><li><span class="cssp-tag"><<span>div</span><span>/</span>></span></li><!--
-			    --></ol><!--
-		     --></code><!--
-		 --></pre>
-		</div>
-		
-		<div id="error-form">
-		    <h2>error form</h2>
-		    <form>
-			<div class="mb1 cssp-error">
-			    <input type="text" placeholder="placeholder">
-			    <input class="btn" type="submit" value="submit">
-			</div>
-			<div class="mb1 cssp-error">
-			    <input type="search" placeholder="search">
-			    <input class="btn" type="submit" value="search">
-			</div>
-			<div class="input-group-line mb1 cssp-error">
-			    <select name="list-demo">
-			       <option value="france">France</option>
-			       <option value="espagne">Espagne</option>
-			       <option value="italie">Italie</option>
-			       <option value="royaume-uni">Royaume-Uni</option>
-			       <option value="canada">Canada</option>
-			       <option value="etats-unis">États-Unis</option>
-			       <option value="chine">Chine</option>
-			       <option value="japon">Japon</option>
-			    </select>
-			</div>
-		    </form>
-		    <!-- code -->
-		    <pre class="cssp-code"><!--
-		     --><code><!--
-			    --><ol><!--
-				--><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>input</span><span> class</span>=<span class="cssp-class">"cssp-error"</span><span> type</span>=<span class="cssp-type">"text"</span><span> placeholder</span>=<span class="cssp-type">"placeholder"</span><span>/</span>></span></li><!--
-				--><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>input</span><span> type</span>=<span class="cssp-type">"submit"</span><span> value</span>=<span class="cssp-type">"submit"</span><span>/</span>></span></li><!--
-			    --></ol><!--
-		     --></code><!--
-		 --></pre>
-		</div>
-	    </section>
-
-	    <section class="mb3" id="navigation">    
-		<header class="cssp-section-header">
-			<h1>Navigation</h1>
-		</header>
-		<div id="inline-navigation">
-		    <h2>Inline Navigation</h2>
-		    <nav class="thm-dark">
-			
-			<!--Button to open and close navigation only visible on small screen-->
-			<a class="cssp-oppen-nav h1-like visibility-desktop-false" href="#cssp-target" aria-hidden="true"><strong>≡</strong></a>
-			<a class="cssp-close-nav h1-like visibility-desktop-false" href="#" aria-hidden="true"><strong>≡</strong></a>
-			
-			<ul class="cssp-nav-bar thm-dark">
-			    <li><a href="#">1</a></li>
-			    <li><a href="#">2</a></li>
-			   	<li><a href="#">3</a></li>
-			    <li><a href="#">4</a></li>
-			</ul>
-		    </nav>
-		    <pre class="cssp-code"><!--
-		     --><code><!--
-			    --><ol><!--				    
-				--><li><span class="cssp-tag"><<span>nav</span><span> class</span>=<span class="cssp-class">"row thm-nav-dark"</span>></span></li><!--
-				--><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>ul</span><span> class</span>=<span class="cssp-class">"cssp-nav-bar"</span>></span></li><!--
-				    --><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
-				    --><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
-				    --><span>1</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
-				    --></li><!--
-				    --><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
-				    --><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
-				    --><span>2</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
-				    --></li><!--
-				    --><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
-				    --><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
-				    --><span>3</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
-				    --></li><!--
-				    --><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
-				    --><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
-				    --><span>4</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
-				    --></li><!--
-				--><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>/</span><span>ul</span>></span></li><!--
-				--><li><span class="cssp-tag"><<span>/</span><span>nav</span>></span></li><!--
-			    --></ol><!--
-		     --></code><!--
-		 --></pre>
-		</div>
-		<div id="inline-navigation">
-		    <h2>Column Navigation</h2>   
+    	<div class="row">
+		<div class="column3 mt2">
 			<ul class="cssp-nav-column thm-third">
-			    <li><a href="#">1</a></li><!--
-			    --><li><a href="#">2</a></li><!--
-			    --><li><a href="#">3</a></li><!--
-			    --><li><a href="#">4</a></li>
+			    <li>
+				    <a href="#positioning">Positioning</a>
+				    <ul>
+					    <li><a href="#grid">grid</a></li>
+				    </ul>
+			    </li>
+			    <li>
+				    <a href="#typo">Typo</a>
+				    <ul>
+					    <li><a href="#paragraph">paragraph</a></li>
+					    <li><a href="#title">title</a></li>
+				    </ul>
+			    </li>
+			    <li>
+				    <a href="#button">Button</a>
+				    <ul>
+					    <li><a href="#button-color">colors</a></li>
+					    <li><a href="#button-widget">widget</a></li>
+					    <li><a href="#button-size">size</a></li>
+				    </ul>
+			    </li>
+			    <li>
+				    <a href="#forms">Forms</a>
+				    <ul>
+					    <li><a href="#style-form">style-form</a></li>
+					    <li><a href="#error-form">error-form</a></li>
+				    </ul>
+			    </li>
+			    <li>
+				    <a href="#navigation">Nav</a>
+				    <ul>
+					    <li><a href="#inline-navigation">inline navigation</a></li>
+					    <li><a href="#secondary-navbar">secondary navbar</a></li>
+				    </ul>
+			    </li>
 			</ul>
-		    <pre class="cssp-code"><!--
-		     --><code><!--
-			    --><ol><!--				    
-				--><li><span class="cssp-tag"><<span>nav</span><span> class</span>=<span class="cssp-class">"thm-nav-third"</span>></span></li><!--
-				--><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>ul</span><span> class</span>=<span class="cssp-class">"cssp-nav-column"</span>></span></li><!--
-				    --><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
-				    --><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
-				    --><span>1</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
-				    --></li><!--
-				    --><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
-				    --><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
-				    --><span>2</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
-				    --></li><!--
-				    --><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
-				    --><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
-				    --><span>3</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
-				    --></li><!--
-				    --><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
-				    --><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
-				    --><span>4</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
-				    --></li><!--
-				--><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>/</span><span>ul</span>></span></li><!--
-				--><li><span class="cssp-tag"><<span>/</span><span>nav</span>></span></li><!--
-			    --></ol><!--
-		     --></code><!--
-		 --></pre>
-		</div> 
-	    </section>
-	</div>
+		</div>
+		<div id="demo-wrap" class="column9">
+		    <!--Button-->
+		    <section class="mb3" id="typo"> 
+			<header class="cssp-section-header">
+				<h1>Typo</h1>
+			</header>
+			<div id="paragraph">
+			    <h2>paragraph</h2>
+			    <p>
+				Lorem ipsum dolor sit amet, consectetur <mark>adipiscing</mark> elit. Nulla urna leo, 
+				tincidunt ut volutpat ac, <q>mattis a purus</q>. Aenean vitae lectus imperdiet 
+				lacus dignissim adipiscing. Nulla fermentum erat eu sapien tempus convallis. 
+				Donec mauris leo, lacinia <b>sed pretium</b> in. Aenean vitae lectus imperdiet 
+				lacus dignissim adipiscing. Nulla fermentum erat eu sapien tempus convallis. 
+				Donec mauris leo, lacinia sed <i>pretium in</i>. Aenean vitae lectus imperdiet 
+				lacus dignissim adipiscing.             
+			    </p>
+			</div>
+			<div id="title">
+			    <h2>title</h2>
+			    <div>
+				<h1>Title level 1</h1>
+				<h2>Title level 2</h2>
+				<h3>Title level 3</h3>
+				<h4>Title level 4</h4>
+				<h5>Title level 5</h5>
+				<h6>Title level 6</h6>
+			    </div>
+			</div>
+		    </section>
+		    
+		    <!--Button-->
+		    <section class="mb3" id="button"> 
+			<header class="cssp-section-header">
+				<h1>Buttons</h1>
+			</header>
+			<div id="button-color">
+			    <h2>Color</h2>
+
+			    <a href="#" class="btn mb1 mr1">Button Action</a>
+			    <a href="#" class="btn btn-main mb1 mr1">Button Main</a>
+			    <a href="#" class="btn btn-important mb1 mr1">Button Important</a>
+			    <a href="#" class="btn btn-success mb1 mr1">Button Success</a>
+			    <a href="#" class="btn btn-error mb1 mr1">Button Error</a>
+			    <a href="#" class="btn btn-dark mb1">Button Dark</a>
+			    
+			    <!-- code -->
+			    <pre class="cssp-code"><!--
+			     --><code><!--
+				    --><ol><!--
+					--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn"</span>></span><!--
+					--><span>Button Default</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
+					--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn btn-main"</span>></span><!--
+					--><span>Button Main</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
+					--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn btn-important"</span>></span><!--
+					--><span>Button Important</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
+					--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn btn-success"</span>></span><!--
+					--><span>Button Success</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
+					--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn btn-error"</span>></span><!--
+					--><span>Button Error</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
+					--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn btn-dark"</span>></span><!--
+					--><span>Button Dark</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
+				    --></ol><!--
+			     --></code><!--
+			 --></pre>
+			</div>
+			<div id="button-widget">
+			    <h2>Widget</h2>
+			    <ul class="btn-multi">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+			    </ul>
+			    <!-- code -->
+			    <pre class="cssp-code"><!--
+			     --><code><!--
+				    --><ol><!--				    
+					--><li><span class="cssp-tag"><<span>ul</span><span> class</span>=<span class="cssp-class">"btn-multi"</span>></span></li><!--
+					    --><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
+					    --><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
+					    --><span>1</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
+					    --></li><!--
+					    --><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
+					    --><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
+					    --><span>2</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
+					    --></li><!--
+					    --><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
+					    --><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
+					    --><span>3</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
+					    --></li><!--
+					    --><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
+					    --><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
+					    --><span>4</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
+					    --></li><!--
+					--><li><span class="cssp-tag"><<span>/</span><span>ul</span>></span></li><!--
+				    --></ol><!--
+			     --></code><!--
+			 --></pre>
+			</div>
+			<div id="button-size">
+			    <h2>Size</h2>
+			    <a href="#" class="btn btn-main king-size mb1 mr1">King Size</a>
+			    <a href="#" class="btn btn-main mb1 mr1">Default Size</a>
+			    <a href="#" class="btn btn-main tiny-size mb1 mr1">Small Size</a>
+
+			    <!-- code -->
+			    <pre class="cssp-code"><!--
+			     --><code><!--
+				    --><ol><!--
+					--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn king-size"</span>></span><!--
+					--><span>King Size</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
+					--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn"</span>></span><!--
+					--><span>Default Size</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
+					--><li><span class="cssp-tag"><<span>a</span><span> class</span>=<span class="cssp-class">"btn tiny-size"</span>></span><!--
+					--><span>Small Size</span><span class="cssp-tag"><<span>/</span><span>a</span>></span></li><!--
+				    --></ol><!--
+			     --></code><!--
+			 --></pre>
+			</div>
+		    </section>
+		    
+		    <!--Form-->
+		    <section class="mb3" id="forms"> 
+			<header class="cssp-section-header">
+			    <h1>Forms</h1>
+			</header>
+			
+			<!--form input text-->
+			<div id="style-form">
+			    <h2>style form</h2>
+			    <form>
+				<div class="mb1">
+				    <input type="text" placeholder="placeholder">
+				    <input class="btn" type="submit" value="submit">
+				</div>
+				<div class="mb1">
+				    <input type="search" placeholder="search">
+				    <input class="btn" type="submit" value="search">
+				</div>
+				<div class="input-group-line mb1">
+				    <select name="list-demo">
+				       <option value="france">France</option>
+				       <option value="espagne">Espagne</option>
+				       <option value="italie">Italie</option>
+				       <option value="royaume-uni">Royaume-Uni</option>
+				       <option value="canada">Canada</option>
+				       <option value="etats-unis">États-Unis</option>
+				       <option value="chine">Chine</option>
+				       <option value="japon">Japon</option>
+				    </select>
+				</div>
+			    </form>
+			    
+			    <!-- code -->
+			    <pre class="cssp-code"><!--
+			     --><code><!--
+				    --><ol><!--
+					--><li><span class="cssp-tag"><<span>div</span><span> class</span>=<span class="cssp-class">"input-group-line"</span>></span></li><!--
+					--><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>input</span><span> type</span>=<span class="cssp-type">"text"</span><span> placeholder</span>=<span class="cssp-type">"placeholder"</span><span>/</span>></span></li><!--
+					--><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>input</span><span> type</span>=<span class="cssp-type">"submit"</span><span> value</span>=<span class="cssp-type">"submit"</span><span>/</span>></span></li><!--
+					--><li><span class="cssp-tag"><<span>div</span><span>/</span>></span></li><!--
+				    --></ol><!--
+			     --></code><!--
+			 --></pre>
+			</div>
+			
+			<div id="error-form">
+			    <h2>error form</h2>
+			    <form>
+				<div class="mb1 cssp-error">
+				    <input type="text" placeholder="placeholder">
+				    <input class="btn" type="submit" value="submit">
+				</div>
+				<div class="mb1 cssp-error">
+				    <input type="search" placeholder="search">
+				    <input class="btn" type="submit" value="search">
+				</div>
+				<div class="input-group-line mb1 cssp-error">
+				    <select name="list-demo">
+				       <option value="france">France</option>
+				       <option value="espagne">Espagne</option>
+				       <option value="italie">Italie</option>
+				       <option value="royaume-uni">Royaume-Uni</option>
+				       <option value="canada">Canada</option>
+				       <option value="etats-unis">États-Unis</option>
+				       <option value="chine">Chine</option>
+				       <option value="japon">Japon</option>
+				    </select>
+				</div>
+			    </form>
+			    <!-- code -->
+			    <pre class="cssp-code"><!--
+			     --><code><!--
+				    --><ol><!--
+					--><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>input</span><span> class</span>=<span class="cssp-class">"cssp-error"</span><span> type</span>=<span class="cssp-type">"text"</span><span> placeholder</span>=<span class="cssp-type">"placeholder"</span><span>/</span>></span></li><!--
+					--><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>input</span><span> type</span>=<span class="cssp-type">"submit"</span><span> value</span>=<span class="cssp-type">"submit"</span><span>/</span>></span></li><!--
+				    --></ol><!--
+			     --></code><!--
+			 --></pre>
+			</div>
+		    </section>
+
+		    <section class="mb3" id="navigation">    
+			<header class="cssp-section-header">
+				<h1>Navigation</h1>
+			</header>
+			<div id="inline-navigation">
+			    <h2>Inline Navigation</h2>
+			    <nav class="thm-dark">
+				
+				<!--Button to open and close navigation only visible on small screen-->
+				<a class="cssp-oppen-nav h1-like visibility-desktop-false" href="#cssp-target" aria-hidden="true"><strong>≡</strong></a>
+				<a class="cssp-close-nav h1-like visibility-desktop-false" href="#" aria-hidden="true"><strong>≡</strong></a>
+				
+				<ul class="cssp-nav-bar thm-dark">
+				    <li><a href="#">1</a></li>
+				    <li><a href="#">2</a></li>
+				   	<li><a href="#">3</a></li>
+				    <li><a href="#">4</a></li>
+				</ul>
+			    </nav>
+			    <pre class="cssp-code"><!--
+			     --><code><!--
+				    --><ol><!--				    
+					--><li><span class="cssp-tag"><<span>nav</span><span> class</span>=<span class="cssp-class">"row thm-nav-dark"</span>></span></li><!--
+					--><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>ul</span><span> class</span>=<span class="cssp-class">"cssp-nav-bar"</span>></span></li><!--
+					    --><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
+					    --><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
+					    --><span>1</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
+					    --></li><!--
+					    --><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
+					    --><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
+					    --><span>2</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
+					    --></li><!--
+					    --><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
+					    --><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
+					    --><span>3</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
+					    --></li><!--
+					    --><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
+					    --><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
+					    --><span>4</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
+					    --></li><!--
+					--><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>/</span><span>ul</span>></span></li><!--
+					--><li><span class="cssp-tag"><<span>/</span><span>nav</span>></span></li><!--
+				    --></ol><!--
+			     --></code><!--
+			 --></pre>
+			</div>
+			<div id="inline-navigation">
+			    <h2>Column Navigation</h2>   
+				<ul class="cssp-nav-column thm-third">
+				    <li><a href="#">1</a></li><!--
+				    --><li><a href="#">2</a></li><!--
+				    --><li><a href="#">3</a></li><!--
+				    --><li><a href="#">4</a></li>
+				</ul>
+			    <pre class="cssp-code"><!--
+			     --><code><!--
+				    --><ol><!--				    
+					--><li><span class="cssp-tag"><<span>nav</span><span> class</span>=<span class="cssp-class">"thm-nav-third"</span>></span></li><!--
+					--><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>ul</span><span> class</span>=<span class="cssp-class">"cssp-nav-column"</span>></span></li><!--
+					    --><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
+					    --><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
+					    --><span>1</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
+					    --></li><!--
+					    --><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
+					    --><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
+					    --><span>2</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
+					    --></li><!--
+					    --><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
+					    --><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
+					    --><span>3</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
+					    --></li><!--
+					    --><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>li</span>></span><!--
+					    --><span class="cssp-tag"><<span>a</span><span> href</span>=<span class="cssp-class">"#"</span>></span><!--
+					    --><span>4</span><span class="cssp-tag"><<span>/</span><span>a</span>></span><span class="cssp-tag"><<span>/</span><span>li</span>></span><!--
+					    --></li><!--
+					--><li><span>&nbsp;&nbsp;&nbsp;</span><span class="cssp-tag"><<span>/</span><span>ul</span>></span></li><!--
+					--><li><span class="cssp-tag"><<span>/</span><span>nav</span>></span></li><!--
+				    --></ol><!--
+			     --></code><!--
+			 --></pre>
+			</div> 
+		    </section>
+			</div>
+		</div>
     </div>
 </body>
 </html>
