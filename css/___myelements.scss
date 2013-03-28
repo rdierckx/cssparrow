@@ -105,12 +105,7 @@ h1, h2, h3, h4, h5, h6, .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-li
 
 /*THEME
 -------------*/
-.thm-third{
-    background-color: $third-color;
-    @if $YN-third-color-dark == false{color: $font-color1;}
-    @if $YN-third-color-dark == true{color: $font-color2;}
-}
-.thm-third.cssp-nav-bar>li a,.thm-third.cssp-nav-column>li a{
+.third-color.cssp-nav-bar>li a,.third-color.cssp-nav-column>li a{
     @if $YN-third-color-dark == false{color: $font-color1;}
     @if $YN-third-color-dark == true{color: $font-color2;}
     border-color: darken($third-color, 15%);

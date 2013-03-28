@@ -1,3 +1,10 @@
+//GRID
+@for $i from 1 through $column-number{
+    .s-column#{$i} {
+        width: (100%/$column-number)*$i;
+    }
+}
+
 //MARGIN SYSTEM
 /* margin left, right */
 .ml0-tablet {margin-left: 0;}
@@ -17,5 +24,5 @@
 .mb3-tablet {margin-bottom: $row-venti-margin;}
 
 //VISIBILITY
-.visibility-tablet-false{display: none !important;}
-.visibility-tablet-true{display: inherit !important;}
+.s-visibility-false{display: none !important;}
+.s-visibility-true{display: inherit !important;}

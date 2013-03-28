@@ -1,7 +1,7 @@
 /*layout.scss is the elements position stylesheet*/
 
 //GENERAL
-*{
+* {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -10,7 +10,7 @@
 }
 
 //WRAPPER
-.cssp-wrapper{
+.cssp-wrapper {
     margin: 0 auto;
     width: $wrapper-width;
     max-width: $wrapper-max-width;
@@ -46,7 +46,6 @@
 			display: table-cell;
 			padding-left: 0;
 			padding-right: 0;
-			vertical-align: middle;
 	    }
 	    .block{
 	    	display: block;
@@ -55,7 +54,7 @@
 }
 
 //FLOAT & RESET
-.clearfix{
+.clearfix {
     clear: both;
     *zoom: 1;
 		&:after, &:before{
@@ -64,23 +63,16 @@
 		    clear: both;
 		}
 }
-.clearfix-overflow{
+.clearfix-overflow {
     overflow: hidden;
     *zoom: 1;
 }
-.float-right{
+.float-right {
     float: right;
 }
-.float-left{
+.float-left {
     float: left;
 }
-
-//DISPLAY
-.cssp-inline{
-	display: inline-block;
-	line-height: 1;
-	vertical-align: top;
-} 
 
 //MARGIN SYSTEM
 /* margin left, right */
@@ -98,28 +90,36 @@
 .mb2 {margin-bottom: $row-grande-margin;}
 .mb3 {margin-bottom: $row-venti-margin;}
 
-//BOX
-.cssp-box{
-    padding: $row-grande-margin $col-grande-margin;
+//MISC
+.cssp-box {
+	padding: $row-grande-margin $col-grande-margin;
 }
+.cssp-inline {
+	display: inline-block;
+	line-height: 1;
+} 
+/*vertical align*/
+.vertical-top {vertical-align: top;}
+.vertical-middle {vertical-align: middle;}
+.vertical-bottom {vertical-align: bottom;}
 
 //NAVIGATION
 /*inline navigation*/
-.cssp-nav-bar{
+.cssp-nav-bar {
     margin: 0;
     padding-left: 0;
     list-style: none;
     display: table;
-		&>li{
+		&>li {
 			display: table-cell;
 			vertical-align: middle;
-				&>a{
+				&>a {
 				    display: inline-block;
 				    line-height: $nav-bar-height; 
 				    height: $nav-bar-height;
 				    padding: 0 $col-grande-margin;
-				    @if $YN-nav-bar-border == true{
-					border-left: 1px solid;
+				    @if $YN-nav-bar-border == true {
+						border-left: 1px solid;
 				    }
 				    -webkit-transition: height 0.3s ease-out, border 0.3s ease-out;
 				    transition: height 0.3s ease-out, border 0.3s ease-out;
@@ -130,21 +130,21 @@
 		}
 }
 /*column navigation*/
-.cssp-nav-column{
+.cssp-nav-column {
     margin: 0;
     padding-left: 0;
     list-style: none;
-	&>li{
-		a{
+	&>li {
+		a {
 		    display: block;
 		    padding: ($row-tall-margin) $col-tall-margin;
 		    border-bottom: 1px solid;
 		}
-		ul{
+		ul {
 		    margin: 0;
 		    padding-left: 0;
 		    list-style: none;
-			&>li a{
+			&>li a {
 			    padding-left: $col-grande-margin;
 			}
 		}
@@ -153,15 +153,15 @@
 
 //IMAGES
 /*fluid image*/
-.cssp-flex-img{
+.cssp-flex-img {
     max-width: 100%;
 }
-    .lt-ie8 .cssp-flex-img{
+    .lt-ie8 .cssp-flex-img {
 	width: 100%;
     }
 
 //VISIBILITY
 /*desktop visibility*/
-.visibility-desktop-false{
-    display: none;
+.m-visibility-false {
+    display: none !important;
 }

@@ -17,8 +17,8 @@ body{
 
 //MEDIAQUERY
 @media handheld, only screen and (max-width: 979px) {
-    @import "__tablet_style";
+    @import "__s_style";
 }
 @media handheld, only screen and (max-width: 767px) {
-    @import "__phone_style";
+    @import "__xs_style";
 }

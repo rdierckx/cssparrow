@@ -14,7 +14,7 @@
 
 //GRID
 @for $i from 1 through $column-number{
-    .small-column#{$i} {
+    .xs-column#{$i} {
         width: (100%/$column-number)*$i;
     }
 }
@@ -26,28 +26,23 @@
 
 //MARGIN SYSTEM
 /* margin left, right */
-.small-ml0 {margin-left: 0;}
-.small-ml1 {margin-left: $col-tall-margin;}
-.small-ml2 {margin-left: $col-grande-margin;}
-.small-ml3 {margin-left: $col-venti-margin;}
-.small-mr0 {margin-right: 0;}
-.small-mr1 {margin-right: $col-tall-margin;}
-.small-mr2 {margin-right: $col-grande-margin;}
-.small-mr3 {margin-right: $col-venti-margin;}
+.xs-ml0 {margin-left: 0;}
+.xs-ml1 {margin-left: $col-tall-margin;}
+.xs-ml2 {margin-left: $col-grande-margin;}
+.xs-ml3 {margin-left: $col-venti-margin;}
+.xs-mr0 {margin-right: 0;}
+.xs-mr1 {margin-right: $col-tall-margin;}
+.xs-mr2 {margin-right: $col-grande-margin;}
+.xs-mr3 {margin-right: $col-venti-margin;}
 /* margin top, bottom */
-.small-mt0 {margin-top: 0;}
-.small-mt1 {margin-top: $row-tall-margin;}
-.small-mt2 {margin-top: $row-grande-margin;}
-.small-mt3 {margin-top: $row-venti-margin;}
-.small-mb0 {margin-bottom: 0;}
-.small-mb1 {margin-bottom: $row-tall-margin;}
-.small-mb2 {margin-bottom: $row-grande-margin;}
-.small-mb3 {margin-bottom: $row-venti-margin;}
-
-//BOX
-.cssp-box{
-    padding: $row-tall-margin 0;
-}
+.xs-mt0 {margin-top: 0;}
+.xs-mt1 {margin-top: $row-tall-margin;}
+.xs-mt2 {margin-top: $row-grande-margin;}
+.xs-mt3 {margin-top: $row-venti-margin;}
+.xs-mb0 {margin-bottom: 0;}
+.xs-mb1 {margin-bottom: $row-tall-margin;}
+.xs-mb2 {margin-bottom: $row-grande-margin;}
+.xs-mb3 {margin-bottom: $row-venti-margin;}
 
 //TYPO
 h1,.h1-like{font-size: 2.3em;}
@@ -106,5 +101,5 @@ form{
 }  
 
 //VISIBILITY
-.small-visibility-false{display: none !important;}
-.small-visibility-true{display: inherit !important;}
+.xs-visibility-false{display: none !important;}
+.xs-visibility-true{display: inherit !important;}
