@@ -1,0 +1,20 @@
+//* sass --style compressed --watch cssparrow.scss:cssparrow_min.css
+@import "_variable";
+body{
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $font-color1;
+    font-family: $current-text;
+    background: $third-color;
+}
+@import "_normalize";
+@import "_layout";
+@import "_typo_form";
+@import "_style";
+
+//import all specific cases here;
+@import "___myelements";
+
+//MEDIAQUERY
+@media screen and (max-width: 979px) { @import "__s_style"; }
+@media screen and (max-width: 767px) { @import "__xs_style"; }

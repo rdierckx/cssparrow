@@ -6,7 +6,7 @@
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
-    box-sizing: border-box; *behavior: url(/js/boxsizing.htc);
+    box-sizing: border-box; *behavior: url(/js/pollify/boxsizing.htc);
 }
 
 //WRAPPER
@@ -27,7 +27,7 @@
 /*row and column float system*/
 .row { 
 	@extend .clearfix; 
-		&>[class^="column"] {
+		&>[class*="column"] {
 			padding-left: $col-tall-margin;
 			padding-right: $col-tall-margin;
 			@extend .float-left;
@@ -155,6 +155,7 @@
 /*fluid image*/
 .cssp-flex-img {
     max-width: 100%;
+    height: auto;
 }
     .lt-ie8 .cssp-flex-img {
 	width: 100%;
