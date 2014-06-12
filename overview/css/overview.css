@@ -1,0 +1,15 @@
+/* Stylesheet for overview pages */
+
+/* GENERAL */
+
+/* LAYOUT VIEW */
+.centerize-element--height { height: 200px; border: 2px solid #dddddd; }
+.big--block { 
+	padding-top: 40px; 
+	padding-bottom: 40px;
+}
+.mix-grid>* { padding: 10px; }
+.mix-grid [class*="column"]>span {
+	padding-top: 105px; 
+	padding-bottom: 105px;
+}

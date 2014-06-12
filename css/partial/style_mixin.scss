@@ -1,0 +1,85 @@
+//UI ELEMENTS
+@mixin ui-element($multiply-padding, $multiply-line-height) {
+    @extend .inline;
+    padding: 0 ($col-margin * $multiply-padding);
+    height: $line-height * $multiply-line-height;
+    line-height: $line-height * $multiply-line-height;
+}
+
+@mixin button() {
+    color: $main-font-color;
+    background-color: #ffffff;
+    border: none;
+    @if $YN-btn-border-radius == true{ border-radius: $btn-border-radius; }
+    -webkit-transition: background 0.2s ease-out;
+            transition: background 0.2s ease-out;
+            &:hover,&:focus{
+                cursor: pointer;
+                background: darken(#ffffff, 8%);
+            }
+}
+
+@mixin btn-border($font-color) { 
+    color: $font-color;
+    border: 1px solid $font-color;
+    background: rgba(0,0,0,0);
+    background: transparent;
+    -webkit-box-shadow: 0 0 0 1px rgba($font-color,0.8) inset;
+            box-shadow: 0 0 0 1px rgba($font-color,0.8) inset;
+    -webkit-transition: color 0.3s ease-out, border 0.3s ease-out;
+            transition: color 0.3s ease-out, border 0.3s ease-out;
+        &:hover {
+            color: rgba($main-color,1);
+            background: rgba(0,0,0,0);
+            background: transparent;
+            -webkit-box-shadow: 0 0 0 1px rgba($main-color,1) inset;
+                    box-shadow: 0 0 0 1px rgba($main-color,1) inset;               
+        }
+}
+
+//THEME BACKGROUND & COLOR
+@mixin theme-color($bg-color,$font-color) { 
+    background-color: $bg-color; 
+    color: $font-color;
+        &.btn {
+            color: $font-color;
+            background-color: $bg-color;
+            border-color: darken($bg-color, 15%);
+                &:hover,
+                &:focus{  background: darken($bg-color, 5%); }           
+        }
+        &.tag {
+            background: $bg-color;
+                &:hover,
+                &:focus{ background: darken($bg-color, 5%); }   
+        }
+        h1,.h1-like,
+        h2,.h2-like,
+        h3,.h3-like,
+        h4,.h4-like { color: $font-color; }
+        a { color: $font-color; }
+}
+
+@mixin theme-color-light($bg-color,$font-color) { 
+    background-color: $bg-color; 
+    color: $font-color;
+}
+
+@mixin theme-color-btn($bg-color,$font-color) { 
+    &.btn {
+        color: $font-color;
+        background-color: $bg-color;
+            &:hover,
+            &:focus{  background: darken($bg-color, 5%); }           
+    }
+}
+@mixin hightlight($line-height,$padding,$space) { 
+    @extend .relative;
+    display: inline;
+    line-height: $line-height;
+    left: $padding;
+    padding: $space $padding;
+    background: rgba($main-color,0.8);
+    box-shadow: $padding 0 0 rgba($main-color,0.8),  
+                $padding*-1 0 0 rgba($main-color,0.8);
+}

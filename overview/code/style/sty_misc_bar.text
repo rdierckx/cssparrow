@@ -1,0 +1,8 @@
+	<div class="bar second-color">
+		<div class="float-left">
+			Bar title aligned
+		</div>
+		<div class="float-right">
+			<a class="btn dark-color" href="#">1</a>
+		</div>
+	</div>

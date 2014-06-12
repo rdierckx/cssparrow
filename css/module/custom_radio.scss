@@ -1,0 +1,52 @@
+//input Radio
+.custom-radio {
+    @extend .relative;
+    cursor: pointer;
+        .radio-circle {
+            @extend .relative;
+            @extend .inline;
+            @extend .vertical-middle;
+            @extend .circle;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            background: #ffffff;
+            border: 2px solid rgba(0,0,0,0.2);
+        }
+        .radio-circle:after{
+            content: '';
+            @extend .absolute;
+            @extend .inline;
+            @extend .circle;
+            width: 15px;
+            height: 15px;
+            top: 3px;
+            left: 3px;
+
+            background: $main-color;
+            z-index: 3;
+            -webkit-transition: -webkit-transform 0.3s ease-out, opacity 0.2s ease-out;
+                    transition:         transform 0.3s ease-out, opacity 0.2s ease-out;
+        }
+        input[type="radio"] {
+            &:not(:checked),
+            &:checked {
+                @extend .absolute;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                z-index: -1;
+                -moz-appearance: none; 
+            }
+            &:not(:checked) + .radio-circle:after {
+                opacity: 0;
+                -webkit-transform: scale(0);
+                        transform: scale(0);
+            }
+            &:checked + .radio-circle:after {
+                opacity: 1;
+                -webkit-transform: scale(1);
+                        transform: scale(1);
+            }
+        }
+}

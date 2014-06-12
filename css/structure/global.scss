@@ -1,0 +1,34 @@
+// Set body and html tags with full height allow to use a panel navigation system
+body,
+html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+body {
+	position: relative;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $main-font-color;
+    font-family: $current-text;
+    background: $general-background;
+}
+
+// Wrap your content inside .container-wrapper and <div class="f-height scroll">
+// and the next element inside it should be
+.container-wrapper {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	z-index: 4;
+	background: $general-background;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	   -moz-transform: translate3d(0px, 0px, 0px);
+			transform: translate3d(0px, 0px, 0px);
+	-webkit-transition: -webkit-transform 0.2s cubic-bezier(.94,.33,.26,.57);
+	   -moz-transition:    -moz-transform 0.2s cubic-bezier(.94,.33,.26,.57);
+			transition: 		transform 0.2s cubic-bezier(.94,.33,.26,.57);
+}

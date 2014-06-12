@@ -1,0 +1,161 @@
+// style.scss is the look and feel stylesheet
+
+// ELEMENTS
+::selection {
+    background: $main-color;
+    color: #ffffff;
+    text-shadow: none; 
+}
+.box { padding: $row-margin $col-margin*2; }
+.bar {
+    height: $nav-bar-height;
+    line-height: $nav-bar-height;
+}
+
+// BUTTONS
+.btn{
+    @include ui-element(1.4, 2);
+    @include button();
+}
+
+// border btn
+.border-btn { @include btn-border($main-font-color); }
+.border-btn-error-color { @include btn-border($error-color); }
+.border-btn-third-color { @include btn-border($third-color); }
+.border-btn-main-color { @include btn-border($main-color); }
+
+// take all width
+.btn-block {
+    @extend .block;
+    width: 100%;
+    text-align: center;
+}
+
+// size btn
+.small-size {
+    height: $line-height*1.3;
+    line-height: $line-height*1.3;
+    padding: 0 $col-margin*1.3;
+    font-size: 12px;
+}
+.king-size {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 $col-margin*3;
+    font-size: 18px;
+}
+
+// multi buttons
+.collapse-buttons {
+    .btn { 
+        border-radius: 0px; 
+        border: 1px solid darken($second-color, 5%);
+    }
+    .btn:first-child { 
+        border-radius: 3px 0 0 3px; 
+        border-right: none;
+    }
+    .btn:last-child { border-radius: 0 3px 3px 0; }
+}
+
+// color set
+.main-color { @include theme-color($main-color, #ffffff); }
+.second-color { @include theme-color($second-color, $main-font-color); }
+.third-color { @include theme-color($third-color, #ffffff); }
+.dark-color { @include theme-color($dark-color, #ffffff); }
+
+// alert color
+.important-color { @include theme-color($important-color, $main-font-color); } 
+.success-color { @include theme-color($success-color, #ffffff); }
+.error-color { @include theme-color($error-color, #ffffff); }
+
+// Social
+.facebook-color { @include theme-color-btn(#3b5998, #ffffff); }
+.instagram-color { @include theme-color-btn(#AA7F63, #ffffff); }
+.twitter-color { @include theme-color-btn(#00ACED, #ffffff); }
+
+// COLOR FONT
+.text-default { color: $main-font-color !important; }
+.text-main { color: $main-color !important; }
+.text-second { color: $second-color !important; }
+.text-third { color: $third-color !important; }
+.text-dark { color: $dark-color !important; }
+.text-important { color: $important-color !important; }
+.text-success { color: $success-color !important; }
+.text-error { color: $error-color !important; }
+.text-white { color: #ffffff !important; }
+.text-gray { color: #aaaaaa !important; }
+
+// Social
+.text-facebook { color: $facebook-color; }
+.text-instagram { color: #AA7F63; }
+.text-twitter { color: $twitter-color; }
+.text-google { color: $google-color; }
+.text-pinterest { color: $google-color; }
+
+
+// ABLE DISABLE
+.disable { 
+    opacity: 0.3;
+    cursor: default !important;
+}
+
+// IMAGES
+// fluid image
+.flex-img {
+    max-width: 100%;
+    height: auto;
+}
+
+// SHADOW
+.shadow1 { box-shadow: 0 0 0 3px rgba(0,0,0,0.1); }
+.shadow2 { box-shadow: 0 0 0 2px rgba(0,0,0,0.1); }
+.shadow3 { box-shadow: 0 0 4px rgba(0,0,0,0.3); }
+
+// Text Shadow
+.text-bg { text-shadow: 0 0 3px rgba(0,0,0,0.15); }
+
+// ROUNDED
+.rounded1 { border-radius: 2px; }
+.rounded2 { border-radius: 3px; }
+
+// Perfect circle 
+.circle { border-radius: 50%; }
+// Circle to the edges
+.circle-edge { border-radius: 500px; }
+
+// MISC
+// border
+.border-top { border-top: solid 1px rgba(0,0,0,0.1); }
+.border-bottom { border-bottom: solid 1px rgba(0,0,0,0.1); }
+.border-left { border-left: solid 1px rgba(0,0,0,0.1); }
+.border-right { border-right: solid 1px rgba(0,0,0,0.1); }
+
+
+// Highlight
+.hightlight { @include hightlight (44px, $col-margin, 0); }
+.hightlight--small { @include hightlight (22px, $col-margin, 0); }
+
+
+// Badge exposant
+.badge-expo {
+    @extend .relative;
+    @extend .inline;
+    padding: 0 3px;
+    top: -10px;
+    font-size: 12px;
+    font-family: 'Arial', sans-serif;
+    line-height: 14px;
+    background: $error-color;
+    color: #ffffff;
+}
+
+// Clickable
+.clickable { cursor: pointer; }
+
+// Code
+pre {
+    @extend .box;
+    color: #fff;
+    background: $dark-color;
+}

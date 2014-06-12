@@ -1,0 +1,21 @@
+// Navigation with panel system
+// --------------------------------------------------
+// /!\ This module need panel_nav.js to works
+
+// variable
+$panel-width: 280px;
+
+// style
+.panel-nav--panel {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: $panel-width;
+		nav li { line-height: 2.4; }
+} 
+
+.main-nav-open .container-wrapper {
+	-webkit-transform: translate3d($panel-width, 0px, 0px);
+	   -moz-transform: translate3d($panel-width, 0px, 0px);
+			transform: translate3d($panel-width, 0px, 0px);
+}

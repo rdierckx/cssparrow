@@ -1,0 +1,85 @@
+//------------------------------------------------------------
+// variable.scss is a powerful way to change colors, typo
+// and sizes in your project. 
+//------------------------------------------------------------
+
+// FONT
+// --------------------------------------
+// current text
+$font-size: 16px;
+$line-height: 22px; 
+
+//font familly
+$current-text: "Helvetica", Arial, Verdana, Sans-Serif;
+$heading-text: "Helvetica", Arial, Verdana, Sans-Serif;
+
+// LAYOUT
+// --------------------------------------      
+// margin / padding
+$col-margin: 11px;
+$row-margin: $line-height;
+$panel-margin: 8px;
+                   
+// cssp-wrapper
+$main-wrapper-width: 100%;
+$main-wrapper-max-width: 1200px;
+
+// grid span number
+$column-number: 12;
+$column-with: $col-margin;
+
+// STYLE
+// --------------------------------------   
+// color range
+$main-color: #f28011;    
+$second-color: #f2f2f2;
+$third-color: #f0c61d;
+$dark-color: #252c32;   
+
+// color alert  
+$important-color: #edcf43;   
+$success-color: #bcd44c;     
+$error-color: #f47245;
+
+// general background
+$general-background: #ffffff;
+
+// text color  
+$main-font-color: #666666;
+$light-font-color: $second-color;
+$font-color-sub: lighten($main-font-color, 35%);
+$font-color-link: $main-color; 
+$heading-color: inherit;
+
+// color social
+$facebook-color: #3b5998;
+$twitter-color: #00ACED;
+$google-color: #DD4C39; 
+$pinterest-color: #CE2029;      
+
+// MEDIAQUERIES
+// --------------------------------------
+$s-break: 767px;
+$m-break: 1050px;
+$l-break: 1300px;
+
+    
+// WIDGET
+// --------------------------------------
+// nav bar
+$nav-bar-height: $line-height * 3;
+
+// buttons
+$YN-btn-border-radius: true; // + ($YN-) display border-radius ?
+$YN-btn-border: false; // + ($YN-) display border ?
+$YN-btn-gradient: false; // + ($YN-) display gradient ?
+$YN-btn-effects: false;
+$btn-border-radius: 3px;
+
+// BUILDER
+// --------------------------------------
+$builder-aside-width: 400px;
+    
+    
+
+

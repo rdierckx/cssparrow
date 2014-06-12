@@ -1,20 +1,30 @@
-//* sass --style compressed --watch cssparrow.scss:cssparrow_min.css
-@import "_variable";
-body{
-    font-size: $font-size;
-    line-height: $line-height;
-    color: $font-color1;
-    font-family: $current-text;
-    background: $third-color;
-}
-@import "_normalize";
-@import "_layout";
-@import "_typo_form";
-@import "_style";
+@charset "utf-8";
+//* sass --style compressed --watch --debug-info cssparrow.scss:cssparrow_min.css
 
-//import all specific cases here;
-@import "___myelements";
+@import "partial/variable";
 
-//MEDIAQUERY
-@media screen and (max-width: 979px) { @import "__s_style"; }
-@media screen and (max-width: 767px) { @import "__xs_style"; }
+// PARTIALS
+// Mixins and fuctions
+@import "partial/layout_mixin";
+@import "partial/typo_form_mixin";
+@import "partial/style_mixin";
+@import "partial/modules_mixin";
+
+// Structure
+// Core of Cssparrow 
+@import "structure/normalize";
+@import "structure/global";
+@import "structure/layout";
+@import "structure/typo_form";
+@import "structure/style";
+
+// Modules
+// Here the place to create your own module
+@import "module/modal";
+@import "module/tooltip";
+@import "module/toggle";
+@import "module/custom_select";
+@import "module/custom_radio";
+@import "module/custom_checkbox";
+@import "module/panel-nav";
+

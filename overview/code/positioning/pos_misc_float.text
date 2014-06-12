@@ -1,0 +1,17 @@
+	.f-right { float: right; }
+	.f-left { float: left; }
+
+	.clearfix {
+		clear: both;
+		*zoom: 1;
+			&:after, &:before{
+				content: "";
+				display: table;
+				clear: both;
+			}
+	}
+
+	.clearfix-overflow {
+		overflow: hidden;
+		*zoom: 1;
+	}

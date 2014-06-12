@@ -1,0 +1,55 @@
+//input Checkbox
+.custom-checkbox {
+    @extend .relative;
+    @extend .inline;
+    @extend .clearfix-overflow;
+    min-height: 25px;
+    min-width: 25px;
+    cursor: pointer;
+        .check-square {
+            @extend .relative;
+            @extend .inline;
+            @extend .vertical-middle;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            background: #ffffff;
+            border: 2px solid rgba(0,0,0,0.2);
+        }
+        .check-square:after{
+            content: '\2714';
+            @extend .absolute;
+            @extend .inline;
+            width: 100%;
+            top: 0;
+            left: 0;
+            font-size: 20px;
+            line-height: 22px;
+            text-align: center;
+            color: $main-color;
+            z-index: 3;
+            -webkit-transition: -webkit-transform 0.3s ease-out, opacity 0.2s ease-out;
+                    transition:         transform 0.3s ease-out, opacity 0.2s ease-out;
+        }
+        input[type="checkbox"] {
+            &:not(:checked),
+            &:checked {
+                @extend .absolute;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                z-index: -1;
+                -moz-appearance: none; 
+            }
+            &:not(:checked) + .check-square:after {
+                opacity: 0;
+                -webkit-transform: scale(0);
+                        transform: scale(0);
+            }
+            &:checked + .check-square:after {
+                opacity: 1;
+                -webkit-transform: scale(1);
+                        transform: scale(1);
+            }
+        }
+}
