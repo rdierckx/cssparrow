@@ -9,5 +9,5 @@ Instalation
 1. Download cssparrow.zip
 2. Unzip it
 3. Put the document on your project
-4. Be sure to have [1]: http://sass-lang.com/        "SASS" installed on your environment. If you don't follow the installation guide [2]: http://sass-lang.com/install        "here" 
+4. Be sure to have [SASS](http://sass-lang.com/) installed on your environment. If you don't follow [the installation guide](http://sass-lang.com/install)
 
