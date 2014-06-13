@@ -19,4 +19,8 @@ Advantages
 * Light weight
 * Modular structure easy to personalize and add new elements
 * Evolutive documentation pages
+* HTML structure with full height and overflow hidden (for panel navigation system)
+* Easy to centerize vertically an element with an unknow height
+
+
 

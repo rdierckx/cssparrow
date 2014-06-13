@@ -1,5 +1,5 @@
 @charset "utf-8";
-//* sass --style compressed --watch --debug-info cssparrow.scss:cssparrow_min.css
+// sass --style compressed --watch cssparrow.scss:cssparrow_min.css
 
 @import "partial/variable";
 
@@ -20,8 +20,6 @@
 
 // Modules
 // Here the place to create your own module
-@import "module/modal";
-@import "module/tooltip";
 @import "module/toggle";
 @import "module/custom_select";
 @import "module/custom_radio";
