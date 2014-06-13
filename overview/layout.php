@@ -16,12 +16,12 @@
 </head>
     
 <body> 
-	<aside class="panel-nav--panel dark-color">
+	<aside class="panel-nav--panel second-color">
 		<nav>
 			<ul class="reset-list uppercase box">
-			    <li><a class='text-white' href="layout.php">Layout</a></li>
-			    <li><a class='text-white' href="style.php">Style</a></li>
-			    <li><a class='text-white' href="font.php">Font and Form</a></li>
+			    <li><a class='text-default' href="layout.php">Layout</a></li>
+			    <li><a class='text-default' href="style.php">Style</a></li>
+			    <li><a class='text-default' href="font.php">Font and Form</a></li>
 			</ul>
 		</nav>
 	</aside>
