@@ -1,7 +1,7 @@
 cssparrow
 =========
 
-Evolutive, light and flexible SASS framework. With a strong structure which give foundation to let developer appropriate it and make it evolve. And because maintainability is important, the documentation give a good overview and can be updated easily, thanks to markdown.
+Evolutive, light and flexible SASS starter. With a strong structure which give foundation to let developer appropriate it and make it evolve. And because maintainability is important, Cssparrow have evolutive guideline which can be updated easily, thanks to markdown.
 
 Instalation
 ------------

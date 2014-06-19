@@ -1,15 +1,15 @@
 //input Checkbox
 .custom-checkbox {
-    @extend .relative;
-    @extend .inline;
-    @extend .clearfix-overflow;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
     min-height: 25px;
     min-width: 25px;
     cursor: pointer;
         .check-square {
-            @extend .relative;
-            @extend .inline;
-            @extend .vertical-middle;
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
             width: 25px;
             height: 25px;
             line-height: 25px;
@@ -18,8 +18,8 @@
         }
         .check-square:after{
             content: '\2714';
-            @extend .absolute;
-            @extend .inline;
+            position: absolute;
+            display: inline-block;
             width: 100%;
             top: 0;
             left: 0;
@@ -34,7 +34,7 @@
         input[type="checkbox"] {
             &:not(:checked),
             &:checked {
-                @extend .absolute;
+                position: absolute;
                 left: 0;
                 top: 0;
                 opacity: 0;

@@ -11,7 +11,4 @@
 			}
 	}
 
-	.clearfix-overflow {
-		overflow: hidden;
-		*zoom: 1;
-	}
+	.area { overflow: hidden; }

@@ -1,8 +1,8 @@
 	<div class="bar second-color">
-		<div class="float-left">
+		<div class="f-left">
 			Bar title aligned
 		</div>
-		<div class="float-right">
+		<div class="f-right">
 			<a class="btn dark-color" href="#">1</a>
 		</div>
 	</div>

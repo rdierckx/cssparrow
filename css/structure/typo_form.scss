@@ -1,6 +1,7 @@
-//typo_form.scss to manage all typo and form issues
+//typo_form.scss to manage all typo and form style
 
-//GENERAL
+// GENERAL
+// -----------
 div,
 dl,
 dt,
@@ -21,15 +22,20 @@ a{
     text-decoration: none;
     color: $font-color-link;
 }
-p{ margin-bottom: $row-margin; }
+p{ margin-bottom: $row-margin/2; }
 
-//TITLE
-h1, .h1-like,
-h2, .h2-like,
-h3, .h3-like,
-h4, .h4-like {
-    margin-top: 14px;
-    margin-bottom: 14px;
+// TITLE
+// -----------
+h1,
+.h1-like,
+h2,
+.h2-like,
+h3,
+.h3-like,
+h4,
+.h4-like {
+    margin-top: 12px;
+    margin-bottom: 12px;
     font-weight: normal;
     font-style: normal;
     color: $heading-color; 
@@ -37,56 +43,55 @@ h4, .h4-like {
         &.mt0 { margin-top: 0; }
 }
 h1,
-.h1-like{ @include title-pattern($heading-text, 42px, $line-height*3); }
+.h1-like{ @include title-pattern($heading-text-second, 52px, $line-height*2.2); }
 h2,
-.h2-like{ @include title-pattern($heading-text, 30px, $line-height*2.2); }
+.h2-like{ @include title-pattern($heading-text-second, 30px, $line-height*2.2); }
 h3,
-.h3-like{ @include title-pattern($heading-text, 18px, $line-height*1.3); }
+.h3-like{ @include title-pattern($heading-text-main, 18px, $line-height*1); }
 h4,
-.h4-like { @include title-pattern($heading-text, 16px, $line-height); }
+.h4-like { @include title-pattern($heading-text-main, 16px, $line-height); }
+
+// TEXT SIZE
+// --------------
+.text-big { font-size: 1.14285714rem; } 
+.text-little { font-size: 0.85714286rem; } 
+
+// TEXT STYLE
+// --------------
 .sub-text { color: $font-color-sub; }
 .uppercase { text-transform: uppercase; }
 .underline { text-decoration: underline; }
-.text-break { word-wrap: break-word; }
+.text-through { text-decoration: line-through; } 
+strong,
+.bold { font-weight: bold; }
+
+// TEXT OVERFLOW
+// --------------
 .ellipsis {
-    @extend .block;
+    display: block;
     white-space: nowrap;
     overflow: hidden;
+    word-wrap: break-word;
     -o-text-overflow: ellipsis;
        text-overflow: ellipsis;
 }
-.hyphens {    
-    -webkit-hyphens: auto;
-       -moz-hyphens: auto;
-        -ms-hyphens: auto;
-         -o-hyphens: auto;
-            hyphens: auto;
-}
-.text-inherit { @include text-hierarchy($font-size, $line-height); }
-.text-big { @include text-hierarchy(18px, $line-height*1.3); } 
-.text-little { 
-    font-family: 'Arial',Sans-serif !important;
-    @include text-hierarchy(12px, 14px);
-} 
 
-//ALIGN
+// TEXT ALIGN
+// --------------
 .text-left{ text-align: left; }
 .text-center{ text-align: center; }
 .text-right{ text-align: right; }
 
-//TEXT STYLE
-strong { font-weight: bold; }
-.text-through { text-decoration: line-through; } 
-.italic { font-style: italic; } 
-
-//LIST
-ul,ol,dl{ padding-left: 18px; }
+// LIST
+// -------------
+ul,
+ol,
+dl{ padding-left: 18px; }
 li{
     ul,
-    ol,
-    {
-	margin-top: 0;
-	margin-bottom: 0;
+    ol {
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }
 .reset-list{
@@ -95,15 +100,8 @@ li{
     list-style: none;
 }
 
-//FORM
-.input{
-    height: $line-height*2;
-    padding: 0 $col-margin;
-    @extend .rounded1;
-    vertical-align: top;
-    border: 2px solid rgba(0,0,0,0.1);
-}
-
+// FORM
+// ------------
 // default
 input[type="text"],
 input[type="password"],
@@ -118,25 +116,17 @@ input[type="email"],
 input[type="url"],
 input[type="search"],
 input[type="tel"],
-input[type="color"] { @extend .input; }
-
-// full width
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-textarea { @extend .f-width; }
-
-input[type="search"] { 
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;       
+input[type="color"] {
+    @include ui-element(1.4, 2);
+    @extend .rounded1;
+    line-height: normal;
+    vertical-align: top;
+    border: 1px solid rgba(0,0,0,0.1);
 }
 
 textarea { 
     padding: $col-margin;
-    border: 2px solid rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.1);
 }
 
 // error
@@ -186,32 +176,20 @@ input[type="url"].big-input,
 input[type="search"].big-input,
 input[type="tel"].big-input,
 input[type="color"].big-input {
-    height: $line-height*2.5;
-    font-size: 1.28571429rem;
-    line-height: $line-height*1.5;   
+    @include ui-element(1.8, 3);
+    line-height: normal;
+    font-size: 1.28571429rem; 
 }
 
 // label
 label,
-.label-like { font-family: "Helvetica", Arial, Sans-serif; }
-
-// Icons font
-// Use the following CSS code if you want to use data attributes for inserting your icons
-[data-icon]:before {
-    display: inline;
-    font-family: 'icomoon';
-    content: attr(data-icon);
-    speak: none;
-    font-size: 16px;
-    text-transform: none;
-    line-height: $line-height;
-    vertical-align: middle;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-style: normal;
+.label-like { 
+    font-family: "Helvetica", Arial, Sans-serif; 
+    font-weight: bold;
 }
 
-// Screen reader text
+// SCREEN READER TEXT
+// --------------------------
 // See: http://a11yproject.com/posts/how-to-hide-content/
 .screen-reader {
     position: absolute;
@@ -223,3 +201,6 @@ label,
     clip: rect(0,0,0,0);
     border: 0;
 }
+
+// ICONS
+// -----------

@@ -3,15 +3,48 @@
 // and sizes in your project. 
 //------------------------------------------------------------
 
+// @FONT-FACE
+@font-face {
+    font-family: 'source_sans_probold';
+    src: url('../font/sourcesanspro/sourcesanspro-bold-webfont.eot');
+    src: url('../font/sourcesanspro/sourcesanspro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/sourcesanspro/sourcesanspro-bold-webfont.woff') format('woff'),
+         url('../font/sourcesanspro/sourcesanspro-bold-webfont.ttf') format('truetype'),
+         url('../font/sourcesanspro/sourcesanspro-bold-webfont.svg#source_sans_probold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'source_sans_prolight';
+    src: url('../font/sourcesanspro/sourcesanspro-light-webfont.eot');
+    src: url('../font/sourcesanspro/sourcesanspro-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/sourcesanspro/sourcesanspro-light-webfont.woff') format('woff'),
+         url('../font/sourcesanspro/sourcesanspro-light-webfont.ttf') format('truetype'),
+         url('../font/sourcesanspro/sourcesanspro-light-webfont.svg#source_sans_prolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'icomoon';
+    src:url('../font/icons/icomoon.eot?brmcqg');
+    src:url('../font/icons/icomoon.eot?#iefixbrmcqg') format('embedded-opentype'),
+        url('../font/icons/icomoon.woff?brmcqg') format('woff'),
+        url('../font/icons/icomoon.ttf?brmcqg') format('truetype'),
+        url('../font/icons/icomoon.svg?brmcqg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 // FONT
 // --------------------------------------
 // current text
-$font-size: 16px;
-$line-height: 22px; 
+$font-size: 14px;
+$line-height: 20px; 
 
 //font familly
 $current-text: "Helvetica", Arial, Verdana, Sans-Serif;
-$heading-text: "Helvetica", Arial, Verdana, Sans-Serif;
+$heading-text-main: "source_sans_probold", Helvetica, Arial, Verdana, Sans-Serif;
+$heading-text-second: "source_sans_prolight", Helvetica, Arial, Verdana, Sans-Serif;
 
 // LAYOUT
 // --------------------------------------      
@@ -22,7 +55,7 @@ $panel-margin: 8px;
                    
 // cssp-wrapper
 $main-wrapper-width: 100%;
-$main-wrapper-max-width: 1200px;
+$main-wrapper-max-width: 920px;
 
 // grid span number
 $column-number: 12;
@@ -31,14 +64,14 @@ $column-with: $col-margin;
 // STYLE
 // --------------------------------------   
 // color range
-$main-color: #ffa800;    
+$main-color: #ff9c00;    
 $second-color: #f2f2f2;
-$third-color: #f0c61d;
-$dark-color: #252c32;   
+$third-color: #47375f;
+$dark-color: #1f2325;   
 
 // color alert  
 $important-color: #edcf43;   
-$success-color: #bcd44c;     
+$success-color: #00a877;     
 $error-color: #f47245;
 
 // general background
@@ -46,7 +79,7 @@ $general-background: #ffffff;
 
 // text color  
 $main-font-color: #666666;
-$light-font-color: $second-color;
+$light-font-color: #aaaaaa;
 $font-color-sub: lighten($main-font-color, 35%);
 $font-color-link: $main-color; 
 $heading-color: inherit;
@@ -79,7 +112,3 @@ $btn-border-radius: 3px;
 // BUILDER
 // --------------------------------------
 $builder-aside-width: 400px;
-    
-    
-
-

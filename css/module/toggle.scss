@@ -1,12 +1,12 @@
 // toggle
 .toggle {
-    @extend .relative;
-    @extend .inline;
+    position: relative;
+    display: inline-block;
     height: $line-height*2;
     width: 80px;
     cursor: pointer;
         input { 
-            @extend .absolute;
+            position: absolute;
             width: 0;
             height: 0;
             opacity : 0;
@@ -20,7 +20,7 @@
                 }
         }
         label {
-            @extend .absolute;
+            position: absolute;
             display: table;
             width: 80px;
             top: 0;
@@ -33,16 +33,16 @@
                     transition: background 0.2s ease-out;
                 &:after,
                 &:before { 
-                    @extend .t-cell;
+                    display: table-cell;
                     width: 50%;
                     line-height: $line-height*2;
                     color: #ffffff;
-                    @extend .text-center;
+                    text-align: center;
                 }
                 &:after { content: 'O'; }
                 &:before { content: 'I'; }
                 div[aria-hidden="true"] {
-                    @extend .absolute; 
+                    position: absolute;
                     content:'';
                     display: block;
                     left: 2px;

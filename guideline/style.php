@@ -16,26 +16,27 @@
 </head>
     
 <body class="my-elements-page"> 
-	<aside class="panel-nav--panel second-color">
+	<aside class="panel-nav--panel dark-color">
 		<nav>
-			<ul class="reset-list uppercase box">
-			    <li><a class='text-default' href="layout.php">Layout</a></li>
-			    <li><a class='text-default' href="style.php">Style</a></li>
-			    <li><a class='text-default' href="font.php">Font and Form</a></li>
+			<ul class="reset-list box">
+			    <li><a class='text-white uppercase' href="layout.php">Layout</a></li>
+			    <li><a class='text-white uppercase' href="style.php">Style</a></li>
+			    <li><a class='text-white uppercase' href="font.php">Font &amp; Form</a></li>
 			</ul>
 		</nav>
 	</aside>
-    <div class="container-wrapper">
-	    <header class="bar">
-			<div class="table f-height f-width">
-			    <div class="t-cell f-height f-width vertical-middle">
-			    	<a class="panel-nav--btn inline vertical-middle ml1" href="#">
-	    				<h1 class="h3-like mt0 mb0 uppercase text-default">☰ <span class="ml1 inline">Style</span></h1>
-	    			</a>
-	    		</div>
-	    	</div>
-	    </header>
-	    <div class="wrapper">
+    <div class="container-wrapper panel-nav--pt">
+		<header class="nav-bar">
+			<div class="v-middle-box">
+				<div>
+					<a class="panel-nav--btn text-default" href="#">
+						<span class="menu-icon ml1 text-big">☰</span>
+						<h1 class="h3-like mt0 mb0 ml1 uppercase inline-b">Style</h1>
+					</a>
+				</div>
+			</div>
+		</header>
+	    <div class="wrapper pt3">
 	    	<div class="row">
 				<div class="s-push1 s-column10 m-push2 m-column8">
 				    <section>
@@ -97,11 +98,15 @@
 					    <div>
 						    <a href="#" class="btn second-color mb1 mr1">Button Action</a>
 						    <a href="#" class="btn main-color mb1 mr1">Button Main</a>
+					    	<a href="#" class="btn third-color mb1 mr1">Button Third</a>
+							<a href="#" class="btn dark-color mb1 mr1">Button Dark</a>
+						</div>
+						<div>
 						    <a href="#" class="btn important-color mb1 mr1">Button Important</a>
 						    <a href="#" class="btn success-color mb1 mr1">Button Success</a>
 						    <a href="#" class="btn error-color mb1 mr1">Button Error</a>
-						    <a href="#" class="btn dark-color mb1">Button Dark</a>
-						</div>
+					    </div>
+
 					    <!--CODE-->
 				    	<div class="mb3">
 							<?= Markdown(file_get_contents('code/style/sty_btn_color.text')); ?>
@@ -113,10 +118,10 @@
 					    </header>
 					    <h3><strong>Button color</strong></h3>
 					    <div>
-					    	<a href="#" class="btn border-btn mb1 mr1">Border button for background</a>
-						    <a href="#" class="btn border-btn-main-color mb1 mr1">Border button main</a>
-						    <a href="#" class="btn border-btn-third-color mb1 mr1">Border button third</a>
-						    <a href="#" class="btn border-btn-error-color mb1 mr1">Border button error</a>
+					    	<a href="#" class="btn-border mb1 mr1">Border button default</a>
+						    <a href="#" class="btn-border main-color mb1 mr1">Button main</a>
+						    <a href="#" class="btn-border third-color mb1 mr1">Button third</a>
+						    <a href="#" class="btn-border dark-color mb1 mr1">Button dark</a>
 						</div>
 					    <!--CODE-->
 				    	<div class="mb3">
@@ -144,21 +149,6 @@
 					    <!--CODE-->
 				    	<div class="mb3">
 							<?= Markdown(file_get_contents('code/style/sty_btn_block.text')); ?>
-				    	</div>					    	
-					    <!--code_end-->
-
-					    <h3><strong>Multi buttons</strong></h3>
-					    <div class="mb1">
-						    <div class="multi-buttons">
-								<a class='btn second-color' href="#">1</a>
-								<a class="btn main-color" href="#">2</a>
-								<a class='btn second-color' href="#">3</a>
-								<a class='btn second-color' href="#">4</a>
-						    </div>
-						</div>
-					    <!--CODE-->
-				    	<div class="mb3">
-							<?= Markdown(file_get_contents('code/style/sty_btn_pagination.text')); ?>
 				    	</div>					    	
 					    <!--code_end-->
 				    </section>
@@ -219,8 +209,8 @@
 					    </header>
 					    <h3 class="h4-like"><strong>Box</strong></h3>
 					    <div class="mb1">
-							<div class="inline dark-color">without box</div>
-							<div class="box inline main-color">with box</div>
+							<div class="inline-b dark-color">without box</div>
+							<div class="box inline-b main-color">with box</div>
 						</div>
 					    <!--CODE-->
 				    	<div class="mb3">
@@ -232,7 +222,7 @@
 					    <div class="mb1">
 							<div class="bar second-color clearfix">
 								<div class="f-left ml1">
-									<h3 class='inline mb0 mt0'>Bar title aligned</h3>	
+									<h3 class='inline-b mb0 mt0'>Bar title aligned</h3>	
 								</div>
 								<div class="f-right mr1">
 							    	<a class="btn dark-color" href="#">button</a>

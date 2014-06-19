@@ -1,14 +1,14 @@
 //custom select for webkit
 .custom-select {
-    @extend .relative;
-    @extend .inline;
+    position: relative;
+    display: inline-block;
     line-height: 1;
     vertical-align: middle;
     overflow: hidden;
         &:after {
             content:'\25BC';
-            @extend .absolute;
-            @extend .inline;
+            position: absolute;
+            display: inline-block;
             pointer-events: none;
             top: 50%;
             right: 10px;

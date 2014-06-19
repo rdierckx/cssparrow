@@ -1,11 +1,11 @@
 //input Radio
 .custom-radio {
-    @extend .relative;
+    position: relative;
     cursor: pointer;
         .radio-circle {
-            @extend .relative;
-            @extend .inline;
-            @extend .vertical-middle;
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
             @extend .circle;
             width: 25px;
             height: 25px;
@@ -15,8 +15,8 @@
         }
         .radio-circle:after{
             content: '';
-            @extend .absolute;
-            @extend .inline;
+            position: absolute;
+            display: inline-block;
             @extend .circle;
             width: 15px;
             height: 15px;
@@ -31,7 +31,7 @@
         input[type="radio"] {
             &:not(:checked),
             &:checked {
-                @extend .absolute;
+                position: absolute;
                 left: 0;
                 top: 0;
                 opacity: 0;

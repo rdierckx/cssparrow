@@ -16,26 +16,27 @@
 </head>
     
 <body class="my-elements-page">
-	<aside class="panel-nav--panel second-color">
+	<aside class="panel-nav--panel dark-color">
 		<nav>
-			<ul class="reset-list uppercase box">
-			    <li><a class='text-default' href="layout.php">Layout</a></li>
-			    <li><a class='text-default' href="style.php">Style</a></li>
-			    <li><a class='text-default' href="font.php">Font and Form</a></li>
+			<ul class="reset-list box">
+			    <li><a class='text-white uppercase' href="layout.php">Layout</a></li>
+			    <li><a class='text-white uppercase' href="style.php">Style</a></li>
+			    <li><a class='text-white uppercase' href="font.php">Font &amp; Form</a></li>
 			</ul>
 		</nav>
 	</aside>
-    <div class="container-wrapper">
-	    <header class="bar">
-			<div class="table f-height f-width">
-			    <div class="t-cell f-height f-width vertical-middle">
-			    	<a class="panel-nav--btn inline vertical-middle ml1" href="#">
-	    				<h1 class="h3-like mt0 mb0 uppercase text-default">☰ <span class="ml1 inline">Font and Form</span></h1>
-	    			</a>
-	    		</div>
-	    	</div>
-	    </header>
-	    <div class="wrapper">
+    <div class="container-wrapper panel-nav--pt">
+		<header class="nav-bar">
+			<div class="v-middle-box">
+				<div>
+					<a class="panel-nav--btn text-default" href="#">
+						<span class="menu-icon ml1 text-big">☰</span>
+						<h1 class="h3-like mt0 mb0 ml1 uppercase inline-b">Font & Form</h1>
+					</a>
+				</div>
+			</div>
+		</header>
+	    <div class="wrapper pt3">
 	    	<div class="row">
 				<div class="s-push1 s-column10 m-push2 m-column8">
 				    <section>
@@ -161,23 +162,6 @@
 								<input class='big-input mt1' type="text">									
 							</div>
 						</div>					
-
-						<h3 class="h4-like">Collapse input</h3>
-						<div class='row mb2'>
-							<div class="column6">
-			                    <div class='collapse-input t-row mt1'>
-			                        <div class='column10'>
-			                            <input type="text">
-			                        </div>
-			                        <div class="column2">
-			                            <a href="#" class="btn main-color">Go</a>
-			                        </div>
-			                    </div>						
-							</div>
-							<div class="column6">
-								<span class='text-white'>.</span>									
-							</div>
-						</div>
 
 						<h3 class="h4-like">Toggle</h3>
 						<div class='row mb2'>

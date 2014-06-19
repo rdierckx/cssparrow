@@ -1,6 +1,7 @@
 	<a href="#" class="btn second-color"></a>
 	<a href="#" class="btn main-color"></a>
+	<a href="#" class="btn third-color"></a>
+	<a href="#" class="btn dark-color"></a>
 	<a href="#" class="btn important-color"></a>
 	<a href="#" class="btn success-color"></a>
 	<a href="#" class="btn error-color"></a>
-	<a href="#" class="btn dark-color"></a>

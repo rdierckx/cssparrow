@@ -1,0 +1,4 @@
+	<div class="inline-b">tallest block</div>
+	<div class="inline-b v-top">vertical top</div>
+	<div class="inline-b v-middle">vertical middle</div>
+	<div class="inline-b v-bottom">vertical bottom</div>

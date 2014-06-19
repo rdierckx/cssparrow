@@ -13,3 +13,11 @@
 	padding-top: 105px; 
 	padding-bottom: 105px;
 }
+/* Style for exemple block */
+.doc-demo--block {
+	display: block;
+	padding: 11px 0;
+}
+
+/* Inline + vertical align demo */
+.doc-demo--tallest-block { padding: 46px; }

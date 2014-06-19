@@ -1,7 +1,10 @@
-//layout.scss is the elements position stylesheet
+// layout.scss is the elements position stylesheet
 
-//GENERAL
-* {
+// GENERAL
+// -------------
+*,
+*::before,
+*::after {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -13,6 +16,9 @@
 // ------------
 .wrapper { @include wrapper($main-wrapper-width, $main-wrapper-max-width); }	
 
+// Easiest way to adjust width to the content
+.adjust-wrapper { display: table; }
+
 // GRID
 // ------------
 @include column-system("");
@@ -20,7 +26,7 @@
 @media screen and (min-width: $m-break) { @include column-system('m-'); }
 @media screen and (min-width: $l-break) { @include column-system('l-'); }
 
-// row and column float system
+// Basic row and column system
 .row {
 	@extend .clearfix; 
 	&>[class*="column"] {
@@ -34,92 +40,83 @@
 	}
 }
 
-// row system for table perfect for vertical align
+// Table row system perfect for vertical align
 .t-row {
     display: table;
     width: 100%;
     border-collapse: collapse;
-	    &>* {
-			display: table-cell;
-			padding-left: 0;
-			padding-right: 0;
-	    }
+    	&.t-fixed { table-layout: fixed;}
+	    &>* { display: table-cell; }
 	    .block{
 	    	display: block;
 	    	float: none;
 	    }
 }
-.t-layout-fixed { table-layout: fixed;}
 
-// CLEARFIX
+// UTILITIES
 // ------------
+// Clearfix
 .clearfix {
     clear: both;
     *zoom: 1;
-		&:after, &:before {
+		&:after, 
+		&:before {
 		    content: "";
 		    display: table;
 		    clear: both;
 		}
 }
-.clearfix-overflow {
-    overflow: hidden;
-    *zoom: 1;
-}
-.scroll { overflow: auto; }
+.o-clearfix { overflow: hidden; }
 
-// FLOAT 
-// --------------
+// Float 
 .f-right { float: right; }
 .f-left { float: left; }
 
+// Centerize element
+.centerize { 
+	margin-left: auto !important; 
+	margin-right: auto !important; 
+}
+
+// Vertical align middle
+.v-middle-box {
+	display: table;
+	height: 100%;
+		&>* {
+			display: table-cell;
+			height: 100%;
+			vertical-align: middle;
+		}
+}
+
+// Fit to the container
+.f-height { height: 100%; }
+.f-width { width: 100%; }
+
+// Fast way to align element
+// 
+// Give inline-b class to element...
+.inline-b { display: inline-block; }
+// ...Then align them 
+.v-top { vertical-align: top; }
+.v-middle { vertical-align: middle; }
+.v-bottom { vertical-align: bottom; }
+
 // MARGIN SYSTEM
+// ------------------
 // Inspired by: http://www.knacss.com/
 @include margin-system("");
 @media screen and (min-width: $s-break) { @include margin-system('s-'); }
 @media screen and (min-width: $m-break) { @include margin-system('m-'); }
 @media screen and (min-width: $l-break) { @include margin-system('l-'); }
 
-
 // PADDING SYSTEM
-// --------------
+// -----------------
+// Inspired by: http://www.knacss.com/
 @include padding-system("");
 @media screen and (min-width: $s-break) { @include padding-system('s-'); }
 @media screen and (min-width: $m-break) { @include padding-system('m-'); }
 @media screen and (min-width: $l-break) { @include padding-system('l-'); }
-
-// MISC
-// --------------
-// centerize
-.centerize { 
-	margin-left: auto !important; 
-	margin-right: auto !important; 
-}
-
-// display
-.inline { display: inline-block; } 
-.block { display: block; } 
-
-// position
-.relative { position: relative;}
-.absolute { position: absolute;}
-.fixed { position: fixed;}
-
-//full place
-.f-min-height { min-height: 100%; }
-.f-height { height: 100%; }
-.f-width { width: 100%; }
-
-//vertical align
-.table { display: table; }
-.t-cell { display: table-cell; }
-.vertical-top { vertical-align: top; }
-.vertical-middle { vertical-align: middle; }
-.vertical-bottom { vertical-align: bottom; }
-
-//input column
-.input-column { margin: $row-margin/2 0 0 0; }
-
 
 // VISIBILITY
 // ---------------

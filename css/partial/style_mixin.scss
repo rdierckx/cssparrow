@@ -1,8 +1,8 @@
 //UI ELEMENTS
 @mixin ui-element($multiply-padding, $multiply-line-height) {
-    @extend .inline;
-    padding: 0 ($col-margin * $multiply-padding);
+    display: inline-block;
     height: $line-height * $multiply-line-height;
+    padding: 0 ($col-margin * $multiply-padding);
     line-height: $line-height * $multiply-line-height;
 }
 
@@ -10,26 +10,22 @@
     color: $main-font-color;
     background-color: #eeeeee;
     border: none;
-    @if $YN-btn-border-radius == true{ border-radius: $btn-border-radius; }
     -webkit-transition: background 0.3s cubic-bezier(.94,.33,.26,.57);
             transition: background 0.3s cubic-bezier(.94,.33,.26,.57);
-            &:hover,&:focus{
-                cursor: pointer;
-                background: darken(#ffffff, 10%);
-            }
+        &:hover,
+        &:focus{ background: darken(#ffffff, 10%); }
 }
 
-@mixin btn-border($color) { 
-    color: $color;
-    border: 2px solid $color;
-    background: transparent;
-    -webkit-transition: color 0.3s ease-out, border 0.3s cubic-bezier(.94,.33,.26,.57);
-            transition: color 0.3s ease-out, border 0.3s cubic-bezier(.94,.33,.26,.57);
-        &:hover {
-            color: darken($color,15%);
-            border: 2px solid darken($color,10%);
-            background: transparent;        
-        }
+@mixin button-border() { 
+    color: $main-font-color;
+    background: transparent !important;
+    -webkit-transition: background 0.3s cubic-bezier(.94,.33,.26,.57);
+       -moz-transition: background 0.3s cubic-bezier(.94,.33,.26,.57);
+            transition: background 0.3s cubic-bezier(.94,.33,.26,.57);
+    -webkit-box-shadow: 0 0 0 1px $main-font-color;
+            box-shadow: 0 0 0 1px $main-font-color;
+        &:hover,
+        &:focus { background: rgba($main-font-color, 0.1) !important; }
 }
 
 //THEME BACKGROUND & COLOR
@@ -43,16 +39,11 @@
                 &:hover,
                 &:focus{  background: darken($bg-color, 7%); }           
         }
-}
-
-// HIGHLIGHTED TEXT
-@mixin hightlight($line-height,$padding,$space) { 
-    @extend .relative;
-    display: inline;
-    line-height: $line-height;
-    left: $padding;
-    padding: $space $padding;
-    background: rgba($main-color,0.8);
-    box-shadow: $padding 0 0 rgba($main-color,0.8),  
-                $padding*-1 0 0 rgba($main-color,0.8);
+        &.btn-border {
+            color: $bg-color;
+            -webkit-box-shadow: 0 0 0 1px $bg-color;
+                    box-shadow: 0 0 0 1px $bg-color;
+                &:hover,
+                &:focus{ background: rgba($bg-color, 0.1) !important; }   
+        }
 }
