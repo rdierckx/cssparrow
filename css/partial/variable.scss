@@ -3,38 +3,6 @@
 // and sizes in your project. 
 //------------------------------------------------------------
 
-// @FONT-FACE
-@font-face {
-    font-family: 'source_sans_probold';
-    src: url('../font/sourcesanspro/sourcesanspro-bold-webfont.eot');
-    src: url('../font/sourcesanspro/sourcesanspro-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/sourcesanspro/sourcesanspro-bold-webfont.woff') format('woff'),
-         url('../font/sourcesanspro/sourcesanspro-bold-webfont.ttf') format('truetype'),
-         url('../font/sourcesanspro/sourcesanspro-bold-webfont.svg#source_sans_probold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'source_sans_prolight';
-    src: url('../font/sourcesanspro/sourcesanspro-light-webfont.eot');
-    src: url('../font/sourcesanspro/sourcesanspro-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/sourcesanspro/sourcesanspro-light-webfont.woff') format('woff'),
-         url('../font/sourcesanspro/sourcesanspro-light-webfont.ttf') format('truetype'),
-         url('../font/sourcesanspro/sourcesanspro-light-webfont.svg#source_sans_prolight') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'icomoon';
-    src:url('../font/icons/icomoon.eot?brmcqg');
-    src:url('../font/icons/icomoon.eot?#iefixbrmcqg') format('embedded-opentype'),
-        url('../font/icons/icomoon.woff?brmcqg') format('woff'),
-        url('../font/icons/icomoon.ttf?brmcqg') format('truetype'),
-        url('../font/icons/icomoon.svg?brmcqg#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
 // FONT
 // --------------------------------------
 // current text
@@ -43,8 +11,8 @@ $line-height: 20px;
 
 //font familly
 $current-text: "Helvetica", Arial, Verdana, Sans-Serif;
-$heading-text-main: "source_sans_probold", Helvetica, Arial, Verdana, Sans-Serif;
-$heading-text-second: "source_sans_prolight", Helvetica, Arial, Verdana, Sans-Serif;
+$heading-text-main: "Helvetica", Arial, Verdana, Sans-Serif;
+$heading-text-second: "Helvetica", Arial, Verdana, Sans-Serif;
 
 // LAYOUT
 // --------------------------------------      
@@ -82,13 +50,7 @@ $main-font-color: #666666;
 $light-font-color: #aaaaaa;
 $font-color-sub: lighten($main-font-color, 35%);
 $font-color-link: $main-color; 
-$heading-color: inherit;
-
-// color social
-$facebook-color: #3b5998;
-$twitter-color: #00ACED;
-$google-color: #DD4C39; 
-$pinterest-color: #CE2029;      
+$heading-color: inherit;     
 
 // MEDIAQUERIES
 // --------------------------------------

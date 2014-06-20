@@ -16,17 +16,11 @@
 
 // BUTTONS
 // ---------------
-.btn,
-.btn-border {
+.btn {
     @include ui-element(1.4, 2);
+    @include button();
     @if $YN-btn-border-radius == true{ border-radius: $btn-border-radius; } 
 }
-
-// Default button
-.btn{ @include button(); }
-
-// border button
-.btn-border { @include button-border(); }
 
 // take all width
 .btn-block {
@@ -61,11 +55,6 @@
 .success-color { @include theme-color($success-color, #ffffff); }
 .error-color { @include theme-color($error-color, #ffffff); }
 
-// Social
-.facebook-color { @include theme-color($facebook-color, #ffffff); }
-.google-color { @include theme-color($google-color, #ffffff); }
-.twitter-color { @include theme-color($twitter-color, #ffffff); }
-
 // COLOR FONT
 .text-default { color: $main-font-color !important; }
 .text-main { color: $main-color !important; }
@@ -79,11 +68,6 @@
 .text-important { color: $important-color !important; }
 .text-success { color: $success-color !important; }
 .text-error { color: $error-color !important; }
-
-// Social color text
-.text-facebook { color: $facebook-color; }
-.text-twitter { color: $twitter-color; }
-.text-google { color: $google-color; }
 
 // ABLE DISABLE
 .disable { 

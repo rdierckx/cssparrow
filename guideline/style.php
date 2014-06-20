@@ -10,7 +10,7 @@
   <title>Style</title>
 
   <link rel="stylesheet" media="screen" href="../css/cssparrow_min.css">
-  <link rel="stylesheet" media="screen" href="../css/cssparrow_min.css">
+  <link rel="stylesheet" media="screen" href="overview.css">
   <meta name="viewport" content="width=device-width">
   <script src="../js/module/panel_nav.js"></script>
 </head>
@@ -36,14 +36,14 @@
 				</div>
 			</div>
 		</header>
-	    <div class="wrapper pt3">
+	    <div class="wrapper pt1">
 	    	<div class="row">
-				<div class="s-push1 s-column10 m-push2 m-column8">
+				<div class="s-push1 s-column10">
 				    <section>
 					    <header class="title-header">
 							<h2 class="text-main">Color</h2>
 					    </header>
-					    <p class="sub-text">Simple color system to set background color easily. With variable.scss file you can set text color behavior to keep the best contrast.</p>
+					    <p class="sub-text text-big">Simple color system to set background color easily. With variable.scss file you can set text color behavior to keep the best contrast.</p>
 					    <h3><strong>Background color</strong></h3>
 					    <div class="mb1">
 					    	<div class="t-row">
@@ -51,7 +51,7 @@
 									<div class="box main-color">Main color</div>
 								</div>
 					    		<div class="column4">
-									<div class="box third-color">Third color darken</div>
+									<div class="box third-color">Third color</div>
 								</div>
 								<div class="column4">
 									<div class="box dark-color">Dark color</div>
@@ -110,22 +110,6 @@
 					    <!--CODE-->
 				    	<div class="mb3">
 							<?= Markdown(file_get_contents('code/style/sty_btn_color.text')); ?>
-				    	</div>					    	
-					    <!--code_end-->
-
-					    <header class="title-header">
-							<h2 class="text-main">Button border</h2>
-					    </header>
-					    <h3><strong>Button color</strong></h3>
-					    <div>
-					    	<a href="#" class="btn-border mb1 mr1">Border button default</a>
-						    <a href="#" class="btn-border main-color mb1 mr1">Button main</a>
-						    <a href="#" class="btn-border third-color mb1 mr1">Button third</a>
-						    <a href="#" class="btn-border dark-color mb1 mr1">Button dark</a>
-						</div>
-					    <!--CODE-->
-				    	<div class="mb3">
-							<?= Markdown(file_get_contents('code/style/sty_btn_border.text')); ?>
 				    	</div>					    	
 					    <!--code_end-->
 

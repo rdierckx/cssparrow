@@ -10,7 +10,7 @@
   <title>Layout</title>
 
   <link rel="stylesheet" media="screen" href="../css/cssparrow_min.css">
-  <link rel="stylesheet" media="screen" href="css/overview.css">
+  <link rel="stylesheet" media="screen" href="overview.css">
   <meta name="viewport" content="width=device-width">
   <script src="../js/module/panel_nav.js"></script>
 </head>
@@ -36,9 +36,9 @@
 				</div>
 			</div>
 		</header>
-	    <div class="wrapper pt3">
+	    <div class="wrapper pt1">
 	    	<div class="row">
-				<div class="s-push1 s-column10 m-push2 m-column8">
+				<div class="s-push1 s-column10">
 				    <section id="grid">
 					    <header class="title-header">
 							<h2 class="text-main">Grid</h2>

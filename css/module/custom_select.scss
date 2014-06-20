@@ -19,6 +19,7 @@
             z-index: 2;
         }
         select {
+            @include ui-element(1.4, 2);
             @extend .input;
             min-width: 90px;
             padding: 0 34px 0 $col-margin;

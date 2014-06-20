@@ -16,18 +16,6 @@
         &:focus{ background: darken(#ffffff, 10%); }
 }
 
-@mixin button-border() { 
-    color: $main-font-color;
-    background: transparent !important;
-    -webkit-transition: background 0.3s cubic-bezier(.94,.33,.26,.57);
-       -moz-transition: background 0.3s cubic-bezier(.94,.33,.26,.57);
-            transition: background 0.3s cubic-bezier(.94,.33,.26,.57);
-    -webkit-box-shadow: 0 0 0 1px $main-font-color;
-            box-shadow: 0 0 0 1px $main-font-color;
-        &:hover,
-        &:focus { background: rgba($main-font-color, 0.1) !important; }
-}
-
 //THEME BACKGROUND & COLOR
 @mixin theme-color($bg-color,$font-color) { 
     background-color: $bg-color; 
