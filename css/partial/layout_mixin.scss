@@ -1,9 +1,3 @@
-@mixin wrapper($wrapper-width, $wrapper-max-width) {
-	margin: 0 auto;
-    width: $wrapper-width;
-    max-width: $wrapper-max-width;
-    @extend .clearfix;
-}
 @mixin column-system($media-screen) {
 	@for $i from 1 through $column-number {
 		.#{$media-screen}column#{$i} { width: (100%/$column-number)*$i; }

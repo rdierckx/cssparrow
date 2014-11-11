@@ -14,7 +14,12 @@
 
 // WRAPPER
 // ------------
-.wrapper { @include wrapper(100%, $main-wrapper-max-width); }	
+.wrapper {
+	margin: 0 auto;
+    width: 100%;
+    max-width: $wrapper-max-width;
+    @extend .clearfix;
+}
 
 // Easiest way to adjust container to an unknown content width
 .adjust { display: table; }
