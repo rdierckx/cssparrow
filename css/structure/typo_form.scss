@@ -34,8 +34,7 @@ h3,
 .h3-like,
 h4,
 .h4-like {
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 0.625rem;
     font-weight: normal;
     font-style: normal;
     color: $heading-color; 
@@ -43,18 +42,18 @@ h4,
         &.mt0 { margin-top: 0; }
 }
 h1,
-.h1-like{ @include title-pattern($heading-text, 52px, $line-height*2.2); }
+.h1-like{ @include title-pattern($heading-text, 3.25rem, $line-height*2.2); }
 h2,
-.h2-like{ @include title-pattern($heading-text, 30px, $line-height*2.2); }
+.h2-like{ @include title-pattern($heading-text, 1.875rem, $line-height*2.2); }
 h3,
-.h3-like{ @include title-pattern($heading-text, 18px, $line-height*1); }
+.h3-like{ @include title-pattern($heading-text, 1.375rem, $line-height*1); }
 h4,
-.h4-like { @include title-pattern($heading-text, 16px, $line-height); }
+.h4-like { @include title-pattern($heading-text, 1rem, $line-height); }
 
 // TEXT SIZE
 // --------------
-.text-big { font-size: 1.14285714rem; } 
-.text-little { font-size: 0.85714286rem; } 
+.text-big { font-size: 1.125rem; } 
+.text-little { font-size: 0.75rem; } 
 
 // TEXT STYLE
 // --------------
@@ -65,8 +64,9 @@ h4,
 strong,
 .bold { font-weight: bold; }
 
-// TEXT OVERFLOW
+// TEXT ELLIPSIS
 // --------------
+// Manage text overflow
 .ellipsis {
     display: block;
     white-space: nowrap;
@@ -154,7 +154,7 @@ input[type="submit"] {
     border: solid 0px transparent;
 }
 input[type="number"] {  
-    width: 90px;
+    width: 5.625rem;
         &::-webkit-inner-spin-button {
             display: inline-block;
             padding: 0 0 0 $col-margin; 
@@ -178,15 +178,12 @@ input[type="tel"].big-input,
 input[type="color"].big-input {
     @include ui-element(1.8, 3);
     line-height: normal;
-    font-size: 1.28571429rem; 
+    font-size: 1.125rem; 
 }
 
 // label
 label,
-.label-like { 
-    font-family: "Helvetica", Arial, Sans-serif; 
-    font-weight: bold;
-}
+.label-like { font-weight: bold; }
 
 // SCREEN READER TEXT
 // --------------------------
@@ -201,6 +198,3 @@ label,
     clip: rect(0,0,0,0);
     border: 0;
 }
-
-// ICONS
-// -----------

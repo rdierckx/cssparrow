@@ -27,11 +27,4 @@
                 &:hover,
                 &:focus{  background: darken($bg-color, 7%); }           
         }
-        &.btn-border {
-            color: $bg-color;
-            -webkit-box-shadow: 0 0 0 1px $bg-color;
-                    box-shadow: 0 0 0 1px $bg-color;
-                &:hover,
-                &:focus{ background: rgba($bg-color, 0.1) !important; }   
-        }
 }

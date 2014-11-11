@@ -1,7 +1,7 @@
 // layout.scss is the elements position stylesheet
 
-// GENERAL
-// -------------
+// INIT BOX CALCULATION
+// ----------------------
 *,
 *::before,
 *::after {
@@ -14,10 +14,10 @@
 
 // WRAPPER
 // ------------
-.wrapper { @include wrapper($main-wrapper-width, $main-wrapper-max-width); }	
+.wrapper { @include wrapper(100%, $main-wrapper-max-width); }	
 
-// Easiest way to adjust width to the content
-.adjust-wrapper { display: table; }
+// Easiest way to adjust container to an unknown content width
+.adjust { display: table; }
 
 // GRID
 // ------------

@@ -9,7 +9,7 @@
 @import "partial/typo_form_mixin";
 @import "partial/style_mixin";
 
-// Structure
+// STRUCTURE
 // Core of Cssparrow 
 @import "structure/normalize";
 @import "structure/global";
@@ -17,11 +17,10 @@
 @import "structure/typo_form";
 @import "structure/style";
 
-// Modules
-// Here the place to create your own module
+// MODULES
+// Place to create your own module
 @import "module/toggle";
 @import "module/custom_select";
 @import "module/custom_radio";
 @import "module/custom_checkbox";
-@import "module/nav-bar";
 @import "module/panel-nav";

@@ -14,28 +14,18 @@
 	}
 }
 @mixin margin-system($media-screen) {
-	@for $i from 1 through 3 {
+	@for $i from 0 through 3 {
 		.#{$media-screen}mt#{$i} { margin-top: $row-margin * $i; }
 		.#{$media-screen}mb#{$i} { margin-bottom: $row-margin * $i; }
 		.#{$media-screen}ml#{$i} { margin-left: $col-margin * $i; }
 		.#{$media-screen}mr#{$i} { margin-right: $col-margin * $i; }
-		
-		// reset margin
-		.#{$media-screen}mr0 {margin-right: 0 !important;}
-		.#{$media-screen}mt0 {margin-top: 0 !important;}
-		.#{$media-screen}mb0 {margin-bottom: 0 !important;}
 	}
 }
 @mixin padding-system($media-screen) {
-	@for $i from 1 through 3 {
+	@for $i from 0 through 3 {
 		.#{$media-screen}pt#{$i} { padding-top: $row-margin * $i; }
 		.#{$media-screen}pb#{$i} { padding-bottom: $row-margin * $i; }
 		.#{$media-screen}pl#{$i} { padding-left: $col-margin * $i; }
 		.#{$media-screen}pr#{$i} { padding-right: $col-margin * $i; }
-
-		// reset margin
-		.#{$media-screen}pr0 {padding-right: 0 !important;}
-		.#{$media-screen}pt0 {padding-top: 0 !important;}
-		.#{$media-screen}pb0 {padding-bottom: 0 !important;}
 	}
 }

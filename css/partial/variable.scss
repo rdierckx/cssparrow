@@ -6,8 +6,8 @@
 // FONT
 // --------------------------------------
 // current text
-$font-size: 14px;
-$line-height: 22px; 
+$font-size: 100%;
+$line-height: 1.5rem; 
 
 //font familly
 $current-text: "Helvetica", Arial, Verdana, Sans-Serif;
@@ -16,12 +16,10 @@ $heading-text: "Helvetica", Arial, Verdana, Sans-Serif;
 // LAYOUT
 // --------------------------------------      
 // margin / padding
-$col-margin: 11px;
+$col-margin: 15px;
 $row-margin: $line-height;
-$panel-margin: 8px;
                    
 // cssp-wrapper
-$main-wrapper-width: 100%;
 $main-wrapper-max-width: 990px;
 
 // grid span number
@@ -69,7 +67,3 @@ $YN-btn-border: false; // + ($YN-) display border ?
 $YN-btn-gradient: false; // + ($YN-) display gradient ?
 $YN-btn-effects: false;
 $btn-border-radius: 3px;
-
-// BUILDER
-// --------------------------------------
-$builder-aside-width: 400px;
