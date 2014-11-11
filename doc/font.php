@@ -4,39 +4,19 @@
 <!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-
-  <title>Font and Form</title>
-
-  <link rel="stylesheet" media="screen" href="../css/cssparrow_min.css">
-  <link rel="stylesheet" media="screen" href="overview.css">
-  <meta name="viewport" content="width=device-width">
-  <script src="../js/module/panel_nav.js"></script>
-</head>
+<?php
+include 'include/head.html';
+?>
     
-<body class="my-elements-page">
-	<aside class="panel-nav--panel dark-color">
-		<nav>
-			<ul class="reset-list box">
-			    <li><a class='text-white uppercase' href="layout.php">Layout</a></li>
-			    <li><a class='text-white uppercase' href="style.php">Style</a></li>
-			    <li><a class='text-white uppercase' href="font.php">Font &amp; Form</a></li>
-			</ul>
-		</nav>
-	</aside>
-    <div class="container-wrapper panel-nav--pt">
-		<header class="nav-bar">
-			<div class="v-middle-box">
-				<div>
-					<a class="panel-nav--btn text-default" href="#">
-						<span class="menu-icon ml1 text-big">☰</span>
-						<h1 class="h3-like mt0 mb0 ml1 uppercase inline-b">Font & Form</h1>
-					</a>
-				</div>
-			</div>
-		</header>
-	    <div class="wrapper pt1">
+<body>
+    <div class="row mt1">
+		<div class="s-column3 m-column2">
+			<h1 class="h3-like mt0 mb0 uppercase">Font &amp; Form</h1>
+			<?php
+			include 'include/nav.html';
+			?>
+		</div>
+	    <div class="s-column9 m-column10">
 	    	<div class="row">
 				<div class="s-push1 s-column10">
 				    <section>
