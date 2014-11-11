@@ -7,12 +7,11 @@
 // --------------------------------------
 // current text
 $font-size: 14px;
-$line-height: 20px; 
+$line-height: 22px; 
 
 //font familly
 $current-text: "Helvetica", Arial, Verdana, Sans-Serif;
-$heading-text-main: "Helvetica", Arial, Verdana, Sans-Serif;
-$heading-text-second: "Helvetica", Arial, Verdana, Sans-Serif;
+$heading-text: "Helvetica", Arial, Verdana, Sans-Serif;
 
 // LAYOUT
 // --------------------------------------      
@@ -23,7 +22,7 @@ $panel-margin: 8px;
                    
 // cssp-wrapper
 $main-wrapper-width: 100%;
-$main-wrapper-max-width: 920px;
+$main-wrapper-max-width: 990px;
 
 // grid span number
 $column-number: 12;

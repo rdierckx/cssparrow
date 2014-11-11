@@ -43,13 +43,13 @@ h4,
         &.mt0 { margin-top: 0; }
 }
 h1,
-.h1-like{ @include title-pattern($heading-text-second, 52px, $line-height*2.2); }
+.h1-like{ @include title-pattern($heading-text, 52px, $line-height*2.2); }
 h2,
-.h2-like{ @include title-pattern($heading-text-second, 30px, $line-height*2.2); }
+.h2-like{ @include title-pattern($heading-text, 30px, $line-height*2.2); }
 h3,
-.h3-like{ @include title-pattern($heading-text-main, 18px, $line-height*1); }
+.h3-like{ @include title-pattern($heading-text, 18px, $line-height*1); }
 h4,
-.h4-like { @include title-pattern($heading-text-main, 16px, $line-height); }
+.h4-like { @include title-pattern($heading-text, 16px, $line-height); }
 
 // TEXT SIZE
 // --------------
