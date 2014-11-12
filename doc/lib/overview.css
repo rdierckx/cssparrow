@@ -19,3 +19,9 @@
 
 /* Inline + vertical align demo */
 .doc-demo--tallest-block { padding: 46px; }
+
+/* Color box */
+.doc-box--container { 
+	padding: 5px;
+}
+.doc-box--color { height: 100px; }

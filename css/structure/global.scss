@@ -6,9 +6,3 @@ body {
     font-family: $current-text;
     background: $general-background;
 }
-.view-title {
-	position: absolute;
-	top: 0;
-	left: $col-margin;
-	line-height: $nav-bar-height !important;
-}
