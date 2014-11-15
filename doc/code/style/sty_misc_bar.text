@@ -1,8 +1,12 @@
-	<div class="bar second-color">
+	<nav class="bar">
 		<div class="f-left">
-			Bar title aligned
+			<ul>
+				<li>Nav</li>
+				<li>Nav</li>
+				<li>Nav</li>
+			</ul>
 		</div>
 		<div class="f-right">
-			<a class="btn dark-color" href="#">1</a>
+			<a class="btn" href="#"></a>
 		</div>
-	</div>
+	</nav>

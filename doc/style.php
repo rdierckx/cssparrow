@@ -28,6 +28,12 @@ include 'include/head.html';
 								<span class="text-little">Main color</span>
 			    			</div>
 						</div>
+						<div class="column6 s-column4 m-column3">
+							<div class="doc-box--container shadow2 rounded2 mb1">
+								<div class="doc-box--color second-color"></div>
+								<span class="text-little">Second color</span>
+							</div>
+						</div>
 			    		<div class="column6 s-column4 m-column3">
 			    			<div class="doc-box--container shadow2 rounded2 mb1">
 								<div class="doc-box--color third-color"></div>
@@ -42,8 +48,20 @@ include 'include/head.html';
 						</div>
 						<div class="column6 s-column4 m-column3">
 							<div class="doc-box--container shadow2 rounded2 mb1">
-								<div class="doc-box--color second-color"></div>
-								<span class="text-little">Second color</span>
+								<div class="doc-box--color important-color"></div>
+								<span class="text-little">Important color</span>
+							</div>
+						</div>
+						<div class="column6 s-column4 m-column3">
+							<div class="doc-box--container shadow2 rounded2 mb1">
+								<div class="doc-box--color error-color"></div>
+								<span class="text-little">Error color</span>
+							</div>
+						</div>
+						<div class="column6 s-column4 m-column3">
+							<div class="doc-box--container shadow2 rounded2 mb1">
+								<div class="doc-box--color success-color"></div>
+								<span class="text-little">Success color</span>
 							</div>
 						</div>
 					</div>
@@ -51,35 +69,6 @@ include 'include/head.html';
 				    <!--CODE-->
 			    	<div class="mb3">
 						<?= Markdown(file_get_contents('code/style/sty_background_color.text')); ?>
-			    	</div>					    	
-				    <!--code_end-->
-
-				    <h3><strong>Background alert color</strong></h3>
-				    <div class="mb1">
-						<div class="row">
-							<div class="column6 s-column4 m-column3">
-								<div class="doc-box--container shadow2 rounded2 mb1">
-									<div class="doc-box--color important-color"></div>
-									<span class="text-little">Important color</span>
-								</div>
-							</div>
-							<div class="column6 s-column4 m-column3">
-								<div class="doc-box--container shadow2 rounded2 mb1">
-									<div class="doc-box--color error-color"></div>
-									<span class="text-little">Error color</span>
-								</div>
-							</div>
-							<div class="column6 s-column4 m-column3">
-								<div class="doc-box--container shadow2 rounded2 mb1">
-									<div class="doc-box--color success-color"></div>
-									<span class="text-little">Success color</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				    <!--CODE-->
-			    	<div class="mb3">
-						<?= Markdown(file_get_contents('code/style/sty_background_alert.text')); ?>
 			    	</div>					    	
 				    <!--code_end-->
 			    </section>
@@ -90,16 +79,11 @@ include 'include/head.html';
 				    </header>
 				    <h3><strong>Button color</strong></h3>
 				    <div>
-					    <a href="#" class="btn second-color mb1 mr1">Button Action</a>
+					    <a href="#" class="btn mb1 mr1">Button Default</a>
 					    <a href="#" class="btn main-color mb1 mr1">Button Main</a>
 				    	<a href="#" class="btn third-color mb1 mr1">Button Third</a>
 						<a href="#" class="btn dark-color mb1 mr1">Button Dark</a>
 					</div>
-					<div>
-					    <a href="#" class="btn important-color mb1 mr1">Button Important</a>
-					    <a href="#" class="btn success-color mb1 mr1">Button Success</a>
-					    <a href="#" class="btn error-color mb1 mr1">Button Error</a>
-				    </div>
 
 				    <!--CODE-->
 			    	<div class="mb3">
@@ -109,9 +93,9 @@ include 'include/head.html';
 
 				    <h3><strong>Button size</strong></h3>
 				    <div class="">
-					    <a href="#" class="btn main-color king-size mb1 mr1">King Size</a>
-					    <a href="#" class="btn main-color mb1 mr1">Default Size</a>
-					    <a href="#" class="btn main-color small-size mb1 mr1">small Size</a>
+					    <a href="#" class="btn big-ui mb1 mr1">King Size</a>
+					    <a href="#" class="btn mb1 mr1">Default Size</a>
+					    <a href="#" class="btn small-ui mb1 mr1">small Size</a>
 					</div>
 				    <!--CODE-->
 			    	<div class="mb3">
@@ -121,29 +105,12 @@ include 'include/head.html';
 
 				    <h3><strong>Button block</strong></h3>
 				    <div class="mb1">
-				    	<a href="#" class="btn third-color mb1">Button inherit</a>
+				    	<a href="#" class="btn mb1">Button inherit</a>
 					    <a href="#" class="btn main-color btn-block mb1">Button block</a>
 					</div>
 				    <!--CODE-->
 			    	<div class="mb3">
 						<?= Markdown(file_get_contents('code/style/sty_btn_block.text')); ?>
-			    	</div>					    	
-				    <!--code_end-->
-			    </section>
-
-			    <section>
-				    <header class="title-header">
-						<h2 class="text-main">Fluid pictures</h2>
-				    </header>
-				    <p class="sub-text">Make the image take the full width of his container and preserved ratio</p>
-				    <div class="row mb1 text-center">
-						<div class="column4">
-							<img class="flex-img xs-mb2" src="img/hong_kong_taxi.jpg" alt="thumb"/>
-						</div>
-					</div>
-				    <!--CODE-->
-			    	<div class="mb3">
-						<?= Markdown(file_get_contents('code/style/sty_img.text')); ?>
 			    	</div>					    	
 				    <!--code_end-->
 			    </section>
@@ -187,26 +154,29 @@ include 'include/head.html';
 				    </header>
 				    <h3 class="h4-like"><strong>Box</strong></h3>
 				    <div class="mb1">
-						<div class="inline-b dark-color">without box</div>
-						<div class="box inline-b main-color">with box</div>
+						<div class="box inline-b second-color">
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat
+						</div>
 					</div>
 				    <!--CODE-->
 			    	<div class="mb3">
-						<?= Markdown(file_get_contents('code/style/sty_misc.text')); ?>
+						<?= Markdown(file_get_contents('code/style/sty_box.text')); ?>
 			    	</div>					    	
 				    <!--code_end-->
 
 				    <h3><strong>Bar</strong></h3>
 				    <div class="mb1">
-						<div class="bar second-color clearfix">
-							<div class="f-left ml1">
-								<h3 class='inline-b mb0 mt0'>Bar title aligned</h3>	
-							</div>
+						<nav class="bar third-color clearfix">
+							<ul class="reset-list f-left">
+								<li class="inline-b ml1"><strong>Nav 1</strong></li>
+								<li class="inline-b ml1"><strong>Nav 2</strong></li>
+								<li class="inline-b ml1"><strong>Nav 3</strong></li>
+							</ul>
 							<div class="f-right mr1">
-						    	<a class="btn dark-color" href="#">button</a>
-						    	<a class="btn dark-color" href="#">button</a>
+								<a href="#" class="inline-b mr1 text-white">login</a>
+						    	<a class="btn small-ui dark-color" href="#">Sign-up</a>
 						    </div>
-						</div>
+						</nav>
 					</div>
 				    <!--CODE-->
 			    	<div class="mb3">

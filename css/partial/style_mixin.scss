@@ -1,19 +1,9 @@
 //UI ELEMENTS
-@mixin ui-element($multiply-padding, $multiply-line-height) {
+@mixin ui-element($btn-padding, $btn-line-height) {
     display: inline-block;
-    height: $line-height * $multiply-line-height;
-    padding: 0 ($col-margin * $multiply-padding);
-    line-height: $line-height * $multiply-line-height;
-}
-
-@mixin button() {
-    color: $main-font-color;
-    background-color: #eeeeee;
-    border: none;
-    -webkit-transition: background 0.3s cubic-bezier(.94,.33,.26,.57);
-            transition: background 0.3s cubic-bezier(.94,.33,.26,.57);
-        &:hover,
-        &:focus{ background: darken(#ffffff, 10%); }
+    height: $btn-line-height;
+    padding: 0 $btn-padding;
+    line-height: $btn-line-height;
 }
 
 //THEME BACKGROUND & COLOR
@@ -23,7 +13,10 @@
         &.btn {
             color: $font-color;
             background-color: $bg-color;
-            border-color: darken($bg-color, 15%);
+            @if $YN-btn-border == true{ 
+                border: 1px solid;
+                border-color: darken($bg-color, 15%);
+            }
                 &:hover,
                 &:focus{  background: darken($bg-color, 7%); }           
         }

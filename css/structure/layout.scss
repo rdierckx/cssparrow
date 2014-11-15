@@ -21,9 +21,6 @@
     @extend .clearfix;
 }
 
-// Easiest way to adjust container to an unknown content width
-.adjust { display: table; }
-
 // GRID
 // ------------
 @include column-system("");
@@ -98,6 +95,9 @@
 .f-height { height: 100%; }
 .f-width { width: 100%; }
 
+// Easiest way to adjust container to an unknown content width
+.adjust { display: table; }
+
 // Fast way to align element
 // 
 // Give inline-b class to element...
@@ -106,6 +106,14 @@
 .v-top { vertical-align: top; }
 .v-middle { vertical-align: middle; }
 .v-bottom { vertical-align: bottom; }
+
+// IMAGES
+// -------------
+// fluid image
+.flex-img {
+    max-width: 100%;
+    height: auto;
+}
 
 // MARGIN SYSTEM
 // ------------------

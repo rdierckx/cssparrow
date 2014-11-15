@@ -1,10 +1,9 @@
 // sass --style compressed --watch cssparrow.scss:cssparrow_min.css
 @charset "utf-8";
 
-@import "partial/variable";
-
 // PARTIALS
 // Mixins and fuctions
+@import "partial/variable";
 @import "partial/layout_mixin";
 @import "partial/typo_form_mixin";
 @import "partial/style_mixin";

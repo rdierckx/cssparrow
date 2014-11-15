@@ -70,26 +70,6 @@ include 'include/head.html';
 		                            </div>  									
 								</div>
 							</div>
-
-							<!-- date -->
-							<div class='t-row mb1'>
-								<div class="column2 vertical-middle">
-									<label for="date-1">input date</label>									
-								</div>
-								<div class="column10">
-									<input id='date-1' type="date">										
-								</div>
-							</div>
-
-							<!-- number -->
-							<div class='t-row mb1'>
-								<div class="column2 vertical-middle">
-									<label for="number-1">input number</label>									
-								</div>
-								<div class="column10">
-									<input id='number-1' type="number" value='1' min='02'>										
-								</div>
-							</div>
 							
 							<!-- checkbox -->
 							<div class='t-row mb1'>
@@ -117,15 +97,6 @@ include 'include/head.html';
 	                                </label>									
 								</p>
                             </div>
-
-							<div class='row'>
-								<div class="column2">
-									<span class='text-white'>.</span>									
-								</div>
-								<div class="column10">
-									<a class='f-right btn main-color'href="#">Send</a>								
-								</div>
-							</div>
 						</form>
 					</div>
 
@@ -138,20 +109,6 @@ include 'include/head.html';
 							<input class='big-input mt1' type="text">									
 						</div>
 					</div>					
-
-					<h3 class="h4-like">Toggle</h3>
-					<div class='row mb2'>
-						<div class="column12">
-		                    <div class='collapse-input t-row mt1'>
-								<div class="toggle">
-									<input name='toggle-1' id='toggle-1' type="checkbox">
-									<label for="toggle-1">
-										<div aria-hidden='true' role='presentation'></div>
-									</label>
-								</div>
-		                    </div>						
-						</div>
-					</div>
 
 				    <h3 class="h4-like">Input error</h3>
 				    <div class="mb2">
@@ -180,35 +137,6 @@ include 'include/head.html';
 		                                    <option value="frozen-white">Black Mamba</option>
 		                                </select>
 		                            </div>  									
-								</div>
-							</div>
-
-							<!-- date -->
-							<div class='t-row mb1'>
-								<div class="column2 vertical-middle">
-									<label for="date-1">input date</label>									
-								</div>
-								<div class="column10">
-									<input class='error' id='date-1' type="date">										
-								</div>
-							</div>
-
-							<!-- number -->
-							<div class='t-row mb1'>
-								<div class="column2 vertical-middle">
-									<label for="number-1">input number</label>									
-								</div>
-								<div class="column10">
-									<input class='error' id='number-1' type="number" value='1' min='02'>										
-								</div>
-							</div>
-
-							<div class='row'>
-								<div class="column2">
-									<span class='text-white'>.</span>									
-								</div>
-								<div class="column10">
-									<a class='f-right btn main-color'href="#">Send</a>								
 								</div>
 							</div>
 						</form>

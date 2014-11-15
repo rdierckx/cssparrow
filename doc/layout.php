@@ -106,28 +106,28 @@ include 'include/head.html';
 				    <p class="mb1">Use <code class="text-main">s-</code> and <code class="text-main">m-</code> prefix like column system to set margin behavior.</p>
 				    <div class="row mb2">
 				    	<div class="column2">
-					    	<div class="box mb1 main-color">mb1</div>
-					    	<div class="third-color">.</div>
+					    	<div class="box mb1 s-mb1 main-color">mb1</div>
+					    	<div class="second-color">.</div>
 				   		</div>
 				    	<div class="column2">
-					    	<div class="box mb2 main-color">mb2</div>
-					    	<div class="third-color">.</div>
+					    	<div class="box mb1 s-mb2 main-color">mb2</div>
+					    	<div class="second-color">.</div>
 				   		</div>
 				    	<div class="column2">
-					    	<div class="box mb3 main-color">mb3</div>
-					    	<div class="third-color">.</div>
+					    	<div class="box mb1 s-mb3 main-color">mb3</div>
+					    	<div class="second-color">.</div>
 				   		</div>
 				    	<div class="column2">
-				    		<div class="third-color">.</div>
-					    	<div class="box mt1 main-color">mt1</div>
+				    		<div class="second-color">.</div>
+					    	<div class="box mt1 s-mt1 main-color">mt1</div>
 				   		</div>
 				    	<div class="column2">
-				    		<div class="third-color">.</div>
-					    	<div class="box mt2 main-color">mt2</div>
+				    		<div class="second-color">.</div>
+					    	<div class="box mt1 s-mt2 main-color">mt2</div>
 				   		</div>
 				    	<div class="column2">
-				    		<div class="third-color">.</div>
-					    	<div class="box mt3 main-color">mt3</div>
+				    		<div class="second-color">.</div>
+					    	<div class="box mt1 s-mt3 main-color">mt3</div>
 				   		</div>
 				    </div>
 					<!--CODE-->

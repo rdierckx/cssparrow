@@ -22,7 +22,7 @@ a{
     text-decoration: none;
     color: $font-color-link;
 }
-p{ margin-bottom: $row-margin/2; }
+p{ margin-bottom: 1rem; }
 
 // TITLE
 // -----------
@@ -38,7 +38,6 @@ h4,
     margin-bottom: 0.75rem;
     font-weight: normal;
     font-style: normal;
-    color: $heading-color; 
         &.mb0 { margin-bottom: 0; }
         &.mt0 { margin-top: 0; }
 }
@@ -53,7 +52,7 @@ h4,
 
 // TEXT SIZE
 // --------------
-.text-big { font-size: 1.125rem; } 
+.text-big { font-size: 1.25rem; } 
 .text-little { font-size: 0.75rem; } 
 
 // TEXT STYLE
@@ -118,7 +117,7 @@ input[type="url"],
 input[type="search"],
 input[type="tel"],
 input[type="color"] {
-    @include ui-element(1.4, 2);
+    @include ui-element(21px, 44px);
     @extend .rounded1;
     line-height: normal;
     vertical-align: top;
@@ -177,7 +176,7 @@ input[type="url"].big-input,
 input[type="search"].big-input,
 input[type="tel"].big-input,
 input[type="color"].big-input {
-    @include ui-element(1.8, 3);
+    @include ui-element(27px, 49px);
     line-height: normal;
     font-size: 1.125rem; 
 }
