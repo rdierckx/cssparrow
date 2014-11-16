@@ -162,21 +162,21 @@ input[type="number"] {
 }
 
 // input size
-input[type="text"].big-input,
-input[type="password"].big-input,
-input[type="datetime"].big-input,
-input[type="datetime-local"].big-input,
-input[type="date"].big-input,
-input[type="month"].big-input,
-input[type="time"].big-input,
-input[type="week"].big-input,
-input[type="number"].big-input,
-input[type="email"].big-input,
-input[type="url"].big-input,
-input[type="search"].big-input,
-input[type="tel"].big-input,
-input[type="color"].big-input {
-    @include ui-element(27px, 49px);
+input[type="text"].big-ui,
+input[type="password"].big-ui,
+input[type="datetime"].big-ui,
+input[type="datetime-local"].big-ui,
+input[type="date"].big-ui,
+input[type="month"].big-ui,
+input[type="time"].big-ui,
+input[type="week"].big-ui,
+input[type="number"].big-ui,
+input[type="email"].big-ui,
+input[type="url"].big-ui,
+input[type="search"].big-ui,
+input[type="tel"].big-ui,
+input[type="color"].big-ui {
+    @include ui-element(27px, 52px);
     line-height: normal;
     font-size: 1.125rem; 
 }

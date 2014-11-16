@@ -106,7 +106,7 @@ include 'include/head.html';
 							<input type="text">									
 						</div>
 						<div class="column12">
-							<input class='big-input mt1' type="text">									
+							<input class='big-ui mt1' type="text">									
 						</div>
 					</div>					
 
