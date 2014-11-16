@@ -1,0 +1,25 @@
+@mixin column-system($media-screen) {
+	@for $i from 1 through $column-number {
+		.#{$media-screen}column#{$i} { width: (100%/$column-number)*$i; }
+		.#{$media-screen}push#{$i} {
+			position: relative;
+			left: (100%/$column-number)*$i; 
+		}
+	}
+}
+@mixin margin-system($media-screen) {
+	@for $i from 0 through 3 {
+		.#{$media-screen}mt#{$i} { margin-top: $row-margin * $i; }
+		.#{$media-screen}mb#{$i} { margin-bottom: $row-margin * $i; }
+		.#{$media-screen}ml#{$i} { margin-left: $col-margin * $i; }
+		.#{$media-screen}mr#{$i} { margin-right: $col-margin * $i; }
+	}
+}
+@mixin padding-system($media-screen) {
+	@for $i from 0 through 3 {
+		.#{$media-screen}pt#{$i} { padding-top: $row-margin * $i; }
+		.#{$media-screen}pb#{$i} { padding-bottom: $row-margin * $i; }
+		.#{$media-screen}pl#{$i} { padding-left: $col-margin * $i; }
+		.#{$media-screen}pr#{$i} { padding-right: $col-margin * $i; }
+	}
+}

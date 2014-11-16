@@ -1,0 +1,150 @@
+// layout.scss is the elements position stylesheet
+
+// INIT BOX CALCULATION
+// ----------------------
+*,
+*::before,
+*::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+// WRAPPER
+// ------------
+.wrapper {
+	margin: 0 auto;
+    width: 100%;
+    max-width: $wrapper-max-width;
+    @extend .clearfix;
+}
+
+// GRID
+// ------------
+@include column-system("");
+@media screen and (min-width: $s-break) { @include column-system('s-'); }
+@media screen and (min-width: $m-break) { @include column-system('m-'); }
+@media screen and (min-width: $l-break) { @include column-system('l-'); }
+
+// Basic row and column system
+.row {
+	@extend .clearfix; 
+	&>[class*="column"] {
+		padding-left: $col-margin;
+		padding-right: $col-margin;
+		@extend .f-left;
+	}
+	.row { 
+		margin-left: -$col-margin;
+		margin-right: -$col-margin;
+	}
+}
+
+// Table row system perfect for vertical align
+.t-row {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    	&.t-fixed { table-layout: fixed;}
+	    &>* { display: table-cell; }
+	    .block{
+	    	display: block;
+	    	float: none;
+	    }
+}
+
+// UTILITIES
+// ------------
+// Clearfix
+.clearfix {
+    clear: both;
+    *zoom: 1;
+		&:after, 
+		&:before {
+		    content: "";
+		    display: table;
+		    clear: both;
+		}
+}
+.o-clearfix { overflow: hidden; }
+
+// Float 
+.f-right { float: right; }
+.f-left { float: left; }
+
+// Centerize element
+.centerize { 
+	margin-left: auto !important; 
+	margin-right: auto !important; 
+}
+
+// Vertical align middle
+.v-middle-box {
+	display: table;
+	height: 100%;
+		&>* {
+			display: table-cell;
+			height: 100%;
+			vertical-align: middle;
+		}
+}
+
+// Fit to the container
+.f-height { height: 100%; }
+.f-width { width: 100%; }
+
+// Easiest way to adjust container to an unknown content width
+.adjust { display: table; }
+
+// Fast way to align element
+// 
+// Give inline-b class to element...
+.inline-b { display: inline-block; }
+// ...Then align them 
+.v-top { vertical-align: top; }
+.v-middle { vertical-align: middle; }
+.v-bottom { vertical-align: bottom; }
+
+// IMAGES
+// -------------
+// fluid image
+.flex-img {
+    max-width: 100%;
+    height: auto;
+}
+
+// MARGIN SYSTEM
+// ------------------
+// Inspired by: http://www.knacss.com/
+@include margin-system("");
+@media screen and (min-width: $s-break) { @include margin-system('s-'); }
+@media screen and (min-width: $m-break) { @include margin-system('m-'); }
+@media screen and (min-width: $l-break) { @include margin-system('l-'); }
+
+// PADDING SYSTEM
+// -----------------
+// Inspired by: http://www.knacss.com/
+@include padding-system("");
+@media screen and (min-width: $s-break) { @include padding-system('s-'); }
+@media screen and (min-width: $m-break) { @include padding-system('m-'); }
+@media screen and (min-width: $l-break) { @include padding-system('l-'); }
+
+// VISIBILITY
+// ---------------
+.hide { display: none !important; }
+@media screen and (min-width: $s-break) { 
+	.s-visibility-false {display: none !important;}
+	.s-visibility-true {display: inherit !important;}
+}
+@media screen and (min-width: $m-break) { 
+	.m-visibility-false{display: none !important;}
+	.m-visibility-true {display: inherit !important;}
+}
+@media screen and (min-width: $l-break) { 
+	.l-visibility-false{display: none !important;}
+	.l-visibility-true {display: inherit !important;}
+}
+
+

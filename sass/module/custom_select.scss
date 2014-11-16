@@ -1,0 +1,37 @@
+//custom select for webkit
+.custom-select {
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+    overflow: hidden;
+        &:after {
+            content:'\25BC';
+            position: absolute;
+            display: inline-block;
+            pointer-events: none;
+            top: 50%;
+            right: 10px;
+            margin-top: -6px;
+            font-family: 'icomoon';
+            font-size: 1rem;
+            color: lighten($dark-color,40%);
+            z-index: 2;
+        }
+        select {
+            @include ui-element(21px, 44px);
+            min-width: 90px;
+            padding: 0 34px 0 $col-margin;
+            -webkit-appearance: none;
+            -webkit-box-shadow: none;
+                    box-shadow: none;
+            border: 1px solid rgba(0,0,0,0.1);
+            background: #ffffff;
+        }
+}
+
+//select firefox hack
+@-moz-document url-prefix() {
+  .custom-select:after { display: none; }
+  .custom-select select { padding: $line-height/2 $col-margin $line-height/2 $col-margin; }
+}
