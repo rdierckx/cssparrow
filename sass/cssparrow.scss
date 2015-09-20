@@ -1,23 +1,22 @@
-// sass --style compressed --watch cssparrow.scss:cssparrow_min.css
+// sass --style compressed --watch cssparrow.scss:../css/cssparrow_min.css
 @charset "utf-8";
+
+
+
+// RESET
+@import "reset";
 
 // PARTIALS
 // Mixins and fuctions
 @import "partial/variable";
-@import "partial/layout_mixin";
-@import "partial/typo_form_mixin";
-@import "partial/style_mixin";
+@import "partial/mixin";
 
 // STRUCTURE
 // Core of Cssparrow 
-@import "structure/normalize";
-@import "structure/global";
 @import "structure/layout";
 @import "structure/typo_form";
 @import "structure/style";
 
 // MODULES
 // Place to create your own module
-@import "module/custom_select";
-@import "module/custom_radio";
-@import "module/custom_checkbox";
+@import "module/topbar";

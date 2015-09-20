@@ -1,7 +1,6 @@
-// layout.scss is the elements position stylesheet
-
 // INIT BOX CALCULATION
 // ----------------------
+
 *,
 *::before,
 *::after {
@@ -14,15 +13,16 @@
 
 // WRAPPER
 // ------------
+
 .wrapper {
 	margin: 0 auto;
     width: 100%;
     max-width: $wrapper-max-width;
-    @extend .clearfix;
 }
 
 // GRID
 // ------------
+
 @include column-system("");
 @media screen and (min-width: $s-break) { @include column-system('s-'); }
 @media screen and (min-width: $m-break) { @include column-system('m-'); }
@@ -30,55 +30,39 @@
 
 // Basic row and column system
 .row {
-	@extend .clearfix; 
-	&>[class*="column"] {
-		padding-left: $col-margin;
-		padding-right: $col-margin;
-		@extend .f-left;
-	}
-	.row { 
-		margin-left: -$col-margin;
-		margin-right: -$col-margin;
-	}
-}
-
-// Table row system perfect for vertical align
-.t-row {
-    display: table;
-    width: 100%;
-    border-collapse: collapse;
-    	&.t-fixed { table-layout: fixed;}
-	    &>* { display: table-cell; }
-	    .block{
-	    	display: block;
-	    	float: none;
-	    }
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	   -moz-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+		&>[class*="col"] {	
+			padding-left: $col-margin;
+			padding-right: $col-margin;
+		}
+		&>[class*="push"] { 
+			position: relative; 
+		}
+		.row { 
+			margin-left: -$col-margin;
+			margin-right: -$col-margin;
+		}
 }
 
 // UTILITIES
 // ------------
-// Clearfix
-.clearfix {
-    clear: both;
-    *zoom: 1;
-		&:after, 
-		&:before {
-		    content: "";
-		    display: table;
-		    clear: both;
-		}
+
+// Clearfix 
+.clearfix { 
+	overflow: hidden; 
 }
-.o-clearfix { overflow: hidden; }
 
 // Float 
-.f-right { float: right; }
-.f-left { float: left; }
-
-// Centerize element
-.centerize { 
-	margin-left: auto !important; 
-	margin-right: auto !important; 
-}
+.fl--r { float: right; }
+.fl--l { float: left; }
 
 // Vertical align middle
 .v-middle-box {
@@ -92,31 +76,28 @@
 }
 
 // Fit to the container
-.f-height { height: 100%; }
-.f-width { width: 100%; }
+.full--h { height: 100%; }
+.full--w { width: 100%; }
 
-// Easiest way to adjust container to an unknown content width
+// Adjust container size to the content size
 .adjust { display: table; }
 
-// Fast way to align element
-// 
-// Give inline-b class to element...
-.inline-b { display: inline-block; }
-// ...Then align them 
-.v-top { vertical-align: top; }
-.v-middle { vertical-align: middle; }
-.v-bottom { vertical-align: bottom; }
+// Vertical alignment 
+.v--top { vertical-align: top; }
+.v--middle { vertical-align: middle; }
+.v--bottom { vertical-align: bottom; }
 
 // IMAGES
 // -------------
-// fluid image
-.flex-img {
+
+.img--flex {
     max-width: 100%;
     height: auto;
 }
 
 // MARGIN SYSTEM
 // ------------------
+
 // Inspired by: http://www.knacss.com/
 @include margin-system("");
 @media screen and (min-width: $s-break) { @include margin-system('s-'); }
@@ -125,6 +106,7 @@
 
 // PADDING SYSTEM
 // -----------------
+
 // Inspired by: http://www.knacss.com/
 @include padding-system("");
 @media screen and (min-width: $s-break) { @include padding-system('s-'); }
@@ -133,7 +115,9 @@
 
 // VISIBILITY
 // ---------------
+
 .hide { display: none !important; }
+
 @media screen and (min-width: $s-break) { 
 	.s-visibility-false {display: none !important;}
 	.s-visibility-true {display: inherit !important;}

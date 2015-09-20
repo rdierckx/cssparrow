@@ -1,20 +1,16 @@
-//------------------------------------------------------------
-// variable.scss is a powerful way to change colors, typo
-// and sizes in your project. 
-//------------------------------------------------------------
-
 // FONT
 // --------------------------------------
-// current text
+
 $font-size: 100%;
-$line-height: 1.625rem; 
+$line-height: 1.5rem; 
 
 //font familly
 $current-text: "Helvetica", Verdana, Sans-Serif;
 $heading-text: "Helvetica", Verdana, Sans-Serif;
 
 // LAYOUT
-// --------------------------------------      
+// --------------------------------------  
+
 // margin / padding
 $col-margin: 15px;
 $row-margin: $line-height;
@@ -26,41 +22,27 @@ $wrapper-max-width: 990px;
 $column-number: 12;
 $column-with: $col-margin;
 
-// STYLE
-// --------------------------------------   
-// color range
+// COLOR
+// --------------------------------------  
+
 $main-color: #ff9657;    
-$second-color: #efeddf;
-$third-color: #099ab9;
+$tonic-color: #efeddf;
 $dark-color: #203b50;   
+$light-color: #203b50;
 
 // color alert  
 $important-color: #edcf43;   
 $success-color: #00a877;     
 $error-color: #f47245;
 
-// general background
-$general-background: #ffffff;
-
 // text color  
-$main-font-color: #777777;
-$light-font-color: #999999;
-$font-color-sub: lighten($main-font-color, 35%);
-$font-color-link: $main-color;   
+$default-font: #777777;
+$heading-font: #222222;
+$light-font: #999999;
+$link-font: #B5B5B5;
 
-// MEDIAQUERIES
+// BREAK POINTS
 // --------------------------------------
 $s-break: 767px;
 $m-break: 1050px;
 $l-break: 1300px;
-
-    
-// WIDGET
-// --------------------------------------
-// nav bar
-$nav-bar-height: $line-height * 2;
-
-// buttons
-$YN-btn-border-radius: true; // + ($YN-) display border-radius ?
-$YN-btn-border: false; // + ($YN-) display border ?
-$btn-border-radius: 3px;

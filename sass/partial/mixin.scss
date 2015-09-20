@@ -1,0 +1,49 @@
+// LAYOUT 
+//--------------
+
+@mixin column-system($media-screen) {
+	@for $i from 1 through $column-number {
+		.#{$media-screen}col#{$i} { width: (100%/$column-number)*$i; }
+		.#{$media-screen}push#{$i} { left: (100%/$column-number)*$i; }
+	}
+}
+@mixin margin-system($media-screen) {
+	@for $i from 0 through 3 {
+		.#{$media-screen}m--t#{$i} { margin-top: $row-margin * $i; }
+		.#{$media-screen}m--b#{$i} { margin-bottom: $row-margin * $i; }
+		.#{$media-screen}m--l#{$i} { margin-left: $col-margin * $i; }
+		.#{$media-screen}m--r#{$i} { margin-right: $col-margin * $i; }
+	}
+}
+@mixin padding-system($media-screen) {
+	@for $i from 0 through 3 {
+		.#{$media-screen}p--t#{$i} { padding-top: $row-margin * $i; }
+		.#{$media-screen}p--b#{$i} { padding-bottom: $row-margin * $i; }
+		.#{$media-screen}p--l#{$i} { padding-left: $col-margin * $i; }
+		.#{$media-screen}p--r#{$i} { padding-right: $col-margin * $i; }
+	}
+}
+
+// STYLE
+//--------------
+
+@mixin ui-element($btn-padding, $btn-line-height) {
+    display: inline-block;
+    height: $btn-line-height;
+    line-height: $btn-line-height;
+    padding: 0 $btn-padding;
+}
+
+// TYPO FORM
+//--------------
+
+@mixin title-pattern($font-family, $font-size, $line-height) {
+	font-family: $font-family;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+@mixin text-hierarchy($font-size, $line-height) {
+    font-size: $font-size;
+    line-height: $line-height;
+}
